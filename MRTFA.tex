@@ -1,15 +1,16 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
-
-\usepackage{graphicx}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage[backend=biber,style=authoryear]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
 \addbibresource{biblio.bib}
 
 \begin{document}
+\chapter*{MRTF-A}
 En 2001, \cite{mercher_involvement_2001} 
 décrivent une translocation impliquée dans les leucémies aigües mégacaryocytiques. 
 Il s'agit de la translocation d'un gène du chromosome 1 sur le chromosome 22, le gène fusion est nommmé One-Twenty-Two-Megakaryocytic-Acute-Leukemia (OTT-MAL). 
@@ -21,12 +22,58 @@ Un homologue est également découvert chez la souris et nommé Basic, SAP et Co
 
 Alors que cette protéine sera appelée dans la suite de ce document MRTF-A, elle pourra être identifiée indifféremment comme MAL, MKL1 ou BSAC dans la bibliographie. 
 
-\section{Rôle de MRTF-A}
+\section{MRTF-A, cofacteur de Serum Response Factor}
+
+La fonction principale des protéines de la famille des myocardines est l'activation du facteur de transcription Serum Response Factor. 
+
+\subsection{Serum Response Factor}
+
+Serum Response Factor est un facteur de transcription qui fait partie de la famille MADS (MCM-1, Agamous, Deficiens, SRF). SRF est présent en un seul exemplaire dans le génome humain mais peut être transcrit en 4 isoformes. 
+La protéine SRF comprend un signal de localisation nucléaire (NLS), une boîte MADS composée du site de liaison à l'ADN et d'un domaine de dimérisation, et d'un domain de transactivation auquel se fixent ses cofacteurs. 
+
+Un dimère SRF se fixe sur une séquence consensus de nucléotides sur l'ADN appelée boîte CArG : CC(A/T)$_{6}$GG, ou sur une séquence CArG-like, qui diffère du consensus d'une seule base, avec une affinité plus faible. Le gène srf contenant lui-même deux boîtes CArG, il est sa propre cible, dans une boucle de rétro-action positive. 
+
+\subsection{Les cofacteurs de SRF : TCF et MRTF}
+
+Serum Response Factor n'est lui-même qu'un transactivateur faible, mais il peut être activé par deux grandes familles de cofacteurs : les Ternary Complex Factors, et les Myocardin-Related Transcription Factor. 
+
+Les deux familles ne sont pas concurrentes pour se lier à SRF : la plupart des sites sur l'ADN sont spécifiques de l'une ou l'autre des familles de cofacteurs (\cite{esnault_rho-actin_2014}). Même lorsque les MRTF sont séquestrées dans le cytoplasmes, les TCF ne les remplacent pas sur les sites de liaison à SRF. 
+
+Un ChIP-seq sur des fibroblastes 3T3 a estimé que 921 gènes sont susceptibles d'être régulés par MRTF/SRF en réponse au sérum, et 76 gènes par TCF/SRF (\cite{esnault_rho-actin_2014}), ce qui représente entre 3 et 4\% du génome. Les MRTF sont donc un élément important de la régulation transcriptionnelle, et l'acteur principal de la régulation de SRF. 
+
+\emph{Les autres cofacteurs de SRF ? }
+
+
+\subsubsection{Ternary Complex Factors}
+
+Elk1, Net et SAP-1 sont trois coactivateurs de SRF de la même famille, les TCF. Ils possèdent un domaine qui leur permet de se lier à des sites spécifiques sur l'ADN (Ets Binding Sites). 
+Lorsqu'un site Ets et une boîte CArG sont adjacents, ils forment un Serum Response Element (SRE). La formation d'un complexe TCF-SRF sur un SRE déclenche la transcription du gène cible. 
+
+Les TCF sont phosphorylées et activées par les MAPK (Mitogen Activated Protein Kinases). 
+
+
+\subsection{La famille Myocardine}
+
+Cette famille de cofacteurs de SRF comprend la myocardine, MRTF-A et MRTF-B. 
+
+La myocardine se présente sous deux isoformes, une forme cardiaque et une forme spécifique au muscle lisse. Les deux sont exclusivement localisées dans le noyau et sont constitutivement actives, en raison de motifs RPEL déficients ou incomplets. 
+
+Les Myocardin-Related Transcription Factors A et B sont exprimées dans un grand nombre de tissus : muscles cardiaques, lisses et squelettiques, neurones, cellules épithéliales, mégacaryocytes \dots Contrairement à la myocardine, les MRTF peuvent être séquestrées dans le cytoplasme, ce qui les empêche d'activer SRF et la transcription. La régulation de la localisation de MRTF est assurée par l'actine, qui peut former un complexe avec la partie N-terminale des MRTF. 
+
+
+
+
+\section{Rôles de MRTF-A}
 Depuis sa découverte au début des années 2000, de nombreux rôles de MRTF-A ont été mis en évidence dans des types cellulaires et dans des tissus très divers. 
 \subsection{Embryogenèse}
-Les MRTF sont exprimées dès le jour 10 du développement de l'embryon (\cite{wang_potentiation_2002}), dans tous les tissus. La délétion de MRTF-B entraîne l'échec de la gastrulation, et donc une fin précoce de l'embryogenèse (\cite{kalita_mkls:_2012}). Au contraire, 60\% des mutants MRTF-A$^{-/-}$ sont viables et atteignent l'âge adulte, les autres étant perdus pendant l'embryogenèse car souffrant de défauts cardiaques. Les mutants survivants sont dépourvus de ces anomalies cardiaques, vivent jusqu'à l'âge adulte (\cite{li_requirement_2006},\cite{sun_acute_2006}). Cependant, les femelles souffrent d'un défaut de formation de la glande mammaire,  lié à une apoptose précoce des cellules myoépithéliales qui déclenchent l'éjection du lait. Il apparaît donc que chez la souris, tandis que MRTF-B est indispensable à l'embryogenèse, l'absence de MRTF-A peut être compensée dans la plus grande partie des tissus. 
+
+Les MRTF sont exprimées dès le jour 10 du développement de l'embryon (\cite{wang_potentiation_2002}), dans tous les tissus. La délétion de MRTF-B entraîne l'échec de la gastrulation, et donc une fin précoce de l'embryogenèse (\cite{kalita_mkls:_2012}). Au contraire, 60\% des mutants MRTF-A$^{-/-}$ sont viables et atteignent l'âge adulte, les autres étant perdus pendant l'embryogenèse car souffrant de défauts cardiaques. Les mutants survivants sont dépourvus de ces anomalies cardiaques, et vivent jusqu'à l'âge adulte (\cite{li_requirement_2006},\cite{sun_acute_2006}). Cependant, les femelles souffrent d'un défaut de formation de la glande mammaire,  lié à une apoptose précoce des cellules myoépithéliales qui déclenchent l'éjection du lait. Il apparaît donc que chez la souris, tandis que MRTF-B est indispensable à l'embryogenèse, l'absence de MRTF-A peut être compensée dans la plus grande partie des tissus. 
 Les souris possédant un gène mutant dominant négatif de MRTF-A sont en revanche de plus petite taille, ne bougent pas et ne survivent que quelques jours, principalement à cause des défauts de musculature de leur diaphragme (\cite{li_requirement_2005}). 
+
 \subsection{Régulation de la masse musculaire}
+
+
+
 \subsection{Transition EMT}
 \subsection{MRTF-A et cancers}
 
@@ -74,5 +121,5 @@ Dans les cellules épithéliales, il a été montré qu'un groupe de gènes est 
 
 \section{En aval de MRTF-A : SRF et gènes cibles}
 
-
+\printbibliography
 \end{document}
