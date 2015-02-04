@@ -4,7 +4,7 @@
 \usepackage[francais]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[backend=biber,style=authoryear]{biblatex}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 
 \addbibresource{biblio.bib}
@@ -43,6 +43,11 @@ Un ChIP-seq sur des fibroblastes 3T3 a estimé que 921 gènes sont susceptibles 
 
 \emph{Les autres cofacteurs de SRF ? }
 
+\section{MRTF-A, indépendamment de SRF}
+
+\subsection{Transition épithélio-mésenchymateuse et domaine SAP}
+\subsection{NF-$\kappa$B}
+
 
 \subsubsection{Ternary Complex Factors}
 
@@ -52,7 +57,7 @@ Lorsqu'un site Ets et une boîte CArG sont adjacents, ils forment un Serum Respo
 Les TCF sont phosphorylées et activées par les MAPK (Mitogen Activated Protein Kinases). 
 
 
-\subsection{La famille Myocardine}
+\subsubsection{La famille Myocardine}
 
 Cette famille de cofacteurs de SRF comprend la myocardine, MRTF-A et MRTF-B. 
 
@@ -60,24 +65,9 @@ La myocardine se présente sous deux isoformes, une forme cardiaque et une forme
 
 Les Myocardin-Related Transcription Factors A et B sont exprimées dans un grand nombre de tissus : muscles cardiaques, lisses et squelettiques, neurones, cellules épithéliales, mégacaryocytes \dots Contrairement à la myocardine, les MRTF peuvent être séquestrées dans le cytoplasme, ce qui les empêche d'activer SRF et la transcription. La régulation de la localisation de MRTF est assurée par l'actine, qui peut former un complexe avec la partie N-terminale des MRTF. 
 
+One-Twenty-Two-Megakaryocytic-Acute-Leukemia (OTT-MAL) est la protéine résultant d'une translocation d'un gène du chromosome 1 à côté du gène MRTF-A. La protéine fusion comprend presque toute la protéine MRTF-A excepté la partie N-terminale. 
 
 
-
-\section{Rôles de MRTF-A}
-Depuis sa découverte au début des années 2000, de nombreux rôles de MRTF-A ont été mis en évidence dans des types cellulaires et dans des tissus très divers. 
-\subsection{Embryogenèse}
-
-Les MRTF sont exprimées dès le jour 10 du développement de l'embryon (\cite{wang_potentiation_2002}), dans tous les tissus. La délétion de MRTF-B entraîne l'échec de la gastrulation, et donc une fin précoce de l'embryogenèse (\cite{kalita_mkls:_2012}). Au contraire, 60\% des mutants MRTF-A$^{-/-}$ sont viables et atteignent l'âge adulte, les autres étant perdus pendant l'embryogenèse car souffrant de défauts cardiaques. Les mutants survivants sont dépourvus de ces anomalies cardiaques, et vivent jusqu'à l'âge adulte (\cite{li_requirement_2006},\cite{sun_acute_2006}). Cependant, les femelles souffrent d'un défaut de formation de la glande mammaire,  lié à une apoptose précoce des cellules myoépithéliales qui déclenchent l'éjection du lait. Il apparaît donc que chez la souris, tandis que MRTF-B est indispensable à l'embryogenèse, l'absence de MRTF-A peut être compensée dans la plus grande partie des tissus. 
-Les souris possédant un gène mutant dominant négatif de MRTF-A sont en revanche de plus petite taille, ne bougent pas et ne survivent que quelques jours, principalement à cause des défauts de musculature de leur diaphragme (\cite{li_requirement_2005}). 
-
-\subsection{Régulation de la masse musculaire}
-
-
-
-\subsection{Transition EMT}
-\subsection{MRTF-A et cancers}
-
-\newpage
 \section*{Structure de MRTF-A}
 
 \begin{figure}
@@ -113,6 +103,45 @@ Dans les cellules épithéliales, il a été montré qu'un groupe de gènes est 
  
  
 
+\section{Rôles de MRTF-A}
+Depuis sa découverte au début des années 2000, de nombreux rôles de MRTF-A ont été mis en évidence dans des types cellulaires et dans des tissus très divers. 
+\subsection{Embryogenèse}
+
+Les MRTF sont exprimées dès le jour 10 du développement de l'embryon (\cite{wang_potentiation_2002}), dans tous les tissus. La délétion de MRTF-B entraîne l'échec de la gastrulation, et donc une fin précoce de l'embryogenèse (\cite{kalita_mkls:_2012}). Au contraire, 60\% des mutants MRTF-A$^{-/-}$ sont viables et atteignent l'âge adulte, les autres étant perdus pendant l'embryogenèse car souffrant de défauts cardiaques. Les mutants survivants sont dépourvus de ces anomalies cardiaques, et vivent jusqu'à l'âge adulte (\cite{li_requirement_2006},\cite{sun_acute_2006}). Cependant, les femelles souffrent d'un défaut de formation de la glande mammaire,  lié à une apoptose précoce des cellules myoépithéliales qui déclenchent l'éjection du lait. Il apparaît donc que chez la souris, tandis que MRTF-B est indispensable à l'embryogenèse, l'absence de MRTF-A peut être compensée dans la plus grande partie des tissus. 
+Les souris possédant un gène mutant dominant négatif de MRTF-A sont en revanche de plus petite taille, ne bougent pas et ne survivent que quelques jours, principalement à cause des défauts de musculature de leur diaphragme (\cite{li_requirement_2005}). 
+
+\subsection{Régulation de la masse musculaire}
+
+Serum Response Factor a pour gènes cibles un grand nombre de gènes liés au cytosquelette et à la différenciation musculaire. 
+
+Lorsque SRF est désactivé dans le muscle squelettique de souris adulte ( souris HSA-Cre-ER$^T2$:srf$^{flox/flox}$ ), l'hypertrophie compensatoire de ses muscles est bloquée (\cite{guerci_srf-dependent_2012}). Les cellules satellites sont moins nombreuses, et ne fusionnent pas avec les fibres musculaires. Au contraire, un SRF constitutivement actif protège de l'atrophie liée à une immobilisation ou à une dénervation. 
+Suite à une dénervation, MRTF-A est exclus des noyaux des fibres musculaires, et donc incapable d'activer SRF. Un MRTF-A constitutivement nucléaire protège contre l'atrophie induite par la dénervation(\cite{collard_nuclear_2014}). C'est donc la régulation de la localisation de MRTF-A dans les fibres musculaires qui régule l'activité de SRF et l'atrophie ou l'hypertrophie en réponse aux contraintes mécaniques.  
+
+
+Dans les myoblastes murins C2C12, un domninant négatif MRTF-B, capable d'interférer avec l'activité des deux MRTF, bloque la différenciation musculaire en myotubes et diminue leur taux de duplication (\cite{selvaraj_megakaryoblastic_2003}, \cite{cen_megakaryoblastic_2003}). 
+Les souris DN-MRTF-A montrent d'ailleurs un phénotype myopathique. 
+
+
+
+
+\subsection{Transition épithéliale-mésenchymale}
+
+La transition épithélio-mésenchymateuse est le processus par lequel des cellules, sous l'influence de signaux extérieurs, vont perdre leur type épithélial (expression de l'E-cadherine, polarisation, organisation en monocouche jointive \dots) et acquérir un phénotype mésenchytmal (expression de N-cadherine, motilité plus importante, fabrication de matrice extra-cellulaire \dots). 
+Plusieurs marqueurs de l'EMT, comme la vimentine ou l'actine du muscle lisse $\alpha$Smooth Muscle Actin sont des cibles de SRF. 
+
+La conjonction d'un signal biochimique, TGF $\beta$ (Transforming Growth Factor), et d'un signal mécanique déclenche l'activation de la voie de signalisation RhoA/actine/MRTF-A/SRF. 
+Les signaux mécaniques déclencheurs peuvent être très divers, locaux ou globaux, cycliques ou statiques : membranes étirées cycliquement (\cite{maier_tenascin-c_2008}), ilôts de fibronectine  (\cite{gomez_tissue_2010},\cite{connelly_actin_2010}), gels de polyacrylamides de différentes rigidités (\cite{huang_matrix_2012}), microbilles magnétiques recouvertes de collagène (\cite{chan_force-induced_2010}). 
+
+
+
+\subsection{MRTF-A et cancers}
+
+
+
+
+\newpage
+
+
 \section{En amont de MRTF-A : voie de signalisation et régulation de l'actine} 
 \subsection{Régulation de l'actine}
 \subsection{Les protéines liées à l'actine}
@@ -121,5 +150,5 @@ Dans les cellules épithéliales, il a été montré qu'un groupe de gènes est 
 
 \section{En aval de MRTF-A : SRF et gènes cibles}
 
-\printbibliography
+%\printbibliography
 \end{document}
