@@ -89,7 +89,7 @@ Les deux bouts du filaments ont des affinités différentes pour les monomères.
 
 Cet équilibre est connu comme le "tapis roulant" de l'actine : lorsque les deux cinétiques sont égales, le filament avance par remplacement des monomères en gardant une longueur constante. 
 
-Bien que cet assemblage puisse avoir lieu spontanément en présence d'actine, de nombreuses protéines aident à la nucléation des filaments, à leur stabilité ou à leur désabilisation. 
+Bien que cet assemblage puisse avoir lieu spontanément en présence d'actine, de nombreuses protéines aident à la nucléation des filaments, à leur stabilité ou à leur déstabilisation. 
 
 \subsection{L'équilibre de polymérisation}
 
@@ -136,20 +136,69 @@ Certaines myosines ont un rôle analogue à celui des moteurs moléculaires asso
 
 Les faiceaux anti-parallèles peuvent être liés par des paires de dimères, qui vont marcher en sens opposé sur les deux filaments, et donc les déplacer l'un par rapport à l'autre. Si les deux filaments sont liés par ailleurs dans le réseau, il va être mis sous tension par ces moteurs moléculaires.
 
-\subsection{Les adhésions focales}
+
 
 
 \section{Rôle mécanique de l'actine : du filament au cytosquelette}
 
+Le cytosquelette est une structure multi-échelle, allant de l'échelle des moteurs moléculaires et des nucléateurs, à l'échelle de la cellule toute entière, en passant pas l'échelle des filaments et des réseaux de filaments. Il peut ressentir et exercer des forces à toutes les échelles. 
+
+
+Dans cette partie, il ne s'agit pas de parler des propriétés mécaniques du cytosol ou de la cellule, mais d'expliquer comment les filaments peuvent générer des forces et comment il réagissent à des forces. 
+
 \subsection{Mécanique du filament d'actine}
+
+Le filament d'actine en lui-même est à la fois générateur et senseur de forces. 
+
+ \subsubsection{Longueur de persistance}
+La longueur de persistance est un moyen de quantifier la corrélation entre l'orientation des différents segments d'un polymère soumis aux fluctuations thermiques. Si l'on considère un polymère de longueur $L$ auquel on attribue une abscisse curviligne $s$, avec $\vec{t_s}$ la tangente au polymère en $s$, alors on a la relation : 
+$$ \langle \vec{t_0}\cdot \vec{t_s} \rangle_L \propto e^{L/\ell_p}$$
+
+Au bout de quelques longueurs de persistance, l'information de l'orientation du polymère en $s=0$ est perdue. 
+
+La longueur de persistance dépend de l'énergie thermique disponible pour agiter le filament. Une manière de définir la rigidité d'un polymère indépendamment de la température consiste à définir un module de courbure comme le produit de la longueur de persistance et de l'énergie thermique : $$\kappa = \ell_p k_B T$$
+
+
+Le filament d'actine subit un vieillissement par l'hydrolyse de l'ATP des monomères qui le composent. Le changement de conformation induit par l'hydrolyse de l'actine a des conséquences sur les propriétés mécaniques du filament. 
+Un filament d'actine ATP a une longueur de persistance de 15 micromètres, contre 9 micromètres pour un filament d'actine ADP. Le vieillissement du filament le rend donc plus déformable et plus souple. 
+Les protéines attachées au filament peuvent également, en stabilisant une conformation, changer sa rigidité. Un filament stabilisé par la phalloïdine ou par la tropomyosine voit sa longueur de persistance augmentée à 18 et 20 microns respectivement. Au contraire, la conformation stabilisée par la cofiline n'a qu'une longueur de persistance de 2,2 microns. 
+
+Un même filament d'actine peut évidemment être le lieu de toutes ces modifications en même temps. Souvent l'extrêmité + des filaments est riche en actine ATP alors que l'extrémité - est riche en actine ADP, ce qui crée un filament plus rigide d'un côté et plus flexible de l'autre. 
+
+\subsubsection{Couplage traction-torsion}
+
+L'hélice que forme le filament peut adopter des conformations différentes, en particulier en ce qui concerne l'angle de rotation entre les monomères successifs. 
+Une force tirant sur le filament va alors favoriser une conformation à faible torsion, ce qui va rendre la fixation de la cofiline, qui stabilise le filament dans une conformation à grande rotation, beaucoup plus difficile. 
+Il en résulte que la cofiline est moins efficace sur les filaments qui sont en tension, induisant une préservation automatique des filaments sous contrainte par rapport aux filaments libres. 
+Au contraire, mDia1 et la profiline sont plus efficaces sur les filaments soumis à une tension. 
+La conformation de l'actine est alors un senseur de contrainte qui va encourager la préservation et l'élongation des filaments qui ressentent une force de traction. 
+
+Les filaments d'actine semi-flexibles peuvent également être courbés, en particulier au voisinage de la membrane. 
+À cause de l'organisation hélicoïdale des monomères, la courbure d'un filament d'actine exerce également une torsion sur ce filament, ce qui rend la modélisation des filaments encore plus complexe. 
+Le facteur de nucléation Arp2/3 se lie plus facilement au côté convexe d'un filament d'actine courbé. 
+
+\subsubsection{Les myosines}
 
 \subsection{Mécanique des adhésions focales}
 
-\subsection{Mécanique de gels d'acto-myosine}
+Les sites d'ancrage de la cellule dans la matrice extra-cellulaire sont la porte d'entrée des signaux mécaniques dans la cellule. Parmi les molécules qui constituent les adhésions focales, certaines réagissent directement lorsqu'elles sont soumises à des stimulations mécaniques. 
+
+Lorsque la transmission des forces est coupée dans la cellule (par l'ajout de drogues qui inhibe la contractilité du cytosquelette), les adhésions focales disparaissent : la tension est nécessaire non seulement à leur constitution, mais également à leur maintien. Ces contraintes peuvent provenir de forces extérieures mais aussi de la contraction du cytosquelette sous l'action des moteurs moléculaires. 
+
+En présence d'une force, les intégrines forment des agrégats et leur affinité pour le ligand augmente grâce à un changement de conformation. 
+La taline relie les intégrines aux filaments d'actine. Dans la conformation initiale, elle est repliée sur elle-même. Lorsqu'elle est mise sous tension entre les intégrines et l'actine, elle se déplie, laissant apparaître des domaines de liaisons à la vinculine qui n'étaient pas précédemment accessibles. 
+La vinculine peut alors recruter d'autres protéines dans les adhésions focales, comme l'$\alpha$-actinine, qui connecte les filaments d'actine en faisceaux. L'étirement de l'$\alpha$-actinine change sa configuration et pourrait être à l'origine de la relocalisation de la zyxine en réponse aux contraintes mécaniques. 
+
+La filamine, qui lie entre eux des filaments d'actine, peut être dépliée lors de tensions sur les filaments. Son domaine de liaison aux intégrines devient alors accessible, et la filamine ancre alors le cytosquelette à la matrice extra-cellulaire par l'intermédiaire des intégrines. De plus, cela cause un changement de conformation des intégrines qui favorise la formation d'agrégats, renforçant l'adhésion. 
+
+Ce ne sont là que quelques exemples de protéines impliquées dans les adhésions focales, il en existe des centaines. Leur exemple montre qu'au premier niveau de contact avec l'environnement mécanique extérieur, les forces sont transcrites en signal biologique au niveau de la molécule individuelle, en changeant la conformation des protéines. 
+
+
 
 \subsection{Mécanique du cytosquelette d'actine}
-
+cortex, podosomes, filopodes, lamellipode, fibres de stress, motilité. 
 \subsection{Un cas particulier : la contraction musculaire}
+myfibrilles, sarcomères, acto-myosine
 
 \section{Rôle régulateur de l'actine}
 
