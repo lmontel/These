@@ -1,15 +1,13 @@
-\documentclass[12pt]{report}
-\usepackage[utf8x]{inputenc}
-\usepackage[francais]{babel}
+\documentclass{report}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\graphicspath{{Figures/}}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
 \usepackage{amsmath}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{biblatex}
-\addbibresource{Biblio.bib}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+\addbibresource{biblio.bib}
 
 \title{
 	{Thesis Title}\\
@@ -18,22 +16,26 @@
 \author{Author Name}
 \date{\today}
 
+
 \begin{document}
 
 \begin{abstract}
 Abstract
 \end{abstract}
 \tableofcontents
-\listoffigures
-\listoftables
 
 
 
-\chapter{Introduction}
-\input{Chapitres/introduction}
 
-\chapter{Chapter Two Title}
-\input{Chapitres/chapter02}
+
+\input{Cellule1}
+
+
+\input{Actine}
+
+
+
+\input{MRTFA}
 
 
 \end{document}

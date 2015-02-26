@@ -1,16 +1,16 @@
-\documentclass{report}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%\documentclass{report}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+%\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%
+%
+%\addbibresource{biblio.bib}
 
-
-\addbibresource{biblio.bib}
-
-\begin{document}
+%\begin{document}
 \chapter{La cellule et son environnement mécanique}
 
 
@@ -26,6 +26,25 @@ Chez les eucaryotes comme chez les procaryotes, il existe des organismes vivants
 Les plus grands organismes, comme les plantes ou les animaux, peuvent être composées d'un très grand nombre de cellules (de l'ordre de $10^{14}$) qui possèdent le même génome mais ont des phénotypes très divers. 
 
 \section{Organisation de la cellule eucaryote}
+\begin{figure}[h!]
+\includegraphics[scale=0.2]{Animal_Cell.png}
+\caption{La cellule eucaryote. 
+1. Nucléole
+2. Noyau
+3. Ribosome
+4. Vésicule
+5. Réticulum endoplasmique rugueux
+6. Appareil de Golgi
+7. Cytosquelette
+8. Réticulum endoplasmique lisse
+9. Mitochondrie
+10. Vacuole (cellule végétale uniquement)
+11. Cytosol
+12. Lysosome
+13. Centrosome
+14. Membrane Plasmique
+Figure par Kelvinsong (CC0)}
+\end{figure}
 
 
 Les cellules eucaryotes sont composées de plusieurs compartiments aux fonctions spécifiques à l'intérieur d'une membrane plasmique. Le noyau est le plus gros de ces compartiments, il renferme l'ADN organisé sous la forme de chromosomes et est le lieu de la transcription de l'ADN en ARN. 
@@ -35,11 +54,34 @@ Les mitochondries sont les unités de production d'énergie de la cellule : elle
 
 \subsection{L'énergie dans la cellule}
 
+Une cellule vivante est un système très éloigné de l'équilibre thermodynamique. Pour se maintenir en vie, elle utilise donc de l'énergie qu'elle va trouver dans le milieu extérieur. 
+
+À l'intérieur de la cellule, la source d'énergie utilisée dans les réactions enzymatiques est l'hydrolyse de nucléosides triphosphates. 
+Il s'agit majoritairement d'Adénosine Triphosphate, qui est hydrolysée en Adénosine Diphosphate et un phosphate inorganique en libérant 30,5 kJ/mol d'énergie. 
+Les protéines qui utilisent l'ATP comme source d'énergie sont des ATPases. 
+C'est le cas par exemple de l'actine et de la myosine qui utilisent l'ATP pour contracter les muscles, dont nous ferons une description plus détaillée plus loin. 
+
+Certaines protéines utilisent à la place de l'ATP le Guanosine Triphosphate, fonctionnant de la même manière. 
+C'est pas exemple le cas des microtubules ou des petites GTPases comme RhoA, dont nous parlerons également plus loin. 
+
+Le corps ne possède en permanence que des réserves d'ATP pour quelques secondes, car l'ATP ne peut pas être stockée telle quelle dans l'organisme. 
+
+L'ATP ne peut pas être puisée directement dans le milieu extérieur. Les sources d'énergie des cellules animales sont les glucides simples (comme les sucres) ou complexes (comme l'amidon)et les lipides ou les acides aminés lorsque les autres sources font défaut. 
+
+La cellule animale reçoit principalement son énergie sous forme de glucose par la circulation sanguine. Ce glucose est alors dégradé d'abord dans le cytoplasme, puis en présence de dioxygène dans la mitochondrie. 
+Une molécule de glucose permet d'obtenir une trentaine d'ATP. 
+Lorsque le dioxygène ne permet pas de fournir assez rapidement l'énergie nécessaire, par exemple lors d'effort musculaires intenses, la fermentation permet de produire de l'énergie en produisant de l'acide lactique. 
+
 \subsection{Le noyau}
 
 Le noyau sépare le matériel génétique du reste du milieu cellulaire. Cependant, bien d'autres molécules que l'ADN sont présentes dans le noyau, et il s'y passe d'autres choses que la transcription ou la duplication de l'ADN. 
 
 \subsubsection{ADN}
+
+\begin{figure}
+\includegraphics[scale=0.3]{ADN.png}
+\caption{Schéma de la structure de l'ADN, par Messer Woland CC-BY-SA-2.5}
+\end{figure}
 
 L'ADN est une molécule constituée d'un enchaînement de nucléotides composés d'une base azotée, d'un sucre et d'un groupement phosphates. Il existe quatre bases azotées possibles : Adénine , Thymine, Cytosine, Guanine. Leur enchaînement va être à la base du code génétique.
 L'enchaînement des nucléotides forme une double hélice dans laquelle les nucléotides se correspondent en deux paires : Adénine et Thymine, Cytosine et Guanine. 
@@ -47,9 +89,18 @@ L'enchaînement des nucléotides forme une double hélice dans laquelle les nucl
 Le génome des être vivants peut comporter typiquement du million au milliard de paires de base d'ADN, la distance entre deux bases étant de 0,34nm. Chez l'homme, on compte environ 3,2 milliards de paires de bases, ce qui correspond à une longueur d'ADN de l'ordre du mètre, qui doit être stockée dans le noyau cellulaire d'un diamètre de 5 à 7 microns. 
 On conçoit alors qu'une organisation spécifique de l'ADN dans le noyau soit nécessaire pour faire tenir une molécule aussi grande dans un compartiment aussi étroit. 
 
+\begin{figure}[h!]
+\includegraphics[scale=0.3]{Nucleosome_structure_by_richard_wheeler}
+\caption{Enroulement de l'ADN autour d'un complexe d'histones, illustré par richard wheeler (CC BY-SA 3.0)}
+\end{figure}
+
 L'ADN est enroulé autour de protéines appelées histones comme du fil autour d'une bobine, formant une structure appelée nucléosome. Ces nucléosomes empilés forment une structure bien plus compacte que l'ADN libre, appelée la chromatine. Certains acides aminés qui composent les histones peuvent subir des réactions chimiques comme l'acétylation ou la méthylation, qui ont un rôle dans la régulation de la transcription du génome. L'acétylation des histones détermine l'état de la chromatine : l'hétérochromatine est la forme compacte où l'ADN ne peut pas être transcrit, l'euchromatine est la forme plus étendue dans laquelle l'ADN est accessible pour la transcription. 
 
 \subsubsection{Transport nucléo-cytoplasmique}
+\begin{figure}
+\includegraphics[scale=0.8]{Rancycle_nuclearimport_nuclearexport.png}
+\caption{Schéma du transport nucléo-cytoplasmique par les karyophérines.}
+\end{figure}
 Le noyau est séparé du reste du cytoplasme par une membrane formée de deux bicouches lipidiques. Elle est percée de trous appelés pores nucléaires, par lesquels les molécules peuvent entrer et sortir du noyau. Les protéines de taille inférieure à 40 kDa peuvent passer par diffusion passive par les pores nucléaires. 
 
 Les protéines de plus grande taille doivent faire appel à des transporteurs spécifiques pour aller d'un côté de la membrane à l'autre. 
@@ -63,6 +114,10 @@ Par exemple, l'actine, bien que de taille 42kDa, à la limite de la diffusion pa
 
 La membrane plasmique sépare le milieu intérieur de la cellule de l'extérieur. Elle est composée d'une bicouche de lipides amphiphiles dans laquelle sont enchassées des molécules transmembranaires qui permettent de réguler les échanges avec le milieu. 
 
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Cell_membrane_detailed_diagram_fr.png}
+\caption{Schéma de la membrane plasmique}
+\end{figure}
 \subsubsection{Transport transmembranaire}
 La membrane assure le passage de molécules d'un côté à l'autre de manière active ou passive. 
 
@@ -114,6 +169,10 @@ Des protéines de pontage peuvent lier ces filaments pour former un gel réticul
 
 \subsubsection{Microtubules}
 
+\begin{figure}
+\includegraphics[scale=0.5]{Microtubule.png}
+\caption{Construction et destruction des microtubules. }
+\end{figure}
 La tubuline, composée de deux sous-unité (alpha et bêta), s'associe en un protofilament de treize monomères, qui vont s'additionner pour former de longs filaments creux de diamètre 25nm. Ces filaments sont polarisés, une extrémité ne comportant que des sous-unités beta ( notée +) et l'autre que des alpha (notée - ), la polymérisation ayant lieu à l'extrémité + et la dépolymérisation à l'extrémité -. 
 Le microtubule est le filament le plus rigide du cytosquelette, sa longueur de persistance est de l'ordre du millimètre, bien plus que la taille d'une cellule. 
 
@@ -143,7 +202,10 @@ L'expression de vimentine est souvent un marqueur de la transition épitéhlio-m
 Plusieurs types de filaments intermédiaires sont exprimés dans les neurones, et deux types sont spécifiquement responsables de la transparence du cristallin. 
 
 \subsubsection{Les lamines}
-
+\begin{figure}
+\includegraphics[scale=1.5]{Structure_and_function_of_the_nuclear_lamina.jpg}
+\caption{Les lamines soutiennent l'organisation de la membrane nucléaire. Illustration par  Coutinho et al. Immunity and Ageing 2009}
+\end{figure}
 Les lamines diffèrent des autres filaments intermédiaires sur plusieurs points. Elles ne forment pas un réseau dans toute la cellule mais sont localisées à la membrane nucléaire, et elles sont exprimées dans tous les types cellulaires. 
 
 Les lamines forment un réseau soutenant la membrane nucléaire interne, dans lequel sont ancrés les pores nucléaires. Par l'intermédiaire de protéines comme la nesprine, le réseau laminaire est couplé mécaniquement au cytosquelette d'actine de la cellule et il est couplé au réseau interne par l'émerine, protéine qui coiffe la pointe des filaments d'actine et augmente leur polymérisation. 
@@ -154,7 +216,10 @@ La progéria et le syndrôme de dystrophie musculaire d'Emery-Dreifuss sont lié
 
 
 \subsubsection{Filaments intermédiaires dans les cellules musculaires}
-
+\begin{figure}
+\includegraphics[scale=0.15]{sarcomere.png}
+\caption{Rôle de la desmine dans l'organisation des fibres musculaires.}
+\end{figure}
 Quatre types de filaments intermédiaires sont exprimés dans la cellule musculaire : la desmine, la vimentine, la lamine et la synésine. 
 La desmine et la vimentine ont des structures suffisamment proches pour pouvoir former des hétéro-dimères et s'associer dans des filaments. La synésine ne peut former que des hétéro-dimères avec les autres filaments intermédiaires. Elle permet de lier le réseau de desmine au disque Z. 
 
@@ -254,4 +319,4 @@ Un facteur de transcription ou ses coactivateurs doivent être présents dans le
 Un facteur de transcription peut également être régulé par la phosphrylation ou celle de ses cofacteurs, ou par la présence d'un ligand. 
 
 
-\end{document}
+%\end{document}
