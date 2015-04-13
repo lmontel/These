@@ -1,0 +1,131 @@
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\chapter{Méthodes et dispositifs expérimentaux}
+
+\section{Culture cellulaire}
+	\subsection{Type cellulaire}
+	Nous avons utilisé comme modèle une lignée immortalisée de myoblastes murins de l'ATCC, les C2C12. Elles présentent l'avantage d'être la lignée immortalisée la plus proche des cellules qui sont utilisées par nos partenaires de l'Institut Cochin dans leurs expérimentations animales sur les souris. 
+	
+	Ce sont des cellules adhérentes conservent leur capacité à se différencier en myotubes lorsqu'elles atteignent la confluence et placées dans un milieu pauvre en sérum. C'est pourquoi il est essentiel de les maintenir en permanence en-dessous de la confluence. 
+	
+	Elles adoptent des formes variées (allongées, triangulaires, en disque) et se déplacent sur leur surface de culture en étendant des lamellipodes. 
+	
+	Les C2C12 sont cultivées dans un milieu de culture composé de DMEM (Dulbecco's Modified Eagle Medium) à 4,5g/L de L-Glucose supplémenté de 10\% de Sérum de Veau F\oe tal (SVF) et de 1\% d'antibiotiques (Pénicilline et Streptomycine). Elles sont conservées dans des flasques de plastiques dans un incubateur à 37$\deg$ C et 5\% de CO$_2$. 
+	
+	
+	Lorsqu'elles sont proches de la confluence, il faut rincer deux fois les cellules avec du PBS (Phosphate Buffered Saline) et les laisser incuber 5 minutes à 37$\deg$ C dans un mélange Trypsine/EDTA. La trypsine est une enzyme qui va casser les adhésions cellulaires, tandis que l'EDTA joue le rôle de chélateur des ions calcium qui sont indispensables pour créer des adhésions. Une fois les cellules décollées, elles sont diluées dans du milieu de culture qui inactive la trypsine et ensemencées à nouveau sur des boîtes de culture. Cette opération s'appelle le passage. 
+	 
+	\subsection{Culture sur PDMS ou sur verre}
+
+	Pour réaliser les différentes expériences de rhéologie cellulaire, les cellules doivent être cultivées sur d'autres substrats que dans les boîtes de cultures : sur des lamelles de verre carrées (22mmm x 22mm x 100 $\mu$m) dans le cas des pinces magnétiques et sur des disques de PDMS (30mm de diamètre et 0.3 mm d'épaisseur) dans le cas de l'étirement. 
+	
+	Les disques de PDMS doivent préalablement être passées dans un four à plasma pendant 2 minutes afin de rendre leur surface hydrophile. Cette opération stérilise également les disques. Les lamelles de verre doivent être stérilisées 30 minutes à l'aide d'un rayonnement UV. 
+	
+	Les lamelles comme les disques sont placés les puits d'une plaque 6 puits, et mis à incuber 30 minutes à 37$\deg$ C dans 1ml de milieu complet et 5$ \mu$ l de fibronectine qui va s'adsorber sur la surface. 
+	
+	Après rinçage, les cellules sont ensemencées sur les lamelles dans du milieu complet. 
+	
+	\subsection{Transfections}
+	Afin de visualiser les protéines qui nous intéressent, on ajoute aux cellules des fragments d'ADN appelés plasmides qui contiennent une version fluorescente de nos protéines d'intérêt. Ces plasmides sont intégrées aux cellules grâce à des protéines spécifiques comme la nanofectine et la lipofectamine lors de la transfection. 
+	
+	Les cellules transfectées expriment donc deux versions de la protéine : la version endogène qui se trouve dans leur propre génome, et la version fluorescente du plasmide. La protéine que l'on observe est par conséquent toujours surexprimée par rapport à la situation normale, d'un facteur qui peut être variable d'une cellule à l'autre, selon la quantité de plasmide qui a été intégrée par la cellule : certaines cellules n'ont incorporé aucun plasmide et ne sont donc pas fluorescentes, d'autres en ont incorporé une grande quantité et sont très fluorescentes. 
+	
+		\subsubsection{MRTF-A GFP par nanofectine}
+		
+		\subsubsection{MRTF-A GFP et Actine Mcherry par nanofectine}
+		\subsubsection{MRTF-A GFP et LifeAct par nanofectine}
+	\subsection{Marquage DAPI sur cellules vivantes}
+	
+	Le  4',6'-diamidino-2-phénylindole (DAPI) est une molécule fluorescente qui peut se fixer entre les bases A et T de l'ADN. Elle peut entrer dans les cellules vivantes et permet ainsi de marquer l'ADN du noyau. Sa localisation dans l'ADN perturbe la réplication de l'ADN nécessaire à la division cellulaire, c'est pourquoi le DAPI est ajouté à la dernière minute avant les expériences sur cellules vivantes. 
+	
+	Trente minutes avant l'observation, du DAPI est ajouté au milieu de culture en proportion 1/1000 ou 1/500 (selon l'efficacité du lot de DAPI pour entrer dans les cellules). Il est si possible rincé avant l'observation pour améliorer le contraste. 
+	\subsection{Fixation}
+	La fixation permet de figer les protéines des cellules à un instant donné. Elle est réalisée en ajoutant sur une lamelle recouverte de cellules préalablement rincée au PBS une solution à 4\% de paraformaldéhyde (PFA) pendant 20 minutes à température ambiante. Cette solution est ensuite rincée au PBS. 
+	
+	Les lamelles fixées ainsi obtenues peuvent être conservées plusieurs mois à 4$\deg$ C et observées longuement au microscope. 
+	\subsection{Marquages sur cellules fixées}
+	Les protéines fixées peuvent être marquées par des molécules fluorescentes qui peuvent être perturbatrices ou toxiques pour des cellules vivantes. Ici nous avons réalisé sur cellules fixées des marquages à 4 couleurs : rouge profond pour les filaments d'actine, rouge pour l'actine monomérique, vert pour la MRTF-A et bleu pour l'ADN. 
+		\subsubsection{Perméabilisation}
+		Afin de faire rentrer plus efficacement les molécules et protéines qui vont nous permettre de marquer les protéines des cellules, il est nécessaire de perméabiliser les cellules. Pour cela, on va ajouter aux cellules fixer une solution contenant 0.1\% de Triton, un tensio-actif qui va permettre de créer des trous dans les membranes plasmiques des cellules fixées. 
+		Pour améliorer la spécificité des différents marqueurs on va également saturer les sites de liaison des protéines à l'aide de protéines non spécifiques : Bovine Serum Albumine (BSA) 4\% et Horse Serum (HS) 5\%. 
+		
+		Les lamelles de cellules fixées sont donc initialement laissées 3h à température ambiante dans la solution de saturation composée de 0.1\% triton, 5\% HS et 4\% BSA. 
+		
+		\subsubsection{Phalloïdine}
+		La phalloïdine est une drogue issue de l'amanite phalloïde qui se lie aux filaments d'actine et les stabilise. Utilisée \emph{in vivo} elle perturbe significativement le cytosquelette jusqu'à se révéler toxique pour les cellules. 
+		
+		Sur des cellules fixées, la phalloïdine permet de marquer spécifiquement les filaments d'actine. La phalloïdine Alexa 647 utilisée pendant nos marquages a été ajoutée aux cellules fixées la veille de l'observation et laissée toute la nuit à 4$\deg$ C, et rincée avant observation. 
+		\subsubsection{DnaseI}
+		La DNaseI est une protéine naturellement présente dans le noyau des cellules et qui découpe l'ADN en morceaux de 4 paires de bases. Son action est bloquée lorsqu'elle est liée à un monomère d'actine. En raison de son action sur l'ADN, elle ne peut pas être utilisée sur des cellules vivantes. Sur des cellules fixées, elle est un marqueur spécifique du monomère d'actine. 
+		
+		Comme la phalloïdine, elle est ajoutée aux cellules fixées la veille de l'observation et laissée toute la nuit à 4$\deg$ C. 
+		\subsubsection{MRTF-A endogène}
+		
+		Lorsque les cellules sont fixées, on peut observer la MRTF-A endogène grâce à l'immunofluorescence plutôt que de transfecter de la MRTF-A GFP dans les cellules. Cela nous permet de détecter les protéines sauvages exprimées directement par cellule sans surexpression induite par la transfection. 
+		
+		Le marquage se fait en deux étapes : le marquage par un anticorps spécifique anti-MRTF-A, puis le marquage de l'anti-corps anti-MRTF-A par un autre anti-corps qui est fluorescent. L'anti-corps primaire est placé pendant 30 minutes à température ambiante. La lamelle est ensuite rincée et on y ajoute l'anticorps secondaire à nouveau pendant 30 minutes à température ambiante, puis on rince à nouveau. 
+		 
+		\subsubsection{DAPI}
+		Le DAPI peut aussi bien être utilisé sur les cellules fixées. Ona joute 1  $\mu$l de DAPI dans 1ml de PBS pendant 30 minutes à température ambiante. La lamelle est alors rincée avant observation. 
+
+\section{Pinces magnétiques}
+	\subsection{Description}
+		\subsubsection{Principe}
+		\subsubsection{Billes superparamagnétiques}
+		\subsubsection{\'Electroaimant}
+		\subsubsection{Montage sous microscope}
+	\subsection{Calibration}
+	\subsection{Protocole de renforcement}
+	\subsection{Dépouillement des vidéos}
+		\subsubsection{ImageJ}
+		\subsubsection{Icy}
+\section{\'Etirement}
+	L'objectif de ce dispositif est de soumettre les cellules à une déformation constante pendant plusieurs heures et de les observer en fluorescence pendant l'étirement sur un microscope inversé. 
+	\subsection{Description}
+	Pendant ma thèse j'ai conçu les plans de cet étireur de cellules qui a ensuite été réalisé par l'atelier du laboratoire. Il est composé de trois parties principales : la cuve, le support de lamelle et le plot. Toutes les parties de l'étireur sont en plastique, le plot étant transparent pour laisser passer la lumière du condenseur. L'étireur à une symétrie cylindrique autour d'un axe vertical. 
+	\subsubsection{La cuve}
+	La cuve doit remplir deux fonctions : contenir le milieu de culture nécessaire aux cellules et permettre l'observation de celles-ci au microscope inversé. Elle est composée de deux pièces trouées en leur centre qui se vissent l'une dans l'autre. Au niveau de l'ouverture destinée à l'observation, on place une lamelle de verre de 30 mm de diamètre dont le contour a été préalablement enrobé dans du téflon souple. Cette lamelle de verre est enserrée entre les deux pièces de façon à former une cuve étanche dont le fond transparent permet l'observation.
+	\subsubsection{La lamelle de PDMS} 
+	Les cellules adhèrent à une lamelle de PDMS réticulé élastique recouverte de fibronectine. Cette lamelle est maintenue par le support et déformée par le plot qui la pousse vers le bas. 
+	Le PDMS est fabriqué à partir d'un mélange 90\% PDMS et 10\% de réticulant. On place alors 1,8g du mélange dans une boite de Petri de XX mm de diamètre et on l'étale jusqu'à la recouvrir entièrement de manière homogène. La masse est choisie de façon à ce que le PDMS étalé fasse 0,3mm d'épaisseur. Les boîtes recouvertes de PDMS sont alors placées toute la nuit dans un incubateur à 60$\deg$C pour réticuler le gel. À l'aide d'un emporte-pièce, des disques de 30mm sont alors découpés dans les boîtes.
+
+		
+	\subsubsection{Le support}
+	Le support est la pièce de serrage de la lamelle de PDMS sur laquelle sont cultivées les cellules. La lamelle de PDMS est placée entre deux anneaux plats de téflon d'un millimètre d'épaisseur qui sont destinés à homogénéiser la pression exercée sur la lamelle par la pièce de serrage. L'ensemble est posé sur un support de hauteur variable (1 mm ou 3mm) qui va déterminer l'étirement maximal possible, et serré par une pièce qui se visse dans le support. 
+	Cette pièce doit maintenir fermement les bords de la lamelle en place tandis que le centre est étiré par le plot. 
+	\subsubsection{Le plot}
+	Le plot transparent est maintenu dans une pièce qui se visse à l'intérieur de la cuve. Le vissage va faire descendre le plot, qui va ainsi étirer la lamelle en la rapprochant du fond de la cuve et donc de l'objectif du microscope. 
+	L'utilisation du support de 1mm ou de 3mm permet de fixer la lamelle de PDMS à différentes hauteurs, et donc pour un même abaissement du plot d'étirer plus ou moins la lamelle. Il existe deux diamètre de plots cylindriques : 10mm et 15mm, qui permettent également de régler l'étirement subit par le PDMS. 
+	\subsection{Calibration}
+	
+	Un modèle géométrique simple permet d'estimer rapidement l'augmentation de la surface de la lamelle de PDMS en fonction du diamètre et de l'enfoncement du plot. Afin de le comparer à l'étirement réel subi par la lamelle de PDMS, des lamelles ont été recouvertes de Pluronics, puis exposées à un rayonnement UVC à travers un masque de quartz contenant un grand nombre de carrés de taille connue formant un quadrillage. Puis les lamelles ont été recouvertes de fibronectine fluorescente, qui ne pouvait adhérer qu'aux endroits non éclairés par les UV. 
+	Nous avons ainsi obtenu des lamelles recouvertes d'un quadrillage visible en microscopie de fluorescence. Ce quadrillage a été observé avant et après étirement, et l'étirement a alors été mesuré à partir de la formation du quadrillage
+	
+	Les images nous montrent que la déformation du PDMS par le plot est radiale et uniforme, et que le modèle géométrique le plus simple décrit bien quantitativement la déformation subie. 
+	
+	\subsection{Protocole d'étirement observé en direct}
+	Les cellules sont ensemencées sur des lamelles de PDMS préalablement recouvertes de fibronectine. Afin d'améliorer l'efficacité de transfection, dans le protocole final, les cellules sont transfectées avec la nanofectine pendant 6h avant d'être rincées décollées, comptées et ensemencées à raison de 110 000 cellules par lamelle. 
+	
+	Après avoir mené un certain nombre d'expériences, nous avons constaté que la sensibilité de MRTF-A à la stimulation par le sérum est telle que le fait de remplacer le milieu de culture dans lequel les cellules baignaient depuis 24h par du milieu de culture neuf provoque des modifications non négligeables de la localisation de MRTF-A dans les cellules. Il est donc essentiel de conserver le même milieu de culture tout au long de l'expérience. 
+	
+	Après ensemencement et adhésion, les lamelles de PDMS peuvent être montées à l'avance sur le support et maintenues dans 5 à 7ml de milieu de culture blanc (5ml pour l'étirement 10\% et 7ml pour 30\%). 
+	
+	L'étireur complet est alors placé sur la plate-forme du microscope et observé à l'aide d'un objectif 20X (trouver les caracs de l'objectif). Les cellules sont observées en lumière blanche et en fluorescence une première fois avant étirement brièvement, afin d'avoir une idée de l'état de départ des cellules. 
+	
+	En vissant le plot, on étire alors la lamelle rapidement en quelques secondes jusqu'à la déformation souhaitée. On cherche alors des cellules exprimant la MRTF-A GFP. À chaque fois qu'une ou plusieurs cellules sont visibles dans un champ, on enregistre la position de la platine motorisée. Toutes les 5 à 10 minutes, on retourne observer toutes les cellules répertoriées afin de suivre l'évolution de la localisation de MRTF-A au cours du temps. De nouvelles cellules sont recherchées jusqu'à 40 minutes après l'étirement et l'observation est ensuite maintenue pendant 2h après l'étirement. 
+	
+	
+	\subsection{Protocole d'étirement fixé}
+	
+
+	\subsection{Dépouillement des images}
+\end{document}
