@@ -119,13 +119,27 @@
 	
 	Après ensemencement et adhésion, les lamelles de PDMS peuvent être montées à l'avance sur le support et maintenues dans 5 à 7ml de milieu de culture blanc (5ml pour l'étirement 10\% et 7ml pour 30\%). 
 	
-	L'étireur complet est alors placé sur la plate-forme du microscope et observé à l'aide d'un objectif 20X (trouver les caracs de l'objectif). Les cellules sont observées en lumière blanche et en fluorescence une première fois avant étirement brièvement, afin d'avoir une idée de l'état de départ des cellules. 
+	Juste avant l'expérience, la lamelle et le milieu de culture sont montés dans le reste de l'étireur et 1,5\% d'HEPES sont alors ajoutés pour tamponner l'acidité du milieu pendant la durée de l'expérience. L'étireur complet est alors placé sur la plate-forme du microscope et observé à l'aide d'un objectif 20X (trouver les caracs de l'objectif). Les cellules sont observées en lumière blanche et en fluorescence une première fois avant étirement brièvement, afin d'avoir une idée de l'état de départ des cellules. 
 	
 	En vissant le plot, on étire alors la lamelle rapidement en quelques secondes jusqu'à la déformation souhaitée. On cherche alors des cellules exprimant la MRTF-A GFP. À chaque fois qu'une ou plusieurs cellules sont visibles dans un champ, on enregistre la position de la platine motorisée. Toutes les 5 à 10 minutes, on retourne observer toutes les cellules répertoriées afin de suivre l'évolution de la localisation de MRTF-A au cours du temps. De nouvelles cellules sont recherchées jusqu'à 40 minutes après l'étirement et l'observation est ensuite maintenue pendant 2h après l'étirement. 
 	
 	
 	\subsection{Protocole d'étirement fixé}
 	
+	Le protocole d'étirement avec observation en direct ne nous permet pas d'observer la population de cellules à des instants courts, car il faut du temps pour retrouver un nombre suffisant de cellules. De plus, l'observation de l'état du cytosquelette en direct est difficile car les différents marqueurs disponibles perturbent trop le système : la surexpression d'actine lors de la transfection avec une actine Mcherry modifie de manière très visible l'équilibre entre MRTF-A et l'actine G, la LifeAct RFP est exprimée tellement intensément que sa fluorescence empiète sur celle de MRTF-A GFP. 
+	
+	Fixer les cellules nous permet d'avoir un marquage quadrichrome : la F-actine en rouge-profond grâce à la phalloïdine, la G-actine en rouge grâce à la DNaseI, MRTF-A GFP ou anticorps anti-MRTF-A en vert et l'ADN du noyau en bleu grâce au DAPI. 
+	
+	Pour une expérience d'étirement fixé, on prépare une boîte de C2C12 proches de la confluence (60-70\%) transfectées si l'on veut observer la MRTF-A GFP. Elles sont ensemencées ensemble sur 6 lamelles de PDMS dans une plaque 6 puits dans 3ml de milieu de culture 24h avant le début de l'expérience. Le lendemain, une de ces lamelles est montée sur le support, rincée au PBS et fixée immédiatement, c'est la lamelle témoin. Les autres lamelles sont successivement étirées, laissées à l'incubateur pendant un temps donné, puis démontées, rincées et fixées immédiatement. On obtient ainsi pour un même étirement une lamelle à t=0 et 5 lamelles à différents temps après étirement (par exemple 5,10,20,30,60 minutes après étirement). 
+	
+	Ces lamelles sont ensuite marquées dans les 4 couleurs suivant un protocole strictement identique, et observées avec des paramètres strictement identiques (intensité du laser, temps d'exposition \dots) au microscope, afin de pouvoir comparer quantitativement les intensité de fluorescence d'une lamelle par rapport aux autres. 
+	
 
 	\subsection{Dépouillement des images}
+	\subsubsection{\'Etirement observé en direct, traitement qualitatif}
+	On obtient après une observation en direct d'étirement typique une vingtaine de série d'images de cellules observées pendant 120 minutes après étirement. 
+	Les images sont observées grâce à ImageJ, qui nous permet de reconstituer une pile d'images en 4 dimensions (x,y,temps et couleur). On peut alors observer qualitativement à l'\oe il s'il y a plus de MRTF-A GFP dans le noyau, dans le cytoplasme, ou si c'est homogène. 
+	Toutes les données finales sont destinées à être stockées dans une base de donnée SQL. Cette forme de stockage de données permet de sélectionner et de trier les données en fonction de nombreux critères à la fois quantitatifs et qualitatifs. Pour remplir la base de donnée, j'ai également créé une interface en Python. Cette interface récupère dans les métadonnées des images prises au microscope les temps auxquelles ces images ont été prises. L'utilisateur peut alors remplir pour chaque temps la localisation principale de MRTF-A dans la cellule : Nucléaire, Homogène ou Cytoplasmique. Il doit également fournir les paramètres de l'expérience. 
+	Dans cette base de données, on retrouve alors pour chaque cellule la localisation de MRTF-A au cours du temps, l'étirement, 
+	\subsubsection{\'Etirement fixé, traitement quantitatif}	
 \end{document}
