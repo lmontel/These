@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <defs>
+        <marker refX="-1.0" overflow="visible" orient="auto" id="arrow1-42">
+            <circle r="1.8819444444444444" latexdraw:dotSizeNum="2.0" fill="black"/>
+        </marker>
+        <marker refX="-1.0" overflow="visible" orient="auto" id="arrow1-43">
+            <circle r="1.8819444444444444" latexdraw:dotSizeNum="2.0" fill="black"/>
+        </marker>
+    </defs>
+    <g>
+        <g latexdraw:type="rectangle" id="id20">
+            <rect x="468.0" y="92.0" width="168.0" height="168.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="black"/>
+        </g>
+        <g latexdraw:type="joinedLines" id="id21">
+            <polyline
+                points="513.2850784983561,161.0 406.56787284558527,259.9083715079033 400.6391401672008,287.3829128382779 430.2828050554788,281.8880050860143 537.0,182.97965398451515 513.2850677901065,161.00002040640422 514.4708144006006,161.00002040640422 "
+                stroke-width="2.0" stroke="black" fill="#999999" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id24">
+            <rect x="158.0" y="312.0" width="468.0" height="8.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id25">
+            <rect x="338.0" y="322.0" width="108.0" height="8.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#3399ff"/>
+        </g>
+        <g latexdraw:type="polygon" id="id26">
+            <polygon
+                points="327.0,441.0 327.0,381.0 357.0,351.0 427.0,351.0 457.0,381.0 457.0,441.0 "
+                stroke-width="2.0" stroke="black" fill="#666666"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id27">
+            <rect x="338.0" y="42.0" width="108.0" height="128.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#666666"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id28" transform="rotate(45.0) translate(-13.439466731789821 -414.445742854949)">
+            <rect x="478.0" y="182.0" width="58.0" height="18.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="black"/>
+        </g>
+        <g latexdraw:type="text" id="id29" font-family="Times New Roman"
+            fill="black" font-size="18" latexdraw:x="477.0">
+            <text x="477.0" y="411.0"><![CDATA[Objectif]]></text>
+        </g>
+        <g latexdraw:type="text" id="id31" font-family="Times New Roman"
+            fill="black" font-size="18" latexdraw:x="457.0">
+            <text x="457.0" y="291.0"><![CDATA[Pointe]]></text>
+        </g>
+        <g latexdraw:type="text" id="id33" font-family="Times New Roman"
+            fill="black" font-size="18" latexdraw:x="521.0">
+            <text x="521.0" y="73.0"><![CDATA[Micromanipulateur]]></text>
+        </g>
+        <g latexdraw:type="text" id="id35" font-family="Times New Roman"
+            fill="black" font-size="18" latexdraw:x="104.0">
+            <text x="104.0" y="301.0"><![CDATA[Lame]]></text>
+        </g>
+        <g latexdraw:type="text" id="id37" font-family="Times New Roman"
+            fill="black" font-size="18" latexdraw:x="147.0">
+            <text x="147.0" y="351.0"><![CDATA[chambre expérimentale]]></text>
+        </g>
+        <g latexdraw:type="text" id="id39" font-family="Times New Roman"
+            fill="black" font-size="18" latexdraw:x="120.0">
+            <text x="120.0" y="122.0"><![CDATA[Condenseur du microscope]]></text>
+        </g>
+        <g latexdraw:type="line" id="id42">
+            <line x1="167.0" x2="147.0" y1="311.0" y2="301.0"
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-start="url(#arrow1-42)"/>
+        </g>
+        <g latexdraw:type="line" id="id43">
+            <line x1="358.0" x2="317.0" y1="328.0" y2="341.0"
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-start="url(#arrow1-43)"/>
+        </g>
+    </g>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:displayBorders>true</latexdraw:displayBorders>
+            <latexdraw:autoAdjust>true</latexdraw:autoAdjust>
+            <latexdraw:ppc>50</latexdraw:ppc>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:unit>cm</latexdraw:unit>
+            <latexdraw:classicGrid>false</latexdraw:classicGrid>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:code>0</latexdraw:code>
+            <latexdraw:displayGrid>true</latexdraw:displayGrid>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:autoUpdate>true</latexdraw:autoUpdate>
+            <latexdraw:version>2.0.8</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1036</latexdraw:width>
+                <latexdraw:height>612</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0</latexdraw:x>
+                <latexdraw:y>0</latexdraw:y>
+            </latexdraw:position>
+            <latexdraw:dividerPosition>0.7876447876447876</latexdraw:dividerPosition>
+            <latexdraw:displayCodePanel>true</latexdraw:displayCodePanel>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:delimitorOpacity>130</latexdraw:delimitorOpacity>
+        </latexdraw:metadata>
+    </metadata>
+</svg>

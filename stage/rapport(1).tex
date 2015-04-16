@@ -1,0 +1,543 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\bbar}[1]{\underline{\underline{#1}}}
+\newcommand{\txt}[1]{\textrm{#1}}
+\newcommand{\lam}{\lambda}
+\newcommand{\der}[3][]{\frac{\ud^{#1} #2}{\ud #3^{#1}}}
+\newcommand{\derp}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}}
+\newcommand{\Derp}[3][]{\frac{\textrm{D}^{#1} #2}{\textrm{D} #3^{#1}}}
+\newcommand{\ud}{\textrm{d}}
+\newcommand{\grad}{\vec{\textrm{grad}}}
+\newcommand{\rot}{\vec{\textrm{rot}}}
+\renewcommand{\div}{\textrm{div}}
+\newenvironment{matrice}{ \left[ \begin{array} }{\end{array} \right]}
+\newcommand{\moy}[1]{\left\langle #1 \right\rangle}
+
+\title{ \Large Réponse cellulaire à une contrainte appliquée par pinces magnétiques \normalsize \\  Stage de Master 2 - Concepts Fondamentaux de la Physique - Parcours Physique des Liquides \\}
+
+\author{\textsc{Lorraine Montel }\\  sous la direction de Sylvie Hénon \\ }
+
+\date{Janvier - Juin 2011}
+
+
+\begin{document}
+
+
+
+\maketitle
+
+\newpage 
+\tableofcontents
+\newpage
+
+\section*{Introduction}
+
+Ce stage a consisté en la conception, la réalisation et l'utilisation d'un dispositif de pinces magnétiques pour l'étude de la rhéologie cellulaire. Dans un premier temps, l'organisation et les propriétés mécaniques des cellules seront présentées, ainsi que les principaux résultats connus dans le domaine de la rhéologie cellulaire. Dans un second temps, nous décrirons le dispositif de pinces magnétiques qui a été conçu au laboratoire pendant ce stage, et expliquerons les différents choix de conception qui ont été faits. Enfin dans un troisième temps, nous présenterons les premiers résultats obtenus sur des cellules vivantes avec ce dispositif expérimental, ainsi que les perspectives futures.
+
+\section{La rhéologie cellulaire}
+
+	\subsection{La cellule et sa mécanique}
+	
+	Les cellules eucaryotes sont composées principalement d'une membrane qui les sépare du milieu extérieur, d'un noyau contenant l'information génétique, et d'organites baignant dans le cytoplasme. Dans le cytoplasme se trouve le cytosquelette, un réseau de polymères conférant à la cellule ses propriétés mécaniques. Le cytosquelette est essentiel pour assurer la forme et la rigidité de la cellule, sa motilité, sa division, et le réseau de polymère allié aux moteurs moléculaires (protéines se déplaçant sur les polymères du réseau) permet d'assurer le transport à l'intérieur de la cellule. 
+	
+	\begin{figure}[hb!]%
+\includegraphics[width=11cm]{cytosquelette.pdf}%
+\caption{Schéma d'une cellule fixée à un substrat par des liaisons intégrine-fibronectine, avec une microbille fixée par les même liaisons.}%
+\label{}%
+\end{figure}
+	
+	Ce réseau est composé de trois principaux types de polymères : les microtubules, polymères tubulaires de 25 nm de diamètre et de 1 mm de longueur de persistance, les filaments intermédiaires, famille qui rassemble différents polymères de 8 à 12 nm de diamètre, et les filaments d'actine de 5,5 nm de diamètre et 10 à 15 nm de longueur de persistance. Ces trois polymères forment un réseau dans l'ensemble de la cellule, réseau relié à la membrane par des protéines membranaires. Ces protéines traversent la membrane de part en part. Du côté interne à la membrane, elle se lient aux réseaux de filaments intermédiaires ou d'actine, du côté externe elles se lient aux autres cellules ou à la matrice extracellulaire. Les intégrines, qui vont nous intéresser ici, sont connectées au réseau d'actine sous la membrane, et adhèrent entre autres à la fribronectine, une protéine de la matrice extra-cellulaire.
+	
+	En fait l'actine est présente dans deux parties du cytosquelette qui ont une organisation et des propriétés différents : le cortex et les fibres de stress. Le cortex est une couche d'actine de quelques centaines de nm d'épaisseur située juste sous la membrane pour la soutenir. Les fibres de stress sont des cables en tension à travers la cellule qui la soutiennent. On peut les observer sur la figure  \ref{stress}. 
+	
+	\begin{figure}[ht!]%
+\includegraphics[width=5cm]{phall-fibres.png}%
+\caption{Image de cellule C2C12 fixée et marquée en fluorescence. Les filaments d'actine sont marqués en rouge, l'ADN du noyau en bleu. En jaune apparaissent des billes de polystyrène. On voit l'actine former des fibres de stress, qui soutiennent sa structure. Les conditions dans lesquelles est prise cette images sont décrites plus loin, dans la section \ref{confocal}.}%
+\label{stress}%
+\end{figure}
+	
+	L'architecture du réseau formé par ces polymères est dynamique : les filaments d'actine et les microtubules, formés par l'assemblage de protéines globulaires, polymérisent à un bout et dépolymérisent à l'autre en permanence, et les protéines qui permettent de contrôler la vitesse de ces réactions chimiques permettent de varier la longueur des filaments. D'autres protéines permettent de changer les propriétés du réseau : des protéines réticulantes ou des moteurs moléculaires comme les myosines II, qui font glisser deux filaments d'actine l'un par rapport à l'autre. Enfin, la cellule vivante peut réguler sa production des divers composants du cytosquelette. Le cytosquelette est alors un milieu actif, capable de s'adapter à une large gamme de contraintes extérieures. Des expériences ont montré que la présence de moteurs moléculaires dans un gel d'actine entraînait une violation du théorême de fluctuation-dissipation \cite{exam}. 
+	
+	\subsection{Présentation des techniques de rhéométrie cellulaire}
+	
+		De nombreuses techniques ont été mises au point pour sonder les caractéristiques mécaniques des cellules \cite{compilation}. On distingue trois grandes catégories d'expériences de rhéométrie cellulaire, selon la déformation imposée : des expériences de déformation globale, où la cellule est déformée entièrement par une contrainte, des expériences de billes, où une bille adhère à une cellule et exerce au niveau local une force sur celle-ci, et les expériences de contrainte locale directe.
+		
+		Les expériences de déformation globale appliquent des forces de l'ordre de la dizaine de nN pour déformer une cellule dans son ensemble. Dans l'expérience des microplaques de verre, une cellule adhère sur deux plaques de verre recouvertes de protéines d'adhésion. Une des deux plaques est fléchie et on connaît la force de rappel qu'elle subit, et donc la contrainte qu'elle exerce sur la cellule. La cellule est tirée entre les deux plaques et se déforme. Dans l'expérience de micropipette, on aspire un bout d'une cellule dans une micropipette. La contrainte exercée sur la cellule est contrôlée par la pression avec laquelle on aspire, et on observe la déformation de la cellule par microscopie. 
+		
+		Les expériences de billes sondent la cellule à un niveau plus local, par l'intermédiaire de ses protéines de liaison. Les billes, d'un rayon de quelques micromètres, sont rendues adhérentes par des protéines qui viennent se fixer aux protéines de liaison de la cellule enchâssées dans la membrane. On applique alors une force ou un couple sur les billes, soit avec un faisceau laser sur une bille en silice ou en latex dans le cas des pinces optiques, soit avec un champ magnétique sur des billes superparamagnétiques dans le cas des pinces magnétiques. On observe le déplacement de la bille en fonction du temps à force constante ou en fonction de la fréquence à force variable. 
+		
+		D'autres expériences sondent la rhéologie cellulaire au niveau local sans passer par l'intermédiaire des billes. C'est le cas par exemple des expériences d'AFM (Atomic Force Microscope). Il est alors possible de sonder la cellule sans passer par ses protéines membranaires. 
+		
+		Une autre méthode est celle de la rhéologie passive, qui consiste à observer les fonctions de corrélation de vésicules présentes naturellement ou de particules introduites préalablement dans la cellule, et dont on suit les mouvements au microscope. On n'applique alors aucune force directe à la cellule. 
+
+		
+		
+	
+	\subsection{Les expériences de fluage}
+	
+	Le cytosquelette, comme les gels et solutions de polymères, de colloïdes et tous les matériaux à l'état vitreux, est un milieu visco-élastique : au lieu de répondre à une contrainte mécanique de manière purement élastique comme un solide, ou purement visqueuse comme un liquide newtonien, sa réponse est entre ces deux extrêmes. 
+	
+	Afin de sonder les propriétés visco-élastiques d'une cellule, on peut mener une expérience de fluage, en exerçant un palier de contrainte $\sigma_0$ à partir d'un instant $t=0$. On définit la fonction de fluage $J(t)$ par la relation : $$\epsilon(t) = \int_0^t J(t-t') \der{\sigma}{t'} \ud t' $$ 
+		où $\epsilon$ est la déformation relative du matériau. Dans une expérience de fluage, $\sigma=\sigma_0 Y(t)$ (avec $Y$ la fonction de Heaviside) et $\epsilon (t)=\sigma_0 J(t)$. Pour un solide élastique $J$ est constante et vaut l'inverse du module d'Young $E$, et pour un liquide visqueux newtonien, $J$ est linéaire $J(t) = \frac{t}{\eta}$ avec $\eta$ la viscosité du fluide. Tout l'intérêt de la fonction de fluage réside dans le fait qu'une fois qu'on l'a établie de 0 à $t$, on peut prédire la déformation en réponse à n'importe quelle contrainte. 
+
+	Il a été montré \cite{compilation} dans de nombreuses expériences de rhéologie que, aux temps courts (typiquement moins de 20 secondes), la fonction de fluage d'une cellule obéit à une loi du type : $$J(t) = J_0 \left(\frac{t}{t_0}\right)^n $$ avec un exposant $n$ compris entre 0 (comportement élastique) et 1 (comportement visqueux). Au-delà le caractère vivant de la cellule intervient
+	
+	Une autre méthode disponible pour sonder les propriétés visco-élastiques d'une cellule est d'analyser sa réponse à une contrainte sinusoïdale sur une large plage de fréquence. Cependant, cette méthode implique de balayer une gamme de fréquence, alors qu'une expérience de fluage permet de déterminer complètement la réponse visco-élastique du matériau. C'est pourquoi nous ferons ici des expériences de fluage uniquement. 
+	
+	
+	\subsection{La mécanotransduction : réponse active et adaptation}
+	
+	Comme on l'a vu, la réponse à un échelon de contrainte du cytosquelette a déjà été caractérisée. Cependant, la cellule est un milieu actif : elle est capable de s'adapter à des contraintes longues et répétées, comme c'est le cas pour les muscles du sportif, ou l'apparition de cals sur la peau lors de pressions ou frictions répétées par exemple. On peut donc chercher à caractériser la réponse d'une cellule à des échelons de contrainte répétés.
+	
+		Une étude préliminaire a été menée par Delphine Icard dans l'équipe où j'ai effectué mon stage \cite{these} à l'aide de pinces optiques sur la rigification de cellules musculaires soumises à des échelons de force longs devant le temps de réaction d'une cellule et répétés au moins 4 fois. Une rigidification a été observée sur certaines cellules, en particulier par la diminution du préfacteur $J_0$ de la fonction de fluage \cite{rigidification}.Une étude similaire mais moins quantitative décrit le même effet \cite{rigidification2}. Mais dans la littérature, le comportement opposé, un ramollissement des cellules sous contrainte, est également rapporté \cite{fluidification1},\cite{fluidification2}.
+		
+		L'un des objectifs du stage a été de pouvoir approfondir la question, afin d'obtenir une réponse claire
+concernant l'évolution de la rigidité. L'expérience de pinces magnétiques que j'ai construite pendant ce stage a pour objectif d'observer de manière systématique l'évolution de la fonction de fluage de cellules soumises à des contraintes répétées. En plus de la simple observation du mouvement des billes, nous souhaitons à terme observer pendant les expériences de fluage le réseau d'actine, rendu fluorescent, à l'aide d'un microscope confocal, afin de déceler des modifications de la densité ou de l'organisation des réseaux de filaments pendant l'application de la force. Cette partie du projet n'a pas pu être commencée pendant le stage.
+
+	
+\section{Les pinces magnétiques}
+
+	\subsection{Description générale}
+
+	Lorsqu'on applique un champ magnétique $$\vec{H} = \frac{\vec{B}}{\mu}$$ sur une bille paramagnétique de volume $V$ et de susceptibilité magnétique $\chi$, cela induit dans la bille un moment magnétique $$\vec{m} = \chi V \vec{H}$$ Si le champ magnétique est de plus inhomogène, la bille subit alors une force :$$\vec{F} = \left( \vec{m}. \vec{\nabla} \right) \vec{B}$$
+	
+	 Afin d'exercer cette force, il est nécessaire de construire un électro-aimant répondant à plusieurs contraintes : il doit être capable de créer un fort champ magnétique ainsi qu'un fort gradient de champ magnétique, cependant il ne doit pas chauffer l'échantillon afin de ne pas endommager les cellules vivantes sur lesquelles on manipule, et cela sans système de refroidissement qui  un bruit mécanique trop important. L'électro-aimant doit pouvoir être amené le plus près possible de l'échantillon afin d'exercer une force maximale, le plus précisément possible afin de conserver une bonne précision sur la direction et la valeur de la force exercée. On souhaite manipuler avec une chambre expérimentale fermée pour éviter toute contamination des cellules, et pouvoir faire des observations en fluorescence. On souhaite également faire des expériences de longue durée, en imposant des paliers de force longs et répétés.	
+	
+	Le dispositif de pinces optiques utilisé prédédemment dans l'équipe appliquait des forces de l'ordre de quelques dizaines de pN. Les pinces magnétiques construites par d'autres laboratoires \cite{Sackmann} \cite{benfabry} ont souvent pour objectif de réaliser des mesures à très grandes forces, de l'ordre du nN, et sont dans ce but positionnées très près de la bille, à quelques microns. Ici, nous souhaitons appliquer des forces plus faibles, mais en contrepartie gagner le confort d'utilisation de placer la pointe à plusieurs centaines de microns, c'est-à-dire opérer en chambre fermée pour les cellules, et garder la pointe en-dehors de tout liquide. 
+	
+	Toute la première partie de ce stage a consisté à assembler et optimiser le dispositif : détermination et confection d'une bobine optimale pour créer le champ magnétique, tests et caractérisation de la force exercée par la pointe sur les billes, montage et tests sur des cellules.
+
+
+	\subsection{L'électro-aimant}
+	
+		\subsubsection{Le c\oe ur}
+		
+		Le c\oe ur est constitué d'un barreau de fer doux, taillé en pointe. La forme de pointe permet d'augmenter le gradient de champ magnétique en resserrant les lignes de champ à cet endroit. Il est très important de conserver sa symétrie cylindrique, et d'avoir le rayon de courbure le plus faible possible au bout de la pointe. Les résultats obtenus sont visible en figure $\ref{pointe}$. \'Etant en fer doux, le barreau est très malléable, il faut donc le manipuler avec précautions : le moindre choc aplatit la pointe. 
+	 Le barreau a été usiné au tour, puis pour la taille d'entretien de la pointe, on monte le barreau sur un moteur de perceuse, ce qui permet de garder la symétrie cylindrique, et on l'approche de morceaux de papier de verre de grain de plus en plus fin, incliné avec un angle de 30 $\degres$ . 
+	 
+\begin{figure}[ht!]%
+\includegraphics[width=6cm]{pointe1-2011-03-29-20X.png}%
+\includegraphics[width=6cm]{pointe1-2011-03-29-40X.png}
+\caption{À gauche une image de la pointe en fer doux au grossissement X20. À droite, la même pointe au X40. Le rayon de courbure mesuré est de l'ordre de 20$\mu$m.}%
+\label{pointe}
+\end{figure}
+	 
+	 L'angle optimal pour maximiser le gradient peut être calculé \cite{magnetisme}, il vaut 55 \degres. Ici, on doit aussi prendre en compte le fait que la pointe doit être approchée de biais au-dessus de la lamelle d'échantillon. Il nous faut donc un angle plus faible que l'angle optimal, trop obtus. On a fixé cet angle à 30 \degres , car il est prévu d'approcher la pointe de la lamelle sur laquelle seront les cellules avec un angle de 45 \degres, comme représenté sur la figure \ref{montage global} .
+	 
+	 Le diamètre du barreau a été réduit afin d'améliorer les performances de la bobine génératrice de champ, comme expliqué ci-après.
+	 
+	 
+		\subsubsection{La bobine}
+		
+		On utilise une bobine afin de générer un champ magnétique stationnaire qui sera transmis par le barreau. Il s'agit ici d'augmenter au maximum le champ généré par une bobine tout en chauffant suffisamment peu pour ne pas avoir besoin d'un système de refroidissement. En effet, l'ajout d'un système de refroidissement engendre un bruit mécanique, alors que l'on aura besoin de connaître précisément la position de la pointe et de l'approcher à des distances de l'ordre de la centaine de microns de la lamelle . 
+		
+		Quelques bobines commerciales ont été testées, mais elles sont composées d'un grand nombre de couches et chauffent très rapidement. Leurs dimensions ne sont de plus pas adaptées idéalement à notre barreau de fer doux. Ces constatations nous ont amenés à chercher les paramètres d'une bobine optimale, et à construire cette bobine.
+		
+		On a comparé l'influence de paramètres tels que la longueur $l_b$ de la bobine, son diamètre $d_b$, le diamètre du fil de cuivre $d_f$, le nombre de couches de fil de cuivre $n_c$. Il y a deux phénomènes à considérer pour choisir les caractéristiques de la bobine : le champ généré par la bobine et l'énergie dissipée par effet Joule. 
+		
+		\begin{figure}[h!]%
+\includegraphics[width=8cm]{champB.pdf}%
+\caption{Champ magnétique $\vec{B}(z)$ généré par une bobine en un point $z$ de son axe.}%
+\label{}%
+\end{figure}
+		
+		Le champ $\vec{B}$ généré par un solénoïde de longueur finie dans le vide sur son axe à une distance $z$:
+		
+		$$ \vec{B} = \frac{\mu_0 n I}{2} \left(\cos \theta_2 -\cos \theta_1 \right) \vec{u_z}$$
+		
+		dépend du nombre $n$ de spires par mètre, de la longueur de la bobine $l_b$ et du courant $I$ qui passe à l'intérieur. On veut donc maximiser $n$ et $I$ pour augmenter la valeur de $B$.
+		
+		La puissance dissipée par effet Joule $$P = R I^2$$ dépend de la résitance de la bobine et de $I$, il s'agit de minimiser ces quantités.
+		
+		La résistance de la bobine : $$R = \frac{L}{\gamma s}$$
+		
+		dépend de la section du fil $s$, de sa longueur totale $L$. $\gamma$ est la conductivité du cuivre.  
+		
+		La section du fil est directement reliée au nombre de spires par mètre : $$ n = \frac{1}{2r_f} = \frac{1}{2 \sqrt{\frac{s}{\pi}}} = \sqrt{\frac{\pi}{4s}}$$  Il est facile de voir que lorsque $s$ augmente, $R$ diminue en $s^{-1}$ alors que $n$ ne diminue qu'en $s^{-1/2}$, et donc qu'il faut choisir la section de fil la plus grande disponible. Une confirmation expérimentale est visible en figure \ref{comparatif}. 
+		
+		En pratique, on ne fait pas qu'une couche de bobinage, mais plusieurs, le nombre de spires par mètres est donc aussi relié à la longueur totale de fil $L_f$.
+		
+		$$R \propto L_f \approx n_c \frac{\pi d_b l_b}{d_f}$$ où $d_b$ est le diamètre de la bobine, $l_b$ sa longueur, $d_f$ le diamètre du fil. 
+		
+		$$n = n_c \frac{1}{d_f}$$
+		
+		
+		Pour augmenter $n_c$ en augmentant le moins possible $R$, il faut alors minimiser le rapport $\frac{\pi d_b l_b}{d_f}$. On a déjà maximisé $d_f$, on minimise alors également $d_b$ le diamètre de la bobine. On peut voir l'amélioration des performances figure \ref{comparatif}. 
+		
+				\begin{figure}[p!]%
+\includegraphics[width=\columnwidth]{Champ_longueur.png}%
+\caption{Mesures de la valeur du champ au bout de la pointe en fonction de l'intensité pour différentes longueurs de la bobine. La plus grande longueur $L=58mm$ correspond à la longueur du barreau de fer doux. Lorsque la bobine est plus courte que le c\oe ur en fer doux, elle est placée au plus près de la pointe. Il y a deux courbes pour $L=21mm$, qui illustrent le phénomène de champ rémanent dans le c\oe ur.}%
+\label{bobine1}%
+\end{figure}
+		
+				
+		\begin{figure}[p!]%
+\includegraphics[width=\columnwidth]{Comparaisons.png}%
+\caption{Mesures du champ au bout de la pointe en fonction de la température de la bobine. Plusieurs grandeurs sont comparées ici. On peut voir que la diminution du diamètre intérieur conduit à des champ plus forts à une même température, car une bobine de moindre diamètre contient moins de longueur de fil. On peut aussi voir que l'augmentation du nombre de couches augmente le champ produit à une température donnée. Enfin on peut voir que l'augmentation du diamètre du fil augmente aussi le champ à une température donnée.}%
+\label{comparatif}%
+\end{figure}
+		
+		En ce qui concerne la longueur de la bobine, $l_b$, on aimerait la minimiser pour diminuer $R$, cependant, le champ $B$ est maximal pour une bobine de longueur infinie. La longueur optimale correspond en fait à celle du c\oe ur de fer doux : ajouter de la longueur de bobine au-delà n'augmente que peu le champ, à cause de la faible perméabilité magnétique de l'air. 
+		
+		On a réalisé un comparatif expérimental de bobines de caractéristiques différentes que j'ai fabriquées, présenté figures \ref{bobine1} et \ref{comparatif}, afin de tester expérimentalement la dépendance du champ magnétique envers les différents paramètres. Toutes les mesures sont réalisées avec la pointe magnétique dans la bobine, et le teslamètre (5180 Gauss/TeslaMeter, FWBell) est positionné perpendiculairement à l'axe de la bobine au bout de la pointe. 
+		
+
+		
+  	La bobine finale réalisée pendant ce stage a les caractéristiques suivantes : 5,05mm de diamètre intérieur, 5,1 cm de longueur, 0,3 $\Omega$/couche de résistance, 8 couches de bobinage avec un fil de cuvire de diamètre 0,5mm. Son inductance mesurée est de $745 \mu$H, alors que l'inductance théorique vaut 1,43 mH, cette différence est dûe à la difficulté d'obtenir 8 couches de spires parfaitement jointives. 
+		
+		Le dernier paramètre que nous n'avons pas encore optimisé est le courant. Un rapide calcul en loi d'échelle nous donne $$P \propto I^2$$ pour la puissance dissipée, et pour la force : 
+		$$F \propto \chi V \frac{B^2}{\xi} \propto \chi V \frac{I^2}{\xi}$$
+		où l'on a maximisé $\chi$ et $V$ en prenant des billes superparamagnétiques du plus grand rayon disponible. Bien que les caractéristiques magnétiques de $\chi$ ne soient pas fournies par le fabriquant, des mesures de $\chi$ pour ces billes menées par d'autres groupes donnent $\chi = 0.245$ \cite{chi}. $\xi$ est la longueur caractéristique du gradient de champ et est maximisée en diminuant le rayon de courbure de la pointe. On voit en revanche que la dépendance en $I$ est identique pour P et F. On choisira les valeurs de $I$ en fonction de la dépendance en température, afin de ne pas tuer les cellules en cours de manipulation ni abimer la bobine. Il est aussi à noter qu'à partir d'une valeur critique de $I$, le champ arrive à saturation, ce qui rend inutile toute augmentation de l'intensité. On a veillé à toujours se placer dans des zones linéaires d'intensité, entre 0 et 1A.
+		
+		On a pu remarquer que la valeur du champ n'est pas identique pour une même intensité à la montée et à la descente, par exemple lorsque l'on fait une série de mesure de 0 à 1A, la valeur ne sera pas la même selon que l'on va de 0 à 1A ou de 1 à 0A. En particulier, après avoir imposé un champ à la pointe, celle-ci conserve un champ rémanent alors même que la bobine n'est plus alimentée, et donc ne produit plus aucun champ. Pour éviter l'effet de cette hystérésis sur nos mesures de comparaison, la pointe était démagnétisée avant toute mesure à l'aide d'un courant sinusoïdal d'intensité décroissante de 1 à 0A. 
+		
+		\subsubsection{Montage électrique}
+		
+		Le circuit électrique est constitué d'un générateur BF (TTI TG1010), d'un amplificateur fabriqué au laboratoire, d'une résistance 10$\Omega$ et d'un ampèremètre. Par la suite, nous indiquerons la tension pic à pic de chaque créneau imposé par le générateur basse fréquence à ce circuit, et non plus les intensités dans le circuit. La courbe caractéristique du montage est présentée en figure \ref{élec}
+		
+		\begin{figure}[h!]%
+\includegraphics[width=\columnwidth]{I(V)montage.png}%
+\caption{Courbe caractéristique du montage électrique.}%
+\label{élec}%
+\end{figure}
+	
+	\subsection{La calibration}
+		
+	 
+		\subsection{Principe}
+		
+		Les billes superparamagnétiques sont des DynaBeads M450, de 4,5 $\mu$m de diamètre (elles sont présentées plus en détail dans la section \ref{billes}). Les caractéristiques magnétiques des billes ne sont pas fournies par le fabriquant. C'est pourquoi une calibration de la force imposée à un courant donné par la pointe aux billes est nécessaire, d'autant plus qu'à des distances inférieures au millimètre, la précision sur les mesures de $\vec{B}$ et $\vec{\nabla}B$ est mauvaise.
+		
+		On peut définir le nombre de Reynolds des billes par : $$Re = \frac{\rho U L }{\eta}$$ avec $L =4.5\mu$m le diamètre des billes, $U$ leur vitesse,  $\rho$ et $\eta$ la masse volumique et la viscosité du fluide. Par exemple pour un fluide visqueux $\eta=1$Pa.s qui a la densité de l'eau $\rho=1000 \txt{kg.m}^{_3}$, $$Re = \frac{10^{3}\cdot 4.5 \cdot 10^{-6} \cdot U}{1} $$  $Re\gg 1$ tant que $U \ll 1\txt{m.s}^{-1}$. L'inertie est donc négligeable devant les deux autres forces, l'attraction magnétique et la force de friction visqueuse s'équilibrent. 
+		
+		On peut alors utiliser la relation de Stokes pour connaître la vitesse de la bille : $$\vec{F}_{mag} =\vec{F}_{Stokes} = 6 \pi \eta r \vec{v}$$
+		où $\eta$ est à nouveau la viscosité du fluide, et $r$ le rayon des billes. On peut alors en mesurant $\vec{v}$, connaître la force exercée par la pointe sur les billes. 
+		
+		Précisons que $\vec{F}_{mag}$ comporte une importante dépendance en distance. Ainsi, si à tout instant la bille a une vitesse d'équilibre fixée par la relation de Stokes, sa vitesse est variable au cours du temps, car plus elle se rapproche de la pointe, plus la force exercée sur elle augmente. 
+		
+		
+		\subsection{Protocole}
+		
+		On crée une suspension de billes dans une huile silicone (du PDMS). Nous avons utilisé des huiles de différentes viscosités (0.10 Pa.s et 0.68 Pa.s), toutes mesurées au laboratoire sur un rhéomètre low shear. La suspension doit être homogénéisée dans une cuve à ultra-sons pendant environ une heure afin de détacher les billes les unes des autres. En effet, les billes s'agrègent et sédimentent rapidement, et la formule de Stokes n'est valable que pour les billes seules. 
+		
+		On utilise une caméra CCD filmant les images d'un microscope droit Reichert doté d'objectifs à air 20X et 40X. Pour nos mesures finales, nous avons besoin de calibrer la force pour des distances allant de la centainte de microns au millimètre à peu près. 
+		
+		\begin{figure}[h!]%
+\includegraphics[width=\columnwidth]{calibration.pdf}%
+\caption{Schéma du montage de calibration. Le vernier permet à la pointe de bouger verticalement, le cube piézo-électrique permet à la lame de bouger dans les trois directions.}%
+\label{}%
+\end{figure}
+		
+		À $t=0$, on démarre la vidéo et on impose un courant $I$ dans le circuit. Les billes sont attirées par la pointe et on filme leur mouvement (à 5 images par seconde). 
+		
+		\begin{figure}[h!]%
+\includegraphics[width=\columnwidth]{Calibration.png}%
+\caption{Entourées en blanc, deux billes dans du PDMS 0.68 Pa.s. Leur trajectoire est suivie image par image, on en déduit leur vitesse, et donc la force avec laquelle elles sont attirées par la pointe. La pointe se trouve à 558 micromètres du bord gauche de l'image. }%
+\label{}%
+\end{figure}
+		
+	 À l'aide de la vidéo, on peut mesurer pour chaque bille sa position (et donc sa distance à la pointe) à tout instant. On utilise pour cela la fonction "\textit{Analyze Particules}" d'ImageJ.
+	 On obtient alors un tableau contenant les coordonnées de toutes les billes repérées sur chaque image de la vidéo. À l'aide d'un petit programme de tri, on peut reconstituer la trajectoire de chaque bille, et obtenir les courbes de la distance parcourue en fonction du temps, dont la pente nous donne la vitesse, qui à son tour nous permet de déduire la force qui s'exerce sur les billes.
+		
+		\subsection{Résultats}
+		
+		\begin{figure}[h!]%
+\includegraphics[width=\columnwidth]{Force.png}%
+\caption{Courbes des forces mesurées en fonction de la distance à la pointe pour une tension constante de 1V. Chaque couleur représente une expérience différente, dans les même conditions.}%
+\label{calibration}%
+\end{figure}
+
+	On voit sur la courbe de résultats (figure \ref{calibration}) que dans les mêmes conditions, il reste une assez grande dispersion des mesures. Le protocole de calibration doit être encore amélioré, afin d'avoir une meilleure précision sur la force imposée pendant les expériences sur les cellules. En particulier, il est important d'affiner la détection des billes et des trajectoires afin d'exclure des mesures les billes qui ne sont pas dans le même plan focal que la pointe, car ces billes ne se déplacent pas seulement selon l'axe de la pointe mais aussi selon l'axe vertical. Ici nous sommes suffisamment loin de la pointe pour que les billes aient toutes une trajectoire dirigée selon l'axe de la pointe, toutes les trajectoires sont parallèles entre elles.	Il faut également contrôler la distance des billes aux surfaces de la lame et de la lamelle, car le frottement du fluide contre les borde interfèrerait avec la mesure. Enfin, il existe une dispersion en taille et en charge magnétique des billes, ce qui fait que la force appliquée sur les billes n'est pas toujours identique.
+	
+		On peut cependant déduire de cette courbe que la force appliquée à 700$\mu$m de distance avec une tension de 1V est de 60pN $\pm$ 10 pN. La distance de 700$\mu$m correspond à la distance entre les billes et la pointe dans le cadre du second mode opératoire.
+		On a réalisé des courbes d'étalonnage semblables pour les différentes tensions imposées pendant les expériences sur les cellules : on applique des forces d'environ 25 pN $\pm$ 10 pN pour 0,7V et de 125pN $\pm$ 10pN pour 1,5V.
+			
+\section{Expériences sur des cellules}
+	\subsection{Protocole expérimental}
+
+	\subsubsection{Les cellules}
+	
+	Les cellules utilisées pour cette étude sont des myoblastes (cellules pré-musculaires) de souris C2C12. Elles sont cultivées en milieu stérile dans du DMEM (Dubecco's Modified Eagle Medium) avec 2mM de glutamine, 10\% en SVF (Sérum de veau f\oe tal), qui contient de nombreux facteurs de croissance, et des antibiotiques (pénicilline et streptomycine). Elles sont cultivées en incubateur à 37 $\degres$ C, 5\% de C0$_2$ dans une atmosphère saturée en humidité.
+	
+	24 heures avant les expériences, les cellules sont ensemencées sur des lamelles 22$\times$22mm stériles sur lesquelles a préalablement été adsorbée de la fibronectine.  
+	
+	\subsubsection{Les billes \label{billes}}
+	
+	Les billes utilisées sont des Dynabeads M-450 Epoxy d'Invitrogen Dynal AS, Oslo, Norvège. Ce sont des billes de polystyrène sphériques, de 4,5$\mu$m de diamètre, recouvertes en surface de groupes epoxy afin de permettre l'ajout de ligands en surface, et contenant des oxydes de fer qui leur confèrent leurs propriétés superparamagnétiques. Elles sont initialement fournies dans une suspension concentrée ($4.10^8$ billes/ml) dans de l'eau distillée. On les recouvre de fibronectine pour une fixation spécifique aux intégrines.
+	
+	Les billes doivent être rincées 3 fois à l'eau avant usage, et passées à la cuve à ultra-sons pendant 15 minutes pour séparer les agrégats de billes. On ajoute alors à 50$\mu$l de solution initiale 450$\mu$l de PBS (Phosphate buffered saline, une solution tampon sans Ca ni Mg) et 1 à 10$\mu$l de solution de fibronectine à 1mg/ml, selon le protocole que l'on suit. La fibronectine va alors se fixer aux groupes epoxy en surface des billes. La solution intermédiaire obtenue doit être placée à 37 $\degres$ C dans l'incubateur pendant 30 minutes, puis peut être conservée au frigo pendant plusieurs semaines. 
+	
+	Avant utilisation, la solution intermédiaire passe au moins 30 minutes à la cuve à ultra-sons afin de séparer les agrégats de billes. 50$\mu$l de la solution intermédiaire sont dilués dans 950$\mu$l de PBS à 1\% de BSA (Bovine Serum Albumine). La BSA s'adsorbe sur le reste de la surface des billes, afin d'empêcher des adsorptions non spécifiques des billes sur des cellules. Après 30 minutes d'incubation à 37 $\degres$ C, la suspension peut être utilisée sur les cellules. Cette suspension peut être conservée quelques jours à 4 $\degres$ C. 
+	
+	Immédiatement avant l'expérience, on rince deux fois avec le milieu de culture la lamelle à observer, en agitant afin d'emporter les cellules qui n'ont pas ou peu adhéré. On ajoute alors 75 à 100 $\mu$l de suspension finale de billes, et on ajoute, lentement afin de ne pas éparpiller les billes dans la solution, 500$\mu$l de milieu. On laisse à l'incubateur pendant 30 minutes le temps que les billes adhèrent aux cellules. On rince alors encore deux fois la lamelle, pour éliminer les billes qui n'ont pas adhéré aux cellules. Sur une lame de microscope dans le premier protocole, et sur une lamelle longue (24$\times$50 mm$^2$) dans le second protocole, on place un séparateur (GeneFrame VWR, 240 $\mu$m d'épaisseur, stérile et biocompatible) que l'on remplit avec 65 $\mu$l de milieu de culture, et on y place la lamelle ensemencée de billes et de cellules. Ceci permet de délimiter une petite chambre expérimentale fermée. 
+	
+	\begin{figure}[h!]%
+\includegraphics[width=\columnwidth]{c68-avt.png}%
+\caption{Image des C2C12 et de billes superparamagnétiques de 4,5$\mu$m de diamètre adhérentes au grossissement 60X (0.1075 $\mu$m/pixel) }%
+\label{}%
+\end{figure}
+	
+	
+	
+	\subsubsection{Le montage expérimental}
+	
+\begin{figure}[h!]%
+\includegraphics[width=\columnwidth]{montageglobal.pdf}%
+\caption{Schéma global du montage expérimental}%
+\label{montage global}%
+\end{figure}
+	
+			L'électro-aimant que l'on a fabriqué précédemment est monté sur un micromanipulateur (InjectMan NI2, Eppendorf, avec une précision de position de 0.1$\mu$m), et incliné à 45 $\degres$ . Le micromanipulateur et la lamelle contenant les cellules sont montés sur un microscope inversé (Leica DMIRB). \`A l'aide du micromanipulateur, on peut approcher la pointe de l'électro-aimant à une distance de 100$\mu$m de la lamelle. On enregistre les images de la bille à l'aide d'une caméra (CoolSnap HQ2, Roper Scientific) reliée à un ordinateur. On a utilisé deux protocoles différents, qui sont décrit en détails plus loin. Dans cette partie, nous décrirons les caractéristiques communes aux deux montages.
+			
+			Avant toute manipulation, on aligne l'axe du c\oe ur en fer doux avec la bille repérée (figures \ref{montage global}, \ref{modeop1} et \ref{modeop2}). Pour cela, on commence par repérer le haut de la lamelle avec le microscope. Ce sera la surface par rapport à laquelle on placera la pointe. Ensuite, on vient avec le micromanipulateur positionner le bout de la pointe dans le champ du microscope avec l'objectif à air 20X. Lorsque l'on a repéré la position $X,Y$ de la pointe, avec le vernier, on monte le plan focal du microscope à $\delta_Z$ $\mu$m du haut de la lamelle ($\delta_Z$ vaut de 100 à 200 $\mu$m). On abaisse alors la pointe jusqu'à ce qu'elle soit dans ce plan focal, à $\delta_Z$ $\mu$m de distance du haut de la lamelle. Enfin, afin d'aligner l'axe de la pointe avec le point $X,Y$ repéré, on déplace la pointe vers la droite de $\delta_Z$ + $d$ micromètres, avec $d$ la distance entre le haut de la lamelle et le plan dans lequel sont les cellules (qui dépend du protocole suivi). Le point $X,Y$ sur lequel a été aligné l'axe de la pointe et de la bobine est repéré à l'écran, et on y positionnera les billes sur lesquelles on veut appliquer une force. On change alors d'objectif : dans le cas du premier protocole, on passe à l'objectif 40X, dans le cas du second protocole, on passe à l'objectif à immersion 100X. 
+			
+			 On teste alors rapidement pendant quelques secondes la réponse de la bille à l'aide d'une tension sinusoïdale de 0.5Hz appliquée à la bobine, dont on fait varier la tension pic à pic afin de déterminer la plus faible tension qui fait bouger la bille. Si l'on voit la bille bouger, on peut alors procéder à l'expérience, qui consiste en général à l'application de plusieurs créneaux de force successifs.
+			
+			Sont exclues des manipulations les billes agglomérées, ou qui sont trop proches sur une cellule : pour les premières, on ne dispose pas de calibration permettant de savoir quelle force est exercée par la pointe sur elles, pour les secondes, les deux billes magnétisées s'attirent l'une l'autre et introduisent une force parasite dans l'expérience, sans compter la possibilité (observée) qu'elles se collent au cours de l'expérience.
+			
+			Durant toute la durée de l'expérience, on mesure la température de la pointe, afin de pouvoir surveiller une éventuelle surchauffe. 
+		
+		\subsubsection{Le traitement des images et des données}
+		
+		Le traitement d'images utilise le logiciel ImageJ (v 1.43a). On localise les billes sur l'image à l'aide d'un seuil, puis on utilise la fonction \textit{Analyze Particules} pour localiser le centre de la bille sur chaque image. On obtient à la fin de ce processus un tableau contenant les positions des billes repérées sur chaque image, et on attache à chaque image son temps d'acquisition.
+		
+		À l'aide du logiciel de traitement de données Igor (Igor Pro v5.0.20, Wavemetrics), on peut alors extraire l'évolution de la position de la bille sous l'action de la force, et observer la fonction de fluage. Du tableau fourni par ImageJ, on commence à l'aide d'un programme de tri par séparer les trajectoires des différentes billes. Ensuite, pour chaque bille, on repère les créneaux de force, puis on isole chaque créneau, afin de pouvoir le comparer aux créneaux précédents et suivants. À partir de la position moyenne des billes pendant les secondes qui précèdent un créneau, on refait le zéro de la position de la bille pour chaque créneau. Enfin, pour chaque fonction de fluage observée, on fait deux ajustements : l'un linéaire sur les logarithmes des données, et l'un en loi de puissance sur les données brutes. Cela nous permet d'exclure d'office toutes les courbes pour lesquelles les paramètres diffèrent trop entre les deux modes d'ajustement, et qui ne sont par conséquent pas des lois de puissance. 
+			
+	
+	\subsubsection{\'Evolution du protocole expérimental}
+	
+	
+		\paragraph{Premier protocole : expériences à courte distance}
+		
+			\begin{figure}[hbtp!]%
+\includegraphics[width=\columnwidth]{modeop1.pdf}%
+\caption{Schéma du montage expérimental : la cellule adhère sur la lamelle et baigne dans du milieu de culture. À l'extérieur au-dessus de la lamelle, on positionne la pointe pour aligner son axe avec la bille.$\delta_z$ vaut de 100 à 300 $\mu$m. }%
+\label{modeop1}%
+\end{figure}
+		 
+		 Dans le protocole initial, un signal créneau de fréquence 10mHz, variant entre 0 et 1V est envoyé dans le circuit électrique. Pour améliorer le refroidissement de la bobine, ce créneau n'est pas symétrique : le signal passe 33s à 1V puis 67s à 0V. 
+		 
+		 La caméra filme 2 images par seconde, et l'acquisition est faite à l'aide du logiciel commercial Metavue. On filme pendant 4 créneaux complets. 
+		 
+		Les billes ont été préparées avec 1$\mu$L à 10$\mu$l de la solution mère de fibronectine, afin de tester différentes adhérences. 
+		
+		La pointe est positionnée à une distance $\delta_z$ de la lamelle qui varie entre 100 et 300 $\mu$m, en fait cette distance a diminué au fur et à mesure que l'on vérifiait la fiabilité du micromanipulateur. 
+		
+		Ce protocole à courte distance (en fait, la plus courte que l'on obtienne avec une chambre fermée) permet d'observer les billes soumises à des forces de l'ordre de la centaine de pN, avec une résolution de 0.108$\mu$m par pixel, à l'aide d'un objectif à air (par opposition à l'objectif à immersion à huile utilisé dans le second protocole). 
+
+		
+		
+		\paragraph{Second protocole : expériences à longue distance}
+		
+		Afin d'observer ce qu'il se passe localement dans le réseau d'actine, on peut marquer la protéine en fluorescence verte. La Green Fluorescent Protein (GFP), est une protéine fluorescente dont on sait se servir pour "marquer" d'autres protéines. Le principe est de créer une nouvelle version du gène codant pour la protéine à marquer, ici l'actine, qui contient en plus de la séquence normale la séquence codant pour la GFP. On peut alors introduire cette nouvelle version de la protéine dans les cellules à étudier, afin de leur faire produire la version fluorescente de la protéine à observer. La cellule produit deux sortes d'actine en même temps, celle qui est présente dans son propre génome, et celle modifiée qui a été introduite. Cependant, la fluorescence émise par les cellules ainsi marquées est trop faible pour être observée à l'aide de l'objectif 40X utilisé précédemment.
+		On doit alors utiliser un objectif à immersion à huile (100X, ouverture numérique 1.25), mais la lamelle sur laquelle sont les cellules doit alors être positionnée en-dessous de la lame, près de l'objectif. Cette position éloigne les billes de la pointe, et donc réduit la force que l'on peut exercer sur celles-ci. 
+		
+		Dans ce protocole, afin de réduire au maximum la distance entre la pointe et les billes, la lamelle est montée sur une grande lamelle (24$\times$50$\times$0,150 mm$^3$) à la place d'une lame d'épaisseur 1mm. 
+		
+		Les caractéristiques du créneau imposé ont changé. On cherche à imposer des créneaux plus longs, afin de mieux observer la rigidification sous contrainte. Le nouveau créneau dure 250s, 125s en phase haute et 125s en phase basse. Cependant, couplé à l'augmentation nécessaire de l'intensité et l'utilisation d'une lamelle et non d'une lame comme support, nous avons commencé à avoir des problèmes liés au chauffage de la bobine et de la pointe. En particulier, la lamelle, moins rigide que la lame, flambe sous son propre poids lorsqu'elle est chauffée. Ce qui cause une défocalisation, corrigée à la main pendant l'expérience lors des phases qui ne sont pas intéressantes pour l'exploitation des données. Heureusement, le flambage de la lamelle est lent par rapport au créneau imposé, ce qui nous permet de ne pas voir son effet pendant les périodes qui nous intéressent. 
+		
+		\begin{figure}[ht!]%
+\includegraphics[width=\columnwidth]{modeop2.pdf}%
+\caption{Montage à longue distance : la lamelle sur laquelle les cellules ont été cultivées doit être du côté de l'objectif, en bas, et la pointe placée au-dessus de la lamelle qui sert de support.}%
+\label{modeop2}%
+\end{figure}
+		
+		On a testé pour ce protocole deux dosages de fibronectine, l'un faible 2$\mu$l et l'autre fort 10$\mu$l. Le premier dosage se révèle insuffisant pour retenir la majorité des billes : la plupart sont éliminées pendant le rinçage, ce qui ne laisse que peu de billes et que les plus attachées. Au contraire, le dosage plus fort nous permet d'avoir une grande quantité de billes à tester. Cependant, comme on se trouve à une distance près de deux fois plus grande que lors du premier protocole, les intensités qui doivent être fournies à la bobine sont souvent plus élevées (le GBF fournit entre 0.15V et 1.5V, souvent entre 1V et 1.5V). 
+		
+		Un autre changement intervenu dans ce protocole est l'utilisation de MicroManager ($\mu$Manager 1.3.48), un logiciel intégré à ImageJ qui permet de contrôler la caméra, et donc l'acquisition. En écrivant un petit script d'acquisition en Beanshell, il nous a été possible de moduler le nombre d'images prises par seconde en fonction du temps. En effet, seule la phase de créneau montant nous intéresse, et il est important d'avoir de nombreux points pendant les quelques premières secondes de vidéo. Avec ce nouveau mode d'acquisition, 10 images par seconde sont prises pendant les 10 premières secondes, puis 2 images par seconde pendant le reste du créneau. Pendant la phase basse du créneau, où l'on relâche la force, on prend une seule image par seconde. 
+		
+		
+		 
+	\subsection{Bilan des différents résultats expérimentaux}
+	
+	\subsubsection{Les courbes de $X(t)$ \label{X(t)}}
+	
+	Les courbes $X(t)$ présentées en figures \ref{c9-1},\ref{c9-2},\ref{c121-1} et \ref{c121-2} sont obtenues selon la méthode décrite dans la partie sur le traitement des données. Les courbes \ref{c9-1} et \ref{c9-2} sont obtenues à l'aide du protocole à courte distance, les courbes \ref{c121-1} et \ref{c121-2} à l'aide du protocole à longue distance.  Elles représentent la position en $X$ (direction selon laquelle on applique la force) de la bille sur l'image en fonction du temps. Plusieurs exemples de courbes typiques observées seront présentées : l'une présentant une rigidification (l'amplitude du mouvement est de plus en plus faible), une autre présentant un ramollissement (l'amplitude du mouvement augmente).
+	
+	\begin{figure}[hp!]%
+\includegraphics[width=\columnwidth]{c9-creneau.png}%
+\caption{Position en $\mu$m en X (direction selon laquelle on applique la force) d'une bille sur une cellule C2C12. L'expérience suit le protocole n $\degres$ 1, la pointe se situe à 360$\mu$m de la bille, le générateur fournit un créneau entre 0 et 1V, les billes ont été préparées avec 10$\mu$l de fibronectine. Le créneau affiché est reconstitué à posteriori à partir de $X(t)$ et de notre connaissance de sa période.}%
+\label{c9-1}%
+\end{figure}
+
+\begin{figure}[hp!]%
+\includegraphics[width=\columnwidth]{c9-renforcement.png}%
+\caption{Les quatre courbes de X(t) remises à zéro. La rouge est la première, l'orange la seconde, la verte la troisième et la bleue la quatrième. On voit que la pente de chaque droite reste presque constante autour de 0.1, mais la valeur du déplacement diminue nettement lors des trois premiers créneaux. La diminution du préfacteur $X_0$ correspond à une augmentation de la rigidité de la cellule.}%
+\label{c9-2}%
+\end{figure}
+	
+	\begin{figure}[htbp!]%
+\includegraphics[width=\columnwidth]{c121-ramollissement.png}%
+\caption{Position en microns en fonction du temps pour les quatre courbes de $X(t)$ d'une cellule se ramollissant. Le code couleur est celui de la figure \ref{c9-2}. Cette série de mesures a été obtenue avec le protocole n $\degres$ 2, à 700 $\mu$m, 1.5V et 10$\mu$l de fibronectine. On voit qu'à la différence de la courbe précédente, elle a été prises à l'aide de MicroManager, car la densité de points pendant les 10 premières secondes de chaque courbe est 5 fois plus importante (10 images par seconde).}%
+\label{c121-1}%
+\end{figure}
+
+\begin{figure}[htbp!]%
+\includegraphics[width=\columnwidth]{c121-ramollissement-log.png}%
+\caption{Ajustement linéaire en coordonnées logarithmiques des courbes de la figure \ref{c121-1}. Le code couleur est celui de la figure \ref{c9-2}. On voit ici que la pente varie peu, mais que le préfacteur augmente notablement d'une courbe à la suivante, ce qui correspond à un ramollissement de la cellule.}%
+\label{c121-2}%
+\end{figure}
+
+	\subsubsection{Obtention de la fonction de fluage à partir des courbes de déplacement}
+	
+	Nous connaissons la force appliquée sur la bille par les pinces magnétiques, et le déplacement de la bille en fonction du temps, il nous faut alors un modèle mécanique pour obtenir la contrainte exercée sur la cellule, et en déduire la fonction de fluage. Le modèle présenté ici correspond à celui utilisé par Delphine Icard pour ses expériences de pinces optiques au laboratoire \cite{these}.
+	
+	\begin{figure}[h!]%
+\includegraphics[width=6cm]{j_0.pdf}%
+\caption{Bille enfoncé dans un milieu homogène semi-infini}%
+\label{}%
+\end{figure}
+
+	Le modèle comprend deux hypothèses principales fortes : on considère la cellule comme un milieu visco-élastique semi-infini et homogène, et  la bille y est ancrée de manière homogène et rigide avec un enfoncement caractérisé par un angle $\theta$, qui reste inférieur à $\frac{\pi}{2}$. Ici, comme on ne connaît pas l'angle d'enfoncement des billes lorsque l'on fait les mesures, on a pris par défaut $\theta=\frac{\pi}{2}$ pour toutes les billes.
+
+	
+	La fonction géométrique que nous avons utilisée ici correspond à celle calculée par l'équipe pour les expériences de pinces optiques au laboratoire  : 
+	$$J(t) = 2 \pi a f(\theta) \frac{\delta X(t)}{F_0} = 2 \pi a \frac{2}{3} \left( \frac{1}{\frac{3}{2 \sin \theta} + \frac{\cos \theta}{\sin^3(\theta)}} \right) \frac{\delta X(t)}{F_0}$$
+	Nous avons également fait l'approximation d'un angle de contact $\theta=\frac{\pi}{2}$ pour toutes les billes, car avec le microscope inversé il nous était difficile de mesurer l'enfoncement réel de la bille. L'utilisation de ce modèle nous permet d'avoir un ordre de grandeur des propriétés mécaniques et de comparer les valeurs obtenues dans différentes conditions.
+	
+	Pour tester nos hypothèses sur l'angle d'enfoncement, nous avons observé cellules sur lesquelles étaient fixées des billes à l'aide d'un microscope confocal (expliqué plus en détail en section \ref{confocal}), qui nous permet d'obtenir une image tridimensionnelle des cellules. L'objectif à long terme est de monter le dispositif de pinces magnétiques directement sur le microscope confocal, et d'y faire des expériences de mécanique. Il sera alors possible d'observer pour chaque cellule testée la position en trois dimensions de la bille dans la cellule, et donc sa géométrie d'enfoncement. Il nous sera alors possible d'affiner le modèle, et d'éliminer certaines hypothèses pour les remplacer par des mesures.
+	
+	\subsubsection{Statistiques sur les caractéristiques mesurées et leur évolution}
+	
+	Des courbes présentées dans la partie \ref{X(t)}, nous avons extrait l'exposant $n$ et le préfacteur $J_0 = J(t =t_0 = $1s) de la fonction de fluage $J(t) = J_0 \left(\frac{t}{t_0}\right)^n$~. Ces exposants, présentés sur la figure \ref{exposants}, ont des valeurs
+typiques comprises entre 0,05 et 0,5 avec une moyenne autour de 0,2. Pour le 1er créneau de force
+appliqué, n= 0,15 $pm$ 0,1 (sur 17 cellules), ce qui est cohérent avec les valeurs typiques obtenues pour les
+C2C12 avec les pinces optiques \cite{rigidification},\cite{compilation}. Les préfacteurs, présentés sur la courbe \ref{prefacteurs}, ont des valeurs typiques distribuées entre 5. $10^{-3}$ et $10^{-1}$ Pa$^{-1}$, ce qui encore une fois est conforme aux valeurs
+attendues pour ces cellules. On peut remarquer que les valeurs de $J_0$ des C2C12 correspondent à des
+modules visco-élastiques particulièrement faibles, même pour des cellules : $J_0^{-1}$ vaut de l'ordre de la
+dizaine à la centaine de Pa. Les valeurs observées pour différents types cellulaires vont de quelques
+dizaines de Pa à une dizaine de kPa \cite{compilation}, les cellules en général sont donc particulièrement molles, elles
+ont des rigidités comparables à celles de gels peu réticulés (les caoutchoucs les plus mous ont quant à
+eux des modules d'Young d'une fraction de MPa).
+
+	\begin{figure}[htbp!]%
+\includegraphics[width=\columnwidth]{Exposants.png}%
+\caption{Occurence cumulée (normalisée) des exposants de la fonction de fluage obtenus pour des C2C12 avec le mode opératoire à longue distance.}%
+\label{exposants}%
+\end{figure}
+
+\begin{figure}[htbp!]%
+\includegraphics[width=\columnwidth]{Prefacteurs.png}%
+\caption{Occurence cumulée (normalisée) et histogramme des préfacteurs de la fonction de fluage obtenus pour des C2C12 avec le monde opératoire à longue distance.}%
+\label{prefacteurs}%
+\end{figure}
+	
+
+On observe sur les valeurs de $n$ et surtout de $J_0$ une grande dispersion. D'une manière générale, il
+existe toujours une dispersion dans les expériences sur cellules vivantes, car toutes les cellules
+n'expriment pas les mêmes caractéristiques au même degré d'intensité. Ici, deux autres sources de
+dispersion des données viennent s'y ajouter : la position de la bille sur la cellule (proche ou éloignée
+du noyau, d'un lamellipode \dots) et l'enfoncement de la bille dans la cellule, qui n'est pas connu. C'est
+pour cela qu'il est important de faire de nombreuses expériences, afin d'obtenir des statistiques qui
+seules pourront nous révéler une tendance. 
+
+On observe aussi que la distribution des valeurs de $J_0$ n'est
+pas gaussienne : elle est très large et non symétrique entre les grandes et les petites valeurs de $J_0$. Ceci
+est de nouveau conforme aux résultats de la littérature, et un modèle semi-phénoménologique a été
+proposé dans l'équipe où j'ai effectué mon stage pour expliquer ceci \cite{compilation}. C'est pourquoi on préfère
+donner une valeur médiane plutôt qu'une valeur moyenne de $J_0$ : $J_0^{med}=3,2.10^{-2}$Pa$^{-1}$ alors que $\moy{J_0}= 5,2.10^{-2}$Pa$^{-1}$.
+Enfin, on peut remarquer sur les deux courbes de la figure \ref{prefacteurs} la présence de deux pics distincts, donc
+de deux rigidités différentes : $J_0^{med1}=0,01$ Pa$^{-1}$ et $J_0^{med2}= 0,09$ Pa$^{-1}$. Ce double comportement a déjà été
+signalé sur d'autre types de cellules \cite{12},\cite{13}. Il peut être lié au fait que les billes adhérentes en surface
+sondent en même temps deux cytosquelettes d'actine différents : le cortex et les fibres de stress.
+Les figures \ref{exposants} et \ref{prefacteurs} présentent également l'évolution des distributions des valeurs de $n$ et $J_0$ au cours des créneaux successifs. Comme on l'a vu dans la partie \ref{X(t)}, nous avons observé des comportements
+différents d'une cellule à l'autre : certaines cellules se rigidifient, d'autres se ramollissent, certaines
+sont arrachées (en perdant tout ou partie de leurs liaisons avec la cellule), d'autres ne voient pas
+d'évolution notable \dots Au bilan, les valeurs moyennes de $n$ et $J_0$ varient peu dans nos expériences.
+
+Dans la littérature, les deux comportements sont rapportés : une rigidification \cite{rigidification},\cite{these},\cite{rigidification2} ou un ramollissement \cite{fluidification1},\cite{fluidification2} sous contrainte, et l'un des objectifs de notre dispositif est de pouvoir
+approfondir la question, afin d'obtenir une réponse claire concernant l'évolution de la rigidité. Les
+articles \cite{rigidification2},\cite{fluidification1} et \cite{fluidification2} utilisent la magnétocytométrie, où l'on applique un couple à des billes magnétiques, la mesure obtenue est une moyenne pour un très grand nombre de billes. On peut
+cependant remarquer que les billes arrachées pèsent alors lourdement dans les statistiques car elles
+comptent comme un ramollissement très prononcé : elles ont tendance à faire pencher la balance
+en faveur d'un ramollissement, lorsqu'on moyenne le comportement sur un très grand nombre de
+billes.
+
+Quand on examine nos résultats expérimentaux dans le détail, on s'aperçoit que les divers types de
+comportement sont observés (rigidification, ramollissement, neutralité, billes arrachées), avec des
+occurrences comparables. Mais ces résultats ne sont que des mesures préliminaires : il est nécessaire
+de poursuivre avec des expériences sur un plus grand nombre de cellules, ce qui nous permettra de
+prendre en compte de plus en plus de critères pouvant influer sur les statistiques comme la position de
+la bille sur la cellule, ou l'enfoncement que nous pourrons mesurer à terme directement en
+microscopie confocale. Nous pourrons ensuite préciser des critères pour chaque type de
+comportement, et en faire une étude plus quantitative (temps caractéristiques, variations rlatives
+caractéristiques etc).
+	
+	
+		
+	
+	\subsection{Observations complémentaires : l'enfoncement des billes par microscopie confocale \label{confocal}}
+	
+	À l'aide d'un microscope confocal, nous avons pu observer en 3 dimensions les billes fixées sur les cellules. Pour cela, nous avons fixé et marqué des cellules préparées comme pour les expériences. La fixation consiste à "momifier" des cellules pour permettre leur conservation pendant plusieurs semaines, à l'aide de paraformaldéhyde, qui réticule les polymères présents dans le cytoplasme des cellules. On réalise alors 3 marquages en fluorescence : on marque le noyrau à l'aide de DAPI, un intercalant de l'ADN qui absorbe dans l'UV et émet dans le bleu, et les filaments d'actine à la phalloïdine fluorescente, qui est une toxine de l'amanite phalloïde dont l'effet est de se lier aux filaments d'actine et de les stabiliser (c'est d'ailleurs cet effet stabilisateur des filaments d'actine qui est à l'origine de sa toxicité). Par ailleurs, certaines cellules ont été transfectées pour exprimer l'actine GFP, ce qui fait apparaître à la fois l'actine globulaire et filamenteuse. Les billes en polystyrène sont également visibles en fluorescence, ce qui n'était pas attendu, en général avec un faible niveau d'intensité.
+	
+	La plupart des billes sont enfoncées dans la cellule, et souvent elles sont assez proches du noyau. Cependant, ces mesures contiennent un biais : le processus de fixation des cellules implique de rincer les cellules de nombreuses fois, ce qui a pour effet de détacher les billes peu liées. Quelques images obtenues durant ces observations sont présentées en figure \ref{cfl-1} et \ref{cfl-2}.
+
+	\begin{figure}[h!]%
+\includegraphics[width=6cm]{3_RGB.png} \hspace{0.2cm}
+\includegraphics[width=6cm]{3_coupe_60deg.png}
+\caption{Cellule fixée et marquée en fluorescence : en bleu l'ADN du noyau, en vert l'actine GFP, en rouge l'actine. On voit la bille en rouge, car elle auto-fluoresce. À gauche vue de dessus, à droite en coupe. On voit que cette bille est très peu enfoncée dans la cellule.}%
+\label{cfl-1}%
+\end{figure}
+
+\begin{figure}[h!]%
+\includegraphics[width=6cm]{GFP-trous.png} \hspace{0.2cm}
+\includegraphics[width=6cm]{Phall-trous.png}
+\caption{Cellule fixée et marquée en fluorescence : en bleu l'ADN du noyau, en vert l'actine GFP, en rouge l'actine. On voit les billes en rouge. Ici, on voit un trou dans l'actine GFP à l'endroit où sont positionnées les billes, qui sont plutôt enfoncées dans la cellule.}%
+\label{cfl-2}%
+\end{figure}
+
+\newpage
+	
+\section{Conclusion}
+
+	\subsection{Création d'un dispositif de pinces magnétiques}
+	
+	Nous avons réalisé pendant ce stage un dispositif de pinces magnétiques, de l'étude préliminaire des caractéristiques d'une bobine pour l'électro-aimant à la réalisation d'expériences de fluage sur des cellules vivantes. Le travail à mener sur ce dispositif est loin d'être terminé, cependant il est satisfaisant de voir qu'il est possible de mener des expériences de fluages dans la configuration que nous avons élaborée, et de nombreuses pistes demeurent encore à exploiter pour améliorer la précision, la fiabilité et la reproductibilité de l'appareil. 
+	
+	Sur un plan personnel, l'élaboration du dispositif m'a permis de développer des compétences très diverses, utiles dans le travail d'un expérimentateur : culture cellulaire, soudure, élaboration de montages sous microscope, calculs et mesures d'optimisation, programmation pour l'acquisition (en beanshell sous $\mu$Manager) et pour le traitement d'images ( macros ImageJ) et pour le traitement de données (sous Igor) \dots Il est également très intéressant de mener un projet d'un bout à l'autre, ce qui permet de connaître dans le détail la place de chaque élément du dispositif, sa raison d'être et les raisons des choix de ses caractéristiques. 
+
+	\subsection{Poursuite de la mise en place du dispositif de pinces magnétiques}
+	
+	Le travail principal de ce stage, la mise en place d'un dispositif de pinces magnétiques pour étudier la rhéologie cellulaire et la mécanotransduction, doit se poursuivre jusqu'à l'obtention de protocoles parfaitement satisfaisants. En particulier il sera nécessaire d'estimer rigoureusement les erreurs commises sur les grandeurs mesurées par les différents appareils, d'effectuer une série d'étalonnages systématiques avec beaucoup de billes afin d'améliorer la précision avec laquelle on estime la force. Il est également nécessaire de mener plus d'expériences dans des conditions identiques, afin de pouvoir obtenir de véritables statistiques pour le préfacteur et l'exposant de la fonction de fluage. 
+	
+	
+	Un des principaux objectifs du dispositif est d'à terme mener des expériences sur le microscope confocal. Nous pourrons alors mesurer dans une même expérience la fonction de fluage, l'enfoncement et la position des billes dans les cellules, un éventuel recrutement d'actine ou réorganisation du cytosquelette pendant la rigidification \dots Cela consitutera l'objet de ma thèse.
+
+\begin{thebibliography}{99}
+
+\bibitem{exam} D. Mizuno, C. Tardin, C.F. Schmidt, F.C. MacKintosh, Science \textbf{315} 370-373
+
+\bibitem{compilation} M. Balland, N. Desprat, D. Icard, S. Féréol, A. Asnacios, J. Browaeys, S. Hénon, F. Gallet, Phys. Rev. E \textbf{74} 021911 (2006)
+
+\bibitem{rigidification} D. Icard-Arcizet, O. Cardos, A. Richert, S. Hénon, Biophys. J. \textbf{94}, 2906-2913 (2008)
+
+\bibitem{Sackmann} A.R. Bausch, F. Ziemann, A.A. Boulbitch, K. Jacobson, E. Sackmann, Biophys. J. \textbf{75} 2038-2049 (1998)
+
+\bibitem{benfabry} P. Kollmannsberger, Ben Fabry, Review of Scientific Instruments \textbf{78} 114301 (2007)
+
+
+
+\bibitem{these} Delphine Icard-Arcizet, thèse, Univ. Paris Diderot (2007)
+
+\bibitem{magnetisme} \textit{\'Electrostatique et Magnétostatique} \'Emile Durand, Masson, Paris 1953 p681-687
+
+\bibitem{chi} M. Zborowski, Ch. Bor Fuh, R. Green, L. Sun and J.Chalmers, Anal. Chem. \textbf{67}, 3702-3712 (1995)
+
+\bibitem{fluidification1} Bursac et al., Nat. Mat. \textbf{4}, 557-561 (2005)
+\bibitem{fluidification2} Trepat et al., Nature \textbf{447}, 592-595 (2007)
+
+\bibitem{rigidification2} Deng et al., Am. J. Physiol. Cell. Physiol. \textbf{287}, C440-C448 (2004).
+
+\bibitem{12} V.M. Laurent, R. Fodil, P. Canadas, S. Fereol, B. Louis, E. Planus, D.Isabey, Annals of biomedical engineering \textbf{ 31} 1263-1278 (2003)
+\bibitem{13} K.M. Van Citters, B.D. Hoffman, G. Massiera, J.C. Crocker, Biophysical Jounrnal \textbf{91} 3946-
+3956 (2006)
+
+
+\end{thebibliography}
+
+\end{document}
+
