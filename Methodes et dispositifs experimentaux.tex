@@ -171,7 +171,23 @@ Les pinces magnétiques ont été construites pour contourner un certain nombre 
 
 	\subsection{Description}
 		\subsubsection{Principe}
+		Lorsqu'on applique un champ magnétique $$\vec{H} = \frac{\vec{B}}{\mu}$$ sur une bille paramagnétique de volume $V$ et de susceptibilité magnétique $\chi$, cela induit dans la bille un moment magnétique $$\vec{m} = \chi V \vec{H}$$ Si le champ magnétique est de plus inhomogène, la bille subit alors une force :$$\vec{F} = \left( \vec{m}. \vec{\nabla} \right) \vec{B}$$
+	
+Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui va créer un champ et un gradient de champ magnétiques lorsqu'il est alimenté par un courant, pour exercer des forces à distance sur un bille magnétique fixée à la cellule par des protéines d'adhésion. 	 
+	 
+	 
+	 Afin d'exercer cette force, il est nécessaire de construire un électro-aimant répondant à plusieurs contraintes : il doit être capable de créer un fort champ magnétique ainsi qu'un fort gradient de champ magnétique, cependant il ne doit pas chauffer l'échantillon afin de ne pas endommager les cellules vivantes sur lesquelles on manipule, et cela sans système de refroidissement qui  un bruit mécanique trop important. L'électro-aimant doit pouvoir être amené le plus près possible de l'échantillon afin d'exercer une force maximale, le plus précisément possible afin de conserver une bonne précision sur la direction et la valeur de la force exercée. On souhaite manipuler avec une chambre expérimentale fermée pour éviter toute contamination des cellules, et pouvoir faire des observations en fluorescence. On souhaite également faire des expériences de longue durée, en imposant des paliers de force longs et répétés.	
+	
 		\subsubsection{Billes superparamagnétiques}
+		Les billes utilisées sont des Dynabeads M-450 Epoxy d'Invitrogen Dynal AS, Oslo, Norvège. 
+		Ce sont des billes de polystyrène sphériques, de 4,5$\mu$m de diamètre, recouvertes en surface de groupes epoxy afin de permettre l'ajout de ligands en surface, et contenant des nanoparticules d'oxydes de fer qui leur confèrent leurs propriétés superparamagnétiques. 
+		Elles sont initialement fournies dans une suspension concentrée ($4.10^8$ billes/ml) dans de l'eau distillée. On les recouvre de fibronectine pour une fixation spécifique aux intégrines.
+		Pendant les expériences, les billes sont détectées par le logiciel de traitement d'images, qui ajuste une ellipse sur la forme de la bille. Nous obtenons donc 385885 mesures de taille pour 191 billes, avec une taille moyenne de 4.4067 $\pm$ 0.0002 \micro m et un rapport petit axe sur grand axe $e=0.98585 \pm 0.0008$. Les billes apparaissent donc légèrement plus petites qu'annoncé par le fabriquant mais semblent bien sphériques.
+		\begin{figure}
+		\includegraphics[scale=0.5]{Taille_des_billes.png}
+		\caption{Fonction de distribution de taille des billes magnétiques utilisées dans 191 expériences de pinces. Pour chaque expérience, lorsque la bille est suivie par le logiciel d'analyse d'image, son grand axe et son petit axe sont mesurés pour chaque temps. La fonction est asymétrique car lorsque la bille n'est pas tout à fait au point, son diamètre apparaît plus grand.}
+\end{figure}		 
+		
 		\subsubsection{\'Electroaimant}
 		\subsubsection{Montage sous microscope}
 	\subsection{Calibration}
