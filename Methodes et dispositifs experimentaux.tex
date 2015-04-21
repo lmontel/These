@@ -26,7 +26,7 @@
 	
 	Lorsqu'elles sont proches de la confluence, il faut rincer deux fois les cellules avec du PBS (Phosphate Buffered Saline) et les laisser incuber 5 minutes à 37\degres   C dans un mélange Trypsine/EDTA. La trypsine est une enzyme qui va casser les adhésions cellulaires, tandis que l'EDTA joue le rôle de chélateur des ions calcium qui sont indispensables pour créer des adhésions. Une fois les cellules décollées, elles sont diluées dans du milieu de culture qui inactive la trypsine et ensemencées à nouveau sur des boîtes de culture. Cette opération s'appelle le passage. 
 	 
-	\subsection{Culture sur PDMS ou sur verre}
+	\subsection{Culture sur PDMS ou sur verre  \label{Coating}}
 
 	Pour réaliser les différentes expériences de rhéologie cellulaire, les cellules doivent être cultivées sur d'autres substrats que dans les boîtes de cultures : sur des lamelles de verre carrées (22mmm x 22mm x 100 \micro m) dans le cas des pinces magnétiques et sur des disques de PDMS (30mm de diamètre et 0.3 mm d'épaisseur) dans le cas de l'étirement. 
 	
@@ -164,9 +164,23 @@
 
 \section{Pinces magnétiques}
 
-Les pinces magnétiques sont destinées faire de la rhéologie à l'échelle locale sur une cellule unique. Comme les pinces optiques, elles utilisent des billes micrométriques recouvertes de protéines d'adhésion pour s'ancrer à la cellule. Une force exercée sur la bille sera alors transmise par les adhésions à la cellule. Les contraintes sont donc non seulement ressenties mécaniquement par la cellule, mais aussi biochimiquement car les protéines des complexes d'adhésions sont stimulés à la liaison fibronectine - intégrine. 
+Les pinces magnétiques sont destinées faire de la rhéologie à l'échelle locale sur une cellule unique. Comme les pinces optiques, elles utilisent des billes micrométriques recouvertes de protéines d'adhésion pour s'ancrer à la cellule. 
+Une force exercée sur la bille sera alors transmise par les adhésions à la cellule.
+ Les contraintes sont donc non seulement ressenties mécaniquement par la cellule, mais aussi biochimiquement car les protéines des complexes d'adhésions sont stimulés à la liaison fibronectine - intégrine. 
+La bille, observée au microscope, se déplace en réponse à la force, mais est retenue par la cellule.
 
-Les pinces magnétiques ont été construites pour contourner un certain nombre de limitations que rencontraient les pinces optiques qui existaient déjà au laboratoire, en particulier pour exercer des forces plus grandes pendant des durées plus longues. Cela s'est fait au prix de la perte de contrôle de la direction de la force et de l'impossibilité de déplacer et coller volontaire
+Pour étudier la rhéologie cellulaire, on va alors exercer une force connue sur la bille, et mesurer au microscope son déplacement, et donc la déformation de la cellule.
+Nous nous sommes placés ici en régime de fluage, plus adapté à la pince magnétique. La bille exerce une contrainte constante sur la cellule $\sigma_0$, qui est reliée à la déformation de la cellule par la relation : 
+$$\epsilon (t) = \sigma_0 J(t)$$.
+
+Deux modèles nous permettent d'obtenir la contrainte subie par la cellule $\sigma_0$ à partir de la force exercée par l'électro-aimant sur la bille $F_0$ et la déformation de la cellule $\epsilon (t)$ en fonction du déplacement de la bille $x(t)$. 
+
+
+
+
+
+
+Les pinces magnétiques ont été construites pour contourner un certain nombre de limitations que rencontraient les pinces optiques qui existaient déjà au laboratoire, en particulier pour exercer des forces plus grandes pendant des durées plus longues. Cela s'est fait au prix de la perte de contrôle de la direction de la force : la pince magnétique ne peut que tirer la bille vers la pointe, dans la direction de l'axe de l'électro-aimant. 
 
 
 	\subsection{Description}
@@ -189,12 +203,291 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 \end{figure}		 
 		
 		\subsubsection{\'Electroaimant}
+		L'électro-aimant est composé d'un c\oe ur entouré d'une bobine de fil de cuivre. Le passage d'un courant électrique dans la bobine crée un champ magnétique dont les lignes de champ sont conduites par le c\oe ur. 
+		
+		\paragraph{Le c\oe ur} Deux types de c\oe ur ont été testés : un c\oe ur en fer doux (diamètre, longueur) et un c\oe ur en mu-métal, un alliage de grande perméabilité magnétique (diamètre 5,10mm , longueur 143,64mm).
+		
+		Une extrémité du barreau est taillée en pointe. La forme de pointe permet d'augmenter le gradient de champ magnétique en resserrant les lignes de champ à cet endroit. Il est très important de conserver sa symétrie cylindrique, et d'avoir le rayon de courbure le plus faible possible au bout de la pointe. Les résultats obtenus sont visible en figure $\ref{pointe}$. \'Etant en fer doux, le barreau est très malléable, il faut donc le manipuler avec précautions : le moindre choc aplatit la pointe. 
+	 Le barreau a été usiné au tour, puis pour la taille d'entretien de la pointe, on monte le barreau sur un moteur de perceuse, ce qui permet de garder la symétrie cylindrique, et on l'approche d'un morceau de papier de verre de grain de plus en plus fin, incliné avec un angle de 30 $\degres$ .
+	 
+	 \begin{figure}[ht!]%
+\includegraphics[width=6cm]{pointe1-2011-03-29-20X.png}%
+\includegraphics[width=6cm]{pointe1-2011-03-29-40X.png}
+\caption{À gauche une image de la pointe en fer doux au grossissement X20. À droite, la même pointe au X40. Le rayon de courbure mesuré est de l'ordre de 2
+0$\mu$m.}%
+\label{pointe}
+\end{figure}
+	 
+	 L'angle optimal pour maximiser le gradient peut être calculé \cite{magnetisme}. Ici, on doit aussi prendre en compte le fait que la pointe doit être approchée de biais au-dessus de la lamelle d'échantillon. Il nous faut donc un angle plus faible que l'angle optimal, trop obtus. On a fixé cet angle à 30 $\degres$ , car il est prévu d'approcher la pointe de la lamelle sur laquelle seront les cellules avec un angle de 45 $\degres$, comme représenté sur la figure \ref{montage global} .
+
+\paragraph{La bobine}
+
+	L'optimisation des caractéristiques de l'électro-aimant a été l'objet de mon stage de Master 2. 
+	Deux contraintes s'opposent lors de la fabrication : l'augmentation du champ magnétique et l'effet Joule. 
+	Le champ $\vec{B}$ généré par un solénoïde de longueur finie dans le vide sur son axe à une distance $z$:
+		
+		$$ \vec{B} = \frac{\mu_0 n I}{2} \left(\cos \left(\theta_2 -\cos \theta_1 \right)\right) \vec{u_z}$$
+		
+		dépend du nombre $n$ de spires par mètre, de la longueur de la bobine $l_b$ et du courant $I$ qui passe à l'intérieur. On veut donc maximiser $n$ et $I$ pour augmenter la valeur de $B$. La distance $z$ sera de l'ordre de 700\micro m. 
+		
+		La puissance dissipée par effet Joule $$P = R I^2$$ dépend de la résistance de la bobine et de $I$, il s'agit de minimiser ces quantités.
+		
+		La résistance de la bobine : $$R = \frac{L}{\gamma s}$$
+		
+		dépend de la section du fil $s$, de sa longueur totale $L$. $\gamma$ est la conductivité du cuivre.  
+		
+		La section du fil est directement reliée au nombre de spires par mètre : $$ n = \frac{1}{2r_f} = \frac{1}{2 \sqrt{\frac{s}{\pi}}} = \sqrt{\frac{\pi}{4s}}$$  Il est facile de voir que lorsque $s$ augmente, $R$ diminue en $s^{-1}$ alors que $n$ ne diminue qu'en $s^{-1/2}$, et donc qu'il faut choisir la section de fil la plus grande disponible.
+		En pratique, on ne fait pas qu'une couche de bobinage, mais plusieurs, le nombre de spires par mètres est donc aussi relié à la longueur totale de fil $L_f$.
+		
+		$$R \propto L_f \approx n_c \frac{\pi d_b l_b}{d_f}$$ où $d_b$ est le diamètre de la bobine, $l_b$ sa longueur, $d_f$ le diamètre du fil. 
+		
+		$$n = n_c \frac{1}{d_f}$$
+		
+		Pour augmenter $n_c$ en augmentant le moins possible $R$, il faut alors minimiser le rapport $\frac{\pi d_b l_b}{d_f}$. On a déjà maximisé $d_f$, on minimise alors également $d_b$ le diamètre de la bobine.
+		
+		En ce qui concerne la longueur de la bobine, $l_b$, on aimerait la minimiser pour diminuer $R$, cependant, le champ $B$ est maximal pour une bobine de longueur infinie. La longueur optimale correspond en fait à celle du c\oe ur : ajouter de la longueur de bobine au-delà n'augmente que peu le champ, à cause de la faible perméabilité magnétique de l'air.
+		
+		La bobine finalement utilisée dans nos expériences est composée de 8 couches de fil de cuivre de diamètre 0,5mm bobinées sur un tube d'aluminium de diamètre extérieur égal à 5,38mm sur une longueur de 66,5mm. Sa résistance est mesurée à 3,3$\Omega$ et son inductance à 1,2mH. 
+		
+		L'aluminium est un bon support pour la bobine car il est à la fois léger, car il ne faut pas surcharger le micromanipulateur qui portera l'électro-aimant dans le montage final, et qu'il conduit bien la chaleur dégagée par l'effet Joule pour qu'elle soit évacuée vers la pointe. L'aluminium a pu également être taraudé à une extrémité afin d'y attacher une vis de support qui est tenue par le micromanipulateur, et qui sert également à évacuer une partie de la chaleur de la pointe.                       
 		\subsubsection{Montage sous microscope}
+		\paragraph{Circuit électrique}
+		
+		Un générateur de tension basse fréquence, contrôlé par ordinateur par l'intermédiaire d'une carte PCI, alimente un amplificateur de courant fabriqué par les ateliers du laboratoire, qui permet de délivrer des courants jusqu'à 2A à la bobine. 
+		La bobine ayant à dessein une résistance la plus faible possible pour limiter l'effet Joule, une résistance de 10$\Omega$ est ajoutée au circuit. Un ampèremètre mesure à tout instant l'intensité délivrée à la bobine. 
+		
+		Le temps de réponse caractéristique du circuit RL est donc de 16ms, ce qui sera négligeable dans toutes les configurations où les pinces seront utilisées. 
+		
+		 \paragraph{Montage sous le microscope}
+		 
+		 L'électro-aimant que l'on a fabriqué précédemment est monté sur un micromanipulateur (InjectMan NI2, Eppendorf, avec une précision de position de 0.1$\mu$m), et incliné à 45 $\degres$ . La force que nous allons exercer sur les billes est parallèle à l'axe de la bobine, nous allons donc appliquer simultanément une force horizontale et une force verticale vers le haut. 
+		 
+		 Un thermomètre est fixé sur la pointe pour mesurer sa température à tout instant et vérifier qu'il n'y a pas de risque d'endommager les cellules pendant l'expérience. 
+		 
+		 Les cellules ont préalablement été ensemencées sur une lamelle de verre et incubées avec les microbilles recouvertes de fibronectine. Sur une lame de verre 22mm*64mm*0.15mm, on monte un séparateur et la lamelle de verre, le tout formant une chambre expérimentale fermée de 65\micro l emplie de milieu de culture. 		 
+		 
+		 Le micromanipulateur et la lamelle contenant les cellules sont montés sur un microscope inversé (Leica DMIRB). \`A l'aide du micromanipulateur, on peut approcher la pointe de l'électro-aimant à une distance de 100$\mu$m de la lamelle. On enregistre les images de la bille à l'aide d'une caméra (CoolSnap HQZ) reliée à un ordinateur qui la contrôle par l'intermédiaire de MicroManager. 
+		 
+		 Il existe deux possibilités de montage pour la lamelle : la lamelle sur laquelle sont les cellules peut être placée en haut, du côté de la pointe de l'électro-aimant, ou au contraire en bas, proche de l'objectif du microscope. 
+		 
+		 Dans le premier cas, la distance entre la pointe de l'électro-aimant et la bobine peut être réduite à 280 \micro m, ce qui permet d'exercer de grandes forces, de l'ordre du nanoNewton. Cependant, la distance entre l'objectif et les cellules est alors d'au moins 400 \micro m, et ne permet pas d'utiliser d'un objectif à immersion, nous restreignant à des grossissements inférieurs à 40X. 
+
+		 Dans le second cas, on peut au contraire utiliser des objectifs à immersion à huile 100X, ce qui nous permet d'avoir une très bonne précision sur la position et sur les déplacements de la bille. Cependant, la distance entre la bille et la pointe est alors de 700 \micro m et il est alors possible d'appliquer au maximum des forces de l'ordre de 160 pN. 
+		 
+Le choix entre les deux méthodes dépend donc de la précision d'observation dont on a besoin et de la force que l'on souhaite exercer. 
+
+		 
+		 
+		 		 
+		  
+		
+		
 	\subsection{Calibration}
+  
+ Les caractéristiques magnétiques des billes ne sont pas fournies par le fabriquant, et de plus à des distances inférieures au millimètre, la précision sur les mesures de $\vec{B}$ et $\vec{\nabla}B$ est mauvaise. 
+ Il est donc impossible de calculer de manière fiable la force exercée par la point sur les billes à un courant et à une distance données.
+ Pour connaître la force exercée par l'électro-aimant sur les billes en fonction de la distance et du courant, nous avons donc procédé à une calibration.
+ 
+ \subsubsection{Principe}
+ 
+ Les billes de diamètre $d=4.5$\micro m sont placées dans du PDMS liquide de masse volumique $\rho$ proche de celle de l'eau mais de grande viscosité $eta=0.75$Pa.s . 
+ Dans ces conditions, le nombre de Reynolds associé aux billes lorsqu'elles se déplacent à une vitesse $U$ dans le liquide vaut : $$Re = \frac{\rho U d }{\eta}=6*U*10^{-3}$$
+ et donc $Re \ll 1$ tant que la vitesse $U \ll 167 m.s^{-1}$. 
+ On peut donc en conclure que les forces inertielles sont complètement négligeables devant les forces visqueuses dans ces conditions. 
+ 
+ Les billes subissent donc deux forces : la force magnétique exercée par la pointe, et les forces de friction visqueuses exercées par le fluide qui s'annulent à l'équilibre. 
+ 
+ La force de friction visqueuse sur une sphère peut être modélisée par la relation de Stokes : 
+ $$ \vec{F}_{vis}=- 3 \pi \eta d \vec{U} =-\vec{F}_{mag}$$
+ 
+ Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peuvent pas être exclues. On appelle $h$ la distance à la lamelle la plus proche. 
+ De plus, la viscosité $\eta$ du fluide est très sensible aux variations de température, or l'électro-aimant chauffe pendant l'application de la force à cause de l'effet Joule dans la bobine. 
+ Comme la mesure est effectuée à une distance de 0,5 à 1mm de la pointe, celle-ci chauffe le fluide localement. 
+ On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a$. 
+ 
+ Le modèle de Stokes est donc corrigé ainsi : 
+ 
+ \begin{equation}
+ {F}_{mag}= 3 \pi \left(\eta_{24^{o}C}-a\left(\frac{T_{fin}-T_{init}}{2} - 24\right) \right) *\left( \frac{d_{max}+d_{min}}{2} \right) * \left( 1+\frac{d}{h} \right)*\vec{U}
+ \label{Stokes_corr}
+ \end{equation}
+ 
+ \subsubsection{Montage et protocole}
+ 
+
+ 
+ L'électro-aimant est monté sur le micromanipulateur à l'horizontale.  
+ On suspend 1 \micro l de solution mère de billes dans 499 \micro l de PDMS, et on passe cette suspension 45 minutes dans une cuve à ultra-sons en cisaillant toutes les 5 minutes.
+ La suspension est placée dans une chambre expérimentale formée par une lamelle 22mm*64mm*0.15mm, une lamelle 22mm*22mm*0.1mm et un séparateur de 240 \micro m d'épaisseur. La chambre est ouverte du côté où l'on va approcher la pointe. 
+ 
+ La chambre expérimentale est placée sous un microscope droit Reichert doté d'un objectif 5X et d'un 20X et d'une caméra reliée à un ordinateur.
+ 
+ \begin{quote}
+ \begin{enumerate}
+ \item Placer le plan focal au centre de la chambre expérimentale selon l'axe vertical.
+ \item \`A l'aide du micromanipulateur, amener la pointe à droite du champ de la caméra avec l'objectif 5X, le plus près possible de la chambre expérimentale sans entrer en contact avec le PDMS. 
+ \item Prendre une image au 5X de la position de la pointe.
+ \item Au 20X, repérer une bille à gauche du champ (éloignée de la pointe), l'amener dans l'axe de la pointe. 
+ \item Faire le point sur la bille et repérer la hauteur du plan focal. 
+ \item Relever la température de la pointe $T_{init}$.
+ \item Simultanément, alimenter la bobine avec un courant continu $i$ et commencer l'acquisition à 5 images/seconde. 
+ \item Lorsque la bille sort du champ de la caméra à droite, arrêter l'acquisition et couper le courant dans la bobine.
+ \item Relever la température finale de la pointe $T_{fin}$.
+ \end{enumerate}
+ \end{quote}
+ 
+ On recommence cette opération une dizaine de fois pour chaque intensité de courant. 
+ 
+ \subsubsection{Traitement des données}
+ On obtient alors $T_{init}$,$T_{fin}$, $i$, $h$ directement, et des vidéos desquelles on extrait $d_{min}$, $d_{max}$ les petit et grand axes de la bille, la position $(x(t),y(t)$ de la bille au court du temps, et une image de la pointe d'où on obtient $(x_p,y_p)$ la position de la pointe. 
+ 
+ Les vidéos des billes attirées par la pointe sont traitées avec l'algorithme d'ImageJ \emph{Analyse Particules} qui repère les billes et relève leur position sur toutes les images successives et leur taille. 
+ Cependant, si ImageJ repère toutes les billes sur chaque image, il ne relie pas une position à l'instant $t$ à la position de la même bille à l'instant $t+ \Delta t$. 
+ 
+ Pour cela, j'ai créé sous Igor un algorithme de tri qui sépare les trajectoires des différents billes et crée pour chaque bille une trajectoire $(x(t),y(t)$. 
+ 
+ La position de la pointe $(xp,yp)$ est repérée sur l'image prise en début d'expérience au 5X, grâce à ImageJ également. Comme la position du champ du 20X dans le champ du 5X est connue, la position $(xp,yp)_{5X}$ de la pointe dans le champ du 5X peut être convertie en position dans le champ du 20X $(xp,yp)_{20X}$. 
+ 
+ On peut constater immédiatement que la vitesse maximale des billes est atteinte quasiment immédiatement, on peut donc supposer que nous sommes toujours dans le régime stationnaire $\vec{F}_{mag}=-\vec{F}_{vis}$. 
+ Les billes ne se déplacent cependant pas à une vitesse constante, car lorsqu'elles se rapprochent de la pointe, la force $F_{mag}$ à laquelle elle sont soumises change. 
+ 
+ Enfin, pour chaque bille, un algorithme sous Igor permet de : 
+ \begin{itemize}
+ \item Calculer la distance de la bille à la pointe à chaque instant.
+ \item \`A l'aide d'un ajustement linéaire local, en déduire la vitesse $U(t)$ de la bille.
+ \item \`A l'aide de la formule de Stokes corrigée \ref{Stokes_corr}, estimer la force exercée par la pointe sur la bille.
+ \end{itemize}
+ 
+ On obtient donc une série de courbes de calibrations, où à chaque intensité de courant on connaît le module de la force magnétique $F$ en fonction de la distance de la bille à la pointe. 
+	
+	
 	\subsection{Protocole de renforcement}
+	\subsubsection{Préparation des cellules et des billes}
+	
+	Les cellules sont ensemencées sur une lamelle de verre recouverte de fibronectine comme indiqué en \ref{Coating} 24 heures avant le début des expériences. 
+	
+	\paragraph{Ingrédients : }
+	\begin{quote}
+	Pour la fabrication de la solution intermédiaire : 
+	\begin{itemize}
+	\item PBS
+	\item la solution mère de Dynabeads à 4.10$^{8}$billes/ml
+	\item de l'eau micro-filtrée 
+	\item un aimant permanent
+	\item de la fibronectine
+	\item une cuve à ultra-sons
+	\end{itemize}
+	Pour la préparation finale : 
+	\begin{itemize}
+	\item des C2C12 sur une lamelle de verre recouverte de fibronectine
+	\item 50 \micro l de solution intermédiaire
+	\item 950 \micro l de DMEM 1\% BSA
+	\item du milieu complet
+	\item une lamelle de verre 22mm*64mm*0.15mm
+	\item un séparateur de 240\micro m d'épaisseur
+	\item 15 \micro l d'HEPES
+	\end{itemize}
+	\end{quote}
+	
+	\paragraph{Protocole : }
+	\begin{quote}
+	\begin{enumerate}
+	\item Suspendre 50 \micro l de solution mère dans 450  \micro l d'eau micro-filtrée. 
+	\item Placer l'aimant sous l'eppendorf pour attirer les billes, et prélever 450 \micro l de surnageant.
+	\item Suspendre à nouveau dans 450 \micro l d'eau.
+	\item Répéter deux fois les deux étapes précédentes, mais la dernière fois, ajouter 450 \micro l de PBS au lieu de l'eau. 
+	\item Placer l'eppendorf 15 minutes dans la cuve à ultra-sons pour disperser les billes, et vortexer toutes les 5 minutes.
+	\item Ajouter 1 à 5 \micro l de fibronectine dans la suspension
+	\item Laisser incuber 30 minutes à 37 \degres C. 
+
+La solution intermédiaire ainsi préparée peut être conservée à 4 \degres C pendant 4 à 6 semaines. Une heure avant la première expérience : 
+	\item Placer l'eppendorf dans la cuve à ultra-sons pendant 15 à 30 minutes en agitant toutes les 5 minutes pour disperser à nouveau les billes
+	\item Prélever 50 \micro l de suspension et les suspendre dans 950 \micro de DMEM 1\% BSA. 
+	\item Ajouter 75 \micro l de suspension sur une lamelle de C2C12.
+	\item Laisser incuber les billes et les cellules ensemble pendant 30 minutes à 37 \degres C. 
+	\item Rincer 2 fois avec 1ml de milieu en cisaillant le moins possible pour enlever les billes qui n'ont pas adhéré aux cellules. 
+	\item Ajouter 15 \micro l d'HEPES pour préserver l'acidité du milieu pendant l'expérience.
+	\item Coller le séparateur sur la lamelle 22mm*64mm*15mm lavée à l'alcool 70\%
+	\item Ajouter 65\micro l de milieu 1,5\% d'HEPES
+	\item Monter la lamelle de C2C12 pour fermer la chambre expérimentale.  
+ 
+	\end{enumerate}
+	\end{quote}
+La lamelle préparée ainsi peut être observée immédiatement et conservée jusqu'à 2h dans une enceinte thermalisée à 37 \degres C. 	 	
+	
+	\subsubsection{Déroulement de l'expérience de fluage}
+	
+	On place la lamelle préparée à l'étape précédente sur le microscope inversé. 
+	\paragraph{Protocole : }
+	\begin{quote}
+	\begin{enumerate}
+	\item Au 20X, repérer la face supérieure de la lamelle au-dessus de la chambre expérimentale.
+	\item Grâce au vernier de la tour à objectif, placer le plan focal 100 \micro m au-dessus de la lamelle. 
+	\item Approcher la pointe avec le micromanipulateur afin de la placer dans le plan focal et au centre du champ de la caméra. 
+	\item Décaler horizontalement vers la droite la pointe de 240\micro m dans la configuration courte distance et de 390 \micro m dans la configuration longue distance. La pointe est alors alignée de sort que l'axe de la bobine passe par le centre du champ d'observation. 
+	\item Mémoriser cette position et éloigner la pointe.
+	\item Décaler la lamelle, changer d'objectif pour le 100X en configuration longue distance, pour le 40X sinon.
+	\item Placer une goutte d'huile sur l'objectif s'il s'agit du 100X et repositionner la lamelle. 
+	\item Chercher une cellule sur laquelle a adhéré une bille unique et placer la bille au centre du champ.
+	\item Ramener la pointe à la position mémorisée.
+	\item Alimenter la pointe avec un signal sinusoïdal de fréquence 0.5Hz afin de chercher la plus petite intensité de courant pour laquelle la bille a un mouvement détectable. 
+	\item Régler le GBF pour fournir la tension continue correspondante en réponse à un déclenchement externe (la carte PCI reliée à l'ordinateur). 
+	\item Ajouter la lentille 1.5X dans l'axe optique.
+	\item Sélectionner une zone restreinte autour de la bille qui va être acquise par la caméra.
+	\item Lancer l'exécution du script sous MicroManager.
+	\end{enumerate}
+	\end{quote}
+	
+	Le script d'acquisition sous MicroManager contrôle la caméra et l'électro-aimant par l'intermédiaire de la carte PCI contrôlant le GBF. Il va procéder ainsi : 
+	
+	\begin{enumerate}
+	\item[\textbf{Phase 1} : ]\textbf{de t=0 à t=12s}
+	\item Déclencher l'acquisition d'images par la caméra en mode \emph{Burst}, c'est-à-dire aussi vite que possible. Cette vitesse est d'autant plus grande que la zone à observer est petite. 
+	\item Déclencher le GBF pour allumer l'électro-aimant au courant pré-programmé sur le GBF. 
+	\item[\textbf{Phase 2 :} ] \textbf{de t=12s à t=125s}
+	\item Continuer l'acquisition des images de la bille mais à une vitesse réduite de 2 images/seconde.
+	\item[\textbf{Phase 3 : }] \textbf{de t=125s à t=250s}
+	\item Couper l'alimentation de l'électro-aimant
+	\item Continuer l'acquisition à 1 image/seconde
+	
+	\end{enumerate}
+	
+	Cette séquence est répétée 4 ou 6 fois afin d'observer les différences de la fonction de fluage d'une expérience à la suivante. 
+	
+	 \`A la fin de l'expérience, nous obtenons une série d'images de la bille au cours du temps. 
+	 Dans les métadonnées de ces images, il est possible d'obtenir l'heure à laquelle a été prise chaque image, ce qui permet d'avoir pour chaque image une coordonnée temporelle. 
+	
 	\subsection{Dépouillement des vidéos}
-		\subsubsection{ImageJ}
-		\subsubsection{Icy}
+	
+	Il est nécessaire d'analyser les images obtenues pour obtenir ce qui nous intéresse : la position de la bille au cours du temps. 
+	
+	Les premières images obtenues pour ma thèse ont toutes été traitées avec l'algorithme \emph{Analyse Particules} d'ImageJ. 
+
+Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier Strale, nous avons préféré utiliser Icy et son plugin \emph{Active Contours}, qui est beaucoup plus robuste à une défocalisation de la bille. 
+
+	Le traitement d'image nous fournit la position de la bille, le grand axe et le petit axe de la bille et la distance au centre du noyau en fonction du temps écoulé depuis le début de l'application de la force. 
+	\subsection{Fonction de fluage}
+	\`A l'issue d'une expérience, nous obtenons donc la position de la bille au cours du temps, en fonction de la force appliquée, pour 4 à 6 applications de la force. 
+	Cependant, nous cherchons à connaître la relation entre la déformation de la cellule et la contrainte qui lui est appliquée.
+	
+	Nous avons donc besoin d'un modèle reliant le mouvement de la bille à la déformation de la cellule, et d'un modèle reliant la force exercée sur la bille à la contrainte subie par la cellule. 
+	
+	Le modèle que nous avons utilisé a été développé par Delphine Icard lorsqu'elle a créé et utilisé les pinces optiques du laboratoire. Il suppose que la bille est enfoncée d'un angle $\theta$ dans la cellule, et qu'elle est soumise à une force horizontale $\vec{F}_0$. La cellule est modélisée comme un milieu visco-élastique semi-infini homogène et isotrope. La bille est supposée s'ancrer dans la cellule de manière homogène et infiniment rigide. 
+	La valeur de la fonction de fluage est alors donnée par : 
+	\begin{equation}
+	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0}
+	\label{Fluage}
+	\end{equation}
+	où $a$ est le rayon de la sphère, $\theta$ l'angle d'enfoncement dans le milieu visco-élastique, $\delta R$ le déplacement de la bille et $F_0$ la composante horizontale de la force exercée sur la bille. 
+	
+	Passons en revue les différentes approximations.
+	
+	 L'ancrage de la bille à la cellule est assurée par les liaisons fibronectine-intégrine ponctuellement sur la surface de bille immergée dans la cellule. Il nous est impossible avec les techniques dont nous disposons d'avoir une quelconque idée de la quantité de liaisons ponctuelles à la surface de contact. Cependant, en plus des contacts spécifiques, la cellule peut établir avec la membrane des contacts non spécifiques. La supposition d'un très grand nombre de sites de liaisons au niveau de la surface de contact est donc crédible. On l'a vu précédemment, au niveau du complexe d'adhésions à l'intérieur de la cellule, la situation est extraordinairement complexe. Lorsque l'on sonde par les intégrines, on sonde la rigidité de l'ensemble de l'assemblage complexe qui les relie au cytosquelette d'actine. 
+	
+	La cellule est considérée comme un milieu semi-infini. Cette approximation serait facile à justifier si la bille était de taille négligeable par rapport à l'épaisseur de la cellule, mais l'épaisseur de la cellule et la taille de la bille sont en fait presque égales; et souvent, la bille est plus grande que l'épaisseur de la cellule lorsqu'elle est loin du noyau. Cependant, la cellule n'est certainement pas non plus isotrope. En effet, lorsqu'avec les pinces magnétiques, on exerce une force ayant deux composantes égales, l'une horizontale et l'autre verticale, la bille n'a un mouvement détectable que dans le plan horizontal. Dans le plan vertical, la bille ne sort pas du plan focal, alors qu'un mouvement très faible serait immédiatement détectable par l'intermédiaire des anneaux de diffraction. Sur le verre, les C2C12 sont très étalées et leur surface inférieure est ancrée à la fibronectine adsorbée sur le verre de façon très forte. 
+	
+	
+	
 \section{\'Etirement}
 	L'objectif de ce dispositif est de soumettre les cellules à une déformation constante pendant plusieurs heures et de les observer en fluorescence pendant l'étirement sur un microscope inversé. 
 	\subsection{Description de l'étireur}
