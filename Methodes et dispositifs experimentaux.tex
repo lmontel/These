@@ -4,6 +4,7 @@
 \usepackage[francais]{babel}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\graphicspath{{Figures/}}
 \usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 \newcommand{\micro}{$\mathrm{\mu}$}
@@ -14,6 +15,11 @@
 
 \section{Culture cellulaire}
 	\subsection{Type cellulaire}
+	
+	\begin{figure}
+	\includegraphics[scale=0.15]{c68-avt.png}
+	\caption{C2C12 en culture sur du verre, avec des billes de 4,5 microns de diamètre, observées au microscope à immersion 100X.}
+	\end{figure}
 	
 	Nous avons utilisé comme modèle une lignée immortalisée de myoblastes murins de l'ATCC, les C2C12. Elles présentent l'avantage d'être la lignée immortalisée la plus proche des cellules qui sont utilisées par nos partenaires de l'Institut Cochin dans leurs expérimentations animales sur les souris. 
 	
@@ -38,6 +44,11 @@
 	
 	\subsection{Transfections}
 	Afin de visualiser les protéines qui nous intéressent, on ajoute aux cellules des fragments d'ADN appelés plasmides qui contiennent une version fluorescente de nos protéines d'intérêt. Ces plasmides sont intégrées aux cellules grâce à des protéines spécifiques comme la nanofectine et la lipofectamine lors de la transfection. 
+	
+	\begin{figure}
+	\includegraphics[scale=0.75]{C2C12_RGB-1.png}
+	\caption{C2C12 transfectées avec un plasmide MRTF-A GFP (en vert) et un plasmide Actine Mcherry (en rouge)}
+	\end{figure}
 	
 	Les cellules transfectées expriment donc deux versions de la protéine : la version endogène qui se trouve dans leur propre génome, et la version fluorescente du plasmide. La protéine que l'on observe est par conséquent toujours surexprimée par rapport à la situation normale, d'un facteur qui peut être variable d'une cellule à l'autre, selon la quantité de plasmide qui a été intégrée par la cellule : certaines cellules n'ont incorporé aucun plasmide et ne sont donc pas fluorescentes, d'autres en ont incorporé une grande quantité et sont très fluorescentes. 
 	
@@ -120,6 +131,11 @@
 		 
 		\subsubsection{DAPI}
 		Le DAPI peut aussi bien être utilisé sur les cellules fixées. Ona joute 1  \micro l de DAPI dans 1ml de PBS pendant 30 minutes à température ambiante. La lamelle est alors rincée avant observation. 
+		
+		\begin{figure}
+		\includegraphics[scale=0.4]{Montage_sc.png}
+		\caption{C2C12 transfectées MRTF-A GFP, fixées et marquées phalloïdine Alexa647, DNAseI Alexa547 et DAPI}
+		\end{figure}
 
 \subsubsection{Protocole de marquage quadrichrome}
 \paragraph{Durée estimée : 3h + 3*30 minutes + une nuit }
@@ -193,12 +209,17 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 	 Afin d'exercer cette force, il est nécessaire de construire un électro-aimant répondant à plusieurs contraintes : il doit être capable de créer un fort champ magnétique ainsi qu'un fort gradient de champ magnétique, cependant il ne doit pas chauffer l'échantillon afin de ne pas endommager les cellules vivantes sur lesquelles on manipule, et cela sans système de refroidissement qui  un bruit mécanique trop important. L'électro-aimant doit pouvoir être amené le plus près possible de l'échantillon afin d'exercer une force maximale, le plus précisément possible afin de conserver une bonne précision sur la direction et la valeur de la force exercée. On souhaite manipuler avec une chambre expérimentale fermée pour éviter toute contamination des cellules, et pouvoir faire des observations en fluorescence. On souhaite également faire des expériences de longue durée, en imposant des paliers de force longs et répétés.	
 	
 		\subsubsection{Billes superparamagnétiques}
+		
+		\begin{figure}
+		\includegraphics[scale=0.5]{Bille.PNG}
+		\caption{Bille Dynabeads M-450 observée en grossissement 150X. }
+		\end{figure}
 		Les billes utilisées sont des Dynabeads M-450 Epoxy d'Invitrogen Dynal AS, Oslo, Norvège. 
 		Ce sont des billes de polystyrène sphériques, de 4,5$\mu$m de diamètre, recouvertes en surface de groupes epoxy afin de permettre l'ajout de ligands en surface, et contenant des nanoparticules d'oxydes de fer qui leur confèrent leurs propriétés superparamagnétiques. 
 		Elles sont initialement fournies dans une suspension concentrée ($4.10^8$ billes/ml) dans de l'eau distillée. On les recouvre de fibronectine pour une fixation spécifique aux intégrines.
 		Pendant les expériences, les billes sont détectées par le logiciel de traitement d'images, qui ajuste une ellipse sur la forme de la bille. Nous obtenons donc 385885 mesures de taille pour 191 billes, avec une taille moyenne de 4.4067 $\pm$ 0.0002 \micro m et un rapport petit axe sur grand axe $e=0.98585 \pm 0.0008$. Les billes apparaissent donc légèrement plus petites qu'annoncé par le fabriquant mais semblent bien sphériques.
 		\begin{figure}
-		\includegraphics[scale=0.5]{Taille_des_billes.png}
+		\includegraphics[scale=0.25]{Taille_des_billes.png}
 		\caption{Fonction de distribution de taille des billes magnétiques utilisées dans 191 expériences de pinces. Pour chaque expérience, lorsque la bille est suivie par le logiciel d'analyse d'image, son grand axe et son petit axe sont mesurés pour chaque temps. La fonction est asymétrique car lorsque la bille n'est pas tout à fait au point, son diamètre apparaît plus grand.}
 \end{figure}		 
 		
@@ -224,6 +245,10 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 
 	L'optimisation des caractéristiques de l'électro-aimant a été l'objet de mon stage de Master 2. 
 	Deux contraintes s'opposent lors de la fabrication : l'augmentation du champ magnétique et l'effet Joule. 
+	
+	\begin{figure}
+	\includegraphics[scale=1]{champB.pdf}
+	\end{figure}
 	Le champ $\vec{B}$ généré par un solénoïde de longueur finie dans le vide sur son axe à une distance $z$:
 		
 		$$ \vec{B} = \frac{\mu_0 n I}{2} \left(\cos \left(\theta_2 -\cos \theta_1 \right)\right) \vec{u_z}$$
@@ -260,6 +285,10 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 		
 		 \paragraph{Montage sous le microscope}
 		 
+		 \begin{figure}
+		 \includegraphics[scale=1]{montageglobal.pdf}
+		 \end{figure}
+		 
 		 L'électro-aimant que l'on a fabriqué précédemment est monté sur un micromanipulateur (InjectMan NI2, Eppendorf, avec une précision de position de 0.1$\mu$m), et incliné à 45 $\degres$ . La force que nous allons exercer sur les billes est parallèle à l'axe de la bobine, nous allons donc appliquer simultanément une force horizontale et une force verticale vers le haut. 
 		 
 		 Un thermomètre est fixé sur la pointe pour mesurer sa température à tout instant et vérifier qu'il n'y a pas de risque d'endommager les cellules pendant l'expérience. 
@@ -267,6 +296,12 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 		 Les cellules ont préalablement été ensemencées sur une lamelle de verre et incubées avec les microbilles recouvertes de fibronectine. Sur une lame de verre 22mm*64mm*0.15mm, on monte un séparateur et la lamelle de verre, le tout formant une chambre expérimentale fermée de 65\micro l emplie de milieu de culture. 		 
 		 
 		 Le micromanipulateur et la lamelle contenant les cellules sont montés sur un microscope inversé (Leica DMIRB). \`A l'aide du micromanipulateur, on peut approcher la pointe de l'électro-aimant à une distance de 100$\mu$m de la lamelle. On enregistre les images de la bille à l'aide d'une caméra (CoolSnap HQZ) reliée à un ordinateur qui la contrôle par l'intermédiaire de MicroManager. 
+		 
+		 \begin{figure}
+		 \includegraphics[scale=0.4]{modeop1.pdf}
+		 \includegraphics[scale=0.4]{modeop2.pdf}
+		 \caption{Schéma des deux montages possibles de la lamelle par rapport à l'objectif et à la pince magnétique.}
+		 \end{figure}
 		 
 		 Il existe deux possibilités de montage pour la lamelle : la lamelle sur laquelle sont les cellules peut être placée en haut, du côté de la pointe de l'électro-aimant, ou au contraire en bas, proche de l'objectif du microscope. 
 		 
@@ -359,6 +394,11 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  \end{itemize}
  
  On obtient donc une série de courbes de calibrations, où à chaque intensité de courant on connaît le module de la force magnétique $F$ en fonction de la distance de la bille à la pointe. 
+ 
+ \begin{figure}
+ \includegraphics[scale=0.5]{Calibration_resume.png}
+ \caption{Courbe de calibration des forces exercées à 700\micro m de la pointe pour l'ancienne (en rouge) et la nouvelle bobine (en bleu, utilisée pour les expériences). }
+ \end{figure}
 	
 	
 	\subsection{Protocole de renforcement}
@@ -466,6 +506,12 @@ La lamelle préparée ainsi peut être observée immédiatement et conservée ju
 Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier Strale, nous avons préféré utiliser Icy et son plugin \emph{Active Contours}, qui est beaucoup plus robuste à une défocalisation de la bille. 
 
 	Le traitement d'image nous fournit la position de la bille, le grand axe et le petit axe de la bille et la distance au centre du noyau en fonction du temps écoulé depuis le début de l'application de la force. 
+	
+	
+	\begin{figure}
+	\includegraphics[scale=0.12]{c9-rigidification-couleurs.png}
+	\caption{Déplacement au cours du temps d'une bille adhérant sur une C2C12 et soumise à 4 créneaux de force de 100pN pendant 33s toutes les 100s. }
+	\end{figure}
 	\subsection{Fonction de fluage}
 	\`A l'issue d'une expérience, nous obtenons donc la position de la bille au cours du temps, en fonction de la force appliquée, pour 4 à 6 applications de la force. 
 	Cependant, nous cherchons à connaître la relation entre la déformation de la cellule et la contrainte qui lui est appliquée.
@@ -484,7 +530,21 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	
 	 L'ancrage de la bille à la cellule est assurée par les liaisons fibronectine-intégrine ponctuellement sur la surface de bille immergée dans la cellule. Il nous est impossible avec les techniques dont nous disposons d'avoir une quelconque idée de la quantité de liaisons ponctuelles à la surface de contact. Cependant, en plus des contacts spécifiques, la cellule peut établir avec la membrane des contacts non spécifiques. La supposition d'un très grand nombre de sites de liaisons au niveau de la surface de contact est donc crédible. On l'a vu précédemment, au niveau du complexe d'adhésions à l'intérieur de la cellule, la situation est extraordinairement complexe. Lorsque l'on sonde par les intégrines, on sonde la rigidité de l'ensemble de l'assemblage complexe qui les relie au cytosquelette d'actine. 
 	
-	La cellule est considérée comme un milieu semi-infini. Cette approximation serait facile à justifier si la bille était de taille négligeable par rapport à l'épaisseur de la cellule, mais l'épaisseur de la cellule et la taille de la bille sont en fait presque égales; et souvent, la bille est plus grande que l'épaisseur de la cellule lorsqu'elle est loin du noyau. Cependant, la cellule n'est certainement pas non plus isotrope. En effet, lorsqu'avec les pinces magnétiques, on exerce une force ayant deux composantes égales, l'une horizontale et l'autre verticale, la bille n'a un mouvement détectable que dans le plan horizontal. Dans le plan vertical, la bille ne sort pas du plan focal, alors qu'un mouvement très faible serait immédiatement détectable par l'intermédiaire des anneaux de diffraction. Sur le verre, les C2C12 sont très étalées et leur surface inférieure est ancrée à la fibronectine adsorbée sur le verre de façon très forte. 
+	La cellule est considérée comme un milieu semi-infini. 
+	Cette approximation serait facile à justifier si la bille était de taille négligeable par rapport à l'épaisseur de la cellule, mais l'épaisseur de la cellule et la taille de la bille sont en fait presque égales; et souvent, la bille est plus grande que l'épaisseur de la cellule lorsqu'elle est loin du noyau. 
+	Cependant, la cellule n'est certainement pas non plus isotrope. 
+	En effet, lorsqu'avec les pinces magnétiques, on exerce une force ayant deux composantes égales, l'une horizontale et l'autre verticale, la bille n'a un mouvement détectable que dans le plan horizontal. 
+	Dans le plan vertical, la bille ne sort pas du plan focal, alors qu'un mouvement très faible serait immédiatement détectable par l'intermédiaire des anneaux de diffraction. 
+	Sur le verre, les C2C12 sont très étalées et leur surface inférieure est ancrée à la fibronectine adsorbée sur le verre de façon très forte et la rigidité des cellules selon l'axe vertical est beaucoup plus grande à la fois que la rigidité dans les deux autres directions, mais aussi que la gamme de ridigités que nous pouvons sonder avec les pinces magnétiques. 
+	
+	Enfin, la cellule est considérée comme un matériau passif, ce qui n'est le cas que pendant les 10 à 20 premières secondes d'application de la force. 
+	Après ce temps, il devient évident que la cellule exerce activement des forces sur la bille. 
+	C'est pourquoi il faut se limiter à appliquer ce modèle pendant les premières 10 secondes de l'application de la force, et c'est pour cette raison qu'il est important de prendre le plus d'images possible pendant ce temps. 
+	
+	Pour tenir compte de ces constats expérimentaux, il serait probablement nécessaire de revoir les hypothèses d'un milieu isotrope semi-infini, et de le remplacer par un milieu non-isotrope de rigidité infinie selon l'axe vertical. 
+	Cependant les calculs théoriques ou numériques pour les milieux non-isotropes sont bien plus complexes, et nécessiteraient un travail analytique qui sort complètement du cadre de cette thèse. 
+	
+	De manière plus générale, ce qui nous intéresse particulièrement dans ces mesures est de comparer pendant plusieurs applications de forces successives l'évolution de la fonction de fluage d'une même cellule. Des biais, dus au modèle, sur la valeur absolue de la fonction de fluage ne nous empêchent pas de comparer ces valeurs les unes aux autres et d'en observer l'évolution au cours du temps. 
 	
 	
 	
@@ -492,6 +552,10 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	L'objectif de ce dispositif est de soumettre les cellules à une déformation constante pendant plusieurs heures et de les observer en fluorescence pendant l'étirement sur un microscope inversé. 
 	\subsection{Description de l'étireur}
 	Pendant ma thèse j'ai conçu les plans de cet étireur de cellules qui a ensuite été réalisé par l'atelier du laboratoire. Il est composé de trois parties principales : la cuve, le support de lamelle et le plot. Toutes les parties de l'étireur sont en plastique, le plot étant transparent pour laisser passer la lumière du condenseur. L'étireur à une symétrie cylindrique autour d'un axe vertical. 
+	\begin{figure}
+	\includegraphics[scale=0.2]{Etireur_3D_vue_dessous_rayon_blanc.png}
+	\caption{Modélisation de l'étireur vu de dessous pendant l'étirement.}
+	\end{figure}
 	\subsubsection{La cuve}
 	La cuve doit remplir deux fonctions : contenir le milieu de culture nécessaire aux cellules et permettre l'observation de celles-ci au microscope inversé. Elle est composée de deux pièces trouées en leur centre qui se vissent l'une dans l'autre. Au niveau de l'ouverture destinée à l'observation, on place une lamelle de verre de 30 mm de diamètre dont le contour a été préalablement enrobé dans du téflon souple. Cette lamelle de verre est enserrée entre les deux pièces de façon à former une cuve étanche dont le fond transparent permet l'observation.
 	\subsubsection{La lamelle de PDMS} 
@@ -508,10 +572,7 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	\subsection{Calibration de l'étireur}
 	
 	Un modèle géométrique simple permet d'estimer rapidement l'augmentation de la surface de la lamelle de PDMS en fonction du diamètre et de l'enfoncement du plot. 
-	
-	
-	
-	
+		
 	Afin de le comparer à l'étirement réel subi par la lamelle de PDMS, des lamelles ont été recouvertes de Pluronics, puis exposées à un rayonnement UVC à travers un masque de quartz contenant un grand nombre de carrés de taille connue formant un quadrillage. Puis les lamelles ont été recouvertes de fibronectine fluorescente, qui ne pouvait adhérer qu'aux endroits non éclairés par les UV. 
 	
 	\paragraph{Ingrédients : }
@@ -534,7 +595,13 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	\item Rincez au PBS et stockez à 4 \degres C dans le PBS, à l'abri de la lumière
 \end{enumerate}		
 	
-	Nous avons ainsi obtenu des lamelles recouvertes d'un quadrillage visible en microscopie de fluorescence. Ce quadrillage a été observé avant et après étirement, et l'étirement a alors été mesuré à partir de la formation du quadrillage
+	Nous avons ainsi obtenu des lamelles recouvertes d'un quadrillage visible en microscopie de fluorescence. Ce quadrillage a été observé avant et après étirement, et l'étirement a alors été mesuré à partir de la formation du quadrillage.
+	
+	\begin{figure}
+	\includegraphics[scale=0.05]{Calibration_plot.png}
+	\includegraphics[scale=0.05]{Calibration_fibro_(RGB).png}
+	\caption{À gauche : image du plot reconstituée à partir d'images prises au 4X sur le microscope confocal. À droite : images en fluorescence du quadrillage de fibronectine Cy3 avant (en rouge) et après (en bleu) un étirement 30\%.}
+	\end{figure}
 	
 	Les images nous montrent que la déformation du PDMS par le plot est radiale et uniforme, et que le modèle géométrique le plus simple décrit bien quantitativement la déformation subie. 
 	
@@ -584,6 +651,10 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	Juste avant l'expérience, la lamelle et le milieu de culture sont montés dans le reste de l'étireur et 1,5\% d'HEPES sont alors ajoutés pour tamponner l'acidité du milieu pendant la durée de l'expérience. L'étireur complet est alors placé sur la plate-forme du microscope et observé à l'aide d'un objectif 20X (trouver les caracs de l'objectif). Les cellules sont observées en lumière blanche et en fluorescence une première fois avant étirement brièvement, afin d'avoir une idée de l'état de départ des cellules. 
 	
 	En vissant le plot, on étire alors la lamelle rapidement en quelques secondes jusqu'à la déformation souhaitée. On cherche alors des cellules exprimant la MRTF-A GFP. À chaque fois qu'une ou plusieurs cellules sont visibles dans un champ, on enregistre la position de la platine motorisée. Toutes les 5 à 10 minutes, on retourne observer toutes les cellules répertoriées afin de suivre l'évolution de la localisation de MRTF-A au cours du temps. De nouvelles cellules sont recherchées jusqu'à 40 minutes après l'étirement et l'observation est ensuite maintenue pendant 2h après l'étirement. 
+	\begin{figure}
+	\includegraphics[scale=0.5]{Montage_translocations_2013-04-16_l2z1.png}
+	\caption{C2C12 transfectées MRTF-A GFP (en vert) et Actine Mcherry (en rouge), marquées au DAPI (en bleu), étirées à 30\% pendant 120 minutes. Dans les deux cellules marquées d'une flèche, MRTF-A s'accumule dans le noyau, puis retourne dans le cytoplasme.}
+	\end{figure}
 	
 	
 	\subsection{Protocole d'étirement fixé}
@@ -591,6 +662,11 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	Le protocole d'étirement avec observation en direct ne nous permet pas d'observer la population de cellules à des instants courts, car il faut du temps pour retrouver un nombre suffisant de cellules. De plus, l'observation de l'état du cytosquelette en direct est difficile car les différents marqueurs disponibles perturbent trop le système : la surexpression d'actine lors de la transfection avec une actine Mcherry modifie de manière très visible l'équilibre entre MRTF-A et l'actine G, la LifeAct RFP est exprimée tellement intensément que sa fluorescence empiète sur celle de MRTF-A GFP. 
 	
 	Fixer les cellules nous permet d'avoir un marquage quadrichrome : la F-actine en rouge-profond grâce à la phalloïdine, la G-actine en rouge grâce à la DNaseI, MRTF-A GFP ou anticorps anti-MRTF-A en vert et l'ADN du noyau en bleu grâce au DAPI. 
+	
+	\begin{figure}
+	\includegraphics[scale=0.3]{2014-06-18-Et10-0-1(RGB).png}
+	\caption{C2C12 marquées par la phalloïdine (ici en rouge), par la DNase I (en vert), un anticorps anti-MRTF-A (en cyan) et le DAPI (en bleu).}
+	\end{figure}
 	
 	Pour une expérience d'étirement fixé, on prépare une boîte de C2C12 proches de la confluence (60-70\%) transfectées si l'on veut observer la MRTF-A GFP. Elles sont ensemencées ensemble sur 6 lamelles de PDMS dans une plaque 6 puits dans 3ml de milieu de culture 24h avant le début de l'expérience. Le lendemain, une de ces lamelles est montée sur le support, rincée au PBS et fixée immédiatement, c'est la lamelle témoin. Les autres lamelles sont successivement étirées, laissées à l'incubateur pendant un temps donné, puis démontées, rincées et fixées immédiatement. On obtient ainsi pour un même étirement une lamelle à t=0 et 5 lamelles à différents temps après étirement (par exemple 5,10,20,30,60 minutes après étirement). 
 	
