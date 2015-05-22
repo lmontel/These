@@ -23,11 +23,11 @@
 	
 	Nous avons utilisé comme modèle une lignée immortalisée de myoblastes murins de l'ATCC, les C2C12. Elles présentent l'avantage d'être la lignée immortalisée la plus proche des cellules qui sont utilisées par nos partenaires de l'Institut Cochin dans leurs expérimentations animales sur les souris. 
 	
-	Ce sont des cellules adhérentes conservent leur capacité à se différencier en myotubes lorsqu'elles atteignent la confluence et placées dans un milieu pauvre en sérum. C'est pourquoi il est essentiel de les maintenir en permanence en-dessous de la confluence. 
+	Ce sont des cellules adhérentes qui conservent leur capacité à se différencier en myotubes lorsqu'elles atteignent la confluence et sont placées dans un milieu pauvre en sérum. C'est pourquoi il est essentiel de les maintenir en permanence en-dessous de la confluence. 
 	
 	Elles adoptent des formes variées (allongées, triangulaires, en disque) et se déplacent sur leur surface de culture en étendant des lamellipodes. 
 	
-	Les C2C12 sont cultivées dans un milieu de culture composé de DMEM (Dulbecco's Modified Eagle Medium) à 4,5g/L de L-Glucose supplémenté de 10\% de Sérum de Veau F\oe tal (SVF) et de 1\% d'antibiotiques (Pénicilline et Streptomycine). Elles sont conservées dans des flasques de plastiques dans un incubateur à 37\degres   C et 5\% de CO$_2$. 
+	Les C2C12 sont cultivées dans un milieu de culture composé de DMEM (Dulbecco's Modified Eagle Medium) à 4,5g/L de L-Glucose supplémenté de 10\% de Sérum de Veau F\oe tal (SVF) et de 1\% d'antibiotiques (Pénicilline et Streptomycine dans un incubateur à 37\degres   C et 5\% de CO$_2$. 
 	
 	
 	Lorsqu'elles sont proches de la confluence, il faut rincer deux fois les cellules avec du PBS (Phosphate Buffered Saline) et les laisser incuber 5 minutes à 37\degres   C dans un mélange Trypsine/EDTA. La trypsine est une enzyme qui va casser les adhésions cellulaires, tandis que l'EDTA joue le rôle de chélateur des ions calcium qui sont indispensables pour créer des adhésions. Une fois les cellules décollées, elles sont diluées dans du milieu de culture qui inactive la trypsine et ensemencées à nouveau sur des boîtes de culture. Cette opération s'appelle le passage. 
@@ -38,12 +38,23 @@
 	
 	Les disques de PDMS doivent préalablement être passées dans un four à plasma pendant 2 minutes afin de rendre leur surface hydrophile. Cette opération stérilise également les disques. Les lamelles de verre doivent être stérilisées 30 minutes à l'aide d'un rayonnement UV. 
 	
-	Les lamelles comme les disques sont placés les puits d'une plaque 6 puits, et mis à incuber 30 minutes à 37\degres   C dans 1ml de milieu complet et 5\micro g de fibronectine qui va s'adsorber sur la surface. 
+	Les lamelles comme les disques sont placés dans les puits d'une plaque 6 puits, et mis à incuber 30 minutes à 37\degres   C dans 1ml de milieu complet et 5\micro g de fibronectine qui va s'adsorber sur la surface. 
 	
-	Après rinçage, les cellules sont ensemencées sur les lamelles dans du milieu complet. 
+	Après rinçage, \nombre{110 000} cellules sont ensemencées sur chaque lamelle dans du milieu complet. 
 	
+	\subsubsection{Visualiser une protéine dans la cellule : anticorps, marqueurs et protéines fluorescentes}
+	
+	Trois techniques ont été utilisée pendant cette thèse pour visualiser nos deux protéines d'intérêt, l'actine et MRTF, dans les cellules. 
+	
+	La première et la plus ancienne fait appel à des anticorps spécifiquement dirigés contre la protéine cible. Une fois que les anticorps se sont fixés sur leurs cibles, un anticorps secondaire couplé à un fluorophore vient détecter et se fixer sur le premier anticorps. 
+	
+	La seconde fait appel à des molécules spécifiquement dirigées contre notre protéine d'intérêt et couplées à un fluorophore. C'est le cas par exemple de la phalloïdine, drogue issue de l'Amanite Phalloïde qui a la propriété de se fixer aux filaments d'actine.	
+	
+	La dernière technique fait appel à la Green Fluorescent Protein (GFP), protéine découverte dans les années soixante chez une méduse, et utilisée à partir des années 90 pour marquer des protéines. En fusionnant la séquence génétique de la GFP avec la séquence de la protéine à observer, on obtient un nouveau gène codant pour une version fluorescente de la protéine d'intérêt. Après introduction du gène dans les cellules, celles-ci expriment alors la version fluorescente de la protéine. Cette utilisation de la GFP a révolutionné la biologie cellulaire et a été l'objet du prix Nobel de Chimie en 2008. Aujourd'hui, il existe de nombreuses variantes de cette technique, que ce soit au niveau des bandes d'émission et d'absorption du fluorophore (il en existe de toutes les couleurs du spectre visible) ou au niveau de la manière dont le gène de la nouvelle protéine est intégrée dans les cellules (transfection, électroporation, infection par des virus  \dots).
+	
+	Cette dernière technique permet d'observer la protéine fluorescente en direct pendant la vie de la cellule, alors que la première technique ne peut être utilisée que sur des cellules fixées. La seconde technique peut parfois être utilisée sur des cellules vivantes lorsque la drogue utilisée n'est pas trop toxique. 
 	\subsection{Transfections}
-	Afin de visualiser les protéines qui nous intéressent, on ajoute aux cellules des fragments d'ADN appelés plasmides qui contiennent une version fluorescente de nos protéines d'intérêt. Ces plasmides sont intégrées aux cellules grâce à des protéines spécifiques comme la nanofectine et la lipofectamine lors de la transfection. 
+	Afin de visualiser les protéines qui nous intéressent, on ajoute aux cellules de l'ADN non chromosomique d'origine bactérienne appelés plasmides qui codent pour une version fluorescente de nos protéines d'intérêt. Ces plasmides sont intégrées aux cellules grâce à des agents spécifiques comme la nanofectine et la lipofectamine lors de la transfection. 
 	
 	\begin{figure}
 	\includegraphics[scale=0.75]{C2C12_RGB-1.png}
@@ -58,7 +69,7 @@
 	
 	\subsubsection{Protocole de transfection}
 	
-	Dans les protocoles suivants, les proportions sont données pour un puits d'une plaque 6 puits. Une boîte de culture représente une surface de 2,5 fois celle d'un puits, les quantités utilisées lors de la transfection d'une boîte sont donc multipliées d'autant.
+	Dans les protocoles suivants, les proportions sont données pour un puits d'une plaque 6 puits. Une petite boîte de culture (T-25) représente une surface de 2,5 fois celle d'un puits, les quantités utilisées lors de la transfection d'une boîte sont donc multipliées d'autant.
 	
 	Trois protocoles sont décrits simultanément ici : le protocole pour une transfection simple de MRTF-A GFP , puis pour une transfection double MRTF-A GFP/Actine Mcherry (option 1) ou MRTF-A GFP/LifeAct RFP (option 2). Sauf indication contraire, toutes les étapes et ingrédients optionnels sont en plus des ingrédients pour la transfection simple.
 	
@@ -67,14 +78,14 @@
 
 	\begin{itemize}
 	\item Des C2C12 ensemencées dans un puits d'une plaque 6 puits
-	\item 1 \micro g de nanofectine 
+	\item 1 \micro g de nanofectine (PAA Nanofectin Kit)
 	\item 1 \micro g d'ADN de MRTF-A GFP
 	\item (option 1 : Actine Mcherry) 1 \micro g d'ADN d'Actine Mcherry
 	\item (option 1 : Actine Mcherry) 1 \micro g de nanofectine
 	\item (option 2 : LifeAct RFP) 0,75 \micro g d'ADN de LifeAct RFP
 	\item (option 2 : LifeAct RFP) 0,75 \micro g de nanofectine
-	\item 2*50 \micro l de NaCl 1mM
-	\item (option 1 ou 2) 2*50 \micro l de NaCl 1mM
+	\item 2*50 \micro l de NaCl 150mM
+	\item (option 1 ou 2) 2*50 \micro l de NaCl 150mM
 	\item 0,9ml de milieu complet (transfection simple uniquement)
 	\item (option 1 ou 2) 0,8 ml de milieu complet
 	\end{itemize}
@@ -83,10 +94,10 @@
 \paragraph{Protocole : }
 \begin{quote}
 \begin{enumerate}
-	\item Diluer dans un eppendorf 1 \micro g de MRTF-A GFP dans 50 \micro l de solution de NaCl 1mM. 
+	\item Diluer dans un eppendorf 1 \micro g de MRTF-A GFP dans 50 \micro l de solution de NaCl 150mM. 
 	\item Diluer de même 1 \micro g de nanofectine
-	\item (option 1 ou 2 ) Répéter ces deux étapes avec l'Actine Mcherry ou la LifeAct
-	\item Transvaser le contenu de l'eppendorf de nanofectine dans l'eppendorf d'ADN (l'ordre est important)
+	\item (option 1 ou 2 ) Répéter ces deux étapes avec l'Actine Mcherry ou la LifeAct RFP
+	\item Transvaser le contenu de l'eppendorf de nanofectine dans l'eppendorf d'ADN (le sens est important)
 	\item (option 1 ou 2 ) Répéter l'opération pour les deux autres tubes
 	\item Laisser incuber 30 minutes à 37~\degres C 
 	\item Transvaser le ou les mélange(s) nanofectine + ADN dans du milieu complet de façon à obtenir 1  ml de solution
@@ -108,9 +119,9 @@
 	
 	Les lamelles fixées ainsi obtenues peuvent être conservées plusieurs mois à 4\degres   C et observées longuement au microscope. 
 	\subsection{Marquages sur cellules fixées}
-	Les protéines fixées peuvent être marquées par des molécules fluorescentes qui peuvent être perturbatrices ou toxiques pour des cellules vivantes. Ici nous avons réalisé sur cellules fixées des marquages à 4 couleurs : rouge profond pour les filaments d'actine, rouge pour l'actine monomérique, vert pour la MRTF-A et bleu pour l'ADN. 
+	Les cellules fixées peuvent être marquées par des molécules fluorescentes qui peuvent être perturbatrices ou toxiques pour des cellules vivantes. Ici nous avons réalisé sur cellules fixées des marquages à 4 couleurs : rouge profond pour les filaments d'actine, rouge pour l'actine monomérique, vert pour la MRTF-A et bleu pour l'ADN. 
 		\subsubsection{Perméabilisation}
-		Afin de faire rentrer plus efficacement les molécules et protéines qui vont nous permettre de marquer les protéines des cellules, il est nécessaire de perméabiliser les cellules. Pour cela, on va ajouter aux cellules fixer une solution contenant 0.5\% de Triton, un tensio-actif qui va permettre de créer des trous dans les membranes plasmiques des cellules fixées. 
+		Afin de faire rentrer les molécules et protéines qui vont nous permettre de marquer les protéines des cellules, il est nécessaire de perméabiliser les cellules. Pour cela, on va ajouter aux cellules fixées une solution contenant 0.5\% de Triton, un tensio-actif qui va permettre de créer des trous dans les membranes plasmiques des cellules fixées. 
 		Pour améliorer la spécificité des différents marqueurs on va également saturer les sites de liaison des protéines à l'aide de protéines non spécifiques : Bovine Serum Albumine (BSA) 4\% et Horse Serum (HS) 5\%. 
 		
 		Les lamelles de cellules fixées sont donc initialement laissées 3h à température ambiante dans la solution de saturation composée de 0.5\% triton, 5\% HS et 4\% BSA. 
@@ -118,7 +129,7 @@
 		\subsubsection{Phalloïdine}
 		La phalloïdine est une drogue issue de l'amanite phalloïde qui se lie aux filaments d'actine et les stabilise. Utilisée \emph{in vivo} elle perturbe significativement le cytosquelette jusqu'à se révéler toxique pour les cellules. 
 		
-		Sur des cellules fixées, la phalloïdine permet de marquer spécifiquement les filaments d'actine. La phalloïdine Alexa 647 utilisée pendant nos marquages a été ajoutée aux cellules fixées la veille de l'observation et laissée toute la nuit à 4\degres C, et rincée avant observation. 
+		Sur des cellules fixées, la phalloïdine permet de marquer spécifiquement les filaments d'actine. La phalloïdine   utilisée pendant nos marquages a été ajoutée aux cellules fixées la veille de l'observation et laissée toute la nuit à 4\degres C, et rincée avant observation. 
 		\subsubsection{DNaseI}
 		La DNaseI est une protéine naturellement présente dans le noyau des cellules et qui découpe l'ADN en morceaux de 4 paires de bases. Son action est bloquée lorsqu'elle est liée à un monomère d'actine. En raison de son action sur l'ADN, elle ne peut pas être utilisée sur des cellules vivantes. Sur des cellules fixées, elle est un marqueur spécifique du monomère d'actine. 
 		
@@ -129,9 +140,7 @@
 		
 		Le marquage se fait en deux étapes : le marquage par un anticorps spécifique anti-MRTF-A, puis le marquage de l'anti-corps anti-MRTF-A par un autre anti-corps qui est fluorescent. L'anti-corps primaire est placé pendant 30 minutes à température ambiante. La lamelle est ensuite rincée et on y ajoute l'anticorps secondaire à nouveau pendant 30 minutes à température ambiante, puis on rince à nouveau. 
 		 
-		\subsubsection{DAPI}
-		Le DAPI peut aussi bien être utilisé sur les cellules fixées. Ona joute 1  \micro l de DAPI dans 1ml de PBS pendant 30 minutes à température ambiante. La lamelle est alors rincée avant observation. 
-		
+				
 		\begin{figure}
 		\includegraphics[scale=0.4]{Montage_sc.png}
 		\caption{C2C12 transfectées MRTF-A GFP (ici en cyan), fixées et marquées phalloïdine Alexa647 (ici en rouge), DNAseI Alexa547 (ici en vert) et DAPI (ici en magenta)}
@@ -149,17 +158,17 @@
  \item 40 \micro g de BSA
  \item 50 \micro l de Horse Serum
  \item 5 \micro l de Triton
- \item 4 \micro l de Phalloïdine Alexa 647
- \item 1 \micro l de DNase I 
- \item 4 \micro l d'anticorps MRTF-A H140
- \item 2 \micro l d'anticorps anti-rabbit Alexa 488
+ \item 4 \micro l de Phalloïdine Alexa 647 (Life Technologies) 6.6 \micro M dans le méthanol
+ \item 1 \micro l de DNase I Alexa 594 (Life Technologies) 161 \micro M dans un mélange 50\% v/v PBS 50\% glycérol
+ \item 4 \micro l d'anticorps MRTF-A H140 (Santa Cruz Biotechnology) 200\micro g/ml dans PBS 0.1\% gélatine
+ \item 2 \micro l d'anticorps goat anti-rabbit Alexa 488 (Jackson ImmunoResearch) 1.5mg/ml dans de l'eau diluée
  \item 1 \micro l de DAPI
  \end{itemize}
 \end{quote}
 
 \paragraph{Protocole pour une lamelle : }
 \begin{enumerate}
-\item Mélanger 40 \micro g de BSA, 50 \micro l de HS et 5 \micro l de Triton dans 905\micro l de PBS. Le mélange constitue la solution de saturation.
+\item Mélanger 40 \micro g de BSA, 50 \micro l de HS et 5 \micro l de Triton dans 905\micro l de PBS. Le mélange constitue la solution de perméabilisation et de saturation.
 \item Enlever le PBS de la lamelle fixée
 \item Ajouter la solution de saturation sur la lamelle, et laisser incuber 3h à température ambiante
 \item Ajouter 4 \micro l d'anti-MRTF-A H140 à 996 \micro l de PBS
@@ -183,21 +192,21 @@
 
 Les pinces magnétiques sont destinées faire de la rhéologie à l'échelle locale sur une cellule unique. Comme les pinces optiques, elles utilisent des billes micrométriques recouvertes de protéines d'adhésion pour s'ancrer à la cellule. 
 Une force exercée sur la bille sera alors transmise par les adhésions à la cellule.
- Les contraintes sont donc non seulement ressenties mécaniquement par la cellule, mais aussi biochimiquement car les protéines des complexes d'adhésions sont stimulées à la liaison fibronectine - intégrine. 
+ Les contraintes sont donc non seulement ressenties mécaniquement par la cellule, mais aussi biochimiquement au niveau des protéines des complexes d'adhésions. 
 La bille, observée au microscope, se déplace en réponse à la force, mais est retenue par la cellule.
 
 Pour étudier la rhéologie cellulaire, on va alors exercer une force connue sur la bille, et mesurer au microscope son déplacement, et donc la déformation de la cellule.
 Nous nous sommes placés ici en régime de fluage, plus adapté à la pince magnétique. La bille exerce une contrainte constante sur la cellule $\sigma_0$, qui est reliée à la déformation de la cellule par la relation : 
 $$\epsilon (t) = \sigma_0 J(t)$$.
 
-Un modèle nous permet d'obtenir la contrainte subie par la cellule $\sigma_0$ à partir de la force exercée par l'électro-aimant sur la bille $F_0$ et la déformation de la cellule $\epsilon (t)$ en fonction du déplacement de la bille $x(t)$. 
+Un modèle nous permet de relier la contrainte subie par la cellule $\sigma_0$ à la force exercée par l'électro-aimant sur la bille $F_0$ et la déformation de la cellule $\epsilon (t)$ au déplacement de la bille $x(t)$. 
 
 
 
 
 
 
-Les pinces magnétiques ont été construites pour contourner un certain nombre de limitations que rencontraient les pinces optiques qui existaient déjà au laboratoire, en particulier pour exercer des forces plus grandes pendant des durées plus longues. Cela s'est fait au prix de la perte de contrôle de la direction de la force : la pince magnétique ne peut que tirer la bille vers la pointe, dans la direction de l'axe de l'électro-aimant. 
+Les pinces magnétiques ont été construites pour contourner un certain nombre de limitations que rencontraient les pinces optiques qui existaient déjà au laboratoire, en particulier pour exercer des forces plus grandes pendant des durées plus longues et des découpler l'observation et l'application de force, qui se faisaient par l'intermédiaire de l'objectif dans le cas des pince optiques. Cela s'est fait au prix de la perte de contrôle de la direction de la force : la pince magnétique ne peut que tirer la bille vers la pointe, dans la direction de l'axe de l'électro-aimant. 
 
 
 	\subsection{Description}
@@ -207,7 +216,7 @@ Les pinces magnétiques ont été construites pour contourner un certain nombre 
 Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui va créer un champ et un gradient de champ magnétiques lorsqu'il est alimenté par un courant, pour exercer des forces à distance sur un bille magnétique fixée à la cellule par des protéines d'adhésion. 	 
 	 
 	 
-	 Afin d'exercer cette force, il est nécessaire de construire un électro-aimant répondant à plusieurs contraintes : il doit être capable de créer un fort champ magnétique ainsi qu'un fort gradient de champ magnétique, cependant il ne doit pas chauffer l'échantillon afin de ne pas endommager les cellules vivantes sur lesquelles on manipule, et cela sans système de refroidissement qui  un bruit mécanique trop important. L'électro-aimant doit pouvoir être amené le plus près possible de l'échantillon afin d'exercer une force maximale, le plus précisément possible afin de conserver une bonne précision sur la direction et la valeur de la force exercée. On souhaite manipuler avec une chambre expérimentale fermée pour éviter toute contamination des cellules, et pouvoir faire des observations en fluorescence. On souhaite également faire des expériences de longue durée, en imposant des paliers de force pendant plusieurs minutes et répétés pendant plusieurs dizaines de minutes.	
+	 Afin d'exercer cette force, il est nécessaire de construire un électro-aimant répondant à plusieurs contraintes : il doit être capable de créer un fort champ magnétique ainsi qu'un fort gradient de champ magnétique, cependant il ne doit pas chauffer l'échantillon afin de ne pas endommager les cellules vivantes sur lesquelles on manipule, et cela sans système de refroidissement qui risquerait d'introduire un bruit mécanique trop important. L'électro-aimant doit pouvoir être amené le plus près possible de l'échantillon afin d'exercer une force maximale, le plus précisément possible afin de conserver une bonne précision sur la direction et la valeur de la force exercée. On souhaite manipuler avec une chambre expérimentale fermée pour éviter toute contamination des cellules, et pouvoir faire des observations en fluorescence. On souhaite également faire des expériences de longue durée, en imposant des paliers de force pendant plusieurs minutes et répétés pendant plusieurs dizaines de minutes.	
 	
 		\subsubsection{Billes superparamagnétiques}
 		
@@ -218,7 +227,8 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 		Les billes utilisées sont des Dynabeads M-450 Epoxy d'Invitrogen Dynal AS, Oslo, Norvège. 
 		Ce sont des billes de polystyrène sphériques, de 4,5$\mu$m de diamètre, recouvertes en surface de groupes epoxy afin de permettre l'ajout de ligands en surface, et contenant des nanoparticules d'oxydes de fer qui leur confèrent leurs propriétés superparamagnétiques. 
 		Elles sont initialement fournies dans une suspension concentrée ($4.10^8$ billes/ml) dans de l'eau distillée. On les recouvre de fibronectine pour une fixation spécifique aux intégrines.
-		Pendant les expériences, les billes sont détectées par le logiciel de traitement d'images, qui ajuste une ellipse sur la forme de la bille. Nous obtenons donc \nombre{385885} mesures de taille pour 191 billes, avec une taille moyenne de 4.4067 $\pm$ 0.0002 \micro m et un rapport petit axe sur grand axe $e=0.98585 \pm 0.0008$. Les billes apparaissent donc légèrement plus petites qu'annoncé par le fabriquant mais semblent bien sphériques.
+		Pendant les expériences de pinces magnétiques, la bille magnétique par l'intermédiaire de laquelle on applique une force sur la cellule est observée au microscope à l'aide d'un objectif 100X et filmée pendant toute la durée de l'expérience.  Ces images sont ensuite traitées avec un logiciel d'analyse d'image (ImageJ, National Institue of Health) qui ajuste une ellipse sur l'image des billes. Le logiciel nous donne pour chaque image de chaque expérience le grand axe et le petit axe de l'ellipse ajustée. Une bille est donc mesurée environ \nombre{4 000} fois pendant une expérience.  
+		Nous obtenons donc \nombre{385 885} mesures de taille pour 191 billes observées pendant 191 expériences de pinces, avec une taille moyenne de 4.4067 $\pm$ 0.0002 \micro m et un rapport petit axe sur grand axe $e=0.98585 \pm 0.0008$. Les billes apparaissent donc légèrement plus petites qu'annoncé par le fabriquant mais semblent bien sphériques.
 		\begin{figure}
 		\includegraphics[scale=0.3]{Taille_des_billes.png}
 		\caption{Fonction de distribution de taille des billes magnétiques utilisées dans \nombre{191} expériences de pinces. Pour chaque expérience, lorsque la bille est suivie par le logiciel d'analyse d'image, son grand axe et son petit axe sont mesurés pour chaque temps. La fonction est asymétrique car lorsque la bille n'est pas tout à fait au point, son diamètre apparaît plus grand.}
