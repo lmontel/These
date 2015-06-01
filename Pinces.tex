@@ -1,0 +1,98 @@
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+
+\begin{document}
+
+\chapter{Rhéologie locale d'un cellule unique}
+
+Les pinces magnétiques ont été construites afin de pouvoir observer l'évolution des caractéristiques mécaniques d'une cellule au cours du temps, lorsque celle-ci est soumise à des forces de manière répétée. L'objectif était de poursuivre ainsi une investigation débutée par Delphine Icard avec les pinces optiques. En effet, dans sa thèse, elle avait observé que lorsqu'une force identique est appliquée de manière répétée sur une cellule, elle devient de plus en plus rigide, et que cet effet s'accompagne d'un recrutement d'actine autour du point d'application de la force. 
+
+Deux expériences sont décrites ici : les expériences faites avec la pince immédiatement après sa construction et donc le but est d'observer l'évolution des paramètres mécaniques de C2C12 isolées, et des expériences faites bien après en collaboration avec Pierre-Oliver Strale sur d'autres cellules exprimant des cadhérines mutantes. 
+
+\section{Description}
+
+\subsection{Sélection préliminaire}
+
+Une fois l'expérience mise en place comme cela a été décrit dans le chapitre précédent, la première étape consiste à trouver une bille adhérent à une cellule sur laquelle on puisse faire des mesures. 
+On écarte volontairement toutes les billes qui sont trop proches d'une autre bille : en effet, lorsque deux billes sont proches, elles interagissent, et s'attirent l'une vers l'autre jusqu'à former un doublet aligné avec les lignes de champ magnétiques. Il est alors impossible de connaître précisément la force exercée sur la bille. 
+
+Lorsque l'on repère une bille isolée adhérent à une cellule, un premier test rapide est réalisé.
+On commence par appliquer une force oscillante sur la bille, et on observe si un mouvement oscillant de la bille est détectable. Si aucun mouvement n'est détectable, on augmente la force jusqu'à détecter un mouvement. Si aucun mouvement n'est détectable à la force maximale, c'est que la bille est trop fortement ancrée, et la cellule trop rigide pour que l'on puisse mesurer ses caractéristiques à l'aide de notre dispositif. 
+
+Sachant que la résolution de l'image de la bille est de 0.0385 \micro m par pixel, et que la force maximale appliquée est de 163 pN, on peut en déduire un $J_{0min}=1.5 *10^{-3} Pa^{-1}$, ce qui correspond typiquement à une rigidité cellulaire de 1kPa. 
+
+Il aurait été intéressant de compter le nombre de cellules écartées à cause d'une trop grande rigidité, car cela nous aurait donné un aperçu de la quantité de la population qu'il était impossible de sonder avec le dispositif tel qu'il était monté. Cela a d'ailleurs été fait dans la deuxième expérience sur les cadhérines mutées. 
+
+\subsection{Sélection a posteriori}
+
+Il arrive qu'au cours de l'expérience, lorsqu'une bille n'est que peu ancrée à la cellule, elle soit arrachée lors d'une application de la force.
+Il peut également arriver que la cellule observée ait un mouvement propre tellement important qu'elle fait sortir la bille du  champ de la caméra. 
+
+Dans ces deux cas, les expériences partielles ne sont pas dépouillées avec les autres, car il leur manque une partie de l'information, mais elles sont dénombrées.
+
+\subsection{Application de la force : la fonction de fluage}
+
+\subsubsection{Direction du mouvement des billes}
+Au temps t=0, une force constante est appliquée sur la cellule par l'intermédiaire de la bille. 
+
+La bille est attirée par la pointe de la pince par une force $\vec{F_{tot}}=F \vec{u}_x+F\vec{u}_z$ dirigée selon l'axe bille-pointe. 
+
+Sur la vidéo, on peut observer la position dans le plan XY du centre de la bille, et constater que la bille est bien attirée par la pointe selon X et n'a qu'un mouvement faible selon Y dû aux petits défauts d'alignement de la pointe. La plupart des billes ont un mouvement total de l'ordre de 0.1 à 0.5 \micro m lors d'une application de force. 
+
+On peut également obtenir des information sur le mouvement de la bille en Z en observant la variation de son rayon, qui augmente lorsqu'elle quitte le plan focal. 
+
+Une calibration à l'aide d'une cale piézo-électrique a permis de déterminer qu'une variation de diamètre de la bille de 0.04\micro m correspond à une variation de hauteur de 0.2 \micro m. 
+Or sur la quasi-totalité des billes observées au cours de ces expériences, la variation du diamètre des billes est inférieure à 0.02 \micro m, ce qui correspond à une borne supérieure de mouvement vertical de 0.1 \micro m de l'ordre de la borne inférieure des mouvements détectés selon l'axe X. 
+
+La pince magnétique applique une force égale selon les deux axes X et Z, mais les déplacements mesurés dans les deux directions sont différents : les cellules semblent plus rigides d'un facteur 5 dans la direction verticale par rapport à l'horizontale. 
+
+A AJOUTER : CELLULES DE PIERRE-OLIVIER QUI BOUGENT PLUS EN VERTICAL : CELLULES PLUS EPAISSES ? DISCUTER AVEC LE MODELE DE KAMGOUE DE L'ENFONCEMENT. 
+\subsubsection{Fonction de fluage en loi de puissance}
+
+Le modèle de Gallet nous permet de calculer une fonction de fluage à partir de la déformation que la bille impose à la cellule et de la force appliquée par la pince : 
+\begin{equation}
+	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0}
+	\end{equation}
+	
+	
+La fonction de fluage de la cellule peut être modélisée par une loi de puissance à une échelle de temps inférieure à 15-20 secondes. Au-delà, les mouvements actifs de la cellule perturbent le mouvement de la bille. 
+
+On peut alors réaliser un ajustement avec la fonction : 
+$$ J(t)=J_0 \left( \frac{t}{t_0} \right)^{\alpha}$$
+
+$J_0$ et $\alpha$ sont les caractéristiques mécaniques de la cellule, $t$ le temps écoulé depuis le début de l'application du pas de force, $t_0$=1s. 
+
+Pour un solide parfaitement élastique, la déformation en réponse à un palier de force est immédiate et constante au cours du temps, et la fonction de fluage est alors l'inverse du module d'Young.
+$$J(t)=\frac{1}{E}$$
+ $$J_0=\frac{1}{E} $$
+ $$\alpha=0$$
+ 
+ Pour un liquide parfaitement visqueux, la fonction de fluage est alors  proportionnelle au temps écoulé depuis le début de l'application de la force : 
+ $$ J(t)=\frac{t}{\eta}$$
+ $$J_0=\frac{t_0}{\eta}$$
+ $$\alpha=1$$
+ 
+ $J_0$ représente alors la déformabilité du matériau : plus il est élevé à un instant donné, plus le matériau a été déformé à force égale. 
+ $\alpha$ quantifie la dépendance temporelle de cette déformation : plus il est grand, plus le matériau aura tendance à couler comme un liquide visqueux, plus il est petit et plus il se déformera comme un solide élastique. 
+
+Un même créneau de force est appliqué 4 à 6 fois sur les billes avec une période de 250 secondes. 
+À chaque application de force, on peut extraire les paramètres $J_0$ et $\alpha$ et ainsi observer leur évolution au cours du temps. 
+
+\section{•}
+
+Quatre séries d'expériences ont été réalisées avec les pinces magnétiques.
+La première série d'expérience a été réalisée sur des C2C12 
+
+
+
+
+
+\end{document}
