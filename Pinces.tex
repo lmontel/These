@@ -62,7 +62,16 @@ Le modèle de Gallet nous permet de calculer une fonction de fluage à partir de
 	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0}
 	\end{equation}
 	
-	
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Exemple_C162_X_vs_slice.png}
+\label{Exemple}
+\caption{Exemple de tracé de la position en X d'une bille au cours du temps lorsqu'elle est soumise à 4 créneaux de force successifs. $J(t)$ est directement proportionnelle à $\delta X(t)$ lorsque le déplacement ne se fait que selon l'axe $X$. On peut remarquer l'allure caractéristique en loi de puissance.} 
+\end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.5]{Figures/Exemple_C162_loglog.png}
+	\caption{Déplacement de la bille en fonction du temps écoulé depuis le début du créneau, pour les 4 créneaux successifs, pour la même cellule que la figure \ref{Exemple}}. On peut remarquer ici qu'après le premier créneau le déplacement est plus grand en réponse à la même force : la cellule s'est ramollie. 
+	\end{figure}
+	 
 La fonction de fluage de la cellule peut être modélisée par une loi de puissance à une échelle de temps inférieure à 15-20 secondes. Au-delà, les mouvements actifs de la cellule perturbent le mouvement de la bille. 
 
 On peut alors réaliser un ajustement avec la fonction : 
@@ -86,10 +95,10 @@ $$J(t)=\frac{1}{E}$$
 Un même créneau de force est appliqué 4 à 6 fois sur les billes avec une période de 250 secondes. 
 À chaque application de force, on peut extraire les paramètres $J_0$ et $\alpha$ et ainsi observer leur évolution au cours du temps. 
 
-\section{•}
+\subsection{Séries d'expériences}
 
 Quatre séries d'expériences ont été réalisées avec les pinces magnétiques.
-La première série d'expérience a été réalisée sur des C2C12 en testant deux concentrations de fibronectine pour enrober les billes magnétiques : 2 \micro g ou  4 \micro g de fibronectine pour $2.10^7$ billes, ce qui correspond à 1.57 et 3.15 mg/m² de fibronectine par unité de surface des billes. 
+La première série d'expérience a été réalisée sur des C2C12 en testant deux concentrations de fibronectine pour enrober les billes magnétiques : 2 \micro g ou  4 \micro g de fibronectine pour $2.10^7$ billes, ce qui correspond à 1.57 et 3.15 mg/m$^2$ de fibronectine par unité de surface des billes. 
 On applique sur ces cellules 4 créneaux de force successifs de 125 secondes chacun avec une période de 250 secondes. 
 
 La seconde série d'expériences a été réalisée sur une autre série de C2C12, issues d'une nouvelle commande à l'ATCC, 4 \micro g de fibronectine sur $2.10^7$ billes et 6 fois 125 secondes de force avec une période de 250s. 
@@ -99,9 +108,37 @@ La troisième série d'expériences est un témoin réalisé avec les mêmes cel
 
 Enfin la dernière série est issue d'une collaboration avec Pierre-Olivier Strale et René-Marc Mège de l'Institut Jacques Monod. Elle a été réalisée avec des cellules A431D exprimant une cadhérine mutante incapable de former des interactions cis avec d'autres cadhérines de la même membrane, et des billes enrobées de cadhérines et non de fibronectine. 
 
+\section{Résultats}
 
 
 
+\subsection{Caractéristiques mécaniques des C2C12}
 
+Les C2C12 sont des cellules très diverses dans leur taille et dans leur forme, mais également en ce qui concerne les paramètres mécaniques : le préfacteur $J_0$ s'étale sur deux décades, de 1 à 100 $10^{-3}$Pa$^{-1}$. 
+L'exposant médian, $\alpha=0.18$ nous indique que la réponse mécanique des cellules est principalement élastique. 
+
+
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/E0_C4_toutes.png} 
+\includegraphics[scale=0.3]{Figures/J0_C4_toutes.png}
+\caption{Caractéristiques mécaniques des C2C12 avec une concentration de fibronectine disponible sur les billes égale à 3.15 mg/m$^2$}
+\end{figure}
+ 
+ Ces valeurs correspondent tout à fait aux valeurs trouvées précédemment par Delphine Icard avec les pinces optiques et de manière concomitante par Elisabeth Charrier sur la même lignée cellulaire, dans des gammes de forces comparables. 
+Il est néanmoins important de rappeler que la population est tronquée de ses cellules les plus rigides, ce qui explique la forme non symétrique du préfacteur $J_0$. 
+
+\subsection{Influence de l'enrobage des billes en fibronectine}
+
+Pendant la première série d'expériences, des billes enrobées de deux concentrations différentes de fibronectine ont été utilisées. 
+
+On peut voir en observant les deux populations que le préfacteur $J_0$ est plus élevé lorsque l'enrobage est moins dense, alors que l'exposant ne varie pas.
+Lorsque la quantité de fibronectine sur les billes est plus faible, les cellules apparaissent donc comme plus déformables, moins rigides, ce qui s'explique facilement par un ancrage moindre de la bille au cytosquelette de la cellule.  
+
+En revanche, l'équilibre entre l'élasticité et la dissipation dans la cellule n'est pas altéré : on sonde toujours le même cytosquelette, mais avec un attachement moins fort. 
+
+\begin{figure}
+\includegraphics[scale=0.15]{Figures/J0_coating.png} 
+\includegraphics[scale=0.3]{Figures/E0_coating.png} 
+\end{figure}
 
 \end{document}
