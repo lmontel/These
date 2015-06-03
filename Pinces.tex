@@ -19,6 +19,21 @@ Deux expériences sont décrites ici : les expériences faites avec la pince imm
 
 \section{Description}
 
+\subsection{Séries d'expériences}
+
+Trois séries d'expériences ont été réalisées avec les pinces magnétiques.
+La première série d'expérience a été réalisée sur des C2C12 en testant deux concentrations de fibronectine pour enrober les billes magnétiques : 2 \micro g ou  4 \micro g de fibronectine pour $2.10^7$ billes, ce qui correspond à 1.57 et 3.15 mg/m$^2$ de fibronectine par unité de surface des billes. 
+On applique sur ces cellules 4 créneaux de force successifs de 125 secondes chacun avec une période de 250 secondes. 
+
+La seconde série d'expériences a été réalisée sur une autre série de C2C12, issues d'une nouvelle commande à l'ATCC, 4 \micro g de fibronectine sur $2.10^7$ billes et 6 fois 125 secondes de force avec une période de 250s. 
+À la suite des expériences de la série \no 1, il nous est en effet apparu que 4 applications de force ne permettaient pas toujours de caractériser le comportement à long terme de la cellule, et nous avons donc augmenté le nombre d'applications de force. 
+
+La troisième série d'expériences est un témoin réalisé avec les mêmes cellules que l'expérience précédente, la même quantité de fibronectine sur les billes, mais seulement 10 secondes d'application de la force, ce qui correspond au temps nécessaire pour extraire les paramètres mécaniques de la cellule. 
+
+
+Enfin les pinces magnétiques ont également servi à faire des mesures dans le cadre d'une collaboration avec Pierre-Olivier Strale et René-Marc Mège de l'Institut Jacques Monod. Il s'agissait de mesurer les caractéristiques mécaniques de cellules A431D exprimant une cadhérine mutante incapable de former des interactions cis avec d'autres cadhérines de la même membrane, et des billes enrobées de cadhérines et non de fibronectine. 
+
+
 \subsection{Sélection préliminaire}
 
 Une fois l'expérience mise en place comme cela a été décrit dans le chapitre précédent, la première étape consiste à trouver une bille adhérent à une cellule sur laquelle on puisse faire des mesures. 
@@ -46,6 +61,9 @@ Au temps t=0, une force constante est appliquée sur la cellule par l'intermédi
 La bille est attirée par la pointe de la pince par une force $\vec{F_{tot}}=F \vec{u}_x+F\vec{u}_z$ dirigée selon l'axe bille-pointe. 
 
 Sur la vidéo, on peut observer la position dans le plan XY du centre de la bille, et constater que la bille est bien attirée par la pointe selon X et n'a qu'un mouvement faible selon Y dû aux petits défauts d'alignement de la pointe. La plupart des billes ont un mouvement total de l'ordre de 0.1 à 0.5 \micro m lors d'une application de force. 
+
+Une fois les positions du centre de la bille extraites de la vidéo par le logiciel d'analyse d'images, on peut en tirer le déplacement de la bille par rapport à sa position au temps t=0 de l'application de la force, pour chaque créneau. 
+ 
 
 On peut également obtenir des information sur le mouvement de la bille en Z en observant la variation de son rayon, qui augmente lorsqu'elle quitte le plan focal. 
 
@@ -95,18 +113,6 @@ $$J(t)=\frac{1}{E}$$
 Un même créneau de force est appliqué 4 à 6 fois sur les billes avec une période de 250 secondes. 
 À chaque application de force, on peut extraire les paramètres $J_0$ et $\alpha$ et ainsi observer leur évolution au cours du temps. 
 
-\subsection{Séries d'expériences}
-
-Quatre séries d'expériences ont été réalisées avec les pinces magnétiques.
-La première série d'expérience a été réalisée sur des C2C12 en testant deux concentrations de fibronectine pour enrober les billes magnétiques : 2 \micro g ou  4 \micro g de fibronectine pour $2.10^7$ billes, ce qui correspond à 1.57 et 3.15 mg/m$^2$ de fibronectine par unité de surface des billes. 
-On applique sur ces cellules 4 créneaux de force successifs de 125 secondes chacun avec une période de 250 secondes. 
-
-La seconde série d'expériences a été réalisée sur une autre série de C2C12, issues d'une nouvelle commande à l'ATCC, 4 \micro g de fibronectine sur $2.10^7$ billes et 6 fois 125 secondes de force avec une période de 250s. 
-
-La troisième série d'expériences est un témoin réalisé avec les mêmes cellules que l'expérience précédente, la même quantité de fibronectine sur les billes, mais seulement 10 secondes d'application de la force, ce qui correspond au temps nécessaire pour extraire les paramètres mécaniques de la cellule. 
-
-
-Enfin la dernière série est issue d'une collaboration avec Pierre-Olivier Strale et René-Marc Mège de l'Institut Jacques Monod. Elle a été réalisée avec des cellules A431D exprimant une cadhérine mutante incapable de former des interactions cis avec d'autres cadhérines de la même membrane, et des billes enrobées de cadhérines et non de fibronectine. 
 
 \section{Résultats}
 
@@ -137,8 +143,45 @@ Lorsque la quantité de fibronectine sur les billes est plus faible, les cellule
 En revanche, l'équilibre entre l'élasticité et la dissipation dans la cellule n'est pas altéré : on sonde toujours le même cytosquelette, mais avec un attachement moins fort. 
 
 \begin{figure}
-\includegraphics[scale=0.15]{Figures/J0_coating.png} 
+\includegraphics[scale=0.3]{Figures/J0_coating.png} 
 \includegraphics[scale=0.3]{Figures/E0_coating.png} 
+\caption{Caractéristiques des C2C12 sondées par des billes ayant différentes densités de fibronectine à leur surface.}
 \end{figure}
+
+\subsection{\'Evolution des paramètres mécaniques}
+
+Pour chaque cellule, la force est appliquée à 4 reprises pour la série \no 1 et à 6 reprises pour les séries \no 2 et \no 3. On obtient alors un coupe de paramètre ($J_0,\alpha$) par créneau, donc on observe l'évolution. 
+
+Dans les résultats finaux, ne sont conservées que les cellules pour lesquelles la mesure des paramètres ($J_0, \alpha$) est possible lors de l'application du premier créneau. 
+En revanche, il arrive pour un nombre non négligeable de cellules que le déplacement de la bille pendant les créneaux suivants passe en dessous de notre résolution, ce qui signifie que la cellule devient trop rigide. Dans ce cas de figure, $J_0$ a été fixé à 0. 
+
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/temoin_J_evolution.png} 
+\includegraphics[scale=0.3]{Figures/temoin_E_evolution.png}
+\\ 
+\includegraphics[scale=0.3]{Figures/S2_J_evolution.png}
+\includegraphics[scale=0.3]{Figures/S2_E_evolution.png} 
+\caption{\label{Evolution_6c}} 
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/Evolution_J.png}
+\includegraphics[scale=0.3]{Figures/Evolution_E.png}
+\caption{Amplitude des évolutions entre la première mesure et les 6 suivantes, pour la série \no 3 témoin (en noir) et pour la série \no 2 en rouge.}
+\label{Diff}
+
+ 
+\end{figure}
+On peut voir sur la figure \ref{Evolution_6c} qu'il n'y a pas de changements de préfacteur $J_0$ communs à toute la population de cellules : ce ne sont pas toutes les cellules qui se rigidifient ou se ramollisent ensemble. 
+En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme  et 3\ieme créneaux, qui se résorbe ensuite. 
+Le comportement mécanique de ces cellules soumises à une force pendant de longues durées évolue donc d'abord dans le sens d'une \og élastification \fg , d'une diminution de la part dissipative de la réponse mécanique. 
+
+Lorsque l'on applique une force pendant 125 secondes, l'amplitude des variations par rapport à la mesure d'origine de $J_0$ et $\alpha$ se détache du bruit obtenu pour seulement 10 secondes de forces, comme on peut le voir sur l'histogramme \ref{Diff}. L'application d'une force pendant une durée plus longue permet donc de modifier significativement les paramètres $J_0$ et $\alpha$. 
+
+\subsection{Classification des cellules selon leur évolution}
+
+Il n'y pas de tendance d'évolution de la population de cellules sondée au cours du temps, cependant on peut observer au niveau individuel l'évolution de $J_0$ pour en déduire une tendance au ramollissement ou à la rigidification. 
+
+On classe ainsi les cellules en trois groupes : celles qui se rigidifient, avec $J_0$ décroissant, celles qui se ramollissent $J_0$ croissant, et celles qui n'ont pas une évolution cohérente dans le temps de $J_0$. 
 
 \end{document}
