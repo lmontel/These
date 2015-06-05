@@ -533,14 +533,14 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	\end{figure}
 	\subsection{Fonction de fluage}
 	\`A l'issue d'une expérience, nous obtenons donc la position de la bille au cours du temps, en fonction de la force appliquée, pour 4 à 6 applications de la force. 
-	Cependant, nous cherchons à connaître la relation entre la déformation de la cellule et la contrainte qui lui est appliquée.
 	
-	Nous avons donc besoin d'un modèle reliant le mouvement de la bille à la déformation de la cellule, et d'un modèle reliant la force exercée sur la bille à la contrainte subie par la cellule. 
+	Cependant, pour obtenir des mesures de modules visco-élastiques, il est nécessaire d'utiliser un modèle reliant le mouvement de la bille à la déformation de la cellule, et d'un modèle reliant la force exercée sur la bille à la contrainte subie par la cellule.
+	Plusieurs modèles existent, en particulier un modèle théorique, le modèle de Gallet, et un modèle numérique développé dans la thèse d'Alain Kamgoué, mais les deux supposent que la bille est soumise à une force incluse dans le plan focal du microscope, ce qui n'est pas le cas de notre pince magnétique, qui tire également verticalement. 
 	
-	Le modèle que nous avons utilisé a été développé par Delphine Icard lorsqu'elle a créé et utilisé les pinces optiques du laboratoire. Il suppose que la bille est enfoncée d'un angle $\theta$ dans la cellule, et qu'elle est soumise à une force horizontale $\vec{F}_0$. La cellule est modélisée comme un milieu visco-élastique semi-infini homogène et isotrope. La bille est supposée s'ancrer dans la cellule de manière homogène et infiniment rigide. 
+	Le modèle de Gallet suppose que la bille est enfoncée d'un angle $\theta$ dans la cellule, et qu'elle est soumise à une force horizontale $\vec{F}_0$. La cellule est modélisée comme un milieu visco-élastique semi-infini homogène et isotrope. La bille est supposée s'ancrer dans la cellule de manière homogène et infiniment rigide. 
 	La valeur de la fonction de fluage est alors donnée par : 
 	\begin{equation}
-	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0}
+	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0} 
 	\label{Fluage}
 	\end{equation}
 	où $a$ est le rayon de la sphère, $\theta$ l'angle d'enfoncement dans le milieu visco-élastique, $\delta R$ le déplacement de la bille et $F_0$ la composante horizontale de la force exercée sur la bille. 
@@ -560,11 +560,35 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	Après ce temps, il devient évident que la cellule exerce activement des forces sur la bille. 
 	C'est pourquoi il faut se limiter à appliquer ce modèle pendant les premières 10 secondes de l'application de la force, et c'est pour cette raison qu'il est important de prendre le plus d'images possible pendant ce temps. 
 	
-	Pour tenir compte de ces constats expérimentaux, il serait probablement nécessaire de revoir les hypothèses d'un milieu isotrope semi-infini, et de le remplacer par un milieu non-isotrope de rigidité plus importante selon l'axe vertical. 
-	Cependant les calculs théoriques ou numériques pour les milieux non-isotropes sont bien plus complexes, et nécessiteraient un travail analytique qui sort complètement du cadre de cette thèse. 
-	
-	De manière plus générale, ce qui nous intéresse particulièrement dans ces mesures est de comparer pendant plusieurs applications de forces successives l'évolution de la fonction de fluage d'une même cellule. Des biais, dus au modèle, sur la valeur absolue de la fonction de fluage ne nous empêchent pas de comparer ces valeurs les unes aux autres et d'en observer l'évolution au cours du temps. 
-	
+	Durant sa thèse sous la direction de Jacques Ohayon, Alain Kamgoué a développé un modèle à partir de simulations numériques, qui prend à en compte à la fois l'angle d'enfoncement de la cellule et l'épaisseur finie de la cellule sous la bille, mais qui considère alors la cellule comme un matériau purement élastique dont il cherche à extraire le module d'Young. Il calcule alors un préfacteur géométrique : 
+$$ p(\theta,\frac{h_u}{2R})=\frac{ F_0}{2 \pi a \delta R(t) E} $$
+
+avec $h_u$ la hauteur de la cellule sous la bille, et $E$ le module d'Young de la cellule. Ce qui nous donne, en le mettant sous la même forme que l'équation \ref{Fluage} : 
+\begin{equation}
+J= 2 \pi a p(\theta,\frac{h_u}{2R}) \frac{\delta R(t)}{F_0}
+\label{Kamgoué}
+\end{equation} 
+
+La différence entre les deux modèles est donc uniquement le facteur géométrique, qui dépend dans les deux cas de l'enfoncement de la bille, et dans le second cas également de l'épaisseur de la cellule en-dessous de la bille.
+
+Durant les expériences de pinces magnétiques, nous ne pouvons pas mesurer l'angle d'enfoncement des billes. Cependant, des cellules fixées ont été observées au microscope confocal, ce qui nous a permis de mesurer l'angle d'enfoncement des billes, et la hauteur $h_u$ pour 23 billes. On obtient alors : 
+$$ \langle h_u \rangle = 1.6 \mu m \: \langle \theta \rangle = 110 \degres$$
+
+Ce qui nous donne avec les deux modèles : 
+\begin{align}
+ \p_{Gallet}&=\frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right) = 0.50 \\
+\p_{Kamgoué}&= 0.92
+\end{align}
+
+Les deux modèles donnent donc deux valeurs différentes, mais ayant le même ordre de grandeur. 
+Les deux supposent une force horizontale, ce qui est faux ici. Le modèle de Gallet prend en compte le caractère visco-élastique de la cellule, mais en faisant l'hypothèse d'un milieu semi-infini, alors que le modèle de Kamgoué-Ohayon considère une épaisseur finie mais oublie la composante visqueuse du milieu cellulaire. 
+
+Le véritable préfacteur se trouve probablement entre les deux, et en réalité ce n'est pas l'essentiel ici : il s'agit d'observer l'évolution des paramètres mécaniques de la cellule au cours du temps, et cette comparaison reste strictement identique quel que soit le préfacteur utilisé. 
+C'est pourquoi les résultats seront en général présentés uniquement sous la forme $\frac{\delta R(t)}{F_0}$ sans tenir compte du préfacteur géométrique. 
+
+
+
+
 	
 	
 \section{\'Etirement}

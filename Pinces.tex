@@ -42,8 +42,6 @@ On écarte volontairement toutes les billes qui sont trop proches d'une autre bi
 Lorsque l'on repère une bille isolée adhérent à une cellule, un premier test rapide est réalisé.
 On commence par appliquer une force oscillante sur la bille, et on observe si un mouvement oscillant de la bille est détectable. Si aucun mouvement n'est détectable, on augmente la force jusqu'à détecter un mouvement. Si aucun mouvement n'est détectable à la force maximale, c'est que la bille est trop fortement ancrée, et la cellule trop rigide pour que l'on puisse mesurer ses caractéristiques à l'aide de notre dispositif. 
 
-Sachant que la résolution de l'image de la bille est de 0.0385 \micro m par pixel, et que la force maximale appliquée est de 163 pN, on peut en déduire un $J_{0min}=1.5 *10^{-3} Pa^{-1}$, ce qui correspond typiquement à une rigidité cellulaire de 1kPa. 
-
 Il aurait été intéressant de compter le nombre de cellules écartées à cause d'une trop grande rigidité, car cela nous aurait donné un aperçu de la quantité de la population qu'il était impossible de sonder avec le dispositif tel qu'il était monté. Cela a d'ailleurs été fait dans la deuxième expérience sur les cadhérines mutées. 
 
 \subsection{Sélection a posteriori}
@@ -70,48 +68,47 @@ On peut également obtenir des information sur le mouvement de la bille en Z en 
 Une calibration à l'aide d'une cale piézo-électrique a permis de déterminer qu'une variation de diamètre de la bille de 0.04\micro m correspond à une variation de hauteur de 0.2 \micro m. 
 Or sur la quasi-totalité des billes observées au cours de ces expériences, la variation du diamètre des billes est inférieure à 0.02 \micro m, ce qui correspond à une borne supérieure de mouvement vertical de 0.1 \micro m de l'ordre de la borne inférieure des mouvements détectés selon l'axe X. 
 
-La pince magnétique applique une force égale selon les deux axes X et Z, mais les déplacements mesurés dans les deux directions sont différents : les cellules semblent plus rigides d'un facteur 5 dans la direction verticale par rapport à l'horizontale. 
+La pince magnétique applique une force égale selon les deux axes X et Z, mais les déplacements mesurés dans les deux directions sont différents : les cellules semblent plus rigides dans la direction verticale par rapport à l'horizontale. 
 
-A AJOUTER : CELLULES DE PIERRE-OLIVIER QUI BOUGENT PLUS EN VERTICAL : CELLULES PLUS EPAISSES ? DISCUTER AVEC LE MODELE DE KAMGOUE DE L'ENFONCEMENT. 
+A AJOUTER : CELLULES DE PIERRE-OLIVIER QUI BOUGENT PLUS EN VERTICAL : CELLULES PLUS EPAISSES ? 
+
+
 \subsubsection{Fonction de fluage en loi de puissance}
 
-Le modèle de Gallet nous permet de calculer une fonction de fluage à partir de la déformation que la bille impose à la cellule et de la force appliquée par la pince : 
-\begin{equation}
-	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0}
-	\end{equation}
+Par défaut, la fonction de fluage sera calculée sans son préfacteur géométrique, qui dépend du modèle choisi mais est strictement identique d'une expérience à l'autre ici.
+$$ J(t) = 2 \pi a p \xi (t)\qquad \xi (t) = \frac{\delta R (t)}{F}$$
 	
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/Exemple_C162_X_vs_slice.png}
-\label{Exemple}
-\caption{Exemple de tracé de la position en X d'une bille au cours du temps lorsqu'elle est soumise à 4 créneaux de force successifs. $J(t)$ est directement proportionnelle à $\delta X(t)$ lorsque le déplacement ne se fait que selon l'axe $X$. On peut remarquer l'allure caractéristique en loi de puissance.} 
-\end{figure}
-	\begin{figure}
+
+\caption{Exemple de tracé de la position en X d'une bille au cours du temps lorsqu'elle est soumise à 4 créneaux de force successifs. $\delta R(t)$ est directement proportionnelle à $\delta X(t)$ lorsque le déplacement ne se fait que selon l'axe $X$. On peut remarquer l'allure caractéristique en loi de puissance.\label{Exemple}} 
 	\includegraphics[scale=0.5]{Figures/Exemple_C162_loglog.png}
-	\caption{Déplacement de la bille en fonction du temps écoulé depuis le début du créneau, pour les 4 créneaux successifs, pour la même cellule que la figure \ref{Exemple}}. On peut remarquer ici qu'après le premier créneau le déplacement est plus grand en réponse à la même force : la cellule s'est ramollie. 
-	\end{figure}
+	\caption{Déplacement de la bille en fonction du temps écoulé depuis le début du créneau, pour les 4 créneaux successifs, pour la même cellule que la figure \ref{Exemple}. On peut remarquer ici qu'après le premier créneau le déplacement est plus grand en réponse à la même force : la cellule s'est ramollie. }
+\end{figure}
+
 	 
 La fonction de fluage de la cellule peut être modélisée par une loi de puissance à une échelle de temps inférieure à 15-20 secondes. Au-delà, les mouvements actifs de la cellule perturbent le mouvement de la bille. 
 
 On peut alors réaliser un ajustement avec la fonction : 
-$$ J(t)=J_0 \left( \frac{t}{t_0} \right)^{\alpha}$$
+$$ \xi (t) = \frac{\delta x}{F}=A \left( \frac{t}{t_0} \right)^{\alpha}$$
 
-$J_0$ et $\alpha$ sont les caractéristiques mécaniques de la cellule, $t$ le temps écoulé depuis le début de l'application du pas de force, $t_0$=1s. 
+$A$ et $\alpha$ sont les caractéristiques mécaniques de la cellule, $t$ le temps écoulé depuis le début de l'application du pas de force, $t_0$=1s. 
 
 Pour un solide parfaitement élastique, la déformation en réponse à un palier de force est immédiate et constante au cours du temps, et la fonction de fluage est alors l'inverse du module d'Young.
-$$J(t)=\frac{1}{E}$$
- $$J_0=\frac{1}{E} $$
+$$J(t)=\frac{1}{E} = 2 \pi a p \xi(t)$$
+ $$J_0=\frac{1}{E} = 2 \pi a p A$$
  $$\alpha=0$$
  
  Pour un liquide parfaitement visqueux, la fonction de fluage est alors  proportionnelle au temps écoulé depuis le début de l'application de la force : 
- $$ J(t)=\frac{t}{\eta}$$
- $$J_0=\frac{t_0}{\eta}$$
+ $$ J(t)=\frac{t}{\eta} = 2 \pi a p \xi(t)$$
+ $$J_0=\frac{t_0}{\eta} = 2 \pi a p \frac{A}{t_0}$$
  $$\alpha=1$$
  
- $J_0$ représente alors la déformabilité du matériau : plus il est élevé à un instant donné, plus le matériau a été déformé à force égale. 
+ $A$ représente alors la déformabilité du matériau : plus il est élevé à un instant donné, plus le matériau a été déformé à force égale. 
  $\alpha$ quantifie la dépendance temporelle de cette déformation : plus il est grand, plus le matériau aura tendance à couler comme un liquide visqueux, plus il est petit et plus il se déformera comme un solide élastique. 
 
 Un même créneau de force est appliqué 4 à 6 fois sur les billes avec une période de 250 secondes. 
-À chaque application de force, on peut extraire les paramètres $J_0$ et $\alpha$ et ainsi observer leur évolution au cours du temps. 
+À chaque application de force, on peut extraire les paramètres $A$ et $\alpha$ et ainsi observer leur évolution au cours du temps. 
 
 
 \section{Résultats}
@@ -120,31 +117,34 @@ Un même créneau de force est appliqué 4 à 6 fois sur les billes avec une pé
 
 \subsection{Caractéristiques mécaniques des C2C12}
 
-Les C2C12 sont des cellules très diverses dans leur taille et dans leur forme, mais également en ce qui concerne les paramètres mécaniques : le préfacteur $J_0$ s'étale sur deux décades, de 1 à 100 $10^{-3}$Pa$^{-1}$. 
-L'exposant médian, $\alpha=0.18$ nous indique que la réponse mécanique des cellules est principalement élastique. 
+Les C2C12 sont des cellules très diverses dans leur taille et dans leur forme, mais également en ce qui concerne les paramètres mécaniques : $A$ s'étale sur deux décades, de $7\dot 10^{-5}$ à $9\dot 10^{-3}$ \micro m/pN avec une médiane à $1.22 \dot 10^{-3}$ \micro m /pN.  Avec le modèle de Gallet, cela correspond à des modules visco-élastiques $G_0$ allant de 12 Pa à 6 kPa avec une médiane à 87 Pa. 
+Avec le modèle de Kamgoué-Ohayon, on obtient un module d'Young E allant de 4 à 546 Pa, avec une médiane à 32 Pa. 
+
+L'exposant médian, $\alpha=0.18$ nous indique que la réponse mécanique des cellules est principalement élastique ce qui peut nous conforter quant à l'opportunité de cette hypothèse du modèle de Kamgoué-Ohayon.
 
 
 \begin{figure}
-\includegraphics[scale=0.3]{Figures/E0_C4_toutes.png} 
-\includegraphics[scale=0.3]{Figures/J0_C4_toutes.png}
+\includegraphics[scale=0.5]{Figures/A0_Toutes.png} 
+\includegraphics[scale=0.5]{Figures/E0_Toutes.png} 
 \caption{Caractéristiques mécaniques des C2C12 avec une concentration de fibronectine disponible sur les billes égale à 3.15 mg/m$^2$}
 \end{figure}
  
- Ces valeurs correspondent tout à fait aux valeurs trouvées précédemment par Delphine Icard avec les pinces optiques et de manière concomitante par Elisabeth Charrier sur la même lignée cellulaire, dans des gammes de forces comparables. 
-Il est néanmoins important de rappeler que la population est tronquée de ses cellules les plus rigides, ce qui explique la forme non symétrique du préfacteur $J_0$. 
+  
+Il est important de rappeler que la population est tronquée de ses cellules les plus rigides, ce qui explique la forme non symétrique de $A$. 
+Les valeurs obtenues peuvent paraître faibles en comparaison de celles obtenues précédemment sur la même lignée par Delphine Icard et Elisabeth Charrier, cependant, il est à noter que les angles d'enfoncement choisis ici sont bien plus élevés que les hypothèses retenues dans ces deux autres séries de mesures. De manière générale, on voit que les valeurs de modules visco-élastiques sont très variables d'un modèle à l'autre. 
 
 \subsection{Influence de l'enrobage des billes en fibronectine}
 
 Pendant la première série d'expériences, des billes enrobées de deux concentrations différentes de fibronectine ont été utilisées. 
 
-On peut voir en observant les deux populations que le préfacteur $J_0$ est plus élevé lorsque l'enrobage est moins dense, alors que l'exposant ne varie pas.
+On peut voir en observant les deux populations que $A$ est plus élevé lorsque l'enrobage est moins dense, alors que l'exposant ne varie pas.
 Lorsque la quantité de fibronectine sur les billes est plus faible, les cellules apparaissent donc comme plus déformables, moins rigides, ce qui s'explique facilement par un ancrage moindre de la bille au cytosquelette de la cellule.  
 
 En revanche, l'équilibre entre l'élasticité et la dissipation dans la cellule n'est pas altéré : on sonde toujours le même cytosquelette, mais avec un attachement moins fort. 
 
 \begin{figure}
-\includegraphics[scale=0.3]{Figures/J0_coating.png} 
-\includegraphics[scale=0.3]{Figures/E0_coating.png} 
+\includegraphics[scale=0.5]{Figures/A_coating.png} 
+\includegraphics[scale=0.5]{Figures/E_coating.png} 
 \caption{Caractéristiques des C2C12 sondées par des billes ayant différentes densités de fibronectine à leur surface.}
 \end{figure}
 
@@ -182,6 +182,37 @@ Lorsque l'on applique une force pendant 125 secondes, l'amplitude des variations
 
 Il n'y pas de tendance d'évolution de la population de cellules sondée au cours du temps, cependant on peut observer au niveau individuel l'évolution de $J_0$ pour en déduire une tendance au ramollissement ou à la rigidification. 
 
-On classe ainsi les cellules en trois groupes : celles qui se rigidifient, avec $J_0$ décroissant, celles qui se ramollissent $J_0$ croissant, et celles qui n'ont pas une évolution cohérente dans le temps de $J_0$. 
+On classe ainsi les cellules en trois groupes : celles qui se rigidifient, avec $J_0$ décroissant significativement sur les 4 à 6 applications de force, celles qui se ramollissent $J_0$ croissant significativement sur les 4 à 6 applications de force, et celles qui n'ont pas une évolution significative ou cohérente dans le temps de $J_0$. 
+On peut créer un classement semblable avec l'évolution de l'exposant $\alpha$. 
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/FRI_temoin_vs_C4.png} 
+\caption{Répartition des cellules dans les trois catégories d'évolution de $J_0$ au cours des applications de force \label{FRI_temoin}}
+\end{figure}
 
+On peut remarquer sur la figure \ref{FRI_temoin} que les cellules ont majoritairement un comportement incohérent lorsque la force n'est appliqué que durant 10 secondes.
+Cette évolution aléatoire et de plus de faible amplitude comme on le voit sur la figure \ref{Diff} est très probablement le bruit sur la mesure de $J_0$. 
+
+Lorsque la force est appliquée pendant 125 secondes, on peut au contraire observer qu'il y a beaucoup plus de cellules qui se ramollissent ou se rigidifient de manière persistante au cours du temps, avec une amplitude de variation plus grande que pour le témoin. 
+
+\subsection{Influence de la position de la bille sur la cellule sur l'évolution des propriétés mécaniques}
+
+On peut donc constater que parmi les cellules soumises à 125 secondes de force de manière répétée, 60\% ont une évolution cohérente de $J_0$ vers la rigidification ou le ramollissement et 40\% une évolution incohérente. 
+
+Cette évolution dépend de la valeur initiale de $J_0$ : ce sont les cellules les plus molles initialement qui se rigidifient, et inversement. Mais cette dépendance est artificielle : les cellules déjà rigides qui se rigidifient n'ont pas de mouvement visible sur lequel faire des mesures, et les cellules molles qui se ramollissent finissent par voir leur bille arrachée, ou sortir du champ d'observation. 
+
+Nous avons alors cherché si ces différences de comportement ne provenaient pas de la position de la bille sur la cellule, et de la direction selon laquelle on appliquait la contrainte. 
+
+Il n'y pas de différence significative entre la distance dans le plan focal entre le bord de la bille et le bord du noyau (qui peut être négative si la bille est au-dessus du noyau) des trois différentes populations de cellules. 
+
+Cependant, on peut observer que la position de la bille par rapport au noyau de la cellule, c'est-à-dire savoir si on tire la bille pour l'éloigner du noyau, ou pour la pousser vers le noyau, ou perpendiculairement à l'axe bille-noyau, est significativement différente pour les cellules ayant un comportement différent (testé avec un G-test d'indépendance). 
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Positions_FRI.png} 
+\caption{Longueur et orientation du vecteur entre le bord du noyau et la bille. La flèche représente la direction de la force exercée sur les billes.}
+\end{figure}
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Hist_Angles.png} 
+\caption{Réparition des comportements cellulaires en fonction de l'angle formé entre l'axe bille-noyau et la direction de la force appliquée, pour 125 secondes de force et 4 \micro g de fibronectine. \label{Angle_C4}}
+\end{figure}
+
+En effet, 65\% des cellules rigidifiés sont du côté opposé à la direction de la force par rapport au noyau (leur angle est de plus de 135\degres ), alors que 57\% des cellules incohérentes ont un angle compris entre 45\degres et 135\degres . 
 \end{document}
