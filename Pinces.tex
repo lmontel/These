@@ -1,17 +1,17 @@
-\documentclass{report}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\graphicspath{{Figures/}}
-\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
-\newcommand{\micro}{$\mathrm{\mu}$}
+%\documentclass{report}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\graphicspath{{Figures/}}
+%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+%\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%\newcommand{\micro}{$\mathrm{\mu}$}
+%
+%\begin{document}
 
-\begin{document}
-
-\chapter{Rhéologie locale d'un cellule unique}
+\chapter{Rhéologie locale d'une cellule unique}
 
 Les pinces magnétiques ont été construites afin de pouvoir observer l'évolution des caractéristiques mécaniques d'une cellule au cours du temps, lorsque celle-ci est soumise à des forces de manière répétée. L'objectif était de poursuivre ainsi une investigation débutée par Delphine Icard avec les pinces optiques. En effet, dans sa thèse, elle avait observé que lorsqu'une force identique est appliquée de manière répétée sur une cellule, elle devient de plus en plus rigide, et que cet effet s'accompagne d'un recrutement d'actine autour du point d'application de la force. 
 
@@ -150,55 +150,61 @@ En revanche, l'équilibre entre l'élasticité et la dissipation dans la cellule
 
 \subsection{\'Evolution des paramètres mécaniques}
 
-Pour chaque cellule, la force est appliquée à 4 reprises pour la série \no 1 et à 6 reprises pour les séries \no 2 et \no 3. On obtient alors un coupe de paramètre ($J_0,\alpha$) par créneau, donc on observe l'évolution. 
+Pour chaque cellule, la force est appliquée à 4 reprises pour la série \no 1 et à 6 reprises pour les séries \no 2 et \no 3. On obtient alors un coupe de paramètre ($A,\alpha$) par créneau, donc on observe l'évolution. 
 
-Dans les résultats finaux, ne sont conservées que les cellules pour lesquelles la mesure des paramètres ($J_0, \alpha$) est possible lors de l'application du premier créneau. 
-En revanche, il arrive pour un nombre non négligeable de cellules que le déplacement de la bille pendant les créneaux suivants passe en dessous de notre résolution, ce qui signifie que la cellule devient trop rigide. Dans ce cas de figure, $J_0$ a été fixé à 0. 
+Dans les résultats finaux, ne sont conservées que les cellules pour lesquelles la mesure des paramètres ($A, \alpha$) est possible lors de l'application du premier créneau. 
+En revanche, il arrive pour un nombre non négligeable de cellules que le déplacement de la bille pendant les créneaux suivants passe en dessous de notre résolution, ce qui signifie que la cellule devient trop rigide. Dans ce cas de figure, $A$ a été fixé à 0. 
 
 \begin{figure}
-\includegraphics[scale=0.3]{Figures/temoin_J_evolution.png} 
-\includegraphics[scale=0.3]{Figures/temoin_E_evolution.png}
-\\ 
-\includegraphics[scale=0.3]{Figures/S2_J_evolution.png}
-\includegraphics[scale=0.3]{Figures/S2_E_evolution.png} 
+\includegraphics[scale=0.3]{Figures/A_créneaux_témoin.png}
+\includegraphics[scale=0.3]{Figures/E_créneaux_témoin.png} 
+\\
+\includegraphics[scale=0.3]{Figures/A_créneaux_S2.png} 
+\includegraphics[scale=0.3]{Figures/E_créneaux_S2.png} 
 \caption{\label{Evolution_6c}} 
 \end{figure}
 
 \begin{figure}
-\includegraphics[scale=0.3]{Figures/Evolution_J.png}
-\includegraphics[scale=0.3]{Figures/Evolution_E.png}
-\caption{Amplitude des évolutions entre la première mesure et les 6 suivantes, pour la série \no 3 témoin (en noir) et pour la série \no 2 en rouge.}
+\includegraphics[scale=0.3]{Figures/A_diff.png} 
+\includegraphics[scale=0.3]{Figures/E_diff.png}
+\caption{Amplitude des évolutions entre la première mesure et les 6 suivantes, pour la série \no 3 témoin (en noir) et pour la même concentration de fibronectine et 125s de force en rouge.}
 \label{Diff}
 
  
 \end{figure}
-On peut voir sur la figure \ref{Evolution_6c} qu'il n'y a pas de changements de préfacteur $J_0$ communs à toute la population de cellules : ce ne sont pas toutes les cellules qui se rigidifient ou se ramollisent ensemble. 
+On peut voir sur la figure \ref{Evolution_6c} qu'il n'y a pas de changements de $A$ communs à toute la population de cellules : ce ne sont pas toutes les cellules qui se rigidifient ou se ramollissent ensemble. 
 En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme  et 3\ieme créneaux, qui se résorbe ensuite. 
 Le comportement mécanique de ces cellules soumises à une force pendant de longues durées évolue donc d'abord dans le sens d'une \og élastification \fg , d'une diminution de la part dissipative de la réponse mécanique. 
 
-Lorsque l'on applique une force pendant 125 secondes, l'amplitude des variations par rapport à la mesure d'origine de $J_0$ et $\alpha$ se détache du bruit obtenu pour seulement 10 secondes de forces, comme on peut le voir sur l'histogramme \ref{Diff}. L'application d'une force pendant une durée plus longue permet donc de modifier significativement les paramètres $J_0$ et $\alpha$. 
+Lorsque l'on applique une force pendant 125 secondes, l'amplitude des variations par rapport à la mesure d'origine de $A$ et $\alpha$ se détache du bruit obtenu pour seulement 10 secondes de forces, comme on peut le voir sur l'histogramme \ref{Diff}. L'application d'une force pendant une durée plus longue permet donc de modifier significativement les paramètres $A$ et $\alpha$. 
 
 \subsection{Classification des cellules selon leur évolution}
 
-Il n'y pas de tendance d'évolution de la population de cellules sondée au cours du temps, cependant on peut observer au niveau individuel l'évolution de $J_0$ pour en déduire une tendance au ramollissement ou à la rigidification. 
+Il n'y pas de tendance d'évolution de la population de cellules sondée au cours du temps, cependant on peut observer au niveau individuel l'évolution de $A$ pour en déduire une tendance au ramollissement ou à la rigidification. 
 
-On classe ainsi les cellules en trois groupes : celles qui se rigidifient, avec $J_0$ décroissant significativement sur les 4 à 6 applications de force, celles qui se ramollissent $J_0$ croissant significativement sur les 4 à 6 applications de force, et celles qui n'ont pas une évolution significative ou cohérente dans le temps de $J_0$. 
+On classe ainsi les cellules en trois groupes : celles qui se rigidifient, avec $A$ décroissant significativement sur les 4 à 6 applications de force, celles qui se ramollissent $A$ croissant significativement sur les 4 à 6 applications de force, et celles qui n'ont pas une évolution significative ou cohérente dans le temps de $A$. 
 On peut créer un classement semblable avec l'évolution de l'exposant $\alpha$. 
 \begin{figure}
+\includegraphics[scale=0.33]{Figures/Rigidification_exemple_s2c2.png} 
+\includegraphics[scale=0.3]{Figures/Ramollissement_exemple_s2c19.png} 
+\caption{Exemples de déplacements au cours du temps et au cours des applications de forces d'une cellule considérée comme en rigification (en haut) et d'une cellule en ramollissement (en bas). }
+\end{figure}
+
+\begin{figure}
 \includegraphics[scale=0.5]{Figures/FRI_temoin_vs_C4.png} 
-\caption{Répartition des cellules dans les trois catégories d'évolution de $J_0$ au cours des applications de force \label{FRI_temoin}}
+\caption{Répartition des cellules dans les trois catégories d'évolution de $A$ au cours des applications de force \label{FRI_temoin}}
 \end{figure}
 
 On peut remarquer sur la figure \ref{FRI_temoin} que les cellules ont majoritairement un comportement incohérent lorsque la force n'est appliqué que durant 10 secondes.
-Cette évolution aléatoire et de plus de faible amplitude comme on le voit sur la figure \ref{Diff} est très probablement le bruit sur la mesure de $J_0$. 
+Cette évolution aléatoire et de plus de faible amplitude comme on le voit sur la figure \ref{Diff} est très probablement le bruit sur la mesure de $A$. 
 
 Lorsque la force est appliquée pendant 125 secondes, on peut au contraire observer qu'il y a beaucoup plus de cellules qui se ramollissent ou se rigidifient de manière persistante au cours du temps, avec une amplitude de variation plus grande que pour le témoin. 
 
 \subsection{Influence de la position de la bille sur la cellule sur l'évolution des propriétés mécaniques}
 
-On peut donc constater que parmi les cellules soumises à 125 secondes de force de manière répétée, 60\% ont une évolution cohérente de $J_0$ vers la rigidification ou le ramollissement et 40\% une évolution incohérente. 
+On peut donc constater que parmi les cellules soumises à 125 secondes de force de manière répétée, 60\% ont une évolution cohérente de $A$ vers la rigidification ou le ramollissement et 40\% une évolution incohérente. 
 
-Cette évolution dépend de la valeur initiale de $J_0$ : ce sont les cellules les plus molles initialement qui se rigidifient, et inversement. Mais cette dépendance est artificielle : les cellules déjà rigides qui se rigidifient n'ont pas de mouvement visible sur lequel faire des mesures, et les cellules molles qui se ramollissent finissent par voir leur bille arrachée, ou sortir du champ d'observation. 
+Cette évolution dépend de la valeur initiale de $A$ : ce sont les cellules les plus molles initialement qui se rigidifient, et inversement. Mais cette dépendance est artificielle : les cellules déjà rigides qui se rigidifient n'ont pas de mouvement visible sur lequel faire des mesures, et les cellules molles qui se ramollissent finissent par voir leur bille arrachée, ou sortir du champ d'observation. 
 
 Nous avons alors cherché si ces différences de comportement ne provenaient pas de la position de la bille sur la cellule, et de la direction selon laquelle on appliquait la contrainte. 
 
@@ -215,4 +221,4 @@ Cependant, on peut observer que la position de la bille par rapport au noyau de 
 \end{figure}
 
 En effet, 65\% des cellules rigidifiés sont du côté opposé à la direction de la force par rapport au noyau (leur angle est de plus de 135\degres ), alors que 57\% des cellules incohérentes ont un angle compris entre 45\degres et 135\degres . 
-\end{document}
+%\end{document}
