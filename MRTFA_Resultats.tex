@@ -1,15 +1,15 @@
-\documentclass{report}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\graphicspath{{Figures/}}
-\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
-\newcommand{\micro}{$\mathrm{\mu}$}
-
-\begin{document}
+%\documentclass{report}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\graphicspath{{Figures/}}
+%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+%\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%\newcommand{\micro}{$\mathrm{\mu}$}
+%
+%\begin{document}
 
 \chapter{Localisation de MRTF-A dans les cellules musculaires en réponse à une stimulation mécanique}
 
@@ -108,7 +108,28 @@ C'est pourquoi les expériences sur MRTF-A ont été poursuivies par des déform
 
 \subsection{Effet de la surexpression d'actine mCherry}
 
-\subsection{Effet du rinçage}
+\subsection{Effet du rinçage et du montage préalables}
+
+En faisant des expériences témoin durant lesquelles aucun étirement n'était imposé, nous avons commencé à soupçonner qu'une ou plusieurs étapes de la préparation de l'échantillon pouvaient interférer avec les expériences. 
+Deux étapes ont été testées : la première est l'étape durant laquelle on sort la lamelle de la plaque six puits pour la monter dans l'étireur, et qui implique des contraintes mécaniques sur la lamelle ; la seconde est l'étape de rinçage durant laquelle le milieu de culture des puits était remplacé par du milieu neuf dans l'étireur, ce qui pouvait induire une variation de la concentration en sérum. 
+
+Pour l'étape de montage, nous avons testé le montage juste avant l'expérience (Montées), et le montage la veille au soir (Prémontées). 
+Le rinçage est toujours effectué en même temps que le montage. 
+
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/CHN_montage_rincage.png} 
+\caption{\label{CHN_montage} Influence sur la localisation de MRTF-A des contraintes mécaniques dues au montage de la lamelle dans l'étireur (Montage) et de la variation de concentration en sérum due au remplacement du milieu de culture par du milieu neuf au moment du montage (Rinçage). Montées : montage à $t-5$ minutes, Prémontées : montage à $t-18$ heures, rinçage au même moment.
+Tous les tests on été réalisés avec un G-test d'indépendance t et une correction de Bonferroni pour les comparaisons multiples. ** : $p<\frac{0.01}{4}$ et *** : $p<\frac{0.001}{4}$}
+\end{figure}
+
+On peut voir sur la figure \ref{CHN_montage} que lorsque les cellules sont rincées juste avant l'expérience (Montées Rincées vs Montées Non Rincées), il y a significativement moins de cellules pour lesquelles MRTF-A est majoritairement cytoplasmique. 
+Comme son nom l'indique, Serum Response Factor est puissamment activé par le sérum, et ici le seul rinçage avec du milieu neuf suffit à activer la voie de signalisation MRTF-A/SRF et changer la localisation de MRTF-A d'une partie des cellules. 
+On également constater que lorsque le rinçage est effectué la veille (Prémontées Rincées vs Prémontées Non Rincées), il n'y a plus aucun effet. 
+
+On peut également voir que l'étape du montage n'a pas la même influence selon qu'il y a rinçage ou non. Sans rinçage, cette étape n'a pas d'influence significative sur l'état des cellules, en revanche avec rinçage, on peut remarquer que le montage a tendance à augmenter la quantité de cellules ayant MRTF-A dans le cytoplasme au dépens de celles l'ayant réparti de manière homogène. 
+
+Une fois ces résultats mis en évidence, nous avons réalisé la suite des expériences en évitant scrupuleusement de changer le milieu de culture dans lequel baignent les cellules le jour même de l'expérience. 
 
 \subsection{Résultats pour l'étirement 10\%}
 
@@ -133,5 +154,5 @@ C'est pourquoi les expériences sur MRTF-A ont été poursuivies par des déform
 
 
 
-
-\end{document}
+%
+%\end{document}
