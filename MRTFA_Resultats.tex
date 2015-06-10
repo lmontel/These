@@ -19,15 +19,22 @@
  
  Cela nous fournit un moyen simple de visualiser l'activation de MRTF-A/SRF : observer en fluorescence la localisation de MRTF-A dans la cellule. 
  
- Dans un premier temps, les cellules exprimant MRTF-A GFP, la version fluorescente du gène MRTF-A, peuvent être classées en trois groupes : celles pour lesquelles on peut distinguer le noyau en noir (la fluorescence est plus importante dans le cytoplasme), qui seront appelées Cytoplasmiques, celles pour lesquelles on peut distinguer le noyau en vert, appelées Nucléaires, et celles pour lesquelles le noyau ne peut être distingué, appelées Homogènes. 
+ Dans un premier temps, les cellules exprimant MRTF-A GFP, la version fluorescente du gène MRTF-A, peuvent être classées en trois groupes : celles pour lesquelles on peut distinguer le noyau en noir (la fluorescence est plus importante dans le cytoplasme), qui seront appelées Cytoplasmiques, celles pour lesquelles on peut distinguer le noyau en vert, appelées Nucléaires, et celles pour lesquelles le noyau ne peut être distingué, appelées Homogènes, comme on peut le voir sur les exemples en figure  \ref{Exemples_CHN}.
  
  \begin{figure}
-  \includegraphics[width=4cm]{Figures/Exemple_C.png} 
- \includegraphics[width=4cm]{Figures/Exemple_H.png} 
- \includegraphics[width=4cm]{Figures/Exemple_N.png} 
- \caption{Exemples de cellules classées comme MRTF-A Cytoplasmique, Homogène et Nucléaire, de gauche à droite respectivement.}
+  \includegraphics[width=3.5cm]{Figures/Exemple_C_invert.png} 
+ \includegraphics[width=3.5cm]{Figures/Exemple_H_invert.png} 
+ \includegraphics[width=3.5cm]{Figures/Exemple_N_invert.png} 
+ \caption{Exemples de cellules classées comme MRTF-A Cytoplasmique, Homogène et Nucléaire, de gauche à droite respectivement. En bleu, la phalloïdine marquant les filaments d'actine, en jaune la MRTF-A GFP.\label{Exemples_CHN}}
 
  \end{figure}
+ 
+ Dans un second temps, l'intensité de fluorescence dans le cytoplasme, dans le noyau et dans une zone péri-nucléaire a été mesurée quantitativement. Cette méthode est plus précise mais allonge considérablement le dépouillement. 
+ Lorsque les images sont prises avec l'objectif 20X, nous ne prenons qu'un seul plan focal, mais il intègre le signal sur une certaine épaisseur de la cellule. Une zone épaisse, comme le noyau et la zone immédiatement autour, apparaîtra plus lumineuse en fluorescence qu'une zone fine comme un lamellipode, alors que la concentration en protéines est identique. 
+ Pour comparer la concentration nucléaire à la concentration cytoplasmique, on remplace alors la mesure sur l'ensemble du cytoplasme par une mesure sur une zone autour du noyau qui a une épaisseur proche de celle du noyau. 
+ On peut également comparer la totalité du signal dans le noyau à sa totalité dans le cytoplasme, car le rapport taille du noyau sur taille de la cellule est relativement bien conservé d'une cellule à l'autre. 
+ 
+ 
 
 \subsection{Influence des moyens d'observation sur l'équilibre entre MRTF-A et l'actine G}
 
@@ -64,7 +71,7 @@ L'objectf de ces doubles transfections était d'observer en même temps que la l
 Parmi ces expériences, certaines cellules ont été observées alors qu'elles n'avaient pas de bille attachée à leur cytosquelette : ce sont des cellules témoins, sur lesquelles le champ magnétique a été appliqué comme pour les autres, mais sur lesquelles le champ n'est pas censé avoir un effet quelconque. 
 
 \begin{figure}
-\includegraphics[scale=0.5]{Figures/Pinces_MRTFA_stars.png} 
+\includegraphics[scale=0.4]{Figures/Pinces_MRTFA_stars.png} 
 \caption{Proportion des cellules observées pour lesquelles MRTF-A GFP change (en vert) ou ne change pas (en bleu) de localisation dans la cellule au cours de l'expérience. * : p<0.05 , ** p<0.01, *** p<0.001 (réalisés avec un test de Fisher)\label{MRTF-A Pinces}}
 \end{figure}
 
@@ -80,19 +87,40 @@ On peut également remarquer que les résultats pour MRTF-A GFP seule sont ident
 On peut raisonnablement supposer que la force appliquée n'est pas suffisante ou n'est pas appliquée suffisamment longtemps pour réorganiser significativement le cytosquelette lors des expériences MRTF-A GFP seule, ce qui explique que leur activité soit proche des cellules témoins. 
 La présence de Life-Act RFP stabilisant les filaments, la réserve d'actine monomérique est plus faible dans les cellules doublement transfectées MRTF-A GFP + LifeAct RFP, ce qui les rend plus sensibles : une contrainte plus faible suffit à dépléter suffisamment la réserve de G-actine. 
 
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/CHN_pinces.png} 
+\caption{Répartition de MRTF-A dans les cellules. \label{CHN_pinces}}
+\end{figure}
+
+On peut remarquer que la répartition de localisation de MRTF-A entre les différentes expériences est relativement semblable, ce qui implique que le changement d'activité observé sur la figure \ref{MRTF-A Pinces} n'est pas dû à l'état initial de MRTF-A dans ces cellules. 
+Cependant, on peut noter une augmentation non significative de la quantité de cellules avec MRTF-A cytoplasmique avec l'actine mCherry, ce qui est cohérent avec la surexpression de l'actine, et une augmentation de la quantité de MRTF-A nucléaire avec la LifeAct, ce qui est également cohérent avec l'hypothèse d'une stabilisation des filaments par la LifeAct. 
+
+\section{Application d'une déformation globale avec l'étireur : \'Etude qualitative et dynamique}
+
+Les pinces magnétiques, lorsqu'il s'agit de suivre la dynamique sur une durée de l'ordre de la dizaine de minutes, ont l'inconvénient majeur de ne pouvoir opérer que sur une cellule à la fois. 
+Il faut alors beaucoup de temps pour obtenir une population de taille acceptable avec cette méthode. 
+
+C'est pourquoi les expériences sur MRTF-A ont été poursuivies par des déformations à l'aide d'un substrat étirable. De cette manière, on peut observer en général une trentaine de cellules pendant deux heures, là où précédemment on n'aurait pu observer que 4 cellules pendant 30 minutes. 
 
 
 
+\subsection{\'Etat de référence}
 
+\subsection{Effet de la surexpression d'actine mCherry}
 
+\subsection{Effet du rinçage}
 
+\subsection{Résultats pour l'étirement 10\%}
 
+\subsection{Résultats pour l'étirement 30\%}
 
+\section{Application d'une déformation globale avec l'étireur : \'Etude quantitative sur cellules fixées}
 
+\subsection{Résultats pour l'étirement 10\%}
 
+\subsection{Résultats pour l'étirement 30\%}
 
-
-
+\section{Application d'une déformation globale avec l'étireur : \'Etude quantitative dynamique}
 
 
 
