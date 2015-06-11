@@ -8,7 +8,7 @@
 %\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 %\usepackage[colorlinks,linkcolor=blue]{hyperref}
 %\newcommand{\micro}{$\mathrm{\mu}$}
-%
+
 %\begin{document}
 
 \chapter{Localisation de MRTF-A dans les cellules musculaires en réponse à une stimulation mécanique}
@@ -18,6 +18,8 @@
  Comme on l'a vu dans le chapitre qui lui est consacré, la localisation de MRTF-A dans la cellule est liée à la concentration disponible en monomères d'actine : lorsqu'il y a des monomères en excès, MRTF-A est cytoplasmique car son NLS est caché, au contraire lorsqu'il n'y a plus assez de monomères disponibles le NLS est accessible et MRTF-A est dans le noyau. 
  
  Cela nous fournit un moyen simple de visualiser l'activation de MRTF-A/SRF : observer en fluorescence la localisation de MRTF-A dans la cellule. 
+ 
+ \paragraph{Classification selon la localisation de MRTF-A}
  
  Dans un premier temps, les cellules exprimant MRTF-A GFP, la version fluorescente du gène MRTF-A, peuvent être classées en trois groupes : celles pour lesquelles on peut distinguer le noyau en noir (la fluorescence est plus importante dans le cytoplasme), qui seront appelées Cytoplasmiques, celles pour lesquelles on peut distinguer le noyau en vert, appelées Nucléaires, et celles pour lesquelles le noyau ne peut être distingué, appelées Homogènes, comme on peut le voir sur les exemples en figure  \ref{Exemples_CHN}.
  
@@ -29,12 +31,22 @@
 
  \end{figure}
  
+ \paragraph{Définition des évènements de changement d'état}
+ 
+ Il peut arriver que les cellules classées comme il est décrit dans le paragraphe précédent changent de groupe au cours du temps. 
+ Lorsqu'une cellule est suivie au cours du temps, on peut alors avoir des cellules qui passent d'un état à un autre, parfois plusieurs fois. 
+ Pour chaque expérience on peut donc mesurer le nombre de cellules qui changent au moins une fois d'état, quantifier le nombre de changements ayant eu lieu (nombre strictement supérieur au précédent) et les classer en fonction de leur état de départ et d'arrivée. 
+ Trois changements sont catégorisés comme \og entrants \fg : C $\rightarrow$ H, C $\rightarrow$ N et H $\rightarrow$ N. 
+ Les trois autres sont catégorisés comme \og sortants \fg  : H $\rightarrow$ C, N $\rightarrow$ H et N $\rightarrow$ C. 
+ 
+ 
+ \paragraph{Quantification}
  Dans un second temps, l'intensité de fluorescence dans le cytoplasme, dans le noyau et dans une zone péri-nucléaire a été mesurée quantitativement. Cette méthode est plus précise mais allonge considérablement le dépouillement. 
  Lorsque les images sont prises avec l'objectif 20X, nous ne prenons qu'un seul plan focal, mais il intègre le signal sur une certaine épaisseur de la cellule. Une zone épaisse, comme le noyau et la zone immédiatement autour, apparaîtra plus lumineuse en fluorescence qu'une zone fine comme un lamellipode, alors que la concentration en protéines est identique. 
  Pour comparer la concentration nucléaire à la concentration cytoplasmique, on remplace alors la mesure sur l'ensemble du cytoplasme par une mesure sur une zone autour du noyau qui a une épaisseur proche de celle du noyau. 
  On peut également comparer la totalité du signal dans le noyau à sa totalité dans le cytoplasme, car le rapport taille du noyau sur taille de la cellule est relativement bien conservé d'une cellule à l'autre. 
  
- 
+
 
 \subsection{Influence des moyens d'observation sur l'équilibre entre MRTF-A et l'actine G}
 
@@ -72,7 +84,7 @@ Parmi ces expériences, certaines cellules ont été observées alors qu'elles n
 
 \begin{figure}
 \includegraphics[scale=0.4]{Figures/Pinces_MRTFA_stars.png} 
-\caption{Proportion des cellules observées pour lesquelles MRTF-A GFP change (en vert) ou ne change pas (en bleu) de localisation dans la cellule au cours de l'expérience. * : p<0.05 , ** p<0.01, *** p<0.001 (réalisés avec un test de Fisher)\label{MRTF-A Pinces}}
+\caption{Proportion des cellules observées pour lesquelles MRTF-A GFP change (en vert) ou ne change pas (en bleu) de localisation dans la cellule au cours de l'expérience. * : $p<\frac{0.05}{4}$ , ** $p<\frac{0.01}{4}$, *** $p<\frac{0.001}{4}$ (réalisés avec un test de Fisher et une correction pour les comparaisons multiples)\label{MRTF-A Pinces}}
 \end{figure}
 
 On peut voir sur la figure \ref{MRTF-A Pinces} que l'ajout d'actine exogène réduit le nombre de cellules pour lesquelles MRTF-A change de localisation, mais de manière non significative, alors que l'ajout de Life Act RFP a l'effet inverse de manière significative. 
@@ -106,9 +118,56 @@ C'est pourquoi les expériences sur MRTF-A ont été poursuivies par des déform
 
 \subsection{\'Etat de référence}
 
-\subsection{Effet de la surexpression d'actine mCherry}
+Avant de comparer ce qu'il se passe pour différents taux d'étirement, il est nécessaire de mesurer quel est l'état de référence de notre système, qui sera le témoin. 
 
-\subsection{Effet du rinçage et du montage préalables}
+L'état de référence est construit à partir de cellules qui ont été transfectées en MRTF-A GFP seulement, puis ensemencées et montées comme si elles allaient être étirées. 
+Aucun rinçage n'a été effectué avant expérience pour éliminer l'effet du changement de milieu de culture (la section \ref{Rinçage} aborde ce sujet en détail). 
+
+La dynamique de référence des cellules a été observée pendant deux heures de manière strictement identique à une expérience où l'étirement est non-nul, afin de pouvoir quantifier la fréquence naturelle des changements de localisation de MRTF-A durant cette durée. 
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Reference.png} 
+\caption{Répartition entre les trois états pour des cellules fixées immédiatement après un montage sans rinçage et sans étirement (n=7, 963 cellules) et lors de l'observation en direct après 5 minutes d'observation sans étirement (n=5, 41 cellules). La différence n'est pas significative (p=0.995, G-test).
+\label{Référence}}
+\includegraphics[scale=0.4]{Figures/Reference_transloc.png} 
+\caption{Quantité de cellules changeant au moins une fois d'état et direction de ces changements \label{Ref_transloc}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/CHN_vs_Temps_reference.png} 
+\caption{\label{Reference_dynamique} \'E{}volution de la proportion de cellules ayant MRTF-A dans chacune des trois localisations au cours du temps lors d'une expérience témoin où l'on a monté à l'avance la lamelle dans l'étireur et où l'on applique aucune contrainte.}
+\end{figure}
+
+On peut observer que la différence de répartition entre les deux états est la même lors des expériences fixées immédiatement après montage et après 5 minutes d'étirement sur la figure \ref{Référence} et constater qu'il n'y aucune différence entre les deux répartitions.
+Cela peut indiquer qu'il n'y a aucune réponse de la part des cellules durant les 5 premières minutes, mais cela n'exclut pas une improbable réaction très rapide qui reviendrait à l'équilibre pendant ce laps de temps. 
+
+Le lecteur attentif aura remarqué que cette répartition est différente de celle présentée en figure \ref{MRTF-A Pinces}. 
+Cela est dû aux différences dans la préparation des cellules dans les deux expériences, car la transfection n'était pas faite dans les conditions optimales lors des expériences de pinces magnétiques. 
+La quantité de plasmide ayant pénétré dans les cellules est plus faible, et la quantité de cellules ayant MRTF-A dans le noyau (Homogène ou Nucléaire) l'est également. 
+
+
+L'évolution de l'état de base au cours du temps est présentée sur la figure \ref{Reference_dynamique}. On peut observer que la proportions des différents états reste relativement stable, avec une légère diminution de la quantité de MRTF-A Cytoplasmique au cours du temps. 
+Pendant la durée totale de l'expérience, on peut observer que environ 27\% des cellules ont changé d'état au moins une fois, et que dans les deux tiers des cas, ces changements se font vers des états où MRTF-A est plus nucléaire qu'avant. 
+
+
+\subsection{Effet de la sur-expression d'actine mCherry}
+
+De manière similaire à ce qui était observé figure \ref{MRTF-A Pinces} pour les expériences de pinces magnétiques, la sur-expression d'actine causée par l'introduction d'un plamide d'actine mCherry cause des changements importants et significatifs à la localisation de MRTF-A dans la cellule. 
+
+La quantité de cellules ayant MRTF-A dans le cytoplasme augmente, aux dépens des cellules ayant MRTF-A dans le noyau, car il y au total plus de G-actine disponible dans la cellule pour empêcher MRTF-A d'être importé dans le noyau. 
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/AMC.png}
+\includegraphics[scale=0.3]{Figures/AMC_translob.png}
+\caption{\label{AMC}Répartition initiale pour des cellules issues des même expériences exprimant ou non le plasmide Actine mCherry. **** : $p<10^{-4}$}\caption{\label{AMC_transloc}Quantité de cellules changeant au moins une fois d'état et direction de ces changements, pour les même expériences, selon que l'Actine mCherrry est exprimée ou non.}
+\end{figure}
+
+Lorsque l'on compare le nombre de cellules ayant changé d'état au moins une fois, on voir qu'il est divisé par deux lorsque l'actine mCherry est exprimée par les cellules, mais cela ne change pas la répartition des évènements entre entrants ou sortants. 
+Pourtant, on aurait pu s'attendre à ce qu'il y ait plus d'évènements entrants que de sortants dans la mesure ou il y a nettement plus de cellules où MRTF-A est cytoplasmique et donc ne peut faire qu'entrer. 
+
+Finalement, la sur-expression d'actine mCherry bloque la transition de MRTF-A par rapport à des cellules dans les même conditions n'exprimant pas le plasmide, ce qui est facilement expliqué par le fait qu'une plus grande réserve d'actine monomérique va séquestrer MRTF-A dans le cytoplasme de manière plus efficace.
+
+\subsection{Effet du rinçage et du montage préalables \label{Rinçage}}
 
 En faisant des expériences témoin durant lesquelles aucun étirement n'était imposé, nous avons commencé à soupçonner qu'une ou plusieurs étapes de la préparation de l'échantillon pouvaient interférer avec les expériences. 
 Deux étapes ont été testées : la première est l'étape durant laquelle on sort la lamelle de la plaque six puits pour la monter dans l'étireur, et qui implique des contraintes mécaniques sur la lamelle ; la seconde est l'étape de rinçage durant laquelle le milieu de culture des puits était remplacé par du milieu neuf dans l'étireur, ce qui pouvait induire une variation de la concentration en sérum. 
@@ -154,5 +213,5 @@ Une fois ces résultats mis en évidence, nous avons réalisé la suite des exp�
 
 
 
-%
+%%
 %\end{document}
