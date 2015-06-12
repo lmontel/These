@@ -1,15 +1,15 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+
+\begin{document}
 
 \chapter{Rhéologie locale d'une cellule unique}
 
@@ -137,7 +137,7 @@ Les valeurs obtenues peuvent paraître faibles en comparaison de celles obtenues
 
 Pendant la première série d'expériences, des billes enrobées de deux concentrations différentes de fibronectine ont été utilisées. 
 
-On peut voir en observant les deux populations que $A$ est plus élevé lorsque l'enrobage est moins dense, alors que l'exposant ne varie pas.
+On peut voir en observant les deux populations que $A$ est plus élevé lorsque l'enrobage est moins dense, alors que l'exposant ne varie pas, mais cette élévation n'est pas significative avec la quantité de cellules que nous avons observées.
 Lorsque la quantité de fibronectine sur les billes est plus faible, les cellules apparaissent donc comme plus déformables, moins rigides, ce qui s'explique facilement par un ancrage moindre de la bille au cytosquelette de la cellule.  
 
 En revanche, l'équilibre entre l'élasticité et la dissipation dans la cellule n'est pas altéré : on sonde toujours le même cytosquelette, mais avec un attachement moins fort. 
@@ -145,7 +145,7 @@ En revanche, l'équilibre entre l'élasticité et la dissipation dans la cellule
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/A_coating.png} 
 \includegraphics[scale=0.5]{Figures/E_coating.png} 
-\caption{Caractéristiques des C2C12 sondées par des billes ayant différentes densités de fibronectine à leur surface.}
+\caption{Caractéristiques des C2C12 sondées par des billes ayant différentes densités de fibronectine à leur surface. p=0.13}
 \end{figure}
 
 \subsection{\'Evolution des paramètres mécaniques}
@@ -173,7 +173,7 @@ En revanche, il arrive pour un nombre non négligeable de cellules que le dépla
  
 \end{figure}
 On peut voir sur la figure \ref{Evolution_6c} qu'il n'y a pas de changements de $A$ communs à toute la population de cellules : ce ne sont pas toutes les cellules qui se rigidifient ou se ramollissent ensemble. 
-En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme  et 3\ieme créneaux, qui se résorbe ensuite. 
+En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme  et 3\ieme créneaux, qui se résorbe ensuite, mais il n'est pas significatif. 
 Le comportement mécanique de ces cellules soumises à une force pendant de longues durées évolue donc d'abord dans le sens d'une \og élastification \fg , d'une diminution de la part dissipative de la réponse mécanique. 
 
 Lorsque l'on applique une force pendant 125 secondes, l'amplitude des variations par rapport à la mesure d'origine de $A$ et $\alpha$ se détache du bruit obtenu pour seulement 10 secondes de forces, comme on peut le voir sur l'histogramme \ref{Diff}. L'application d'une force pendant une durée plus longue permet donc de modifier significativement les paramètres $A$ et $\alpha$. 
@@ -217,8 +217,8 @@ Cependant, on peut observer que la position de la bille par rapport au noyau de 
 \end{figure}
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/Hist_Angles.png} 
-\caption{Réparition des comportements cellulaires en fonction de l'angle formé entre l'axe bille-noyau et la direction de la force appliquée, pour 125 secondes de force et 4 \micro g de fibronectine. \label{Angle_C4}}
+\caption{Réparition des comportements cellulaires en fonction de l'angle formé entre l'axe bille-noyau et la direction de la force appliquée, pour 125 secondes de force et 4 \micro g de fibronectine. p=0.044 \label{Angle_C4}}
 \end{figure}
 
 En effet, 65\% des cellules rigidifiés sont du côté opposé à la direction de la force par rapport au noyau (leur angle est de plus de 135\degres ), alors que 57\% des cellules incohérentes ont un angle compris entre 45\degres et 135\degres . 
-%\end{document}
+\end{document}
