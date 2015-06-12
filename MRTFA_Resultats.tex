@@ -1,15 +1,15 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
 
-%\begin{document}
+\begin{document}
 
 \chapter{Localisation de MRTF-A dans les cellules musculaires en réponse à une stimulation mécanique}
 
@@ -192,9 +192,74 @@ Une fois ces résultats mis en évidence, nous avons réalisé la suite des exp�
 
 \subsection{Résultats pour l'étirement 10\%}
 
+Dans les mêmes conditions que pour le témoin, c'est-à-dire avec des lamelles montées la veille des expériences en conservant le même milieu de culture, et sans plasmide Actine mCherry, nous avons appliqué un étirement de 10\% au temps t=0, puis observé les cellules toutes les 10 minutes pendant 120 minutes. 
+
+On peut observer sur la figure \ref{CHN_dyn_Et10} que dès le début, la proportions de cellules ayant MRTF-A dans le cytoplasme est inférieure à celle du témoin, et ne fait que diminuer.
+Au contraire, les cellules ayant MRTF-A répartie de manière homogène sont plus nombreuses et croissent. 
+
+
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Etirement10_vs_0_dynamique.png} 
+\caption{\label{CHN_dyn_Et10} Comparaison de l'évolution de la fréquence de chaque localisation de MRTF-A au cours du temps après 10\% d'étirement ou dans les expériences témoin (n=5 et 141 cellules dans les deux cas)}
+\end{figure}
+
+On peut confirmer cette tendance en observant les figures \ref{transloc_dyn_Et10} et \ref{activité_Et10}, sur lesquelles on voit une vague importante d'évènements C$\rightarrow$ H et H $\rightarrow$ N (donc entrants) se produire lors de l'étirement 10\%. Le nombre total d'évènements par cellule est lui aussi bien plus important (multiplié par plus de 2) lorsque les cellules ont été étirées. 
+
+\begin{figure}
+\includegraphics[scale=0.33]{Figures/Etirement10_vs_0_translocations.png} 
+\caption{\label{transloc_dyn_Et10} Nombre d'évènements ayant eu lieu pendant la fenêtre [t-5min,t+5min] pour chaque type de transition possible divisé par le nombre de cellules observées.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Etirement10_vs_temoin_activité.png} 
+\caption{\label{activité_Et10} Nombre d'évènements entrants ou sortants par cellule observée pendant 120 minutes, pour l'étirement 10\% et pour le témoin. p=0.0003 }
+\end{figure}
+
+De manière générale, les résultats sont conformes à ce qui était attendu : l'application d'une contrainte mécanique sur les cellules entraîne l'accumulation de MRTF-A dans le noyau, probablement car la contrainte oblige les cellules à renforcer leur cytosquelette, et donc crée un manque de monomères d'actine.  
+
+
 \subsection{Résultats pour l'étirement 30\%}
 
+Initialement, on s'attendait à voir pour l'étirement le plus fort les mêmes effets que pour l'étirement 10\%, mais plus importants. 
+Ce n'est pas du tout ce qui est ressorti des expériences, qui ont montré à peu près le contraire de ce qu'on attendait. 
+
+En effet, si l'on observer l'évolution des trois populations différents par rapport au témoin, on peut voir sur la figure \ref{Et30_CHN} que la quantité de cellules avec MRTF-A cytoplasmique augmente, et que celles où MRTF-A est homogène diminue, contrairement au témoin et à l'expérience 10\%. 
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Etirement30_vs_0_dynamique.png} 
+\caption{\label{Et30_CHN} Comparaison de l'évolution de la fréquence de chaque localisation de MRTF-A au cours du temps après 30\% d'étirement ou dans les expériences témoin (n=5 et 141 cellules pour le témoin, n=3 et 102 cellules pour l'étirement 30\%)}
+\end{figure}
+
+De plus, sur la figure \ref{Et30_transloc}, on peut constater qu'il y a dès le début de l'expérience un pic net dans le nombre d'évènements sortants H $\rightarrow$ C entre 20 et 40 minutes. 
+Un pic d'évènements sortants devrait être lié à une grande quantité de G-actine libérées dans ces cellules, de manière très rapide, ce qui nous amène naturellement à poser l'hypothèse d'une destruction brutale du cytosquelette en réponse à un déformation trop forte, suivie d'une reconstruction que l'on commence à voir à partir de 80 minutes d'étirement, avec l'augmentation des transitions C $\rightarrow$ H. 
+
+ 
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Etirement30_vs_0_translocations.png}
+\caption{\label{Et30_transloc} Nombre d'évènements ayant eu lieu pendant la fenêtre [t-5min,t+5min] pour chaque type de transition possible divisé par le nombre de cellules observées.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Etirement30_vs_temoin_activité.png}
+\caption{\label{Et30_activité} Quantité de changements d'état par cellule pour les trois conditions différentes}
+\end{figure}
+
+Comme l'autre expérience d'étirement, une grande partie des cellules changent au moins une fois d'état pendant les deux heures d'observation, comme on peut le voir sur la figure \ref{Et30_activité}, mais il y a nettement moins de déséquilibre entre les évènements entrants et sortants (p=0.014, figure \ref{Et30_ES}). 
+
+ \begin{figure}
+ \includegraphics[scale=0.5]{Figures/Activité.png} 
+ \caption{\label{Et30_ES} Comparaison pour les deux étirements et le témoin de la quantité de cellules qui changent d'état au moins une fois}
+ \end{figure}
+ 
+Initialement, on souhaitait regarder en parallèle l'état du cytosquelette d'actine et la localisation de MRTF-A. 
+Malheureusement, comme on peut le voir tant en expériences de pinces magnétiques que d'étirement, les plasmides Actine mCherry et LifeAct RFP perturbent de manière trop importante le cytosquelette d'actine pour être utilisés pendant les expériences. 
+C'est pourquoi les expériences ont été faites avec MRTF-A GFP seulement, ce qui nous prive d'informations sur l'état du cytosquelette.
+Afin de vérifier les hypothèses posées pour expliquer les observations aux deux étirements testés, il nous a fallu passer aux expériences fixées, qui ont l'avantage de pouvoir être marquées à la fois pour l'actine F et pour l'actine G (pour laquelle il n'existe actuellement aucune sonde commerciale). 
+
 \section{Application d'une déformation globale avec l'étireur : \'Etude quantitative sur cellules fixées}
+
+
 
 \subsection{Résultats pour l'étirement 10\%}
 
@@ -213,5 +278,4 @@ Une fois ces résultats mis en évidence, nous avons réalisé la suite des exp�
 
 
 
-%%
-%\end{document}
+\end{document}
