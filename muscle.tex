@@ -6,11 +6,11 @@
 \usepackage{graphicx}
 \usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
-
+\newcommand{\micro}{$\mathrm{\mu}$}
 \addbibresource{biblio.bib}
 
 
-%\begin{document}
+\begin{document}
 \chapter{De la cellule au muscle}
 
 Les muscles représentent environ 40\% de la masse totale d'un humain adulte. Ils participent à tous les phénomènes indispensables à notre vie : ils nous permettent de nous mouvoir, d'exercer des forces sur notre environnement, mais aussi de respirer, de faire circuler le sang, de digérer \dots 
@@ -21,14 +21,23 @@ Il en existe environ 640, de toutes tailles, des minuscules muscles contrôlant 
 
 \section{Organisation du muscle squelettique}
 
-Dans le chapitre premier, une cellule typique et peu différenciée a été présentée, semblable à celle des précurseurs du muscle. Les cellules qui composent les muscles ont une organisation bien différente. 
+Dans le chapitre premier, une cellule typique et peu différenciée a été présentée, semblable aux précurseurs du muscle. Les cellules qui composent les muscles ont une organisation bien différente. 
 En partant des cellules et des protéines qui ont été décrites dans les chapitres précédents, nous allons reconstituer l'architecture du muscle. 
 
 \subsection{Du myoblaste au myocyte}
 
+\begin{figure}
+\includegraphics[scale=0.25]{Figures/Myocytes.png} \includegraphics[scale=0.5]{Figures/Myotubes.png} 
+\caption{Myoblastes primaires infectés avec un plasmide MRTF-A GFP, et myotubes obtenus à partir de myoblastes primaires après 4 jours de différenciation \textit{in vitro}. En magenta, le noyau marqué au DAPI.}
+\end{figure}
+
 Les myoblastes sont les cellules progénitrices du muscles. Les C2C12 sont une lignée immortalisée de myoblastes murins, mais des myoblastes primaires peuvent également être mis en cultures \textit{in vitro}.
-La différenciation des myoblastes se produit quand les myoblastes sont suffisamment nombreux et que les facteurs de croissance qui les maintiennent en prolifération viennent à manquer. 
+La différenciation se produit quand les myoblastes sont suffisamment nombreux et que les facteurs de croissance qui les maintiennent en prolifération viennent à manquer. 
 Les myoblastes se mettent alors à sécréter de la fibronectine, la liaison intégrine/fibronectine étant indispensable à la différenciation.
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Myoblast_fusion.png} 
+\caption{\'E tapes successives de la différenciation des myoblastes en myotubes chez la souris, d'après \cite{Abmayr}}
+\end{figure}
 
 Les myoblastes vont alors s'aligner, puis fusionner entre eux pour former des myotubes, qui sont des cellules plurinuclées et allongées. 
 Les myoblastes étendent autour d'eux des lamellipodes et des filopodes pour contacter les cellules voisines. Au niveau de ces contacts, les compositions des lipides de la membrane change, on trouve un grand nombre de protéines comme les M-cadhérines, les intégrines et les filamines qui assurent un lien avec le cytosquelette. Ce dernier est réorganisé localement : un réseau dense se forme sous la membrane, mis sous tension par la myosine 2A. 
@@ -43,22 +52,103 @@ Une fois le myotube formé, il mature pour devenir une myofibre en développant 
 
 Un sarcomère est composé de filaments d'actine et de filaments de myosines qui sont dotés de milliers de têtes de myosines. Le mouvement des têtes de myosines sur le filament d'actine fait coulisser les deux filaments l'un par rapport à l'autre, ce qui crée la contraction musculaire. 
 
-Afin que les filaments d'actine, dont nous avons vu au chapitre 2 qu'ils sont ordinairement très dynamiques, maintiennent leur taille, ils sont coiffés aux deux extrémités par des protéines comme CapZ. 
+Afin que les filaments d'actine, dont nous avons vu au chapitre 2 qu'ils sont ordinairement très dynamiques, maintiennent leur taille, ils sont coiffés aux deux extrémités par CapZ d'un côté et par la tropomoduline de l'autre.
 Les nébulines, de très longues protéines qui peuvent se lier à environ 200 actines en filament, sont soupçonnées de servir d'étalon pour fixer la longueur des filaments d'actine dans les sarcomères. 
 
-Autour des filaments d'actine, la tropomyosine, liée également à la troponine, régule la liaison entre le filament d'actine et le filament de myosine, en recouvrant ou découvrant les sites de liaisons des têtes de myosines à l'actine. 
+Autour des filaments d'actine, la tropomyosine, liée également à la troponine, régule la liaison entre le filament d'actine et le filament de myosine, en recouvrant ou découvrant les sites de liaisons des têtes de myosines à l'actine, et le maintient polymérisé. 
 
+Les filaments de myosine sont maintenus alignés grâce à la structure de la bande M, et les filaments d'actine par le disque Z. 
 
+Au niveau de la bande M, les filaments de myosine se lient aux protéines M, aux myomésines et aux titines. 
+La titine est une protéine géante qui maintient l'intégrité du sarcomère en se liant à la bande M, au disque Z et aux filaments de myosine. Elle présente une structure enroulée sur elle-même, et fonctionne comme un ressort qui stocke de l'énergie quand le sarcomère change de longueur, et contribue ainsi à maintenir l'intégrité de l'ensemble de la structure. 
+Les myomésines ont une structure semblable mais sont plus courtes. Elles forment des ponts entre les filaments de myosines pour les maintenir dans une structure qui ressemble à un réseau hexagonal. 
+
+Au niveau du disque Z, un grand nombre de protéines viennent assurer l'ancrage des filaments d'actine et l'organisation du sarcomère. Une partie d'entre elles sont également partie prenantes de cascades de signalisation.
+L'$\alpha$-actinine, déjà évoquée précédemment en tant que protéine liée à l'actine, assure vis-à-vis de l'actine la même mission que les myomésines pour les filaments de myosine : elle lie les filaments entre eux pour former un réseau hexagonal, et lie également les titines. 
+Par l'intermédiaire de la filamine C, l'$alpha$-actinine relie les filaments d'actine du sarcomère aux intégrines qui assurent l'ancrage avec la matrice extra-cellulaire. 
+La desmine, le filament intermédiaire du cytosquelette s'enroule autour du disque Z pour maintenir sa structure, et l'$\alpha\beta$-cristalline l'empêche de former des agrégats. 
 
 
 
 \subsection{De la fibre au muscle}
 
-\subsection{Différents types de muscles}
+Les sarcomères mis bout à bout les uns à la suite des autres forment des myofibrilles. Les myofibrilles adjacentes sont liées et alignées au niveau de leurs disques Z, afin que les contractions se fassent de manière synchronisée. 
+
+Dans une myofibre, on trouve de nombreuses myofibrilles liées les unes aux autres, de l'ordre de la dizaine, qui occupent la majeure partie de l'espace disponible. Les multiples noyaux sont repoussés en périphérie de la cellule. 
+
+Les myofibres sont regroupées en faisceaux de quelques dizaines de fibres dans un tissu conjontif composé principalement de collagènes, faisceaux qui sont eux-même regroupés pour former le muscle lui-même. Le tissu conjonctif confère une résistance passive aux muscles et les relie aux tendons qui les fixent sur les os. 
+
+Les capillaires sanguins et les nerfs contrôlant les contractions musculaires sont également encapsulés dans ce tissu conjonctif. 
+\subsubsection{Différents types de muscles}
+
+Les fibres musculaires ont toutes une organisation similaire, mais ne sont pas toutes identiques. 
+On peut distinguer 2 types majeurs de fibres musculaires : les fibres lentes et les fibres rapides. 
+
+Les fibres lentes servent aux efforts de longue durée et de faible force, comme par exemple le maintien de la posture, elles se contractent lentement. 
+Elles sont riches en mitochondries et en capillaires sanguins, car leur alimentation en énergie se fait principalement par la consommation d'oxygène. 
+Les fibres rapides permettent des mouvements puissants, développant une grande force. Elles sont riches en glycogène, dont elles tirent la majeure partie de leur énergie. 
+
+
+
+
+
 
 \section{La contraction musculaire}
 
-\subsection{Au niveau du sarcomère}
+\subsection{Mécanismes moléculaires}
 
-\subsection{Force ou vélocité, il faut choisir}
+Le signal de contraction musculaire arrive du système nerveux par un neurone moteur, qui est attaché à une fibre musculaire par la plaque motrice.
+Lorsque le signal nerveux est transmis au niveau de la synapse, la membrane de la myofibre est dépolarisée, ce qui aboutit à libérer des ions Calcium du Réticulum Sarcoplasmique (l'équivalent pour la cellule musculaire du Réticulum Endoplasmique lisse). 
 
+Les ions Calcium libérés se lient à la troponine C, qui est présente sur la tropomyosine qui décore les filaments d'actine dans le sarcomère. La tropomyosine est déplacée sur le filament d'actine, laissant apparaître les sites de liaison à la myosine, qui étaient cachés. 
+
+Les têtes de myosine s'attachent au filament d'actine, puis l'ATP qu'elles contiennent est hydrolysée en ADP+Pi. Le phosphate est ensuite libéré, ce qui provoque un changement de conformation de la tête de myosine, qui avance sur le filament, puis l'ADP est relâchée à son tour, ce qui incline encore plus la tête de myosine. 
+
+À ce moment, les filaments d'actine et les filaments de myosine coulissent les uns par rapport aux autres, ce qui raccourcit la longueur totale du sarcomère. C'est la contraction musculaire. 
+
+En l'absence d'ATP, le phénomène s'arrête à cette étape : les filaments d'actine et de myosine sont attachés les uns aux autres. Le muscle est immobilisé, c'est l'origine de la rigidité cadavérique. 
+
+Lorsqu'elle est présente, l'ATP peut alors remplir le site de liaison laissé vacant par le départ de l'ADP. Cela provoque à nouveau un changement de conformation qui détache la tête de myosine du filament d'actine et la remet dans sa position initiale.
+
+Tant que la concentration en ions calcium est suffisante pour maintenir dans tropomyosine dans cette configuration, le cycle attachement-avancée-détachement des têtes de myosine sur l'actine continue, et la fibre musculaire se contracte de plus en plus. 
+
+Lorsque la concentation en calcium diminue car le signal du neurone moteur s'est arrêté, la tropomyosine retrouve sa conformation d'origine, et les myosines ne peuvent plus s'attacher au filament d'actine. 
+
+
+\subsection{Mécanique de la contraction musculaire}
+Dans les conditions optimales, une seule cellule musculaire mature peut exercer une force de l'ordre de 0,3 \micro N, et un muscle peut exercer autour de 30N/cm$^2$ de section efficace. 
+
+Le modèle de Hill \cite{Hill}, élaboré bien avant que les mécanismes internes de la contraction musculaire soient connus, permet de relier la vitesse de contraction d'un muscle aux forces qu'il est capable d'appliquer. 
+
+Hill constate que pour un muscle de taille donnée se raccourcissant d'une longueur $x$, l'énergie dissipée dans le muscle est proportionnelle à $x$ : $W_d=ax$. $a$ est proportionnel à la section efficace du muscle (et donc du nombre de myofibres), et comme la force maximale supportée par le muscle également, le rapport entre les deux  est constant : $$\frac{a}{P_0}=0.25$$
+
+En faisant un bilan d'énergie dans le muscle, on obtient : 
+$$ E=W+W_d=Px+ax=(P+0.25P_0)x$$
+
+La puissance totale dissipée vaut alors $(P+a)v$ où $v$ est la vitesse de contraction du muscle, dérivée de $x$ par rapport au temps. 
+
+Hill trouve également que la puissance développée par le muscle est une fonction linéaire du poids qui lui est appliqué, avec $v=0$ quand $P=P_0$. 
+La relation devient alors : 
+$$ (P+a)v=b(P_0-P)$$
+avec $b$ une constante mesurée dans les expériences. 
+
+Cette relation peut se réécrire : 
+\begin{equation}
+\label{Hill}
+(P+a)(v+b)=b(P_0+a)=Cste
+\end{equation}
+L'équation de Hill relie donc la force que peut appliquer un muscle $P$ à la vitesse de contraction $v$. Plus la contraction est rapide, moins elle peut être forte, au contraire plus elle est lente et plus elle peut développer de force. 
+
+Non seulement la loi de Hill est vérifiée pour les muscles striées, mais elle l'est également au niveau du myoblaste unique \cite{Mitrossilis} et même au niveau d'un unique filament d'actine déplacé par 8 têtes de myosine du muscle squelettique \cite{Debold}, ce qui confirme l'hypothèse de Huxley \cite{Huxley} qui attribue ce comportement aux propriétés du complexe acto-myosine. 
+
+\section{Les cellules satellites, MRTF-A et régulation de la masse musculaire}
+Entre la lame basale et les myofibres, on peut trouver des cellules moins différenciées, les cellules satellites. Celles-ci sont responsables de la réparation et de la croissance des muscles adultes. 
+En effet, les myofibres sont des cellules qui ne se reproduisent plus, et après les deux phases de création de myofibres pendant la vie embryonnaire, le nombre de fibres musculaires reste constant. 
+Cependant, lorsqu'elles sont activées en réponse à une blessure ou à une sollicitation importante du muscle, les cellules satellites prolifèrent, et une partie d'entre elles se différencient et fusionnent avec les fibres musculaires. 
+
+En réponse à une stimulation mécanique, SRF est activé dans les myofibres \textit{in vivo} par l'intermédiaire de MRTF-A. L'activiation de SRF produit un signal paracrine composé d'Interleukines 6, qui encourage la prolifération des cellules satellites, et d'interleukines 4 qui les fait fusionner avec les fibres musculaires. 
+
+Au contraire, lors d'une absence de signaux mécaniques, l'actine G s'accumule dans le noyau des fibres musculaires, MRTF-A est exclut du noyau, SRF est inactif et le muscle s'atrophie. 
+
+
+\end{document}
