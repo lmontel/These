@@ -46,6 +46,8 @@ Le myoblaste envahit le myotube à l'aide de podosomes quasiment exclusivement c
 Une fois le myotube formé, il mature pour devenir une myofibre en développant une organisation spécifique de l'actine et de la myosine.
 
 
+
+
 \subsection{Une organisation spécifique de l'actine}
 
 À l'intérieur d'un myocyte totalement différencié, l'actine est organisée en unités appelées les sarcomères. 
@@ -69,7 +71,22 @@ Par l'intermédiaire de la filamine C, l'$alpha$-actinine relie les filaments d'
 La desmine, le filament intermédiaire du cytosquelette s'enroule autour du disque Z pour maintenir sa structure, et l'$\alpha\beta$-cristalline l'empêche de former des agrégats. 
 
 
+\subsection{Rôle de la voie RhoA/MRTF-A/SRF}
 
+Parmi les gènes cibles de SRF, on trouve un grand nombre de protéines indispensables à la constitution des sarcomères :  tous les différents gènes d'actine et en particulier l'$\alpha$ Skeletal Actin , des myosines (MHC9,myo16,myoIE), des $\alpha$-actinines, des intégrines et des tropomyosines (\cite{selvaraj_2004},\cite{charvet_2006},\cite{esnault_rho-actin_2014}).
+
+MyoD, facteur de transcription de la famille des Myogenic Regulatory Factors et marqueur de la différenciation en cellule musculaire, contient un Serum Response Element \cite{l'honore_2003} et est activé par MRTF-A/SRF (\cite{Mokalled_2011}. 
+
+Il suffit qu'un seul des maillons de la voie RhoA/MRTF/SRF manque pour que la différenciation en cellule musculaire échoue. 
+
+\textit{In vivo} dans des souris ayant une délétion conditionnelle de SRF dans les muscles, on observe une diminution de l'expression de la tropomyosine et de l'$\alpha$ actine du muscle squelettique, corrélés à des défauts dans la croissance des myofibres, une désorganisation des sarcomères et une hypotrophie musculaire (\cite{charvet_2006},\cite{li_requirement_2005}). \textit{In vitro}, un SRF dominant négatif bloque la différenciation de myoblastes C2C12 en myotubes \cite{wei_1998}.
+
+Les souris dominant négatif MRTF-A sont viables mais présentent une hypotrophie musculaire qui dépend du niveau d'expression de MRTF-A, une fibrose, et des noyaux positionnés au centre des fibres musculaires, ce qui les désorganise \cite{li_requirement_2005}. \textit{In vitro}, la différenciation des C2C12 nécessite également la présence des MRTF \cite{selvaraj_megakaryoblastic_2003}. 
+
+Bloquer RhoA avec un dominant négatif \cite{wei_1998} empêche également la différenciation.
+
+\cite{kawauchi_p130cas-dependent_2012} détaillent un peu plus loin ces voies de signalisations impliquées dans la différenciation musculaire, en montrant que la signalisation passe par p130Cas, les intégrines $\beta$3 et ILK, qui désactivent à la fois ERK1/2 (ce qui empêche la phosphorylation de MRTF-A et donc promeut son accumulation nucléaire, et met hors jeu les TCF), et la cofiline (ce qui promeut l'actine polymérisée). Ils montrent que p130Cas contribue à maintenir l'actine polymérisée et MRTF-A présent dans le noyau alors que la différenciation se fait dans un milieu pauvre en sérum, où RhoA est diminué. 
+ 
 \subsection{De la fibre au muscle}
 
 Les sarcomères mis bout à bout les uns à la suite des autres forment des myofibrilles. Les myofibrilles adjacentes sont liées et alignées au niveau de leurs disques Z, afin que les contractions se fassent de manière synchronisée. 
@@ -146,9 +163,17 @@ Entre la lame basale et les myofibres, on peut trouver des cellules moins diffé
 En effet, les myofibres sont des cellules qui ne se reproduisent plus, et après les deux phases de création de myofibres pendant la vie embryonnaire, le nombre de fibres musculaires reste constant. 
 Cependant, lorsqu'elles sont activées en réponse à une blessure ou à une sollicitation importante du muscle, les cellules satellites prolifèrent, et une partie d'entre elles se différencient et fusionnent avec les fibres musculaires. 
 
-En réponse à une stimulation mécanique, SRF est activé dans les myofibres \textit{in vivo} par l'intermédiaire de MRTF-A. L'activiation de SRF produit un signal paracrine composé d'Interleukines 6, qui encourage la prolifération des cellules satellites, et d'interleukines 4 qui les fait fusionner avec les fibres musculaires. 
+En réponse à une stimulation mécanique (hypertrophie compensatoire), SRF est activé dans les myofibres \textit{in vivo} par l'intermédiaire de MRTF-A  \cite{guerci_srf-dependent_2012}. 
+L'activation de SRF dans les myofibres produit un signal paracrine composé d'Interleukines 6, qui encourage la prolifération des cellules satellites, et d'interleukines 4 qui les fait fusionner avec les fibres musculaires. 
+Dans les fibres musculaires mutantes où SRF est désactivé, le nombre de noyaux par fibre n'augmente pas, ce qui signifie qu'il n'y a pas de fusion des cellules satellites avec les myofibres. La surexpression d'IL6 chez les mutants restaure la prolifération, mais pas la fusion des cellules satellites. Surexprimer Cox2, qui est en aval de SRF et en amont de l'IL4, ou l'IL4 elle-même permet de restaurer la fusion et l'hypertrophie chez les mutants. 
 
-Au contraire, lors d'une absence de signaux mécaniques, l'actine G s'accumule dans le noyau des fibres musculaires, MRTF-A est exclut du noyau, SRF est inactif et le muscle s'atrophie. 
+
+Au contraire, lors d'une absence de signaux mécaniques induite par la dénervation, l'actine G s'accumule dans le noyau des fibres musculaires et l'activité de SRF diminue, cependant, cette diminution n'est pas à l'origine de l'actine nucléaire \cite{collard_nuclear_2014}. En revanche, l'activité de MICAL-2 est également réduite, or son rôle contribue normalement à exclure l'actine monomérique du noyau. 
+L'accumulation d'actine G dans le noyau favorise l'export de MRTF-A, qui est confiné dans le cytoplasme dans les muscles dénervés. Cela explique le déficit d'activité de SRF, qui ne peut pas être atteint par son cofacteur. 
+
+La désactivation de SRF, l'injection de CCG1423 (drogue inhibant MRTF/SRF), ou l'expression d'une actine non polymérisable sont tous liés à une augmentation de la gravité de l'atrophie musculaire, montrant que cette voie de signalisation protège l'organisme de la destruction de ses propres muscles. 
+
+Au contraire, l'expression d'un MRTF-A incapable de se lier à l'actine, et donc constitutivement actif (sur le modèle de la myocardine), permet de protéger les muscles de l'atrophie induite par la dénervation, ce que ne fait pas la simple sur-expression de MRTF-A GFP. Cependant, si SRF n'est pas fonctionnel, cette protection n'est plus efficace, prouvant que c'est bien le couple MRTF/SRF qui est nécessaire. 
 
 
 \end{document}
