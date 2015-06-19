@@ -1,1 +1,65 @@
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio.bib}
+
+\begin{document}
+
 \chapter{Rhéologie cellulaire}
+
+L'étude des propriétés mécaniques des objets biologiques (cellules, tissus, gels de biopolymères \dots) a été investie par des physiciens convergeant à la fois de la mécanique des milieux continus, de la physique de la matière molle (polymères, mousses, colloïdes, verres), et de l'hydrodynamique. 
+En effet, ils rassemblent des objets et des propriétés qui intéressent tous ces domaines, à des échelles allant de celle de la molécule à l'échelle macroscopique. 
+
+Il est aisé de voir à quelle point la mécanique peut être un aspect important du vivant : les médecins détectent les anomalies d'un tissu en testant sa rigidité \og à la main \fg pendant une palpation, l'absence de gravité a des conséquences importantes sur les os, et l'absence d'exercice sur les muscles, tandis que les changements de propriétés mécaniques des globules rouges ou des parois des vaisseaux sanguins peuvent se révéler dramatiques. 
+
+Les matériaux vivants, comme les tendons, les os ou la cornée, ou issus du vivant comme la soie ou la nacre peuvent également posséder des propriétés rhéologiques intéressantes, que l'on cherche à dupliquer pour créer de nouveaux matériaux composites. 
+
+Les matériaux vivants combinent plusieurs particularités qui en font des objets particulièrement difficiles à étudier du point de vue physique : ils sont intrinsèquement hors de l'équilibre thermodynamique, car ils consomment de l'énergie en permanence, ils ne sont le plus souvent ni homogènes, ni isotropes, sont composés d'une grande diversité de constituants différents, leurs propriétés varient à la fois au cours du temps et d'un individu à l'autre. 
+Tous ces éléments rendent plus complexes la reproductibilité d'une mesure à l'autre, la comparaison de mesures prises par des techniques différentes, l'élaboration de modèles théoriques et de simulations numériques.
+
+
+\section{Rhéologie}
+
+La rhéologie est l'étude de la manière dont les matériaux se comportent lorsqu'ils sont soumis à une contrainte ou à une déformation. 
+
+Par exemple, on appelle solide élastique un matériau pour lequel la déformation $\epsilon$ est proportionnelle à la contrainte $ \sigma$, et on appelle module d'Young ce coefficient de proportionnalité : 
+$$ E = \frac{\sigma}{\epsilon}$$
+La déformation élastique est parfaitement réversible, c'est-à-dire que si on enlève la contrainte, le matériau revient à sa forme initiale. C'est le cas, aux petites déformations, de solides comme l'acier, le verre, le caoutchouc etc. Au niveau énergétique, la déformation élastique est donc une manière de stocker de l'énergie dans le système par l'intermédiaire de la déformation, énergie qui pourra être récupérée plus tard lorsque le solide reprendra sa forme initiale. 
+
+Au contraire, pour les liquides visqueux, la viscosité $\eta$ représente la relation entre la contrainte et le taux de déformation $\dot{\epsilon}$ : 
+$$ \eta=\frac{\sigma}{\dot{\epsilon}}$$
+Le liquide va donc être déformé de manière linéaire au cours du temps. Lorsque que la contrainte est levée, la déformation s'arrête, mais le liquide ne reprend pas la place qu'il occupait avant son application. 
+L'écoulement visqueux est un phénomène irréversible, et l'énergie qui a été fournie pour le faire s'écouler est dissipée. 
+
+Cependant, ces propriétés ne sont pas intrinsèque à une matériau, elles sont également dépendantes de la manière dont ils sont stimulés mécaniquement, et en particulier de l'échelle de temps. Par exemple, le manteau de la croûte terrestre peut être considéré comme un solide élastique à une échelle de temps de quelques heures, mais à des échelles de temps géologiques, il peut être considéré comme un liquide extrêmement visqueux ($\eta \approx 10^{21}$Pa.s). 
+
+Les cellules vivantes et la plupart des biopolymères sont des matériaux visco-élastiques, ce qui signifie qu'une partie de l'énergie transmise par la contrainte ou par la déformation va être stockée, et une autre va être dissipée. 
+Lorsque le matériau est stimulé de manière oscillante à une fréquence $\omega$, on peut alors écrire un module complexe de manière analogue à ce qui a été fait pour le solide élastique ou le liquide visqueux : 
+$$ G(\omega)=\frac{\sigma(\omega)}{\epsilon(\omega)} = G'(\omega)+iG''(\omega)$$
+où la partie en phase $G'(\omega)$ représente le module de stockage, et la partie en opposition de phase $G''(\omega)$ représente le module de perte. 
+
+Si l'on veut se placer plutôt en coordonnées temporelles, on peut également reformuler cela en utilisant la fonction de fluage $J(t)$ : 
+$$ \epsilon(t) = \int_0^t J(t-t') \frac{\mathrm{d}\sigma}{\mathrm{d}t'} \mathrm{d}t'$$
+
+
+\section{Propriétés des réseaux d'actine in vitro}
+
+\section{Techniques de rhéologie cellulaire}
+
+\section{Propriétés rhéologiques de cellules}
+
+
+
+
+
+
+
+
+\end{document}
