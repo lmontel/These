@@ -1,15 +1,15 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+
+\begin{document}
 
 \chapter{Rhéologie locale d'une cellule unique}
 
@@ -191,6 +191,11 @@ On peut créer un classement semblable avec l'évolution de l'exposant $\alpha$.
 \end{figure}
 
 \begin{figure}
+\includegraphics[scale=0.5]{Figures/Evolution_J4-J0_sur_J0.png} 
+\caption{Histogramme cumulé de $\frac{A_4-A_1}{A_1}$ pour les trois groupes de cellules classées. On voit que près de la moitié des cellules se rigidifiant sont passées sous le seuil de détection de la pince, tandis que les ramollissements sont souvent supérieurs à 100\%.  }
+\end{figure}
+
+\begin{figure}
 \includegraphics[scale=0.5]{Figures/FRI_temoin_vs_C4.png} 
 \caption{Répartition des cellules dans les trois catégories d'évolution de $A$ au cours des applications de force \label{FRI_temoin}}
 \end{figure}
@@ -221,4 +226,17 @@ Cependant, on peut observer que la position de la bille par rapport au noyau de 
 \end{figure}
 
 En effet, 65\% des cellules rigidifiés sont du côté opposé à la direction de la force par rapport au noyau (leur angle est de plus de 135\degres ), alors que 57\% des cellules incohérentes ont un angle compris entre 45\degres et 135\degres . 
-%\end{document}
+
+Au vu de cette information, on pourrait se dire que les cellules rigidifiées, qui sont tirées vers le noyau, expérimentent en fait un gradient de viscosité en se rapprochant du noyau : elles se rapprochent d'une zone péri-nucléaire où la viscosité serait plus élevée. 
+
+Cependant, on peut voir sur la figure \ref{DBN} que ce n'est pas le cas, au contraire : la majorité des cellules qui se ramollissent se rapprochent du noyau, alors que les cellules rigidifiées se rapprochent ou s'éloignent dans des proportions égales. La statistique n'est cependant pas assez riche pour que l'on puisse affirmer que cet effet est systématique.
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Evolution_DBN.png}
+\caption{Différence entre la distance bille-noyau finale et la distance bille-noyau initiale, pour les cellules classées précédemment. \label{DBN}}
+\end{figure}
+
+ 
+ 
+ 
+\end{document}

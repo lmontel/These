@@ -38,18 +38,55 @@ $$ \eta=\frac{\sigma}{\dot{\epsilon}}$$
 Le liquide va donc être déformé de manière linéaire au cours du temps. Lorsque que la contrainte est levée, la déformation s'arrête, mais le liquide ne reprend pas la place qu'il occupait avant son application. 
 L'écoulement visqueux est un phénomène irréversible, et l'énergie qui a été fournie pour le faire s'écouler est dissipée. 
 
-Cependant, ces propriétés ne sont pas intrinsèque à une matériau, elles sont également dépendantes de la manière dont ils sont stimulés mécaniquement, et en particulier de l'échelle de temps. Par exemple, le manteau de la croûte terrestre peut être considéré comme un solide élastique à une échelle de temps de quelques heures, mais à des échelles de temps géologiques, il peut être considéré comme un liquide extrêmement visqueux ($\eta \approx 10^{21}$Pa.s). 
+Le liquide purement visqueux et le solide purement élastique sont des modèles qui ne sont valables que dans certaines conditions. Une barre d'acier est élastique dans une gamme de contraintes et de déformations, au-delà elle est plastique et se déforme de manière irréversible. Cela peut également dépendre de l'échelle de temps à laquelle on se place, par exemple, le manteau de la croûte terrestre peut être considéré comme un solide élastique à une échelle de temps de quelques heures, mais à des échelles de temps géologiques, il peut être considéré comme un liquide extrêmement visqueux ($\eta \approx 10^{21}$Pa.s). 
 
-Les cellules vivantes et la plupart des biopolymères sont des matériaux visco-élastiques, ce qui signifie qu'une partie de l'énergie transmise par la contrainte ou par la déformation va être stockée, et une autre va être dissipée. 
-Lorsque le matériau est stimulé de manière oscillante à une fréquence $\omega$, on peut alors écrire un module complexe de manière analogue à ce qui a été fait pour le solide élastique ou le liquide visqueux : 
-$$ G(\omega)=\frac{\sigma(\omega)}{\epsilon(\omega)} = G'(\omega)+iG''(\omega)$$
-où la partie en phase $G'(\omega)$ représente le module de stockage, et la partie en opposition de phase $G''(\omega)$ représente le module de perte. 
 
-Si l'on veut se placer plutôt en coordonnées temporelles, on peut également reformuler cela en utilisant la fonction de fluage $J(t)$ : 
-$$ \epsilon(t) = \int_0^t J(t-t') \frac{\mathrm{d}\sigma}{\mathrm{d}t'} \mathrm{d}t'$$
+La fonction de fluage quantifie la déformation d'un matériau en réponse à une contrainte $\sigma$ constante appliquée à partir d'un temps $t=0$. 
+Dans le cas simple du solide élastique, la fonction de fluage est une constante : à l'application d'une contrainte, le matériau est immédiatement déformé, et cette déformation reste constante par la suite. 
+$$J(t)=\frac{1}{E}$$
+Dans le cas d'un liquide visqueux, la fonction de fluage est une fonction linéaire du temps : 
+$$ J(t)=\frac{t}{\eta}$$
 
+Les cellules vivantes et la plupart des bio-polymères sont des matériaux visco-élastiques, ce qui signifie qu'une partie de l'énergie transmise par la contrainte ou par la déformation va être stockée, et une autre va être dissipée. Il existe plusieurs manière simple de combiner les deux modèles précédents pour créer un modèle de visco-élasticité. 
+
+Les deux plus simples sont le modèle de Kelvin-Voigt et le modèle de Maxwell, qui associent un élément élastique de module d'Young $E$ et un élément visqueux de viscosité $\eta$, le premier en parallèle et le second en série. 
+Dans le modèle de Maxwell, lorsque l'on impose une contrainte $\sigma$ constante, on obtient une superposition des deux fonctions de fluage précédentes : 
+$$J(t)=\frac{1}{E} + \frac{t}{\eta}$$ 
+et donc une déformation affine au cours du temps. Le matériau se déforme de manière élastique, puis coule en relaxant la contrainte. 
+Dans le modèle de Kelvin-Voigt : 
+$$ J(t)=J_0 e^{-\frac{t}{\tau}} \qquad \tau=\frac{\eta}{E}$$
+Un temps caractéristique du système apparaît, en dessous duquel la réponse est principalement élastique, et au-dessus duquel la déformation est principalement visqueuse. 
+
+Ces deux modèles peuvent être ensuite complexifiés, en combinant plusieurs éléments visqueux et plusieurs éléments élastiques, en parallèle et/ou en série. 
+
+Lorsque la sollicitation mécanique n'est plus une contrainte constante, mais sinusoïdale de fréquence $\omega$, on parle plutôt en terme de module visco-élastique : 
+$$G(\omega) = \frac{\sigma(\omega)}{\epsilon(\omega)} = G'(\omega)+iG''(\omega)$$
+
+$G'$ est le module de stockage, et correspond à la part élastique de la réponse, tandis que $G''$ est le module de perte, qui quantifie la dissipation. Pour un solide élastique on a $G'=E$ et $G''=0$, alors que pour un liquide visqueux $G'=0$ et $G''=\omega \eta$. 
 
 \section{Propriétés des réseaux d'actine in vitro}
+
+Une des approches utilisées par les physiciens pour aborder l'étude des objets biologiques consiste à rechercher le système le plus simple pour lequel les propriétés observées dans le vivant peuvent être reproduites. 
+En partant d'un très petit nombre de protéines purifiées, re-mélangées \textit{in vitro}, on peut reconstruire des modèles simplifiés du cytosquelette, dans le but de comprendre quels éléments, et quelles associations d'éléments sont à l'origine des propriétés des cellules. 
+
+Dans le cas de l'actine, cela peut être un gel d'actine purifiée, auquel on peut ajouter des protéines réticulantes, comme l'$\alpha$-actinine, la scruine ou la filamine, des moteurs moléculaires comme les myosines ou Arp2/3 pour créer des réseaux branchés. 
+
+Les gels d'actine purifiée et polymérisée, même en l'absence de tout réticulant se rigidifient sous contrainte. Deux mécanismes principaux expliquent ce comportement. 
+D'une part, les filaments d'actine semi-flexibles, lorsqu'ils sont étirés, perdent des degrés de liberté de fluctuation, et cela crée une élasticité entropique \cite{storm_2005}. Plus la contrainte et grande, et plus les possibilités se réduisent, et plus le gel se rigidifie. 
+D'autre part, les filaments semi-flexibles peuvent fluer, et acquièrent ainsi une élasticité de courbure. 
+Au-delà de 20\% de déformation, les gels d'actine cèdent, et leur module élastique diminue brutalement de manière irréversible \cite{janmey_1994}.
+Il est à noter que les valeurs de modules élastiques mesurées pour les gels d'actine sont apparemment extrêmement dépendantes des conditions de purification, de stockage et de polymérisation de l'actine. 
+
+L'ajout de réticulants permanents, comme la scruine, rend le gel quasiment exclusivement élastique, avec un module qui dépend principalement de la concentration en réticulants. 
+Les réticulants dotés d'un temps caractéristique d'interaction entre deux filaments, comme l'$\alpha$-actinine ou la filamine, n'augmentent pas autant la rigidité des gels d'actine. 
+La réponse en fréquence de ces mélanges est également modifiée par la cinétique d'interaction entre les filaments et les réticulants, car une molécule avec des temps de détachement courts permet plus de dissipation et de relaxation des contraintes qu'une protéine interagissant longtemps. 
+Les gels réticulés ont un comportement encore plus non-linéaire que les gels d'actine simple, allant jusqu'à des rigidités multipliées par 100 pour des gels avec de la filamine. 
+
+L'ajout de moteurs dans le réseau d'actine est encore une question de physique tout à fait différente. En plus de lier les filaments entre eux à la manière d'un réticulant classique, les myosines consomment de l'ATP et produisent des déplacements de filaments les uns par rapport aux autres, sans qu'il soit nécessaire de leur appliquer une contrainte extérieur. 
+Un gel d'actine, de filamine et de myosine peut alors se rigidifier sans contrainte, uniquement sous l'action des moteurs moléculaires mettant en tension le réseau \cite{koenderink}. 
+La consommation d'ATP par les myosines place également le gel hors de l'équilibre thermodynamique. Dans les concentrations d'ATP qui permettent aux myosines de faire coulisser les filaments les uns par rapport aux autres, le théorème fluctuation-dissipation n'est alors plus valable \cite{mizuno}, alors qu'il l'est sans ajout de myosines, ou lorsque la fréquence de stimulation est supérieure à 10 Hz. 
+
+
 
 \section{Techniques de rhéologie cellulaire}
 
