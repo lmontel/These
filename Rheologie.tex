@@ -82,7 +82,7 @@ Les réticulants dotés d'un temps caractéristique d'interaction entre deux fil
 La réponse en fréquence de ces mélanges est également modifiée par la cinétique d'interaction entre les filaments et les réticulants, car une molécule avec des temps de détachement courts permet plus de dissipation et de relaxation des contraintes qu'une protéine interagissant longtemps. 
 Les gels réticulés ont un comportement encore plus non-linéaire que les gels d'actine simple, allant jusqu'à des rigidités multipliées par 100 pour des gels avec de la filamine. 
 
-L'ajout de moteurs dans le réseau d'actine est encore une question de physique tout à fait différente. En plus de lier les filaments entre eux à la manière d'un réticulant classique, les myosines consomment de l'ATP et produisent des déplacements de filaments les uns par rapport aux autres, sans qu'il soit nécessaire de leur appliquer une contrainte extérieur. 
+L'ajout de moteurs dans le réseau d'actine est encore une question de physique tout à fait différente. En plus de lier les filaments entre eux à la manière d'un réticulant classique, les myosines consomment de l'ATP et produisent des déplacements de filaments les uns par rapport aux autres, sans qu'il soit nécessaire de leur appliquer une contrainte extérieure. 
 Un gel d'actine, de filamine et de myosine peut alors se rigidifier sans contrainte, uniquement sous l'action des moteurs moléculaires mettant en tension le réseau \cite{koenderink}. 
 La consommation d'ATP par les myosines place également le gel hors de l'équilibre thermodynamique. Dans les concentrations d'ATP qui permettent aux myosines de faire coulisser les filaments les uns par rapport aux autres, le théorème fluctuation-dissipation n'est alors plus valable \cite{mizuno}, alors qu'il l'est sans ajout de myosines, ou lorsque la fréquence de stimulation est supérieure à 10 Hz. 
 
@@ -90,8 +90,91 @@ La consommation d'ATP par les myosines place également le gel hors de l'équili
 
 \section{Techniques de rhéologie cellulaire}
 
+De très nombreuses techniques ont été développées pour sonder les propriétés mécaniques des cellules \textit{in vitro}, mais elles ne sondent pas toutes exactement la même chose. 
+
+En premier, les techniques peuvent être classées en deux catégories : les techniques de rhéologie active, où l'on applique une contrainte ou une déformation extérieure à la cellule, et les techniques de rhéologie passive, où il n'y a aucune contrainte ou déformation imposée. 
+
+Les techniques se distinguent également par l'échelle à laquelle elles sondent les cellules : certaines techniques sont globales, comme la micropipette ou le rhéomètre à cellule unique, d'autres sont locales comme les pinces optiques, et même parfois très locales, comme l'AFM. 
+Selon la taille caractéristique de l'élément sondé, ce ne sont pas les mêmes éléments du cytosquelette qui sont caractérisés : une technique sondant la réponse locale à la surface de la cellule verra principalement le cortex cellulaire, tandis qu'une bille enfoncée profondément au milieu du corps cellulaire verra le cytosquelette interne. 
+
+Certaines techniques appliquent la contrainte par l'intermédiaire des protéines d'adhésion, ce qui est le cas de la majorité des techniques de billes par exemple, tandis que d'autres peuvent sonder directement la mécanique cellulaire, comme l'AFM ou l'étireur optique (optical stretcher). Cet aspect est particulièrement important pour étudier la mécanotransduction : savoir si le signal mécanique est médié ou non par les diverses adhésions ( à la matrice extra-cellulaire, aux autres cellules ) est une information essentielle pour comprendre le phénomène. 
+Cependant, la présence de ces adhésions oblige à faire des hypothèses sur les liaisons avec la cellule qui peuvent parfois affecter grandement les valeurs mesurées. 
+
+Parmi les techniques de rhéologie active, certaines appliquent des contraintes, d'autres des couples, et d'autres encore des déformations. Ces différences peuvent parfois rendre les comparaisons difficiles entre les résultats, lorsqu'il faut replacer les mesures sur une échelle commune à des techniques différentes. 
+
+Dans chacune des deux principales catégories, les techniques seront présentées dans un ordre approximatif de la technique la plus globale à la plus locale. 
+
+\subsection{Les techniques de rhéologie active}
+\subsubsection{Les techniques globales}
+Les techniques de rhéologie globales stimulent la cellule dans son entier, ou sur la majeure partie de son volume. Elles ont l'avantage de considérer les cellules comme un tout. 
+
+\paragraph{Rhéomètre à cellule unique (Single Cell Rheometer)}
+
+Le rhéomètre à cellule unique est composé de deux fines plaques de verre recouvertes de protéines adhérentes entre lesquelles est placée une cellule. 
+La déflexion de la lamelle du haut est mesurée, soit directement sur l'image de microscopie, soit indépendamment, et permet de connaître ou de fixer la force appliquée aux cellules. 
+
+Même s'il est présenté dans les techniques de rhéologie active, le rhéomètre à cellule unique peut être également utilisé en rhéologie passive. 
+La cellule est alors attrapée entre les deux plaques et laissée libre de s'étaler. La force qu'elle exerce sur les plaques est déduite de la déflexion de la lamelle souple, ce qui permet de quantifier la force totale que la cellule peut déployer pour s'ancrer à son substrat. 
+
+Lorsqu'il est utilisé en rhéologie active, il peut appliquer une contrainte sinusoïdale ou constante, et donc mesurer le module visco-élastique $G(\omega)$ ou la fonction de fluage $J(t)$. 
+
+
+
+\paragraph{Optical stretcher}
+\paragraph{Micropipette}
+\subsubsection{Les techniques de billes}
+Ces techniques utilisent des billes micrométriques recouvertes de protéines d'adhésion qui se lient aux récepteurs de la membrane et servent d'intermédiaire pour exercer des contraintes sur les cellules. 
+
+Que la force soit appliquée sur la bille par un laser ou par un champ magnétique, le principe reste le même. La contrainte est transmise à la cellule par l'intermédiaire des protéines d'adhésion, ce qui signifie que les voies de mécanotransductions activées au niveau des adhésions vont également être stimulées. 
+La stimulation est donc plus ou moins locale, selon le rapport entre la taille de la cellule et la taille de la surface de contact avec la bille.
+
+Les estimations de modules visco-élastiques obtenues par des techniques de billes sont souvent très dépendantes des hypothèses qui sont faites sur la densité de liaisons au niveau de la surface de contact et du modèle mécanique qui permet d'obtenir une relation contrainte-déformation à partir de la relation entre la force exercée sur la bille et le déplacement de celle-ci. 
+De plus, les billes sont plus ou moins enfoncées dans la cellule, selon les ligands, les types cellulaires, les temps d'incubations, et cela change la nature des éléments du cytosquelette qui vont être sondés : le cortex pour une bille en surface, le lamellipode pour une bille sur le bord en progression, le noyau pour une bille enfoncée au contact de celui-ci\dots
+
+
+\paragraph{Magnétocytométrie}
+\paragraph{Pinces magnétiques}
+
+Le principe des pinces magnétiques est d'utiliser des billes de taille micrométrique qui contiennent des nanoparticules de fer qui les rendent super-paramagnétiques.
+Ces billes soumises à un champ magnétique créé par un électro-aimant sont attirées vers lui avec une force qu'il faut calibrer à l'avance.
+La force exercée sur une bille peut alors être réglée en modifiant le courant électrique parcourant l'électro-aimant.
+Ces billes sont fonctionnalisées avec des protéines d'adhésion (intégrines, cadhérines, ICAM \dots), elles vont donc sonder le cytosquelette par l'intermédiaire de ces protéines. 
+Elles sont calibrées à l'avance de façon à connaître la relation entre le courant passant
+
+Les pinces magnétiques peuvent appliquer des forces de l'ordre de quelques dizaines à quelques centaines de pN lorsqu'elles sont placées hors de la chambre expérimentale, mais peuvent monter à quelques nN ou à la dizaine de nN lorsqu'elles sont placées à seulement une dizaine de microns de la cellule. 
+Leur précision est subordonnée principalement à la variabilité de la charge magnétique d'une bille à l'autre, selon leur contenu en nanoparticules de fer. 
+L'électro-aimant ne peut qu'attirer les billes, ce qui signifie que lorsqu'il n'y a qu'un seul électro-aimant, la force ne peut être appliquée que dans une seule direction et un seul sens. 
+
+Durant le début de ma thèse, j'ai construit et utilisé des pinces magnétiques afin de sonder la rhéologie cellulaire de myoblastes en culture. Les détails de la conception, de l'utilisation et des résultats de ces pinces sont décrits dans les chapitres suivants. 
+
+
+\paragraph{Pinces optiques}
+
+Les pinces optiques utilisent des billes de silice qui sont piégées dans le faisceau focalisé un laser infra-rouge. 
+La bille est en permanence soumise à une force de rappel élastique qui la ramène vers le centre du piège. 
+En mesurant l'écart entre la position de la bille et le centre du piège, on peut connaître la force exercée par le piège sur la bille. 
+
+Les pinces optiques peuvent appliquer des forces de la dizaine à la centaine de pN dans n'importe quelle direction du plan focal, avec une précision sur la force appliquée bien meilleure de celle des pinces magnétiques, au prix d'une gamme de forces plus réduites. 
+
+\subsubsection{Microscopie à force atomique (AFM)}
+
+\subsubsection{Autres techniques}
+\paragraph{Cell poking}
+
+\paragraph{Ablation laser}
+
+\subsection{Les techniques de rhéologie passive}
+\subsubsection{Techniques utilisant le substrat}
+\paragraph{Traction Force Microscopy}
+\paragraph{Surfaces micro-texturées}
+\subsubsection{Techniques utilisant des objets intra-cellulaires}
+\paragraph{Billes en diffusion}
+\paragraph{Micro-aiguilles}
+
+
 \section{Propriétés rhéologiques de cellules}
 
+\section{Mécanotransduction}
 
 
 
