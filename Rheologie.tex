@@ -42,9 +42,9 @@ Le liquide purement visqueux et le solide purement élastique sont des modèles 
 
 
 La fonction de fluage quantifie la déformation d'un matériau en réponse à une contrainte $\sigma$ constante appliquée à partir d'un temps $t=0$. 
-Dans le cas simple du solide élastique, la fonction de fluage est une constante : à l'application d'une contrainte, le matériau est immédiatement déformé, et cette déformation reste constante par la suite. 
+Dans le cas simple du solide élastique, la fonction de fluage est une constante : à l'application d'une contrainte, le matériau est immédiatement déformé, et cette déformation reste constante par la suite. Par exemple, dans le cas d'un étirement uniaxial : 
 $$J(t)=\frac{1}{E}$$
-Dans le cas d'un liquide visqueux, la fonction de fluage est une fonction linéaire du temps : 
+Dans le cas d'un liquide visqueux cisaillé, la fonction de fluage est une fonction linéaire du temps : 
 $$ J(t)=\frac{t}{\eta}$$
 
 Les cellules vivantes et la plupart des bio-polymères sont des matériaux visco-élastiques, ce qui signifie qu'une partie de l'énergie transmise par la contrainte ou par la déformation va être stockée, et une autre va être dissipée. Il existe plusieurs manière simple de combiner les deux modèles précédents pour créer un modèle de visco-élasticité. 
@@ -201,20 +201,46 @@ Les pinces optiques peuvent appliquer des forces de la dizaine à la centaine de
 
 \subsubsection{Microscopie à force atomique (AFM)}
 
+La microscopie à force atomique a initialement été développée comme une manière d'observer des échantillons avec une résolution 1000 fois meilleure que celle de la microscopie optique, avec une résolution verticale atteignant celle d'un atome. 
+Elle repose sur un levier élastique flexible qui va scanner la surface de l'échantillon pour mesurer sa topographie. En cela, la microscopie à force atomique est par rapport à notre sens du toucher ce que la microscopie optique est à notre vue. Un laser est réfléchi sur le bout du levier et le déplacement du reflet permet de mesurer la déflexion du levier avec une très grande précision. 
 
+Mais le levier peut également être utilisé comme une sonde pour appliquer des forces en appuyant sur une cellule. La raideur du levier est calibrée, ce qui permet à partir de sa déflexion de mesurer une force. 
+La pointe d'un microscope à force atomique est en général extrêmement fine, pour permettre la résolution nanométrique de l'AFM. Mais pour stimuler une cellule vivante, cette pointe peut être trop fine et endommager les cellules, c'est pourquoi une bille est parfois fixée sur la pointe. Lors d'études sur les contacts entre deux cellules, une cellule a également pu être fixée sur le levier pour servir d'intermédiaire. 
+
+Selon la taille de la pointe, l'AFM va pouvoir sonder la cellule à des échelles locales, voir très locales, de l'ordre de la taille de la pointe (de la dizaine à la centaine de nanomètres), avec des forces allant du pN à la centaine de nN. Selon l'indentation, c'est-à-dire la profondeur à laquelle la pointe va être enfoncée, les éléments du cytosquelette sondés seront également différents. 
+La pointe peut être utilisée pour observer la fonction de fluage, une relaxation, ou peut être mise en oscillations pour observer le régime fréquentiel. 
+
+\subsubsection{Endosomes magnétiques}
+
+Toutes les cellules peuvent absorber des particules extérieures avec lesquelles elles rentrent en contact par un mécanisme appelé endocytose. L'objet est enveloppé dans une invagination de la membrane plasmique, et se retrouve dans la cellule à l'intérieur d'une bulle de membrane. 
+
+En introduisant des nanoparticules magnétiques par ce moyen dans le cytoplasme des cellules, il devient possible de sonder la rhéologie de l'intérieur de la cellule. 
+Soumises à un champ magnétique, les nanoparticules magnétiques s'alignent pour former des aiguilles, qui sont mises en rotation par un champ magnétique tournant. 
+L'observation de cette rotation permet d'obtenir $G(\omega)$. 
+
+Cette technique permet de faire des mesures dans plusieurs endroits  simultanément dans la même cellule, et également de faire de la rhéologie passive lorsqu'aucune force n'est appliquée. Elle sonde la cellule à une échelle sub-micrométrique, en s'affranchissant de l'influence du cortex et de l'adhésion, mais est influencée par les mouvements actifs auxquels sont soumis les endosomes de la part de la cellule. 
 
 \subsection{Les techniques de rhéologie passive}
-\subsubsection{Techniques utilisant le substrat}
-\paragraph{Traction Force Microscopy}
-\paragraph{Surfaces micro-texturées}
-\subsubsection{Techniques utilisant des objets intra-cellulaires}
-\paragraph{Billes en diffusion}
-\paragraph{Micro-aiguilles}
+Les techniques de rhéologie passives ont l'avantage de ne pas perturber les cellules pendant l'expérience avec une force ou une déformation imposée. 
+
+Il est à noter que certaines techniques présentées dans la partie rhéologie active peuvent également être utilisées en rhéologie passive. C'est par exemple le cas du rhéomètre à cellule unique et des endosomes magnétiques. 
+
+Les techniques de rhéologie passives reposent sur l'observation du mouvement brownien de particules à l'intérieur des cellules. Ces particules peuvent avoir des tailles de l'ordre du nm au micron, être composées de différends matériaux comme de l'or, des polymères, de la silice ou des oxydes de fer, et être introduites dans la cellules par injection, endocytose, phagocytose ou être adhérentes. 
+
+La rhéologie passive suppose que les billes sont soumises au mouvement brownien dans un milieu visco-élastique à l'équilibre thermodynamique, et peut à l'aide du théorème fluctuation-dissipation calculer $G(\omega)$. 
+Cependant, l'hypothèse de l'équilibre thermodynamique, souvent vérifiée aux temps courts, ne l'est pas aux temps plus longs, lorsque les moteurs moléculaires sont actifs. 
+
+En comparant les résultats de mesures effectuées en rhéologie passive et active avec les prédictions du théorème fluctuation-dissipation, on peut également avoir accès à l'énergie déployée par la cellule pour développer des mouvements actifs. 
+
 
 
 \section{Propriétés rhéologiques de cellules}
 
-\section{Mécanotransduction}
+\section{Autres mesures physiques sur les objets biologiques et mécanotransduction}
+
+\subsection{Mesurer les forces générées par les cellules}
+
+\subsection{Appliquer des forces pour observer la réponse biologique}
 
 
 
