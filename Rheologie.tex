@@ -229,12 +229,34 @@ Les techniques de rhéologie passives reposent sur l'observation du mouvement br
 
 La rhéologie passive suppose que les billes sont soumises au mouvement brownien dans un milieu visco-élastique à l'équilibre thermodynamique, et peut à l'aide du théorème fluctuation-dissipation calculer $G(\omega)$. 
 Cependant, l'hypothèse de l'équilibre thermodynamique, souvent vérifiée aux temps courts, ne l'est pas aux temps plus longs, lorsque les moteurs moléculaires sont actifs. 
+Certaines expériences sont d'ailleurs faites sur des cellules où l'ATP a été bloquée chimiquement, ce qui permet d'être certain d'éviter l'interférence des moteurs moléculaires. 
 
 En comparant les résultats de mesures effectuées en rhéologie passive et active avec les prédictions du théorème fluctuation-dissipation, on peut également avoir accès à l'énergie déployée par la cellule pour développer des mouvements actifs. 
 
 
 
 \section{Propriétés rhéologiques de cellules}
+
+Les données récoltées par toutes les méthodes décrites dans la section précédente dessine une image de la rhéologie cellulaire qui converge sur certains points, et qui diverge sur d'autres. 
+
+Les valeurs du module visco-élastique peuvent énormément varier d'une technique à l'autre, pour un même type cellulaire dans des conditions semblables, allant de quelques dizaines Pa à quelques kPa. 
+Un premier effet vient du fait que des techniques sondant la cellule à des échelles et des localisations différentes, ne mesure pas exactement les paramètres du même objet. 
+Un autre effet important vient du fait que pour remonter à ces valeurs, un modèle mécanique est nécessaire. Selon les hypothèses qu'il contient sur le système (sur l'adhésion, sur l'homogénéité du milieu cellulaire \dots) les valeurs obtenues pourront être très différentes. 
+Par exemple, si le modèle suppose une adhésion parfaite sur toute la surface d'une bille, alors que l'adhésion se fait par un nombre de points limité, la rigidité sera sous-estimée. 
+
+Cependant ces données se retrouvent sur la dépendance en fréquence de $G(\omega)$, qui est en loi de puissance de $10^{-2}$ à $10^3$ rad/s. La grande amplitude de fréquences sur laquelle ce comportement est retrouvé est d'ailleurs un élément essentiel pour distinguer la loi de puissance de l'exponentielle. Plus précisément, \cite{hoffner} proposent une somme de deux lois de puissance : 
+$$G'(\omega)= A \cos \left(\frac{\pi \beta}{2}\right) \omega^{\beta} + B \cos\left(\frac{3 \pi}{8}\right) \omega^{3/4}$$
+L'exposant de cette loi de puissance est compris entre 0, qui correspondrait à un comportement parfaitement élastique, et 1, qui correspondrait à un comportement visqueux, quantifie l'importance relative des deux comportements dans la visco-élasticité. 
+L'exposant $\beta$ est la dépendance en fréquence principale aux faibles fréquences, tandis qu'aux hautes fréquences le terme en $\omega^{3/4}$ domine. 
+
+L'auteur va même plus loin en divisant les données obtenues par différentes techniques en deux groupes, l'un pour lequel $\beta$ est autour de 0.15, regroupant les techniques qui sondent la cellule en surface et donc voient principalement l'influence du cortex très élastique, l'autre pour lequel $\beta$ = 0.25, mesure la visco-élasticité du volume interne de la cellule. 
+
+Il est à noter que ce terme aux hautes fréquences se retrouve également pour les réseaux d'actine \textit{in vitro}, tout en ne correspondant pas à une échelle de temps de stimulation réellement pertinente d'un point de vu biologique (la milliseconde). 
+Cependant, pour des stimulations rapides et des échelles de temps inférieures au dixième de seconde, un autre modèle, de poro-élasticité, a été proposé. 
+Il s'agit de considérer qu'à cette échelle, le facteur majeur de dissipation est le passage de l'eau entre les mailles du réseau d'actine, de manière analogue à de l'eau qui sortirait d'une éponge que l'on presse.  
+Un des avantages de ce modèle sur le modèle de la loi de puissance est qu'il part de mécanismes précis de dissipation pour calculer ses prédictions. 
+
+Car si le modèle de rhéologie en loi de puissance semble bien conservé entre les techniques de rhéologie et les types cellulaires, il est principalement descriptif, mais ne donne que très peu d'informations sur ce qui se passe effectivement à l'intérieur du cytosquelette. 
 
 \section{Autres mesures physiques sur les objets biologiques et mécanotransduction}
 
