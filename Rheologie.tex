@@ -237,6 +237,8 @@ En comparant les résultats de mesures effectuées en rhéologie passive et acti
 
 \section{Propriétés rhéologiques de cellules}
 
+\subsection{Description}
+
 Les données récoltées par toutes les méthodes décrites dans la section précédente dessine une image de la rhéologie cellulaire qui converge sur certains points, et qui diverge sur d'autres. 
 
 Les valeurs du module visco-élastique peuvent énormément varier d'une technique à l'autre, pour un même type cellulaire dans des conditions semblables, allant de quelques dizaines Pa à quelques kPa. 
@@ -257,6 +259,32 @@ Il s'agit de considérer qu'à cette échelle, le facteur majeur de dissipation 
 Un des avantages de ce modèle sur le modèle de la loi de puissance est qu'il part de mécanismes précis de dissipation pour calculer ses prédictions. 
 
 Car si le modèle de rhéologie en loi de puissance semble bien conservé entre les techniques de rhéologie et les types cellulaires, il est principalement descriptif, mais ne donne que très peu d'informations sur ce qui se passe effectivement à l'intérieur du cytosquelette. 
+
+\subsection{Modèles}
+
+Un certain nombre de modèles ont été élaborés pour expliquer les propriétés de la rhéologie cellulaire, pour la plupart inspirés de la matière molle. 
+
+Le modèle Sol-Gel considère le milieu intra-cellulaire et son cytosquelette comme à la transition entre un réseau de filaments semi-flexibles peu connectés ( et donc principalement visqueux ) et un réseau très connecté principalement élastique. 
+Dans ce modèle, ce sont les propriétés du gel qui sont importantes,  d'où l'importance de l'étude des gels d'actine \textit{in vitro}. 
+Les gels d'actine purifiée, avec ou sans réticulants permanents, ont un comportement élastique indépendant de la fréquence aux basses fréquences qui ne correspond pas à ce qui est observé à l'échelle de la cellule. En revanche, aux grandes fréquences, leur comportement est analogue, probablement car les échelles de temps sont trop faibles pour que des phénomènes biologiques aient lieu. 
+Les gels avec des réticulants comme la filamine ou l'$\alpha$-actinine montrent un comportement en loi de puissance, mais les exposants sont bien plus faibles que ceux observés pour les cellules ($\beta$ inférieurs à 0.15), montrant qu'il manque une partie des sources de dissipation.
+Cependant, ces protéines ne peuvent expliquer à elles seules le comportement des cellules, car en leur absence, les cellules ont un comportement quasiment inchangé. 
+
+Si l'étude des gels reconstitués \textit{in vitro} à partir de protéines purifiées permettent d'étudier l'importance des différents ingrédients dans le comportement rhéologiques, ils sont loin de reconstituer la grande diversité de protéines impliquées dans la cellule, ce qui explique qu'ils soient encore loin d'avoir les même propriétés que les cellules complètes. 
+Des gels d'actine et filamine sous tension ont récemment montré deux des propriétés les plus marquantes des cellules, la rhéologie en loi de puissance et la rigidification sous contrainte, donnant naissance à un modèle basé sur des réticulants qui peuvent se déplier sous contrainte pour révéler des sites de liaison cachés. Comme déjà évoqué dans le chapitre sur l'actine, de plus en plus de protéines liées au cytosquelette montrent ainsi des capacités mécano-sensitives. Quelques simulations ont montré une rhéologie en loi de puissance prometteuse. 
+
+Le modèle de Soft Glassy Rheology considère la cellule d'un point de vue énergétique. 
+La cellule est alors constituée d'un grand nombre de petits éléments densément compactés, qui peuvent se déplacer les uns par rapport aux autres au prix d'une énergie beaucoup plus grande que les fluctuations thermiques. 
+Les réarrangements se font donc sous l'action d'une énergie extérieure, en l'occurence pour la cellule la consommation d'ATP par les moteurs moléculaires. 
+Ce système implique l'existence d'un grand nombre de temps de relaxation qui engendre une rhéologie en loi de puissance. 
+Le rôle de la source d'énergie extérieure dans les réarrangements implique que les moteurs moléculaires sont essentiels pour ce comportement. Une plus grande activité des moteurs qui fournit plus d'énergie au système pour ses réarrangements devrait donc augmenter la fluidité du milieu. 
+Cependant, l'effet du blocage des moteurs moléculaires sur les propriétés des cellules est encore controversé. Sur les myoblastes, l'effet attendu a été observé, mais sur un autre type cellulaire, c'est l'effet contraire. Certaines expériences n'ont remarqué aucune différence significative en bloquant l'ATP. 
+Ce modèle ne parle cependant que du cytosquelette d'acto-myosine, sans prendre en compte l'action des autres réticulants, de manière complémentaire avec le modèle précédent. 
+
+Une approche intermédiaire consiste à considérer le cytosquelette comme une organisation auto-similaire, allant de l'échelle du simple filament, moteur et réticulant, à l'échelle des fibres de stress, des filaments de myosines et des agrégats de réticulants. 
+Cette répartition fractale des taille entraîne une répartition en loi de puissance des temps de relaxation du système, qui elle-même est à l'origine d'un comportement en loi de puissance de la fonction de fluage. Les variations de comportement entre les cellules sont alors vues comme des distributions aléatoires parmi tous les temps de relaxation disponibles. Ce modèle prédit une répartition normale des exposants dans la population cellulaire et une répartition log-normale des $G_0$, ainsi qu'une relation linéaire entre $ln(G_0)$ et l'exposant $\alpha$. 
+
+
 
 \section{Autres mesures physiques sur les objets biologiques et mécanotransduction}
 
