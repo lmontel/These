@@ -288,14 +288,60 @@ Cette répartition fractale des taille entraîne une répartition en loi de puis
 
 \section{Autres mesures physiques sur les objets biologiques et mécanotransduction}
 
+ 
+
+
+
 \subsection{Mesurer les forces générées par les cellules}
+
+Les cellules ne sont pas seulement un matériau aux propriétés rhéologiques étonnantes, elles sont avant tout un système vivant, capable d'apporter une réponse biologique à une sollicitation mécanique, et d'exercer leurs propres forces et déformations pour se mouvoir, changer de forme, se diviser \dots 
+Il est alors intéressant de mesurer ces forces et déformations, par exemple observer comme une cellule tire et pousse sur son substrat pour se déplacer, comme elle équilibre les forces pendant sa division pour aligner puis séparer les chromosomes, ou comment des mutations dans certaines protéines peuvent compromettre la capacité de cellules musculaires à se contracter.
+
+\subsubsection{Traction Force Microscopy}
+
+L'idée de cette technique est d'ensemencer les cellules sur un subtrat de polyacrylamide déformable. 
+Des billes d'un diamètre de l'ordre de la centaine de nanomètres à l'intérieur du gel servent de traceurs. 
+Lorsque la cellule exerce des forces sur le substrat, le gel est déformé et les billes sont déplacées. 
+Les cellules sont alors décollées, ce qui permet au gel de reprendre sa forme au repos et donc d'avoir la position initiale des billes. 
+La connaissance des propriétés mécaniques du gel permettent de remonter du champ de déformations dans le gel sous et autour de la cellule au champ de contraintes exercées par la cellule. 
+
+Cette technique peut s'utiliser à l'échelle d'une cellule unique lorsque les cellules sont suffisamment éloignées les unes des autres pour que les champs de déformation qu'elles causent ne se superposent pas. 
+Elle peut également être utilisée à l'échelle d'un tissu lorsqu'on ne cherche pas à démêler la contribution individuelle de chaque cellule mais seulement celle du tissu tout entier. 
+
+\subsubsection{Substrats texturés}
+
+Ensemencer les cellules sur un champ de piliers en PDMS de 2 \micro m de diamètre et d'une dizaine de \micro m de haut permet de remonter plus facilement aux forces générées par la cellule. 
+En effet, la raideur des piliers peut être calibrée à l'avance, et retrouver la force exercée sur le pilier à partir de sa déflexion est un problème plus simple à résoudre que celui du champ de déformation de la TFM. 
+
+Cette technique peut être combinée à d'autres : le champ de micro-piliers en PDMS peut ensuite être étiré pour observer comment la génération de forces est modifiée par la déformation extérieure, les micro-piliers peuvent être recouverts de motifs de protéines d'adhésion de formes et de tailles contrôlées, ou des particules magnétiques peuvent être incorporées à l'intérieur des piliers pour contrôler leur déflexion avec un champ magnétique. 
+
+\subsubsection{Contrôle de la forme}
+
+Le forme des cellules peut être hautement variable d'un type cellulaire à l'autres, mais également à l'intérieur d'un même type cellulaire. 
+Ainsi, dans une population de C2C12, certaines cellules ont une forme allongée, d'autres plutôt triangulaire, certaines sont rondes, et leur taille peut également varier d'un facteur 10. Au contraire, lorsque les mêmes cellules sont différenciées en myotybes, elles ont toutes une forme très allongée. 
+
+Ces différences de taille et de formes sont autant de paramètres géométriques hors de contrôle de celui qui veut mesurer les paramètres physiques des cellules et en déduire des principes généraux. 
+
+C'est pour réduire cette variabilité qu'ont été développées les techniques de micro-patrons adhésifs. 
+Le principe est de créer sur le substrat des zones recouvertes de protéines adhésives de forme et de taille contrôlées.
+Une cellule ne pourra adhérer que sur ces zones, le reste de la surface étant rendue non-adhésive. 
+
+Cette technique a été utilisée dans différents contextes pour étudier la manière dont MRTF-A régule la transition EMT. 
+Dans le premier cas, les cellules ont été ensemencées individuellement sur des disques d'aires différentes. Sur les disques de taille trop faible pour que la cellule puisse s'étaler, MRTF-A était accumulée dans le noyau, contribuant au changement de type cellulaire. 
+Dans le second cas, les cellules étaient ensemencées sur des motifs carrés d'une centaine de microns de côté. Les cellules sur les bords subissaient alors plus de contraintes et de tension que les cellules du centre du motif, et MRTF-A était nucléaire dans les cellules des bords du carrés, et cytoplasmique dans les cellules à l'intérieur.
+
+Dans les deux cas, la forme et l'aire proposées à la cellule déterminent suffisamment l'était du cytosquelette pour induire la translocation de MRTF-A.  
 
 \subsection{Appliquer des forces pour observer la réponse biologique}
 
+La mécanotransduction s'intéresse particulièrement à la réponse biologique des cellules soumises à des contraintes mécaniques. 
+Il est alors important de pouvoir leur appliquer de manière contrôlée des contraintes et des déformations pour observer les changements biologiques que cela provoque. 
+
+Un grande partie des techniques de rhéologie active présentées précédemment peuvent être utilisées pour appliquer des forces contrôlées aux cellules, car la majorité d'entre elles sont compatibles avec des observations sur leur état biologique. 
+
+Les cellules peuvent également être cultivées sur des substrats déformables, la plupart du temps des gels de polyacylamide ou de PDMS, recouverts de protéines d'adhésion, qui seront soumis à des déformations constantes ou cycliques. Un dispositif permettant ce type de stimulations est décrit dans le chapitre de cette thèse concernant les méthodes expérimentales. 
 
 
-
-
-
+Le développement de la microfluidique a permis d'observer des cellules soumises à des flux se déplacer à contre-courant, ou de les observer se déformer pour se faufiler dans des petits interstices. 
 
 \end{document}
