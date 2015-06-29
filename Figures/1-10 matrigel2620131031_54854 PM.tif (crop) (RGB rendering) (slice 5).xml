@@ -24,7 +24,7 @@
 <rightout>255</rightout>
 </scaler0>
 <colormap0>
-<name>component 0</name>
+<name>Custom</name>
 <enabled>true</enabled>
 <type>RGB</type>
 <red rawdata="false">
@@ -89,7 +89,7 @@
 <rightout>255</rightout>
 </scaler1>
 <colormap1>
-<name>component 1</name>
+<name>Custom</name>
 <enabled>true</enabled>
 <type>RGB</type>
 <red rawdata="false">
@@ -154,7 +154,7 @@
 <rightout>255</rightout>
 </scaler2>
 <colormap2>
-<name>component 2</name>
+<name>Custom</name>
 <enabled>true</enabled>
 <type>RGB</type>
 <red rawdata="false">
