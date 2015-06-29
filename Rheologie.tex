@@ -1,16 +1,16 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%\addbibresource{biblio.bib}
-%
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio.bib}
+
+\begin{document}
 
 \chapter{Rhéologie cellulaire}
 
@@ -337,11 +337,14 @@ Dans les deux cas, la forme et l'aire proposées à la cellule déterminent suff
 La mécanotransduction s'intéresse particulièrement à la réponse biologique des cellules soumises à des contraintes mécaniques. 
 Il est alors important de pouvoir leur appliquer de manière contrôlée des contraintes et des déformations pour observer les changements biologiques que cela provoque. 
 
-Un grande partie des techniques de rhéologie active présentées précédemment peuvent être utilisées pour appliquer des forces contrôlées aux cellules, car la majorité d'entre elles sont compatibles avec des observations sur leur état biologique. 
+Un grande partie des techniques de rhéologie active présentées précédemment peuvent être utilisées pour appliquer des forces contrôlées aux cellules, car la majorité d'entre elles sont compatibles avec des observations sur leur état biologique.
+
+Par exemple,\cite{zhao_force_2007} ont utilisé des billes magnétiques pour appliquer une contrainte verticale constante à des fibroblastes cardiaques de rat. Ils ont observé une activation de la voie RhoA/ROCK en réponse à la force, qui aboutit à la désactivation de la cofiline. Cela stabilise alors les filaments d'actine, MRTF-A est alors accumulée dans le noyau et le promoteur de l'$\alpha$-actine  du muscle lisse est activé. 
 
 Les cellules peuvent également être cultivées sur des substrats déformables, la plupart du temps des gels de polyacylamide ou de PDMS, recouverts de protéines d'adhésion, qui seront soumis à des déformations constantes ou cycliques. Un dispositif permettant ce type de stimulations est décrit dans le chapitre de cette thèse concernant les méthodes expérimentales. 
+Des étirements cycliques ont été appliqués par \cite{kuwahara_myocardin-related_2010} sur des myocytes cardiaques de rat et sont liés à une accumulation nucléaire de MRTF-A.  
 
 
 Le développement de la microfluidique a permis d'observer des cellules soumises à des flux se déplacer à contre-courant, ou de les observer se déformer pour se faufiler dans des petits interstices. 
 
-%\end{document}
+\end{document}
