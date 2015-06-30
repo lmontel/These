@@ -235,11 +235,7 @@ La membrane plasmique est une bicouche lipide qui a de faibles modules élastiqu
 Dans le volume de la cellule, l'actine forme un réseau moins dense. \textit{In vitro} on peut observer des faisceaux de filaments appelés fibres de stress. 
 Dans le muscle, l'actine et ses moteurs associés (les myosines) forment une organisation spécialisée responsable de la contraction musculaire, appelée sarcomère, qui sera décrite dans le chapitre dédié au muscle.
 
-Lors de la division cellulaire, le réseau d'actine est dépolymérisé. À la fin de la séparation des chromosomes, l'actine corticale forme un anneau contractile qui va se refermer pour séparer le corps cellulaire en deux cellules filles distinctes. 
-
-Un grand nombre de protéines interagissent avec l'actine (Actin-Binding Proteins). Concernant le cytosquelette d'actine, il s'agit de facteurs de polymérisation ou de dépolymérisation, de moteurs (les myosines) ou de protéines qui ancrent le réseau d'actine aux protéines transmembranaires (comme les cadhérines ou les intégrines) ou au réseau de lamines du noyau. 
-
-L'actine n'est pas limitée à un rôle mécanique, elle a également des rôles de régulation de l'expression du génome et d'organisation de l'ADN. 
+L'actine interagit avec un très grand nombre de protéines, ce qui confère au réseau un caractère particulièrement dynamique. L'actine n'est pas limitée à un rôle mécanique, elle a également des rôles de régulation de l'expression du génome et d'organisation de l'ADN. 
 
 Le couplage entre le rôle mécanique de l'actine et son rôle transcriptionnel est au c\oe ur de ce travail de thèse, c'est pourquoi l'actine sera présentée en détail dans un chapitre dédié. 
 
@@ -262,14 +258,14 @@ L'information génétique est stockée dans l'ADN, pour y être protégée et tr
 
 Lorsque toutes les conditions d'expression sont réunies, l'ARN polymérase peut se fixer sur l'ADN au site de début de transcription. Le complexe ouvre l'ADN, et permet aux bases de l'ARN, Adénine, Uracile, Guanine et Cytosine, de compléter les bases de l'ADN, respectivement Thymosine, Adénine, Cytosine et Guanine. L'ARN polymérase progresse ainsi jusqu'à rencontrer une séquence terminateur sur l'ADN. 
 
-À l'issu de cette étape, un ARN a été transcrit directement à partir de la séquence codante. 
+À l'issue de cette étape, un ARN a été transcrit directement à partir de la séquence codante. 
 
 \subsubsection{La maturation de l'ARN}
 
-A l'issu de sa transcription, l'ARN subit plusieurs transformations. Des éléments sont ajoutés à ses deux extrémités, pour sa stabilité et sa reconnaissance par les ribosomes. 
+Après sa transcription, l'ARN subit plusieurs transformations. Des éléments sont ajoutés à ses deux extrémités, pour assurer sa stabilité et sa reconnaissance par les ribosomes. 
 L'ARN transcrit comprend deux types de séquences, les introns et les exons. Seuls les exons contiennent l'information des acides aminés pour coder la protéine. 
 L'ARN va subir une étape d'épissage : les introns sont retirés de l'ARN jusqu'à ce qu'il ne reste que l'enchaînement des exons. Lors de cette étape, tous les exons peuvent être réassemblés, ou seulement une partie d'entre eux. Les protéines synthétisées par ces reconstitutions différentes seront différentes : on parle d'épissage alternatif. 
-Un même gène peut donc coder pour des protéines différentes grâce au jeu de l'épissage. Chez la drosophile par exemple, un unique gène code pour autant de protéines différentes que tout le reste du génome. 
+Un même gène peut donc coder pour des protéines différentes grâce au jeu de l'épissage. Par exemple, il existe chez la drosophile, un unique gène peut coder pour plus de 38 000 protéines différentes \cite{schmucker}, ce qui est du même ordre de grandeur que le nombre total de gène dans le génome de la drosophile. 
 
 Après sa maturation, l'ARN messager est exporté du noyau pour se diriger vers le réticulum endoplasmique.
 
@@ -278,37 +274,49 @@ Tous les ARN n'ont pas vocation à être traduits en protéines : certains vont 
 \subsubsection{La traduction}
 
 Le code génétique est la correspondance entre des triplets de nucléotides et les acides aminés qui composent les protéines. 
-Dans le cytoplasme, les ribosomes et les ARN de transfert vont faire la correspondance entre les nucléotides de l'ARN messager et les acides aminés, et assembler la suite des acides aminés jusqu'à atteindre un codon stop. 
+
+La traduction commence au codon start le plus proche du début de l'ARN messager. La plupart du temps, chez les eucaryotes, il s'agit d'un triplet AUG, codant pour une Méthionine, cependant on découvre de plus en plus de séquences qui commencent avec un codon start alternatif. C'est le cas par exemple de la protéine Myocardin-Related Transcription Factor A, qui a deux variants d'épissage, l'un débutant par un codon GTG (Valine) \ref{scharenberg_2014}
+
+Le travail de traduction est assuré par le ribosome, un assemblage complexe de protéines et d'ARN et par des ARN de transfert. Les ARN de transferts sont l'assemblage d'un ARN replié en croix et d'un acide aminé. À une extrémité, l'ARN présente un triplet anti-codon, le complémentaire d'un codon du code génétique. À l'autre se trouve l'acide-aminé correspondant à ce codon. 
+
+Au début de la traduction, le ribosome se fixe sur le codon start, puis, il va chercher un ARN de transfert dont le triplet anti-codon corresponde au premier triplet sur la séquence à traduire. Comme quelqu'un qui teste différentes clés pour ouvrir une serrure, le ribosome va chercher l'ARN de transfert qui lui permet de faire correspondre un acide aminé à un codon. Lorsqu'il l'a trouvé, il attache l'acide aminé au précédent de la séquence, et ainsi de suite jusqu'à arriver à un codon stop. 
+
+On parle souvent \emph{du} code génétique, car il est commun à un grand nombre d'êtres vivants, mais il en existe des variantes apparues au cours de l'évolution. En particulier, dans les cellules eucaryotes, l'ADN des mitochondries utilise un autre code génétique que celui de l'ADN de la cellule elle-même. 
+
+\subsubsection{Modifications post-traductionnelles}
+
+Les protéines commencent à se replier dès le début de leur synthèse par le ribosome. Mais certaines requièrent l'aide d'autres protéines, appelées chaperons, pour arriver au repliement correct. D'autres encore nécessitent des modifications chimiques après la traduction. 
+
+Tous les acides aminés peuvent faire l'objet de modifications post-tranductionnelles. La plus connue est sans doute la phosphorylation, ajout d'un groupe phosphate à un acide aminé par des enzymes, les kinases. La phosphorylation joue le rôle de bouton on/off pour un grand nombre de protéines dans des voies de signalisation. Ce sera le cas des voies de signalisation qui seront présentées au chapitre 3, faisant intervenir les kinases ROCK, LIMK ou ERK1/2. 
+Autre exemple de modifications, l'oxydation de l'actine sera également évoquée au chapitre 2. 
 
 
 \subsection{Régulation de l'expression du génome}
 
 \subsubsection{Réorganisation de la chromatine}
 
-L'ADN est stocké dans la cellule sous une forme condensée, la chromatine. Il est enroulé autour de complexes de protéines appelées les histones. Selon leur état biochimique (acétylation, méthylation) les histones forment un enroulement plus ou moins compact de l'ADN. 
-Sous sa forme la plus condensée, l'hétérochromatine, l'ADN n'est pas accessible pour être lu par les ARN polymérase, il ne peut pas être transcrit. Par exemple, chez les femelles mammifères, l'un des deux chromosomes X est désactivé afin de ne pas avoir deux fois plus de transcription des gènes portés par ce chromosome qu'un organisme mâle. Il est condensé définitivement sous forme d'hétérochromatine. 
+L'ADN est stocké dans la cellule sous une forme condensée, la chromatine. Il est enroulé autour de complexes de protéines appelées les histones. Selon leur état biochimique (acétylation, méthylation) les histones forment un enroulement plus ou moins compact de l'ADN. Par exemple, chez les femelles mammifères, l'un des deux chromosomes X est désactivé afin de ne pas avoir deux fois plus de transcription des gènes portés par ce chromosome qu'un organisme mâle. Il est condensé définitivement sous forme d'hétérochromatine. 
 
-La compaction de l'ADN dans l'hétérochromatine ou dans l'euchromatine détermine donc quels gènes sont accessibles pour être trancrits et quels gènes sont désactivés dans l'hétérochromatine. 
-La régulation de cette organisation par la modification chimique des histones est donc la première étape de la régulation trancriptionnelle du génome. 
+La compaction de l'ADN dans l'hétérochromatine ou dans l'euchromatine détermine donc quels gènes sont accessibles pour être transcrits et quels gènes sont désactivés dans l'hétérochromatine. 
+La régulation de cette organisation par la modification chimique des histones est donc la première étape de la régulation transcriptionnelle du génome. 
 
 \subsubsection{Les facteurs de transcription}
 
 L'ARN polymérase ne peut pas se lier seule de manière stable sur l'ADN pour initier la transcription. 
-Les facteurs de transcription sont une famille de protéines qui ont pour rôle de se fixer sur l'ADN en amont de la séquence à transcrire pour contribuer à l'expression du gène ou au contraire pour la réprimer. 
+Les facteurs de transcription forment une famille de protéines qui ont pour rôle de se fixer sur l'ADN en amont de la séquence à transcrire pour contribuer à l'expression du gène ou au contraire pour la réprimer. 
 
 Un facteur de transcription reconnaît une séquence spécifique sur l'ADN en amont du gène régulé, le promoteur. Les promoteurs en amont d'un gène vont déterminer quels facteurs de transcription vont être capables d'activer la transcription. Des gènes partageant le même promoteur vont être activés par les mêmes facteurs de transcription et répondre aux mêmes stimuli.  
 
 Dans le développement des êtres pluricellulaires, la différenciation des cellules souches totipotentes de l'embryon en différents types de tissus va être orchestrée par l'activation de nombreux facteurs de transcription. 
 
-Les facteurs de transcription vont également être impliqués dans les réponses d'une cellule ou d'un organisme à des signaux biologiques provenant de cellules voisines (par l'intermédiaire des liaisons transmembranaires entre deux cellules, par une structure spécialisée comme un synapse ou par un signal paracrine) ou des tissus éloignés (hormones circulant dans le corps), mais aussi à des signaux environnementaux comme la température, le choc osmotique, les contraintes mécaniques, l'exposition à la lumière du soleil  \dots
+Les facteurs de transcription vont également être impliqués dans les réponses d'une cellule ou d'un organisme à des signaux biochimiques (hormones, facteurs de croissances, inflammation, poisons, toxines \dots) provenant de cellules voisines (par l'intermédiaire des liaisons transmembranaires entre deux cellules, par une structure spécialisée comme une synapse ou sécrété dans le milieu extra-cellulaire par les cellules voisines) ou des tissus éloignés (hormones circulant dans le corps), mais aussi à des signaux environnementaux comme la température, le choc osmotique, les contraintes mécaniques, l'exposition à la lumière du soleil  \dots
 
+Les facteurs de transcriptions se lient directement à l'ADN, ils doivent donc être présents dans le noyau pour accomplir leur fonction. Certains facteurs de transcriptions sont ainsi régulés par leur localisation : lorsqu'ils sont confinés hors du noyau, ils ne peuvent pas être actifs. C'est le cas du récepteurs des \oe{}strogènes, qui est présent dans le cytoplasme en l'absence d'hormones et va être transporté dans le noyau lorsqu'il sera lié aux \oe{}strogènes.
 
-Un facteur de transcription peut recruter d'autres protéines, comme des coactivateurs (ou des corépresseurs), ou des protéines qui vont changer localement l'état de compacité de la chromatine, afin de rendre le gène plus facilement ou plus difficilement accessible. 
+Un facteur de transcription peut recruter d'autres protéines, comme des coactivateurs (ou des corépresseurs) qui vont l'amplifier (ou diminuer) l'activation de la transcription. Ces cofacteurs peuvent alors eux-même réguler l'activité transcriptionnelle par leur activité ( en particulier leur état de phosphorylation) ou par leur localisation. C'est le cas du mécanisme de régulation de Serum Response Factor, qui sera détaillé dans le chapitre 3. 
 
-Un facteur de transcription ou ses coactivateurs doivent être présents dans le noyau pour accomplir leur fonction. Le contrôle de leur localisation dans la cellule permet d'activer ou de désactiver un facteur de transcription. Par exemple, le récepteur des \oe strogènes est principalement présent dans le cytoplasme en l'absence d'hormone. En présence d'hormones, il est transporté dans le noyau où il peut se lier à l'ADN et activer la trancription de ses gènes cibles. 
+Un facteur de transcription peut également recruter des protéines qui vont changer localement l'état de compacité de la chromatine, afin de rendre le gène plus facilement ou plus difficilement accessible. 
 
-
-Un facteur de transcription peut également être régulé par la phosphrylation ou celle de ses cofacteurs, ou par la présence d'un ligand. 
 
 
 \end{document}
