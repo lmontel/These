@@ -1,16 +1,18 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%
-%\addbibresource{biblio.bib}
-%
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\addbibresource{biblio.bib}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
 
-%\begin{document}
+
+
+
+\begin{document}
 \chapter{L'actine}
 
 L'actine est une protéine ubiquitaire conservée chez tous les eucaryotes, exprimée dans tous les types cellulaires. 
@@ -21,8 +23,8 @@ Elle interagit avec un grand nombre de protéines appelées Actin-Binding Protei
 
 L'actine est un composant du cytosquelette prenant la forme d'un réseau de filaments très dynamique. La rigidité d'une cellule et sa motilité sont majoritairement contrôlées par l'organisation du cytosquelette d'actine. 
 
-Mais l'actine est également un composant des trois ARN Polymérases PolI, PolII et PolIII, qui transcrivent l'ADN en ARN pendant la première étape de l'expression du génome. 
-Elle est indispensable à la réorganisation de la chromatine qui précède l'expression mais aussi à l'export de l'ARN.  
+Mais l'actine est également un composant des trois ARN Polymérases PolI, PolII et PolIII, qui transcrivent l'ADN en ARN pendant la première étape de l'expression du génome ( \cite{Ye} \cite{Hoffman} \cite{Hu}). 
+Elle est indispensable à la réorganisation de la chromatine qui précède l'expression (revue par \cite{Farrants} mais aussi à l'export de l'ARN (\cite{hofmann_2001}).  
 
 L'association de ces rôles mécaniques et biologiques fait de l'actine un acteur de choix dans l'interface entre les signaux mécaniques et les signaux biologiques. 
 
@@ -55,58 +57,57 @@ Dans le sous-domaine 2 se trouve une structure de 8 acides aminés appelée Dnas
 \subsection{L'actine est une ATPase}
 
 L'actine, après sa fabrication, n'est prête à jouer son rôle qu'avec l'ajout d'une ATP au centre de sa structure.
-En plus de ses deux formes, globulaire ou filamenteuse, l'actine a donc également deux états énergétiques : ATP ou ADP.
+En plus de ses deux formes, globulaire ou filamenteuse, l'actine est capable d'hydrolyser l'ATP en ADP.
 
 Les deux formes d'actine, ATP et ADP sont capables de former des filaments et de s'incorporer à des filaments. 
-Cependant, l'actine ATP est plus facilement polymérisée alors que l'actine ADP est plus facilement dépolymérisée. 
-Les actines ATP incorporés dans un filament sont ensuite hydrolysées, et deviennent donc plus facilement dépolymérisables, ce qui donne lieu à un tapis roulant : les monomères s'ajoutent à un bout et s'enlèvent à l'autre. 
+
 
 \subsection{Localisation et transport}
 
 L'actine a longtemps été étudiée pour son rôle dans le cytoplasme, en tant que composant du cytosquelette. Cependant de l'actine est également présente dans le noyau de la cellule, où elle a des rôles essentiels. 
-L'actine peut polymériser dans les deux compartiments, bien que l'on ne trouve pas de grands filaments organisés dans le noyau. 
+L'actine peut polymériser dans les deux compartiments (\cite{mcdonald_nucleoplasmic_2006},\cite{baarlink_nuclear_2013}), bien que l'on ne trouve pas de grands filaments organisés dans le noyau. 
 
 L'actine est à une taille intermédiaire pour les pores nucléaires : elle n'est pas tout à fait assez petite pour diffuser facilement à travers. Elle est donc transportée activement entre le noyau et le cytoplasme. 
-Son import nécessite la liaison à la cofiline, et est médiée par l'importine 9. Son export nécessite la profiline et est médiée par l'exportine 6. 
+Son import nécessite la liaison à la cofiline, et est médiée par l'importine 9 (\cite{dopie_active_2012}). Son export nécessite la profiline et est médiée par l'exportine 6 (\cite{dopie_active_2012}).
 
 
 
 \subsection{Oxydation de l'actine}
 
-Les protéines MICAL sont capables d'ajouter deux atomes d'oxygène sur la Met44 de l'actine. Cet acide aminé est au centre d'une zone de la protéine qui relie les monomères dans un filament. 
-L'oxydation spécifique de cet acide aminé déstabilise les filaments et l'actine oxydée est incapable de se lier à d'autres actines pour former de nouveaux filaments. 
+Les protéines MICAL sont capables d'ajouter deux atomes d'oxygène sur la Méthionine qui se trouve en 44e position de la la chaîne d'acides aminés de l'actine. Cet acide aminé est au centre d'une zone de la protéine qui relie les monomères dans un filament. 
+L'oxydation spécifique de cet acide aminé déstabilise les filaments et l'actine oxydée est incapable de se lier à d'autres actines pour former de nouveaux filaments \cite{hung_direct_2011}. 
 
-MICAL2 est une version de cette protéine localisée dans le noyau. L'actine qu'elle oxyde, en plus d'être dépolymérisée, est expulsée du noyau et ne peut plus y entrer. MICAL2 organise donc la régulation de l'actine nucléaire en appauvrissant le réservoir d'actine nucléaire en filaments et en monomères.
+
 
 \subsection{Protéines interagissant avec l'actine G}
 
  La profiline est une petite protéine (autour de 15kDa) qui peut se lier à l'actine G par son extrémité +, l'empêchant de former un nouveau filament ou de se lier à l'extrémité - d'un filament existant. 
-Bien qu'elle se lie au monomère, son action est globalement favorable à la croissance des filaments. 
-La profiline facilite le remplacement d'une ADP par une ATP dans le monomère auquel elle est attaché. 
+Bien qu'elle se lie au monomère, son action est globalement favorable à la croissance des filaments \cite{pollard_1984}. 
+La profiline facilite le remplacement d'une ADP par une ATP dans le monomère auquel elle est attachée. 
 Or l'actine ATP polymérise mieux que l'actine ADP, l'action de la profiline va donc recycler l'actine ADP dépolymérisée des anciens filaments en actine ATP prête à allonger de nouveaux filaments. 
-De plus, les élongateurs de filaments comme les formines et VASP vont préférentiellement utiliser de l'actine liée à la profiline pour faire croître les filaments. 
-La profiline joue également un rôle dans la localisation de l'actine : l'exportine 6 va se lier spécifiquement au complexe actine-profiline et le faire passer de l'intérieur vers l'extérieur du noyau. 
+De plus, les élongateurs de filaments comme les formines et VASP vont préférentiellement utiliser de l'actine liée à la profiline pour faire croître les filaments \cite{Ferron},\cite{romero}. 
+La profiline joue également un rôle dans la localisation de l'actine : l'exportine 6 va se lier spécifiquement au complexe actine-profiline et le faire passer de l'intérieur vers l'extérieur du noyau (\cite{dopie_active_2012}).
 
 
-Les thymosines $\beta 4$ sont de toutes petites protéines d'environ 5kDa dont le rôle principal est de maintenir un réservoir d'actine monomérique. Elles se lient principalement aux actines ATP et les empêchent de polymériser. 
+Les thymosines $\beta 4$ sont de toutes petites protéines d'environ 5kDa dont le rôle principal est de maintenir un réservoir d'actine monomérique \cite{Safer}. Elles se lient principalement aux actines ATP et les empêchent de polymériser. 
 
-Les CAP (Adenylate Cyclase Associated Protein) sont également des catalyseurs de l'échange une ADP contre une ATP dans les monomères d'actine. 
+Les CAP (Adenylate Cyclase Associated Protein) sont également des catalyseurs de l'échange d'un ADP contre un ATP dans les monomères d'actine\cite{makkonen}. 
 
-Les cofilines sont une famille de petites protéines qui lient à l'actine G et à l'actine F. Elles sont une préférence pour l'actine ADP. 
+Les cofilines sont une famille de petites protéines qui lient à l'actine G et à l'actine F. Elles ont une préférence pour l'actine ADP. 
 Le complexe cofiline-actine est plus facilement recruté par les CAP, qui vont  dissocier le complexe et remplacer l'ADP par une ATP sur l'actine. 
 Les cofilines sont suffisamment petites pour passer par les pores nucléaires par diffusion, elles sont cependant dotées d'un signal de localisation nucléaire. Cela leur permet d'être importées dans le noyau lorsqu'elles sont liées à d'autres protéines plus massives. 
-Ainsi, le complexe cofiline-actine est importé dans le noyau par l'importine 9. 
+Ainsi, le complexe cofiline-actine est importé dans le noyau par l'importine 9 (\cite{dopie}).
 
 L'actine bloque l'activité de la DNase I, une enzyme qui coupe l'ADN en fragments de 4 paires de bases de manière non spécifique. La DNase I se lie à l'actine globulaire avec une grande affinité, alors qu'elle ne se lie que très peu à l'actine F, c'est pourquoi elle est souvent utilisée pour la détection de l'actine G en immunofluorescence. 
 
-Les Myocardin-Related Transcription Factors sont des cofacteurs de transcriptions qui peuvent former un complexes avec trois ou cinq monomères d'actine. Leur rôle n'est pas de réguler l'équilibre dynamique de l'actine mais d'agir comme un détecteur de la concentration de monomères d'actine disponibles. 
+Les Myocardin-Related Transcription Factors sont des cofacteurs de transcriptions qui peuvent former un complexes avec trois ou cinq monomères d'actine \cite{mouilleron_molecular_2008}. Leur rôle n'est pas de réguler l'équilibre dynamique de l'actine mais d'agir comme un détecteur de la concentration de monomères d'actine disponibles. 
 En fonction de l'état de polymérisation du cytosquelette, les MRTF vont réguler l'activité d'un facteur de transcription contrôlant les gènes de l'actine et d'un grand nombre d'ABP qui régulent sa dynamique. 
-Les MRTF sont un maillon d'une boucle de rétro-action qui contrôle la dynamique de l'actine à long terme par l'expression des gènes. 
-Les mécanismes détaillés de ce contrôle et ses conséquences seront décrits dans un chapitre dédié. 
+Les MRTF sont un maillon d'une boucle de rétro-action qui contrôle la dynamique de l'actine à long terme par l'expression des gènes \cite{salvany_core_2014}. 
+Les mécanismes détaillés de ce contrôle et ses conséquences seront décrits dans le chapitre 3. 
 
 \section{Actine F}
 
-La principale fonction de l'actine chez les eucaryote est sa capacité à former un réseau de filaments branchés, connecté par des moteurs moléculaires. 
+La principale fonction de l'actine chez les eucaryotes est sa capacité à former un réseau de filaments branchés, connecté par des moteurs moléculaires. 
 La formation de filaments d'actine est régulée par de très nombreuses protéines qui vont se lier aux monomères ou aux filaments. 
 
 \begin{figure}
@@ -121,9 +122,11 @@ Les filaments d'actine sont très dynamiques, et ont une structure changeante. I
 Les monomères d'actine s'associent les unes à la suite des autres, l'extrémité pointue d'un monomère se liant à l'extrémité barbée de l'autre, avec une rotation entre un monomère et l'autre. 
 Le filament est alors polarisé, avec une extrémité pointue notée également - et une extrémité barbée notée +. 
 
-Les deux bouts du filaments ont des affinités différentes pour les monomères. En présence d'une grande quantité de monomères disponibles, le filament peut croître par les deux bouts, mais dans une concentration intermédiaire, le filament va croître par ajout de monomères à son extrémité + et décroître par dépolymérisation à l'extrémité -. L'équilibre entre les deux cinétiques de réaction détermine si la taille du filament croît ou non. 
+L'actine ATP est plus facilement polymérisée alors que l'actine ADP est plus facilement dépolymérisée. 
+Les actines ATP incorporés dans un filament sont ensuite hydrolysées, et deviennent donc plus facilement dépolymérisables.
+Les deux bouts du filaments ont alors des affinités différentes pour les monomères. En présence d'une grande quantité de monomères disponibles, le filament peut croître par les deux bouts, mais dans une concentration intermédiaire, le filament va croître par ajout de monomères à son extrémité + et décroître par dépolymérisation à l'extrémité -. L'équilibre entre les deux cinétiques de réaction détermine si la taille du filament croît ou non. 
 
-Cet équilibre est connu comme le "tapis roulant" de l'actine : lorsque les deux cinétiques sont égales, le filament avance par remplacement des monomères en gardant une longueur constante. 
+Cet équilibre est connu comme le \og tapis roulant \fg de l'actine : lorsque les deux cinétiques sont égales, le filament avance par remplacement des monomères en gardant une longueur constante. 
 
 Bien que cet assemblage puisse avoir lieu spontanément en présence d'actine, de nombreuses protéines aident à la nucléation des filaments, à leur stabilité ou à leur déstabilisation. 
 
@@ -134,14 +137,14 @@ Des protéines vont réguler toute l'existence d'un filament d'actine : la nucl�
 \subsubsection{Les nucléateurs}
 Les dimères et les trimères d'actine sont des structures peu stables, à la durée de vie assez courte. C'est à partir du tétramère que la structure devient suffisamment stable pour créer un nouveau filament d'actine. 
 
-Afin de dépasser cette barrière, d'autres protéines jouent le rôle de nucléateurs. Le complexe Arp2/3 (Arp pour Actin Related Protein) est le plus connu de ces nucléateurs. Il se lie au côté d'un filament et Arp2 et Arp3 miment un dimère d'actine. D'autres monomères peuvent alors se fixer sur cette base et un nouveau filament peut croître. Ce nouveau filament est de plus attaché avec un angle fixé au filament initial, créant un réseau branché. 
+Afin de dépasser cette barrière, d'autres protéines jouent le rôle de nucléateurs. Le complexe Arp2/3 (Arp pour Actin Related Protein) est le plus connu de ces nucléateurs. Il se lie au côté d'un filament et Arp2 et Arp3 miment un dimère d'actine. D'autres monomères peuvent alors se fixer sur cette base et un nouveau filament peut croître. Ce nouveau filament est de plus attaché avec un angle d'environ 70 \degres au filament initial, créant un réseau branché (\cite{blanchoin}). 
 
-Les formines se fixent à l'extrémité barbée d'un filament et y ajoutent successivement des monomères d'actine. Les formines peuvent nucléer un nouveau filament en stabilisant un dimère et en y ajoutant d'autres monomères. 
+Les formines se fixent à l'extrémité barbée d'un filament et y ajoutent successivement des monomères d'actine. Les formines peuvent nucléer un nouveau filament en stabilisant un dimère et en y ajoutant d'autres monomères. \cite{pring}. 
 
 \subsubsection{Les élongateurs}
 
 Une fois les filaments formés, des facteurs d'élongation comme les formines ou Ena/VASP, peuvent ajouter des monomères liés à la profiline à l'extrémité barbée du filament. 
-Certaines formines avancent le long du filament tout en le construisant à partir de complexes actine-profiline. 
+Certaines formines avancent le long du filament tout en le construisant à partir de complexes actine-profiline \cite{otomo}. 
 
 
 \subsubsection{Protéines de coiffage (capping proteins)}
@@ -150,21 +153,28 @@ Il existe deux sortes de protéines de coiffage : celles qui se lient à l'extr�
 
 
 \subsubsection{Protéines de fragmentation (severing proteins)}
-Les protéines de frangmentation découpent et dépolymérisent les filaments d'actine. 
+Les protéines de fragmentation découpent et dépolymérisent les filaments d'actine. 
 
-La cofiline se lie aux filaments d'actine ADP et entraîne une configuration où la rotation des monomères les uns par rapport aux autres est plus grande. Cela déstabilise les filaments et les casse. 
+La cofiline se lie aux filaments d'actine ADP et entraîne une configuration où la rotation des monomères les uns par rapport aux autres est plus grande \cite{mcgough}. Cela déstabilise les filaments et les casse. 
 
-La gelsoline et la famille des villines et la fragmine sont également des facteurs de dépolymérisation des filaments d'actine. 
+La gelsoline, la famille des villines et la fragmine sont également des facteurs de dépolymérisation des filaments d'actine. 
 
-À première vue, on peut voir l'impression que ces protéines vont avoir tendance à diminuer le nombre et la longueurs des filaments et participer à la destruction du cytosquelette. Cela peut être le cas, mais pas toujours : la fragmentation d'un long filament en de nombreux filaments courts fait apparaître de nombreuses extrémité barbées là où il n'y en avait qu'une seule. Selon les conditions, en particulier l'activation de facteurs d'élongation et la disponibilité des monomères, la fragmentation peut donc agir en faveur de la polymérisation, en particulier lors du remplacement d'un réseau à longs filaments par un réseau très dense et réticulé. 
+À première vue, on peut voir l'impression que ces protéines vont avoir tendance à diminuer le nombre et la longueur des filaments et participer à la destruction du cytosquelette. Cela peut être le cas, mais pas toujours : la fragmentation d'un long filament en de nombreux filaments courts fait apparaître de nombreuses extrémité barbées là où il n'y en avait qu'une seule. Selon les conditions, en particulier l'activation de facteurs d'élongation et la disponibilité des monomères, la fragmentation peut donc agir en faveur de la polymérisation, en particulier lors du remplacement d'un réseau à longs filaments par un réseau très dense et réticulé. 
 
-Les protéines MICAL sont une nouvelle famille de protéines dépolymérisant l'actine, découvertes dans les neurones. En oxydant l'actine des filaments, elle les dépolymérise. Comme l'actine oxydée ne peut plus former de nouveaux filaments, la destruction du cytosquelette par MICAL ne peut pas promouvoir la croissance du réseau. 
+Les protéines MICAL forment une famille de protéines dépolymérisant l'actine, découvertes récemment dans les neurones (\cite{hung_direct_2011}. En oxydant l'actine des filaments, elle les dépolymérise. Comme l'actine oxydée ne peut plus former de nouveaux filaments, la destruction du cytosquelette par MICAL ne peut pas promouvoir la croissance du réseau. 
+
+MICAL2 est un membre de la famille des protéines MICAL qui est particulièrement localisé dans le noyau. L'actine qu'elle oxyde, en plus d'être dépolymérisée, est expulsée du noyau et ne peut plus y entrer (\cite{lundquist_redox_2014}). MICAL2 organise donc la régulation de l'actine nucléaire en appauvrissant le réservoir d'actine nucléaire en filaments et en monomères.
 
 \subsubsection{Stabilisateurs des filaments}
 
-Les tropomyosines sont des protéines qui vont former également des filaments. Ces filaments vont s'enrouler autour des filaments d'actines et les protéger : ils bloquent l'activité des cofilines et avec la troponine ils promeuvent l'association avec les myosines. 
+Les tropomyosines sont des protéines qui vont former également des filaments. Ces filaments vont s'enrouler autour des filaments d'actines et les protéger : ils bloquent l'activité des cofilines et avec la troponine ils régulent l'association avec les myosines, en particulier dans la contraction musculaire (voir le chapitre 4).
 
-Les nébulines sont des protéines stabilisantes dont le but est de fixer la longueur du filament d'actine auquel elles vont se lier, à la manière d'un étalon de mesure. 
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Nebuline.png} 
+\caption{Rôle de la nébuline dans le maintient de la longueur des filaments adéquate dans les cellules musculaires, d'après \cite{Ottenheijm}.\label{nebuline}}
+\end{figure} 
+
+Les nébulines sont des protéines stabilisantes dont le but est de fixer la longueur du filament d'actine auquel elles vont se lier, à la manière d'un étalon de mesure (\cite{Ottenheijm}, voir figure \ref{nebuline}). 
 
 \begin{figure}[h!]
 \includegraphics[scale=0.7]{Actine_phenomenon.png}
@@ -173,7 +183,7 @@ Les nébulines sont des protéines stabilisantes dont le but est de fixer la lon
 
 \subsection{Organisation en réseau de filaments}
 
-Les filaments d'actine en évolution permanente sont liés entre eux par des protéines de pontage, liés à la membrane plasmique et liés aux autres filaments du cytosquelette (microtubules et filaments intermédiaires). 
+Les filaments d'actine en évolution permanente sont liés entre eux mais également à la membrane plasmique et aux autres filaments du cytosquelette (microtubules et filaments intermédiaires). 
 
 
 \subsubsection{Ancrage à la membrane}
@@ -182,20 +192,20 @@ Les cellules sont liées mécaniquement entre elles par les cadhérines qui reli
 
 L'ancrage du cytosquelette à la matrice extra-cellulaire se fait par l'intermédiaire d'une structure extraordinairement complexe, les adhésions focales. 
 Au niveau des adhésions focales, des dizaines de protéines interagissent entre elles pour relier les intégrines enchâssées dans la membrane et les filaments d'actine. 
-Il serait impossible de faire ici l'inventaire des protéines impliquées dans ces adhésions. 
-À l'intérieur des adhésions focales, une signalisation complexe est à l'\oe uvre qui permet, en réponse à des forces extérieures, de construire une structure mécanosensible capable de déclencher des cascades de signalisation dans toute la cellule. 
-En particulier, les petites GTPases Rac, Rho et Ras sont activées par les adhésions focales soumises à des signaux mécaniques et régulent l'architecture du cytosquelette. 
+Je ne vais pas faire ici l'inventaire des protéines impliquées dans ces adhésions. 
+À l'intérieur des adhésions focales, une signalisation complexe est à l'\oe uvre qui permet, en réponse à des forces extérieures, de construire une structure mécanosensible capable de déclencher des cascades de signalisation dans toute la cellule \cite{geiger}. 
+En particulier, les petites GTPases Rac, Rho et Ras sont activées par des signaux provenant des adhésions focales soumises à des signaux mécaniques et régulent l'architecture du cytosquelette.
+Je reviendrai plus loin sur la mécanique des adhésions focales.  
 
 \subsubsection{Protéines de pontage}
 
 Les filaments d'actine sont organisés en réseau par des protéines comme la filamine, la spectrine ou la transgeline. 
 
-La filamine est un homodimère qui lie deux filaments d'actine. Elle peut se déformer sous la contrainte, ce qui permet doter le réseau d'actine à la fois d'une élasticité et d'une mécanosensibilité supplémentaire.
-La filamine peut également se lier à la membrane pour y ancrer le réseau d'actine. 
+La filamine est un homodimère qui lie deux filaments d'actine. Elle peut se déformer sous la contrainte \cite{furuike}, ce qui permet de doter le réseau d'actine à la fois d'une élasticité et d'une mécanosensibilité supplémentaire \cite{kainulainen}.
+La filamine peut également se lier à la membrane pour y ancrer le réseau d'actine  \cite{yamazaki}.
 
-Les tétramères de spectrine s'associent à l'actine pour former un réseau hexagonal soutenant la membrane plasmique. 
 
-Lorsque son interaction avec les filaments est forte, l'$\alpha$-actinine peut lier des filaments en réseaux, alors que lorsque sa vitesse de dissociation est grande elle forme plutôt des faisceaux. 
+Lorsque son interaction avec les filaments est forte, l'$\alpha$-actinine peut lier des filaments en réseaux, alors que lorsque sa vitesse de dissociation est grande elle forme plutôt des faisceaux \cite{Wachsstock}. Elle fait partie des protéines qui organisent les filaments d'actine dans les cellules musculaires, et sera donc évoquée à nouveau dans le chapitre 4. 
 
 
 \subsubsection{Protéines de faisceau}
@@ -207,9 +217,9 @@ Des protéines se liant à l'actine peuvent également former des dimères ou de
 
 \subsubsection{Lien avec les autres filaments du cytosquelette}
 
-Le cytosquelette d'actine est relié aux réseaux de filaments intermédiaires et aux microtubules par des protéines capables de se lier aux trois types de filaments. 
+Le cytosquelette d'actine est relié aux réseaux de filaments intermédiaires et aux microtubules par des protéines capables de se lier à deux ou aux trois types de filaments. 
 Par exemple, la plectine et les nesprines permettent de connecter les microtubules et les filaments d'actine au réseau de lamines de la membrane nucléaire, et donc de transmettre les contraintes jusqu'au noyau. 
-Les WHAMM se lient aux microtubules et à la membrane et nucléent des filaments d'actine. 
+Les WHAMM en sont un autre exemple, elles se lient aux microtubules et à la membrane et nucléent des filaments d'actine. 
 
 
  
@@ -220,19 +230,20 @@ Les WHAMM se lient aux microtubules et à la membrane et nucléent des filaments
 
 Les myosines sont des moteurs moléculaires qui se déplacent sur l'actine en consommant de l'ATP. Il en existe chez tous les eucaryotes, mais leur homologie n'est pas aussi grande que celle de l'actine, car elles ont des fonctions différentes. Dans le génome humain, on dénombre une quarantaine de gènes pour la myosine. 
 
-La myosine II, aussi appelée "conventionnelle" est la plus étudiée. Elle est présente en quantité importante dans le muscle, car avec l'actine elle permet la contraction musculaire. 
+La myosine II, aussi appelée \og conventionnelle \fg est la plus étudiée. Elle est présente en quantité importante dans le muscle, car avec l'actine elle permet la contraction musculaire. 
 
-Les myosines ont une tête qui peut se lier à l'actine en filament, un cou  qui sert de levier et de régulateur, et une queue qui sert souvent à former un dimère, et éventuellement à se lier à un cargo. On les appelles "chaînes lourdes" par opposition aux "chaînes légères", qui ne sont pas à proprement parler des myosines mais qui sont des protéines qui vont se lier au cou des "chaînes lourdes" pour les réguler. 
+Les myosines ont une tête qui peut se lier à l'actine en filament, un cou  qui sert de levier et de régulateur, et une queue qui sert souvent à former un dimère, et éventuellement à se lier à un cargo. On les appelle "chaînes lourdes" par opposition aux \og chaînes légères \fg, qui ne sont pas à proprement parler des myosines mais qui sont des protéines qui vont se lier au cou des \og chaînes lourdes \fg pour les réguler. 
 
-Par exemple, pour la contraction musculaire, deux chaînes lourdes de myosine II s'associent en dimère par leur queue, et quatre chaînes légères s'ajoutent au niveau des deux cous. Le dimère a alors deux têtes pouvant se lier à l'actine, et va s'en servir comme de deux jambes pour avancer le long du filament. 
-La myosine est une ATPase, lors de l'hydrolyse de l'ATP qui lui est attachée, sa tête va changer de conformation et se détacher de l'actine. L'ADP sera alors libérée, et remplacée par une nouvelle ATP.  La tête reprend alors sa conformation initiale, et peu se rattacher au filament. Dans le dimère, chaque tête va faire ainsi un pas successivement et faire avancer le moteur sur le filament en consommant de l'ATP. 
+Par exemple, pour la contraction musculaire, deux chaînes lourdes de myosine II s'associent en dimère par leur queue, et quatre chaînes légères s'ajoutent au niveau des deux cous. Le dimère a alors deux têtes pouvant se lier à l'actine, et va s'en servir comme de deux jambes pour avancer le long du filament. Dans les cellules musculaires, cet assemblage de deux chaînes lourdes et quatre légères va se lier à un grand nombre d'autres identiques pour former des filaments qui vont coulisser par rapport aux filaments d'actine (voir le chapitre 4 pour plus de détail). 
 
-
-
-Certaines myosines ont un rôle analogue à celui des moteurs moléculaires associés aux microtubules et transportent des molécules le long des filaments, en général en direction de l'extrémité + (seule la myosine VI se déplace en sens inverse). 
+La myosine est une ATPase, lors de l'hydrolyse de l'ATP qui lui est attachée, sa tête va changer de conformation et se détacher de l'actine. L'ADP sera alors libérée, et remplacée par une nouvelle ATP.  La tête reprend alors sa conformation initiale, et peut se rattacher au filament. Dans le dimère, chaque tête va faire ainsi un pas successivement et faire avancer le moteur sur le filament en consommant de l'ATP. 
 
 
-Les faiceaux anti-parallèles peuvent être liés par des paires de dimères, qui vont marcher en sens opposé sur les deux filaments, et donc les déplacer l'un par rapport à l'autre. Si les deux filaments sont liés par ailleurs dans le réseau, il va être mis sous tension par ces moteurs moléculaires.
+
+Certaines myosines ont un rôle analogue à celui des moteurs moléculaires associés aux microtubules et transportent des molécules le long des filaments, en général en direction de l'extrémité + ,seule la myosine VI se déplace en sens inverse. 
+
+
+Les faiceaux anti-parallèles d'actine peuvent être liés par des paires de dimères de myosine, qui vont marcher en sens opposé sur les deux filaments, et donc les déplacer l'un par rapport à l'autre. Si les deux filaments sont liés par ailleurs dans le réseau, il va être mis sous tension par ces moteurs moléculaires.
 
 \begin{figure}
 \includegraphics[scale=0.25]{actine_cycle.png}
@@ -241,10 +252,10 @@ Les faiceaux anti-parallèles peuvent être liés par des paires de dimères, qu
 
 \section{Rôle mécanique de l'actine : du filament au cytosquelette}
 
-Le cytosquelette est une structure multi-échelle, allant de l'échelle des moteurs moléculaires et des nucléateurs, à l'échelle de la cellule toute entière, en passant pas l'échelle des filaments et des réseaux de filaments. Il peut ressentir et exercer des forces à toutes les échelles. 
+Le cytosquelette est une structure multi-échelle, allant de l'échelle des protéines, à l'échelle de la cellule toute entière, en passant pas l'échelle des filaments et des réseaux de filaments. Il peut ressentir et exercer des forces à toutes les échelles. 
 
 
-Dans cette partie, il ne s'agit pas de parler des propriétés mécaniques du cytosol ou de la cellule, mais d'expliquer comment les filaments peuvent générer des forces et comment il réagissent à des forces. 
+Dans cette partie, il ne s'agit pas de parler des propriétés mécaniques du cytosol ou de la cellule, mais d'expliquer comment les filaments peuvent générer des forces et comment ils réagissent à des forces. 
 
 \subsection{Mécanique du filament d'actine}
 
@@ -252,16 +263,25 @@ Le filament d'actine en lui-même est à la fois générateur et senseur de forc
 
  \subsubsection{Longueur de persistance}
 La longueur de persistance est un moyen de quantifier la corrélation entre l'orientation des différents segments d'un polymère soumis aux fluctuations thermiques. Si l'on considère un polymère de longueur $L$ auquel on attribue une abscisse curviligne $s$, avec $\vec{t_s}$ la tangente au polymère en $s$, alors on a la relation : 
-$$ \langle \vec{t_0}\cdot \vec{t_s} \rangle_L \propto e^{L/\ell_p}$$
+$$ \langle \vec{t_0}\cdot \vec{t_s} \rangle_L \propto e^{-L/\ell_p}$$
 
 Au bout de quelques longueurs de persistance, l'information de l'orientation du polymère en $s=0$ est perdue. 
 
-La longueur de persistance dépend de l'énergie thermique disponible pour agiter le filament. Une manière de définir la rigidité d'un polymère indépendamment de la température consiste à définir un module de courbure comme le produit de la longueur de persistance et de l'énergie thermique : $$\kappa = \ell_p k_B T$$
+La longueur de persistance dépend de l'énergie thermique disponible pour agiter le filament : elle diminue lorsque la température augmente. 
+
+On peut également définir l'énergie de courbure d'un filament de longueur $L$, de rayon $a$ et de module d'Young $E$ : 
+$$ E= \frac{\kappa}{2L} \int_0^L \left( \frac{\partial \theta}{\partial s} \right) ds \approx \frac{\kappa L}{2R^2}$$
+ où $\kappa \approx Ea^4$ est le module de courbure et $R$ le rayon de courbure du filament.  
+ On définit alors la longueur de persistance comme la longueur pour laquelle l'énergie de courbure devient comparable à l'énergie thermique : 
+ $$ E (L=l_p,R=l_p) = \frac{k_B T}{2} = \frac{\kappa l_p}{2 l_p^2}$$ 
+ $$ l_p = \frac{\kappa}{k_B T}$$
+ 
+ 
 
 
 Le filament d'actine subit un vieillissement par l'hydrolyse de l'ATP des monomères qui le composent. Le changement de conformation induit par l'hydrolyse de l'actine a des conséquences sur les propriétés mécaniques du filament. 
-Un filament d'actine ATP a une longueur de persistance de 15 micromètres, contre 9 micromètres pour un filament d'actine ADP. Le vieillissement du filament le rend donc plus déformable et plus souple. 
-Les protéines attachées au filament peuvent également, en stabilisant une conformation, changer sa rigidité. Un filament stabilisé par la phalloïdine ou par la tropomyosine voit sa longueur de persistance augmentée à 18 et 20 microns respectivement. Au contraire, la conformation stabilisée par la cofiline n'a qu'une longueur de persistance de 2,2 microns. 
+Un filament d'actine ATP a une longueur de persistance de 15 micromètres, contre 9 micromètres pour un filament d'actine ADP \cite{isambert}. Le vieillissement du filament le rend donc plus déformable et plus souple. 
+Les protéines attachées au filament peuvent également, en stabilisant une conformation, changer sa rigidité. Un filament stabilisé par la phalloïdine ou par la tropomyosine voit sa longueur de persistance augmentée à 18 et 20 microns respectivement \cite{isambert}. Au contraire, la conformation stabilisée par la cofiline n'a qu'une longueur de persistance de 2,2 microns \cite{mccullouch}. 
 
 Un même filament d'actine peut évidemment être le lieu de toutes ces modifications en même temps. Souvent l'extrêmité + des filaments est riche en actine ATP alors que l'extrémité - est riche en actine ADP, ce qui crée un filament plus rigide d'un côté et plus flexible de l'autre. 
 
@@ -269,13 +289,13 @@ Un même filament d'actine peut évidemment être le lieu de toutes ces modifica
 
 L'hélice que forme le filament peut adopter des conformations différentes, en particulier en ce qui concerne l'angle de rotation entre les monomères successifs. 
 Une force tirant sur le filament va alors favoriser une conformation à faible torsion, ce qui va rendre la fixation de la cofiline, qui stabilise le filament dans une conformation à grande rotation, beaucoup plus difficile. 
-Il en résulte que la cofiline est moins efficace sur les filaments qui sont en tension, induisant une préservation automatique des filaments sous contrainte par rapport aux filaments libres. 
-Au contraire, mDia1 et la profiline sont plus efficaces sur les filaments soumis à une tension. 
+Il en résulte que la cofiline est moins efficace sur les filaments qui sont en tension \cite{hayakawa}, induisant une préservation automatique des filaments sous contrainte par rapport aux filaments libres. 
+Au contraire, la formine mDia1, qui est un élongateur des filaments, et la profiline sont plus efficaces sur les filaments soumis à une tension \cite{higashida}. 
 La conformation de l'actine est alors un senseur de contrainte qui va encourager la préservation et l'élongation des filaments qui ressentent une force de traction. 
 
 Les filaments d'actine semi-flexibles peuvent également être courbés, en particulier au voisinage de la membrane. 
 À cause de l'organisation hélicoïdale des monomères, la courbure d'un filament d'actine exerce également une torsion sur ce filament, ce qui rend la modélisation des filaments encore plus complexe. 
-Le facteur de nucléation Arp2/3 se lie plus facilement au côté convexe d'un filament d'actine courbé. 
+Des observations \textit{in vitro} sur des filaments d'actine courbés et immobilisés montrent que le facteur de nucléation Arp2/3 se lie préférentiellement au côté convexe d'un filament d'actine courbé \cite{risca}. 
 
 \subsubsection{Les myosines}
 
@@ -284,12 +304,16 @@ La myosine ayant hydrolysé son ATP en ADP + phosphate s'est liée à l'actine. 
 Cette dernière étape transforme l'énergie chimique de l'ATP en déplacement mécanique sur le filament d'actine. 
 À l'ajout d'une nouvelle ATP, la myosine se détache. 
 
-Ces évènements sont eux-même dépendant des contraintes qui peuvent être appliqués à la myosine. 
-L'application d'une force de 1,6pN poussant la myosine vers sa conformation finale divise par deux la durée que la myosine va passer attachée au filament en facilitant le changement de conformation. 
+Ces évènements sont eux-même dépendants des contraintes qui peuvent être appliqués à la myosine. 
+L'application d'une force de 1,6pN poussant la myosine vers sa conformation finale divise par deux la durée que la myosine va passer attachée au filament en facilitant le changement de conformation \cite{veigel}. 
 Inversement, l'application de la même force en sens opposé multiplie par deux la durée d'attachement. 
-En fait, la durée que la myosine passe attachée au filament d'actine dépend exponentiellement de la force exercée, dans la gamme -2pN $-$ 2pN. 
+En fait, la durée que la myosine passe attachée au filament d'actine dépend exponentiellement de la force exercée, dans la gamme -2pN $-$ 2pN \cite{veigel}. 
 
 \subsubsection{La croissance du filament comme source de force}
+
+La croissance des filaments peut elle-même être une source de forces. Par exemple, un filament en croissance proche de la membrane plasmique s'appuie sur elle et sur le réseau d'actine derrière lui dans la cellule. La bactérie \textit{Listeria Monocytogenes} utilise ce mécanisme pour se déplacer à l'intérieur des cellules qu'elle infecte : elle possède à une extrémité des protéines Arp2/3 qui polymérisent l'actine. 
+Ces forces peuvent également être utilisées pour pousser la membrane plasmique, créant une protrusion comme un filopode ou un lamellipode. Sous l'effet de l'agitation thermique, un monomère pousse la membrane. Si l'extrémité barbée d'un filament se trouve à proximité, le monomère peut alors rejoindre le filament. C'est alors le filament qui va pousser sur la membrane. 
+
 
 
 \subsection{Mécanique des adhésions focales}
@@ -416,4 +440,4 @@ Dans le cas de l'actine, les nesprines et SUN font la liaison entre les filament
 
 
 
-%\end{document}
+\end{document}
