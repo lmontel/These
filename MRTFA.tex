@@ -1,21 +1,24 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%
-%\addbibresource{biblio.bib}
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+\addbibresource{biblio.bib}
+\begin{document}
 \chapter{MRTF-A}
+La fonction principale des protéines de la famille des myocardines est l'activation du facteur de transcription Serum Response Factor. 
+
 En 2001, \cite{mercher_involvement_2001} 
 décrivent une translocation impliquée dans les leucémies aigües mégacaryocytiques. 
-Il s'agit de la translocation d'un gène du chromosome 1 sur le chromosome 22, le gène fusion est nommmé One-Twenty-Two-Megakaryocytic-Acute-Leukemia (OTT-MAL). 
+Il s'agit de la translocation d'un gène du chromosome 1 sur le chromosome 22, le gène fusion est nommé One-Twenty-Two-Megakaryocytic-Acute-Leukemia (OTT-MAL). 
 Les fonctions des deux gènes qui ont fusionné sont alors inconnues. 
 
-En 2002, deux homologues de la myocardine sont identifiés dans le génome humain par \cite{wang_potentiation_2002} et sont nommés Myocardin-Related Transcription Factor A et B (MRTF-A/B).
+En 2002, deux homologues de la myocardine, une protéine impliquée dans la différenciation des muscles cardiaque et lisses, sont identifiés dans le génome humain par \cite{wang_potentiation_2002} et sont nommés Myocardin-Related Transcription Factor A et B (MRTF-A/B).
 MRTF-A correspond au gène du chromosome 22 MAL (ou MKL1) et MRTF-B à un gène du chromosome 16 (MAL16 ou MKL2). 
 Un homologue est également découvert chez la souris et nommé Basic, SAP et Coil-coil (BSAC) \parencite{sasazuki_identification_2002}. 
 
@@ -23,14 +26,14 @@ Alors que cette protéine sera appelée dans la suite de cette thèse MRTF-A, el
 
 \section{MRTF-A, cofacteur de Serum Response Factor}
 
-La fonction principale des protéines de la famille des myocardines est l'activation du facteur de transcription Serum Response Factor. 
+
 
 \subsection{Serum Response Factor}
 
-Serum Response Factor est un facteur de transcription qui fait partie de la famille MADS (MCM-1, Agamous, Deficiens, SRF). SRF est présent en un seul exemplaire dans le génome humain mais peut être transcrit en 4 isoformes. 
-La protéine SRF comprend un signal de localisation nucléaire (NLS), une boîte MADS composée du site de liaison à l'ADN et d'un domaine de dimérisation, et d'un domaine de transactivation auquel se fixent ses cofacteurs. 
+Serum Response Factor est un facteur de transcription qui fait partie de la famille MADS (MCM-1, Agamous, Deficiens, SRF). Srf est présent en un seul exemplaire dans le génome humain mais peut être transcrit en 4 isoformes. 
+La protéine SRF comprend un signal de localisation nucléaire (NLS), une boîte MADS composée du site de liaison à l'ADN et d'un domaine de dimérisation, et d'un domaine de transactivation. 
 
-Un dimère SRF se fixe sur une séquence consensus de nucléotides sur l'ADN appelée boîte CArG : CC(A/T)$_{6}$GG, ou sur une séquence CArG-like, qui diffère du consensus d'une seule base, avec une affinité plus faible. Le gène srf contenant lui-même deux boîtes CArG, il est sa propre cible, dans une boucle de rétro-action positive. 
+Un dimère SRF se fixe sur une séquence consensus de nucléotides sur l'ADN appelée boîte CArG : CC(A/T)$_{6}$GG, ou sur une séquence CArG-like, qui diffère du consensus d'une seule base, avec une affinité plus faible. Le gène srf contenant lui-même deux boîtes CArG au sein de son promoteur, il est sa propre cible, dans une boucle de rétro-action positive. 
 
 \subsection{Les cofacteurs de SRF : TCF et MRTF}
 
@@ -38,9 +41,8 @@ Serum Response Factor n'est lui-même qu'un transactivateur faible, mais il peut
 
 Les deux familles ne sont pas concurrentes pour se lier à SRF : la plupart des sites sur l'ADN sont spécifiques de l'une ou l'autre des familles de cofacteurs (\cite{esnault_rho-actin_2014}). Même lorsque les MRTF sont séquestrées dans le cytoplasme, les TCF ne les remplacent pas sur les sites de liaison à SRF. 
 
-Un ChIP-seq sur des fibroblastes 3T3 a estimé que 921 gènes sont susceptibles d'être régulés par MRTF/SRF en réponse au sérum, et 76 gènes par TCF/SRF (\cite{esnault_rho-actin_2014}), ce qui représente entre 3 et 4\% du génome. Les MRTF sont donc un élément important de la régulation transcriptionnelle, et l'acteur principal de la régulation de SRF. 
+Un ChIP-seq sur des fibroblastes 3T3 a estimé que 921 gènes sont susceptibles d'être régulés par MRTF/SRF en réponse au sérum, et 76 gènes par TCF/SRF (\cite{esnault_rho-actin_2014}), ce qui représente au total entre 3 et 4\% du génome. Les MRTF sont donc un élément important de la régulation transcriptionnelle, et l'acteur principal de la régulation de SRF. 
 
-\emph{Les autres cofacteurs de SRF ? }
 
 \subsubsection{Ternary Complex Factors}
 
@@ -64,13 +66,20 @@ Les Myocardin-Related Transcription Factors A et B sont exprimées dans un grand
 
 One-Twenty-Two-Megakaryocytic-Acute-Leukemia (OTT-MAL) est la protéine résultant d'une translocation d'un gène du chromosome 1 à côté du gène MRTF-A. La protéine fusion comprend presque toute la protéine MRTF-A excepté la partie N-terminale. 
 
+\subsubsection{D'autres manières de réguler SRF}
+
+Si ces deux familles de cofacteurs sont les principales voies de régulation de SRF, il possède encore d'autres coactivateurs et corépresseurs, dont je ne parlerai pas ici (\cite{posern_actin_2006}). Des micro-ARN peuvent également réguler sont activité au niveau des ARN messagers transcrits \cite{chen}. 
+SRF peut aussi être clivé en deux parties non fonctionnelles  \cite{drewett}, phosphorylé de sorte qu'il soit incapable de se lier aux MRTF ni à l'ADN \cite{Iyer}, ou être séquestré dans le cytoplasme \cite{lange}.   
+
 
 \section{MRTF-A, indépendamment de SRF}
+
+Le principal partenaire des MRTF est SRF, cependant, de nouveaux partenaires minoritaires sont apparus récemment. 
 
 \subsection{Transition épithélio-mésenchymateuse et domaine SAP}
 
 L'activation de la transcription de la tenascine C en réponse à une stimulation mécanique et à TGF$\beta$ a été liée à MRTF-A (\cite{maier_tenascin-c_2008}). Cependant, cette réponse est indépendante de SRF, ou du domaine liant MRTF-A à SRF (\cite{asparuhova_transcriptional_2011}), elle dépend du domaine SAP. 
-S'il est possible que SAP soit capable de lier MRTF-A à l'ADN (\cite{aravind_sapputative_2000}), savoir si MRTF-A est capable d'être un facteur de transcription à lui seul, ou s'il a un partenaire facteur de transcription encore inconnu est une question ouverte. 
+S'il est possible que SAP soit capable de lier MRTF-A à l'ADN (\cite{aravind_sapputative_2000}), savoir si MRTF-A est capable d'être un facteur de transcription à lui seul, ou s'il a un partenaire facteur de transcription encore inconnu est une question ouverte. Les données de  \cite{esnault_rho-actin_2014} vont cependant dans le sens d'une absence d'effet indépendant de SRF, montrant que la question est encore controversée. 
 
 
 \subsection{NF-$\kappa$B}
@@ -88,40 +97,44 @@ Ainsi l'activation de la voie TNF$\alpha$/NF-$\kappa$B peut être empêchée par
 \end{figure}
  \subsection{Les motifs RPEL}
  
- La partie N-terminale de MRTF-A contient trois motifs RPEL consécutifs, qui peuvent se lier aux monomères d'actine (\cite{posern_mutant_2004}, \cite{mouilleron_molecular_2008}) avec des affinités variables, les deux premiers motifs se liant plus fortement que le troisième (\cite{guettler_rpel_2008}). La structure détaillée du complexe montre que les trois motifs RPEL se lient à 3 à 5 monomères d'actine selon la concentration en monomères d'actine. (\cite{hirano_sensing_2011}, \cite{treisman_structure_2011}). 
+ La partie N-terminale de MRTF-A contient trois motifs RPEL consécutifs, qui peuvent se lier aux monomères d'actine (\cite{posern_mutant_2004}, \cite{mouilleron_molecular_2008}) avec des affinités différentes, les deux premiers motifs se liant plus fortement que le troisième (\cite{guettler_rpel_2008}). La structure détaillée du complexe montre que les trois motifs RPEL se lient à 3 à 5 monomères d'actine selon la concentration en monomères d'actine. (\cite{hirano_sensing_2011}, \cite{treisman_structure_2011}). 
  
  
  \begin{figure}[h!]
  \includegraphics[scale=0.30]{MRTF-A_actines_complexes.png}
- \caption{D'après \cite{hirano_sensing_2011}}
+ \caption{D'après \cite{hirano_sensing_2011}\label{hirano}}
  \end{figure}
- Deux domaines basiques, B2 et B3 sont inclus dans les motifs RPEL et forment un signal de localisation nucléaire (NLS) bipartite (\cite{rajakyla_actin-regulated_2010}). Lorsqu'il n'y a pas d'actine sur les motifs RPEL, ce NLS peut se lier au complexe Importine$\alpha / \beta$ (\cite{hirano_sensing_2011},\cite{rajakyla_actin-regulated_2010}) et MRTF-A est importée dans le noyau de la cellule, où se trouve SRF. En présence de suffisamment de monomères, le NLS est recouvert par l'actine liée aux RPEL, MRTF-A reste cytoplasmique (Posern 2002, \cite{miralles_actin_2003},\cite{posern_mutant_2004}). 
+ Deux domaines basiques, B2 et B3 sont inclus dans les motifs RPEL et forment un signal de localisation nucléaire (NLS) bipartite (\cite{rajakyla_actin-regulated_2010}). Lorsqu'il n'y a pas d'actine sur les motifs RPEL, ce NLS peut se lier au complexe Importine$\alpha / \beta$ (\cite{hirano_sensing_2011},\cite{rajakyla_actin-regulated_2010}) et MRTF-A est importée dans le noyau de la cellule, où se trouve SRF. En présence de suffisamment de monomères d'actine, leur liaison aux domaines RPEL recouvre le NLS et MRTF-A reste cytoplasmique (Posern 2002, \cite{miralles_actin_2003},\cite{posern_mutant_2004}). 
  
- MRTF-A est exportée du noyau par Crm1 (\cite{vartiainen_nuclear_2007},\cite{hayashi_differences_2013}). \emph{Ces deux articles se contredisent sur la question de la liaison à l'actine : le premier prétend qu'elle est indispensable, le second qu'elle empêche l'export} 
+ MRTF-A est exportée du noyau par Crm1 (\cite{vartiainen_nuclear_2007},\cite{hayashi_differences_2013}).Cependant, ces deux articles se contredisent sur la question de la liaison à l'actine : le premier observe qu'une surexpression de l'actine augmente la vitesse d'export, le second montre que la liaison entre Crm1 et MRTF-A est empêchée lorsque MRTF-A est liée à l'actine. Récemment, \cite{rajakyla_rna_2015} ont découvert par une élégante expérience de FRET que la protéine Ddx19 est indispensable à MRTF-A pour changer de conformation préalablement à son import (voir figure \ref{Ddx}. Une explication possible qui serait compatible avec les deux observations apparemment contradictoires concernant l'export serait que pour être exportée, MRTF-A doive retrouver sa configuration repliée, et qu'elle ne puisse le faire qu'en se liant à l'actine. Elle devrait ensuite perdre tout ou partie des actines liées à ses RPEL pour se lier à Crm1 et être exportée. En particulier, sur la figure \ref{hirano}, le NES se situerait plus à droite encore que le NLS2. La conformation à 3 actines laisserait donc plus facilement apparaître le NES. 
  
- Les motifs RPEL sont donc la clé de la régulation de MRTF-A par l'actine : selon la concentration en monomères d'actine, MRTF-A est localisée dans le cytoplasme en cas d'excès et dans le noyau, où se trouve SRF, en cas de manque. Lorsque le domaine RPEL est muté ou absent, la protéine est constitutivement nucléaire (\cite{miralles_actin_2003}), comme la myocardine, dont les motifs RPEL ne sont plus fonctionnels (\cite{guettler_rpel_2008}). 
+ La drogue anti-cancéreuse CCG1423 se lie aux motifs RPEL de MRTF-A, MRTF-B et de la myocardine, et bloque leur import dans le noyau \cite{hayashi_2014}. 
+ 
+ Les motifs RPEL sont donc la clé de la régulation de MRTF-A par l'actine : selon la concentration en monomères d'actine, MRTF-A est localisée dans le cytoplasme en cas d'excès et dans le noyau, où se trouve SRF, en cas de manque. Lorsque le domaine RPEL est muté ou absent, la protéine est constitutivement nucléaire (\cite{miralles_actin_2003}), comme la myocardine, dont les motifs RPEL ne sont pas fonctionnels (\cite{guettler_rpel_2008}). 
  
  \subsection{La région basique et SRF}
  \begin{figure}[h!]
  \includegraphics[scale=0.5]{MRTFA_SRF_complex.png}
  \caption{D'après \cite{posern_actin_2006}}
  \end{figure}
- La région B1 est le site de liaison de MRTF-A à SRF. MRTF-A s'attache préférentiellement à SRF en dimère (\cite{miralles_actin_2003}). Le complexe MRTF-A-5actines ne peut pas se lier à SRF et l'activer, la présence de MRTF-A dans le noyau n'est donc pas suffisante pour activer SRF, il faut également que la concentration en G-actine dissocie le complexe (\cite{vartiainen_nuclear_2007}). 
+ La région B1 est le site de liaison de MRTF-A à SRF. MRTF-A s'attache préférentiellement à SRF en dimère (\cite{miralles_actin_2003}). Le complexe MRTF-A-5actines ne peut pas se lier à SRF et l'activer, la présence de MRTF-A dans le noyau n'est donc pas suffisante pour activer SRF, il faut également que la concentration en G-actine soit suffisamment faible pour que le complexe soit dissocié (\cite{vartiainen_nuclear_2007}). 
  \subsection{Leucine zipper et oligomérisation}
  MRTF-A/B peuvent former des homo ou des hétérodimères (\cite{miralles_actin_2003}). Un dominant négatif pourra ainsi bloquer une protéine WT dans un hétérodimère non fonctionnel (\cite{selvaraj_megakaryoblastic_2003},\cite{cen_myocardin/mkl_2004}, \cite{li_requirement_2005},\cite{rajakyla_actin-regulated_2010}). La formation des dimères n'est pas indispensable à la fonctionnalité de MRTF-A, les mutations dans cette région réduisent son efficacité sans l'inhiber totalement (\cite{selvaraj_megakaryoblastic_2003}). 
  OTT-MAL est également capable de former des hétérodimères avec les MRTF, et donc de perturber leur équilibre. 
  
- \subsection{SAP}
  
-Dans les cellules épithéliales, il a été montré qu'un groupe de gènes est activé par MRTF-A et nécessite particulièrement la zone SAP, tout en étant indépendant de SRF (\cite{asparuhova_transcriptional_2011}, \cite{gurbuz_sap_2014}).
  
  
  \subsection{TAD}
  
+ SRF n'est lui-même qu'un transactivateur faible, c'est pourquoi il a besoin de ses cofacteurs pour démarrer la transcription de ses gènes cibles. Le TAD de MRTF-A a pour fonction d'aider SRF lors de cette étape. 
+ 
  
  
  \subsection{Phosphorylation}
-	MRTF-A peut être phosphorylée (\cite{miralles_actin_2003},\cite{cen_myocardin/mkl_2004}).Dans les neurones, la phosphorylation de MRTF-A par ERK1/2 est même la voie principale de régulation de son activité, car la protéine est toujours nucléaire, mais elle n'active SRF qu'une fois phosphorylée (\cite{kalita_role_2006}). Il existe donc au moins une voie d'activation de MRTF indépendante de la régulation de l'actine. 
+	MRTF-A peut être phosphorylée par ERK1/2 (\cite{miralles_actin_2003},\cite{cen_myocardin/mkl_2004}). \cite{muelich} montrent qu'un mutant non phosphorylable est incapable de se lier à l'actine et est constitutivement nucléaire, car il ne peut pas être exporté. Les données de \cite{kalita_role_2006} montrent également que MRTF-A doit être phosphorylée pour se lier à SRF et activer la transcription.
+	
+	Dans les neurones, la phosphorylation de MRTF-A par ERK1/2 est même la voie principale de régulation de son activité, car la protéine est toujours nucléaire, mais elle n'active SRF qu'une fois phosphorylée (\cite{kalita_role_2006}). 
 	
  \subsection{Isoformes}
  \begin{figure}[h!]
@@ -129,17 +142,17 @@ Dans les cellules épithéliales, il a été montré qu'un groupe de gènes est 
  \caption{D'après \cite{scharenberg_tgf-_2014} : les deux isoformes de MRTF-A}
  
  \end{figure}
- D'après \cite{scharenberg_tgf-_2014}, il existe 2 isoformes de MRTF-A chez l'humain, une version longue (MRTF-A\_L) et une courte (MRTF-A\_S). La version longue présente 80 acides aminés avant le premier motif RPEL, contre 15 seulement pour la version courte. Cette dernière contient deux TAD de 9 acides aminés (9aaTAD), un à l'extrémité C-terminale, et un à l'extrémité N-terminale spécifique à cet isoforme. Une surexpression de MRTF-A\_S est observée en réponse à TGF-$\beta$ ou à une contrainte cyclique dans les cellules épithéliales. 
+ D'après \cite{scharenberg_tgf-_2014}, il existe 2 isoformes de MRTF-A chez l'humain, une version longue (MRTF-A\_L) et une courte (MRTF-A\_S). La version longue présente 80 acides aminés avant le premier motif RPEL, contre 15 seulement pour la version courte. Cette dernière contient deux TAD de 9 acides aminés (9aaTAD), un à l'extrémité C-terminale, et un à l'extrémité N-terminale spécifique à cet isoforme. Une surexpression de MRTF-A\_S est observée en réponse à TGF-$\beta$ ou à une contrainte cyclique dans les cellules épithéliales. Elle est liée à une expressions de gènes cibles qui seraient spécifiques à cet isoforme, en particulier des gènes codant pour des protéines de la matrice extra-cellulaire. 
  
  
 \subsection{Conformations}
 
-La conformation de MRTF-A en complexe avec cinq actines est très différente de la conformation de MRTF-A liée à l'importine $\alpha$ (\cite{hirano_sensing_2011}). 
-Ddx19 est une protéine capable de remodeler des complexes protéine-ARN, dont le rôle principal est de contribuer à l'export des ARN messagers. Des expériences de FRET ont montré que Ddx19 peut également changer la conformation de MRTF-A, la faisant passer d'une configuration repliée à une configuration dépliée qui permet son attachement à l'importine $\alpha/\beta$ et son import dans le noyau. 
+La conformation de MRTF-A en complexe avec cinq actines est très différente de la conformation de MRTF-A liée à l'importine $\alpha$ (\cite{hirano_sensing_2011},\cite{treisman_structure_2011}). 
+Ddx19 est une protéine capable de remodeler des complexes protéine-ARN, dont le rôle principal est de contribuer à l'export des ARN messagers. Des expériences de FRET ont montré que Ddx19 est indispensble à l'import de MRTF-A dans le noyau. En effet, elle peut également changer la conformation de MRTF-A, la faisant passer d'une configuration repliée à une configuration dépliée qui permet son attachement à l'importine $\alpha/\beta$.
 
 \begin{figure}[h!]
 \includegraphics[scale=0.5]{Ddx19.png}
-\caption{Modèle proposé par \cite{rajakyla_rna_2015}}
+\caption{Modèle proposé par \cite{rajakyla_rna_2015} \label{Ddx}}
 \end{figure}
 
 
@@ -147,12 +160,12 @@ Ddx19 est une protéine capable de remodeler des complexes protéine-ARN, dont l
 \section{En amont de MRTF-A : voie de signalisation et régulation de l'actine} 
 
 
-La régulation de l'activité de MRTF-A se fait principalement par sa localisation intracellulaire qui dépend du réservoir d'actine monomérique disponible. 
+La régulation de l'activité de MRTF-A se fait principalement par sa localisation intracellulaire qui dépend essentiellement du réservoir d'actine monomérique disponible. 
 Lorsque l'actine G est disponible pour former un complexe pentamérique avec MRTF-A, ce complexe est confiné dans le cytoplasme où il ne peut jouer aucun rôle dans la transcription. 
 Lorsque l'actine G n'est pas disponible, MRTF-A est importée dans le noyau et peut se lier à SRF pour activer la transcription de ses gènes cibles. 
 
 L'actine est le point de convergence d'une grande diversité de signaux extra-cellulaires ou intracellulaires, biochimiques ou mécaniques, qui vont activer ou inhiber MRTF-A et SRF. 
-Ainsi, tout élément qui va perturber la dynamique de l'actine aura des conséquence sur l'activation de MRTF-A : drogues agissant sur l'actine, protéines liées à l'actine (Actin-Binding Proteins, ABP), voies de signalisations, environnement mécanique. 
+Ainsi, tout élément qui va perturber la dynamique de l'actine aura des conséquence sur l'activation de MRTF-A : drogues agissant sur l'actine, protéines liées à l'actine , voies de signalisation, environnement mécanique. 
 
 
 \subsection{Actines mutantes}
@@ -165,6 +178,8 @@ Les mutants non-polymérisables comme R62D ont le même effet que la surexpressi
 
 Les mutants qui polymérisent mieux ou qui forment des filaments plus stables déclenchent l'accumulation nucléaire de MRTF-A et l'activation de SRF (\cite{posern_mutant_2004}). 
 
+Récemment, des expériences avec des actines R62D-NLS, localisées exclusivement dans le noyau, ont montré que les formines mDia1 activent SRF en réponse au sérum en polymérisant l'actine nucléaire \cite{baarlink_nuclear_2013}. 
+
 
 \subsection{Drogues agissant sur l'actine}
 
@@ -175,7 +190,7 @@ L'ajout de latrunculine B permet donc de conserver l'actine hors des filaments e
 
 La cytochalasine D coiffe les microfilaments d'actine à leur extrémité + et empêche leur polymérisation et leur dépolyméristion . 
 Contrairement à la latrunculine, elle est incompatible avec la formation du complexe car l'organisation de l'actine dans le complexe actines-RPELs est très différente de l'organisation dans les filaments (\cite{treisman_structure_2011}). 
-Par conséquent, la cytochalasine séquestre l'actine hors de portée à la fois des filaments et de MRTF-A, qui est alors importée dans le noyau et activée.(\cite{miralles_actin_2003},\cite{vartiainen_nuclear_2007},\cite{smith_induction_2013}) Le Swinholide A séquestre des dimères d'actine et fonctionne de manière semblable.(\cite{miralles_actin_2003},\cite{vartiainen_nuclear_2007}).
+Par conséquent, la cytochalasine séquestre l'actine hors de portée à la fois des filaments et de MRTF-A, qui est alors importée dans le noyau et activée.(\cite{miralles_actin_2003},\cite{vartiainen_nuclear_2007},\cite{smith_induction_2013}) Le Swinholide A séquestre des dimères d'actine et fonctionne de manière analogue.(\cite{miralles_actin_2003},\cite{vartiainen_nuclear_2007}).
 
 Le Jasplakinolide augmente la polymérisation de l'actine, diminuant la disponibilité de l'actine monomérique et entraînant l'accumulation de MRTF-A dans le noyau (\cite{miralles_actin_2003},\cite{vartiainen_nuclear_2007},\cite{smith_induction_2013}). 
 
@@ -184,11 +199,11 @@ Le Jasplakinolide augmente la polymérisation de l'actine, diminuant la disponib
 
 L'équilibre dynamique de polymérisation de l'actine dans la cellule est régulée par de nombreuses protéines impliquées dans d'encore plus nombreuses voies de signalisation. 
 
-De manière générale, les protéines qui vont favoriser la formation ou la stabilité des filaments, comme la profiline, Arp2/3, les formines mDia (\cite{chan_force-induced_2010},\cite{baarlink_nuclear_2013}) ou l'émerine (\cite{ho_lamin_2013}), seront à l'origine d'une accumulation nucléaire de MRTF-A, car elle vont appauvrir les réserves de monomères d'actine. 
+De manière générale, les protéines qui vont favoriser la formation ou la stabilité des filaments, comme la profiline, Arp2/3, les formines mDia (\cite{chan_force-induced_2010},\cite{baarlink_nuclear_2013}) ou l'émerine (\cite{ho_lamin_2013}), seront à l'origine d'une accumulation nucléaire de MRTF-A, car elles vont appauvrir les réserves de monomères d'actine. 
 
-Lorsque la voie RhoA est activée, la cofiline est phosphorylée, ce qui l'inactive. L'inactivation de la cofiline stabilise les filaments d'actine, et donc l'accumulation nucléaire de MRTF-A (\cite{zhao_force_2007}). 
 
-La thymosine $\beta$, comme la latrunculine, séquestre les monomères d'actine avec une st\oe chiométrie de 1:1. Mais contrairement à celle-ci, la thymosine $\beta$ empêche l'intégration des monomères dans le complexe avec MRTF-A. Lors d'une surexpression de T$\beta$4, MRTF-A est donc nucléaire et SRF activé (\cite{morita_g-actin_2013}).
+
+Les thymosines$\beta$, comme la latrunculine, séquestre les monomères d'actine avec une st\oe chiométrie de 1:1. Mais contrairement à celle-ci, la thymosine $\beta$ empêche l'intégration des monomères dans le complexe avec MRTF-A. Lors d'une surexpression de T$\beta$4, MRTF-A est donc nucléaire et SRF activé (\cite{morita_g-actin_2013}).
 
 
 
@@ -197,10 +212,10 @@ La thymosine $\beta$, comme la latrunculine, séquestre les monomères d'actine 
 
 RhoA (Ras homolog gene family, member A) est une protéine de la famille des petites GTPases dont le rôle est de réguler le cytosquelette d'actine. Ce rôle fait de RhoA une voie de signalisation importante pour MRTF-A. 
 
-RhoA a deux cibles principales : ROCK (Rho-associated coiled-coil-containing protein kinase 1) et les formines mDia (mammalian Diaphanous). La phosphorylation de ROCK entraîne la phosphorylation de LIMK (LIM domain kinase) qui désactive la cofiline. L'activation des formines et le blocage de la cofiline concourent à la formation de filaments d'actine plus longs et plus nombreux et à la réduction des réserves de monomères d'actine. 
+RhoA a deux cibles principales : ROCK (Rho-associated coiled-coil-containing protein kinase 1) et les formines mDia (mammalian Diaphanous). La phosphorylation de ROCK entraîne la phosphorylation de LIMK (LIM domain kinase) qui désactive la cofiline. L'activation des formines et le blocage de la cofiline concourent à la formation de filaments d'actine plus longs et plus nombreux et à la réduction des réserves de monomères d'actine (\cite{zhao_force_2007}). 
 
 La voie RhoA peut être activée par un grand nombre de signaux biochimiques ou mécaniques. ILK (Integrin Linked Kinase) associée à une stimulation mécanique (\cite{maier_tenascin-c_2008}), les androgènes (\cite{schmidt_rhoa_2012}), la thrombopoïétine (\cite{smith_induction_2013}), le sérum (\cite{sotiropoulos_signal-regulated_1999}) et les hormones du rythme circadien (\cite{gerber_blood-borne_2013}) activent la voie de signalisation RhoA/actine/MRTF-A/SRF. 
-Une déformation mécanique constante(\cite{albinsson_stretch_2004}, \cite{zhao_force_2007},\cite{chan_force-induced_2010}) ou cyclique (\cite{kuwahara_myocardin-related_2010}), un substrat dur (\cite{huang_matrix_2012}) sont des signeux mécaniques qui vont également activer la voie RhoA. 
+Une déformation mécanique constante(\cite{albinsson_stretch_2004}, \cite{zhao_force_2007},\cite{chan_force-induced_2010}) ou cyclique (\cite{kuwahara_myocardin-related_2010}), un substrat dur (\cite{huang_matrix_2012}) sont des signaux mécaniques qui vont également activer la voie RhoA. 
 
 
 \subsection{Un cas particulier : MICAL2}
@@ -218,20 +233,20 @@ Lorsque une atrophie musculaire est causée par la dénervation, MICAL2 est sous
 MICAL2 est donc une voie d'activation de MRTF-A indépendante de RhoA, et donc l'activité se concentre sur le réservoir d'actine nucléaire de la cellule. 
 
 
-%\section{En aval de MRTF-A : SRF et gènes cibles}
+
 \section{Rôles de MRTF-A}
 Depuis sa découverte au début des années 2000, de nombreux rôles de MRTF-A ont été mis en évidence dans des types cellulaires et dans des tissus très divers. 
 \subsection{Embryogenèse}
 
 Les MRTF sont exprimées dès le jour 10 du développement de l'embryon (\cite{wang_potentiation_2002}), dans tous les tissus. La délétion de MRTF-B entraîne l'échec de la gastrulation, et donc une fin précoce de l'embryogenèse (\cite{kalita_mkls:_2012}). Au contraire, 60\% des mutants MRTF-A$^{-/-}$ sont viables et atteignent l'âge adulte, les autres étant perdus pendant l'embryogenèse car souffrant de défauts cardiaques. Les mutants survivants sont dépourvus de ces anomalies cardiaques, et vivent jusqu'à l'âge adulte (\cite{li_requirement_2006},\cite{sun_acute_2006}). Cependant, les femelles souffrent d'un défaut de formation de la glande mammaire,  lié à une apoptose précoce des cellules myoépithéliales qui déclenchent l'éjection du lait. Il apparaît donc que chez la souris, tandis que MRTF-B est indispensable à l'embryogenèse, l'absence de MRTF-A peut être compensée dans la plus grande partie des tissus. 
-Les souris possédant un gène mutant dominant négatif de MRTF-A sont en revanche de plus petite taille, ne bougent pas et ne survivent que quelques jours, principalement à cause des défauts de musculature de leur diaphragme (\cite{li_requirement_2005}). 
+Les souris possédant un gène mutant dominant négatif de MRTF-A spécifiquement dans le muscle sont en revanche de plus petite taille, ne bougent pas et ne survivent que quelques jours, principalement à cause des défauts de musculature de leur diaphragme (\cite{li_requirement_2005}). 
 
 \subsection{Régulation de la masse musculaire}
 
 Serum Response Factor a pour gènes cibles un grand nombre de gènes liés au cytosquelette et à la différenciation musculaire. 
 
-Lorsque SRF est désactivé dans le muscle squelettique de souris adulte ( souris HSA-Cre-ER$^T2$:srf$^{flox/flox}$ ), l'hypertrophie compensatoire de ses muscles est bloquée (\cite{guerci_srf-dependent_2012}). Les cellules satellites sont moins nombreuses, et ne fusionnent pas avec les fibres musculaires. Au contraire, un SRF constitutivement actif protège de l'atrophie liée à une immobilisation ou à une dénervation. 
-Suite à une dénervation, MRTF-A est exclue des noyaux des fibres musculaires, et donc incapable d'activer SRF. Une MRTF-A constitutivement nucléaire protège contre l'atrophie induite par la dénervation (\cite{collard_nuclear_2014}). C'est donc la régulation de la localisation de MRTF-A dans les fibres musculaires qui régule l'activité de SRF et l'atrophie ou l'hypertrophie en réponse aux contraintes mécaniques.  
+Lorsque SRF est désactivé dans le muscle squelettique de souris adulte ( souris HSA-Cre-ER$^T2$:srf$^{flox/flox}$ ), l'hypertrophie compensatoire de ses muscles est bloquée (\cite{guerci_srf-dependent_2012}). Au contraire, un SRF constitutivement actif protège de l'atrophie liée à une perte d'activité. 
+Suite à une dénervation, MRTF-A est exclue des noyaux des fibres musculaires, et donc incapable d'activer SRF. Une MRTF-A constitutivement nucléaire protège contre l'atrophie induite par la dénervation (\cite{collard_nuclear_2014}).ceci suggère que la régulation de la localisation de MRTF-A dans les fibres musculaires qui régule l'activité de SRF et l'atrophie ou l'hypertrophie en réponse aux contraintes mécaniques.  
 
 
 Dans les myoblastes murins C2C12, un dominant négatif MRTF-B, capable d'interférer avec l'activité des deux MRTF, bloque la différenciation musculaire en myotubes et diminue leur taux de duplication (\cite{selvaraj_megakaryoblastic_2003}, \cite{cen_megakaryoblastic_2003}). 
@@ -240,9 +255,9 @@ Les souris DN-MRTF-A montrent d'ailleurs un phénotype myopathique.
 
 
 
-\subsection{Transition épithéliale-mésenchymale}
+\subsection{Transition épithéliale-mésenchymateuse}
 
-La transition épithélio-mésenchymateuse est le processus par lequel des cellules, sous l'influence de signaux extérieurs, vont perdre leur type épithélial (expression de l'E-cadherine, polarisation, organisation en monocouche jointive \dots) et acquérir un phénotype mésenchymal (expression de N-cadherine, motilité plus importante, fabrication de matrice extra-cellulaire \dots). 
+La transition épithélio-mésenchymateuse est le processus par lequel des cellules, sous l'influence de signaux extérieurs, vont perdre leur type épithélial (expression de l'E-cadherine, polarisation apico-basale, organisation en monocouche jointive \dots) et acquérir un phénotype mésenchymateux (expression de N-cadherine, motilité plus importante, fabrication de matrice extra-cellulaire \dots). 
 Plusieurs marqueurs de l'EMT, comme la vimentine ou l'actine du muscle lisse $\alpha$Smooth Muscle Actin sont des cibles de SRF. 
 
 La conjonction d'un signal biochimique, TGF $\beta$ (Transforming Growth Factor), et d'un signal mécanique déclenche l'activation de la voie de signalisation RhoA/actine/MRTF-A/SRF. 
@@ -267,8 +282,8 @@ Dans le foie de rats et de souris, la polymérisation de l'actine est maximale a
 \subsection{MRTF-A et cancers}
 Le rôle de MRTF-A dans l'invasion, les métastases et la prolifération cancéreuse est complexe. 
 Dans l'exemple du cancer du sein, on a attribué à MRTF-A un rôle antiprolifératif en tant que facteur de transcription de l'Eplin$\alpha$ (Epithelial protein lost in Neoplasm), protéine qui est inversement corrélée avec la mortalité et l'invasion cancéreuse ( \cite{leitner_epithelial_2010}).
-Cependant, dans les cancers du sein sensibles aux \oe strogènes, l'activation de MRTF-A favorise la transition vers un type insensible au contrôle hormonal (\cite{kerdivel_activation_2014}) et MRTF et SRF sont nécessaires à l'adhésion, à la motilité et à l'invasion dans des lignées issues de cancers du sein et de mélanomes (\cite{medjkane_myocardin-related_2009}).  
-Les gènes contrôlés par MRTF-A indépendamment de SRF semblent être liés à un mauvais pronostic (\cite{gurbuz_sap_2014}). 
+Cependant, dans les cancers du sein sensibles aux \oe strogènes, l'activation de MRTF-A favorise la transition vers un type insensible au contrôle hormonal (\cite{kerdivel_activation_2014}) et MRTF et SRF sont nécessaires à l'adhésion, à la motilité et à l'invasion dans des lignées issues de cancers du sein et de mélanomes (\cite{medjkane_myocardin-related_2009}). CCG1423 est d'ailleurs une drogue anti-cancéreuse qui bloque la voie RhoA/MRTF/SRF. Une publication récente montre qu'elle intéragit directement avec MRTF-A, MRTF-B et avec la myocardine au niveau de leurs séquences RPEL lorsqu'il ,'y a pas d'actines, et qu'elle bloque ainsi leur import dans le noyau \cite{hayashi_2014}. 
+ 
 
 \cite{leitner_mal/mrtf-controls_2011} montre bien le rôle complexe que peut avoir la régulation d'un élément du cytosquelette dans différents contextes : MRTF-A augmente l'adhésion dans deux types cellulaires, des cellules épithéliales non-invasives et des cellules tumorales de cancer du sein, mais l'effet sur la motilité est opposé dans les deux types. Dans les cellules mammaires épithéliales, l'augmentation de l'adhésion causée par la surexpression de MRTF-A cloue les cellules sur place : l'adhésion est trop forte et les cellules ne sont plus capables de se détacher pour avancer. Inversement, l'adhésion était le facteur limitant dans les cellules tumorales. Avec la surexpression de MRTF-A, elles adhèrent mieux et se déplacent plus efficacement. 
 
@@ -281,11 +296,11 @@ La protéine fusion est toujours localisée dans le noyau et active SRF (\cite{d
 
 \subsection{Réorganisation de la chromatine}
 
-En plus de son rôle de régulateur de la transcription des cibles de SRF, plusieurs effets de MRTF-A sur l'organisation de la chromatine ont été mis en évidence. L'activation de MRTF-A et de différents mutants montre une augmentation de l'acétylation de l'histone H3, de la quantité d'euchromatine et de l'activité transcriptionnelle (\cite{flouriot_actin/mkl1_2014}). Cette fonction de MRTF-A nécessite son domaine C-terminal. 
+En plus de son rôle de régulateur de la transcription des cibles de SRF, plusieurs effets de MRTF-A sur l'organisation de la chromatine ont été mis en évidence récemment. L'activation de MRTF-A et de différents mutants montre une augmentation de l'acétylation de l'histone H3, de la quantité d'euchromatine et de l'activité transcriptionnelle (\cite{flouriot_actin/mkl1_2014}). Cette fonction de MRTF-A nécessite son domaine C-terminal. 
 Les fibroblastes 3T3 cultivés sur des motifs de grande taille montrent une plus grande quantité de MRTF-A dans le noyau, associée à une histone déacétylase HDAC3 séquestrée dans le cytoplasme et une plus grande activité transcriptionnelle (\cite{jain_cell_2013}). 
 
 L'histone méthyltransférase SMYD3 coopère avec MRTF-A, sans interaction direct, pour réguler la transcription du gène MYL9 codant pour la Myosin Light Chain (\cite{luo_histone_2014}). 
 
 
 
-%\end{document}
+\end{document}
