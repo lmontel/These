@@ -1,16 +1,16 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%\addbibresource{biblio.bib}
-%
-%
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio.bib}
+
+
+\begin{document}
 \chapter{De la cellule au muscle}
 
 Les muscles représentent environ 40\% de la masse totale d'un humain adulte. Ils participent à tous les phénomènes indispensables à notre vie : ils nous permettent de nous mouvoir, d'exercer des forces sur notre environnement, mais aussi de respirer, de faire circuler le sang, de digérer \dots 
@@ -24,7 +24,7 @@ Il en existe environ 640, de toutes tailles, des minuscules muscles contrôlant 
 Dans le chapitre premier, une cellule typique et peu différenciée a été présentée, semblable aux précurseurs du muscle. Les cellules qui composent les muscles ont une organisation bien différente. 
 En partant des cellules et des protéines qui ont été décrites dans les chapitres précédents, nous allons reconstituer l'architecture du muscle. 
 
-\subsection{Du myoblaste au myocyte}
+\subsection{Du myoblaste au myotube}
 
 \begin{figure}
 \includegraphics[scale=0.25]{Figures/Myocytes.png} \includegraphics[scale=0.5]{Figures/Myotubes.png} 
@@ -32,17 +32,18 @@ En partant des cellules et des protéines qui ont été décrites dans les chapi
 \end{figure}
 
 
-Les myoblastes sont les cellules progénitrices du muscles. Les C2C12 sont une lignée immortalisée de myoblastes murins, mais des myoblastes primaires peuvent également être mis en cultures \textit{in vitro}.
+Les myoblastes sont les cellules progénitrices du muscle. Les C2C12 sont une lignée immortalisée de myoblastes murins, mais des myoblastes primaires peuvent également être mis en cultures \textit{in vitro}.
 La différenciation se produit quand les myoblastes sont suffisamment nombreux et que les facteurs de croissance qui les maintiennent en prolifération viennent à manquer. 
-Les myoblastes se mettent alors à sécréter de la fibronectine, la liaison intégrine/fibronectine étant indispensable à la différenciation.
+%Les myoblastes se mettent alors à sécréter de la fibronectine, la liaison intégrine/fibronectine étant indispensable à la différenciation. 
+%% Impossible de retrouver la référence
 \begin{figure}
 \includegraphics[scale=0.4]{Figures/Myoblast_fusion.png} 
 \caption{\'E tapes successives de la différenciation des myoblastes en myotubes chez la souris, d'après \cite{Abmayr}}
 \end{figure}
 
-Les myoblastes vont alors s'aligner, puis fusionner entre eux pour former des myotubes, qui sont des cellules plurinuclées et allongées. 
-Les myoblastes étendent autour d'eux des lamellipodes et des filopodes pour contacter les cellules voisines. Au niveau de ces contacts, les compositions des lipides de la membrane change, on trouve un grand nombre de protéines comme les M-cadhérines, les intégrines et les filamines qui assurent un lien avec le cytosquelette. Ce dernier est réorganisé localement : un réseau dense se forme sous la membrane, mis sous tension par la myosine 2A. 
-Le myoblaste envahit le myotube à l'aide de podosomes quasiment exclusivement composés d'actine en filaments, avant que des pores se forment entre les deux cellules pour achever la fusion. 
+Les myoblastes vont alors s'aligner les uns avec les autres, sortir du cycle cellulaire et devenir des myocytes. Certains de ces myocytes deviendront des cellules fondatrices de myotubes. Les autres myocytes vont alors fusionner avec lors d'un processus asymétrique qui mène à la formation de myotubes polynuclés de plusieurs centaines de microns de long. 
+Les myoblastes étendent autour d'eux des lamellipodes et des filopodes pour contacter les cellules voisines. Au niveau de ces contacts, les compositions des lipides de la membrane change, on trouve un grand nombre de protéines comme les M- et N-cadhérines, les intégrines et les filamines qui assurent un lien avec le cytosquelette (revue par \cite{abmayr}. Ce dernier est réorganisé localement : un réseau dense se forme sous la membrane, mis sous tension par la myosine 2A \cite{duan}. 
+Le myoblaste envahit le myotube à l'aide de structures podosome-like quasiment exclusivement composés d'actine en filaments, avant que des pores se forment entre les deux cellules pour achever la fusion. 
 
 
 \begin{figure}
@@ -58,7 +59,7 @@ Une fois le myotube formé, il mature pour devenir une myofibre en développant 
 
 \subsection{Une organisation spécifique de l'actine}
 
-À l'intérieur d'un myocyte totalement différencié, l'actine est organisée en unités appelées les sarcomères. 
+À l'intérieur d'une myofibre totalement différencié, l'actine est organisée en unités appelées les sarcomères. 
 
 \begin{figure}
 \includegraphics[scale=0.2]{Figures/sarcomere.png} 
@@ -85,45 +86,45 @@ Au niveau de la bande M, les filaments de myosine se lient aux protéines M, aux
 La titine est une protéine géante qui maintient l'intégrité du sarcomère en se liant à la bande M, au disque Z et aux filaments de myosine. Elle présente une structure enroulée sur elle-même, et fonctionne comme un ressort qui stocke de l'énergie quand le sarcomère change de longueur, et contribue ainsi à maintenir l'intégrité de l'ensemble de la structure. 
 Les myomésines ont une structure semblable mais sont plus courtes. Elles forment des ponts entre les filaments de myosines pour les maintenir dans une structure qui ressemble à un réseau hexagonal. 
 
-Au niveau du disque Z, un grand nombre de protéines viennent assurer l'ancrage des filaments d'actine et l'organisation du sarcomère. Une partie d'entre elles sont également partie prenantes de cascades de signalisation.
+Au niveau du disque Z, un grand nombre de protéines viennent assurer l'ancrage des filaments d'actine et l'organisation du sarcomère. Une partie d'entre elles sont également partie prenante de cascades de signalisation.
 L'$\alpha$-actinine, déjà évoquée précédemment en tant que protéine liée à l'actine, assure vis-à-vis de l'actine la même mission que les myomésines pour les filaments de myosine : elle lie les filaments entre eux pour former un réseau hexagonal, et lie également les titines. 
-Par l'intermédiaire de la filamine C, l'$alpha$-actinine relie les filaments d'actine du sarcomère aux intégrines qui assurent l'ancrage avec la matrice extra-cellulaire. 
-La desmine, le filament intermédiaire du cytosquelette s'enroule autour du disque Z pour maintenir sa structure, et l'$\alpha\beta$-cristalline l'empêche de former des agrégats. 
+Par l'intermédiaire de la filamine C, l'$\alpha$-actinine relie les filaments d'actine du sarcomère aux intégrines qui assurent l'ancrage avec la matrice extra-cellulaire. 
+La desmine, le filament intermédiaire du cytosquelette spécifique du muscle s'enroule autour du disque Z pour maintenir sa structure, et l'$\alpha$B-cristalline l'empêche de former des agrégats. 
 
 
 \subsection{Rôle de la voie RhoA/MRTF-A/SRF}
 
 Parmi les gènes cibles de SRF, on trouve un grand nombre de protéines indispensables à la constitution des sarcomères :  tous les différents gènes d'actine et en particulier l'$\alpha$ Skeletal Actin , des myosines (MHC9,myo16,myoIE), des $\alpha$-actinines, des intégrines et des tropomyosines (\cite{selvaraj_2004},\cite{charvet_2006},\cite{esnault_rho-actin_2014}).
 
-MyoD, facteur de transcription de la famille des Myogenic Regulatory Factors et marqueur de la différenciation en cellule musculaire, contient un Serum Response Element \cite{l'honore_2003} et est activé par MRTF-A/SRF (\cite{Mokalled_2011}. 
+MyoD, facteur de transcription de la famille des Myogenic Regulatory Factors et marqueur de la différenciation en cellule musculaire, contient un Serum Response Element (\cite{l'honore_2003}) et est activé par MRTF-A/SRF (\cite{Mokalled_2011}. 
 
 Il suffit qu'un seul des maillons de la voie RhoA/MRTF/SRF manque pour que la différenciation en cellule musculaire échoue. 
 
-\textit{In vivo} dans des souris ayant une délétion conditionnelle de SRF dans les muscles, on observe une diminution de l'expression de la tropomyosine et de l'$\alpha$ actine du muscle squelettique, corrélés à des défauts dans la croissance des myofibres, une désorganisation des sarcomères et une hypotrophie musculaire (\cite{charvet_2006},\cite{li_requirement_2005}). \textit{In vitro}, un SRF dominant négatif bloque la différenciation de myoblastes C2C12 en myotubes \cite{wei_1998}.
+\textit{In vivo} dans des souris ayant une délétion conditionnelle de SRF dans les muscles, on observe une diminution de l'expression de la tropomyosine et de l'$\alpha$ actine du muscle squelettique, corrélés à des défauts dans la croissance des myofibres, une désorganisation des sarcomères et une hypotrophie musculaire (\cite{charvet_2006},\cite{li_requirement_2005}). \textit{In vitro}, un SRF dominant négatif bloque la différenciation de myoblastes C2C12 en myotubes (\cite{wei_1998}).
 
 Les souris dominant négatif MRTF-A sont viables mais présentent une hypotrophie musculaire qui dépend du niveau d'expression de MRTF-A, une fibrose, et des noyaux positionnés au centre des fibres musculaires, ce qui les désorganise \cite{li_requirement_2005}. \textit{In vitro}, la différenciation des C2C12 nécessite également la présence des MRTF \cite{selvaraj_megakaryoblastic_2003}. 
 
-Bloquer RhoA avec un dominant négatif \cite{wei_1998} empêche également la différenciation.
+Bloquer RhoA avec un dominant négatif (\cite{wei_1998}) empêche également la différenciation.
 
 \cite{kawauchi_p130cas-dependent_2012} détaillent un peu plus loin ces voies de signalisations impliquées dans la différenciation musculaire, en montrant que la signalisation passe par p130Cas, les intégrines $\beta$3 et ILK, qui désactivent à la fois ERK1/2 (ce qui empêche la phosphorylation de MRTF-A et donc promeut son accumulation nucléaire, et met hors jeu les TCF), et la cofiline (ce qui promeut l'actine polymérisée). Ils montrent que p130Cas contribue à maintenir l'actine polymérisée et MRTF-A présent dans le noyau alors que la différenciation se fait dans un milieu pauvre en sérum, où RhoA est diminué. 
  
 \subsection{De la fibre au muscle}
 
-Les sarcomères mis bout à bout les uns à la suite des autres forment des myofibrilles. Les myofibrilles adjacentes sont liées et alignées au niveau de leurs disques Z, afin que les contractions se fassent de manière synchronisée. 
+Les sarcomères mis bout à bout  forment des myofibrilles. Les myofibrilles adjacentes sont liées et alignées au niveau de leurs disques Z, afin que les contractions se fassent de manière synchronisée. 
 
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/12_29_0.png} 
 \end{figure}
 
-Dans une myofibre, on trouve de nombreuses myofibrilles liées les unes aux autres, de l'ordre de la dizaine, qui occupent la majeure partie de l'espace disponible. Les multiples noyaux sont repoussés en périphérie de la cellule. 
+Dans une myofibre, on trouve de nombreuses myofibrilles liées les unes aux autres, de l'ordre de quelques dizaines, qui occupent la majeure partie de l'espace disponible. Les multiples noyaux sont repoussés en périphérie de la cellule. 
 
-Les myofibres sont regroupées en faisceaux de quelques dizaines de fibres dans un tissu conjontif composé principalement de collagènes, faisceaux qui sont eux-même regroupés pour former le muscle lui-même. Le tissu conjonctif confère une résistance passive aux muscles et les relie aux tendons qui les fixent sur les os. 
+Les myofibres sont regroupées en faisceaux de quelques dizaines de fibres dans un tissu conjonctif composé principalement de différents types de collagène, faisceaux qui sont eux-même regroupés pour former le muscle lui-même. Le tissu conjonctif confère une résistance passive aux muscles et les relie aux tendons qui les fixent sur les os. 
 
 Les capillaires sanguins et les nerfs contrôlant les contractions musculaires sont également encapsulés dans ce tissu conjonctif. 
 \subsubsection{Différents types de muscles}
 
 Les fibres musculaires ont toutes une organisation similaire, mais ne sont pas toutes identiques. 
-On peut distinguer 2 types majeurs de fibres musculaires : les fibres lentes et les fibres rapides. 
+On peut distinguer 2 types majeurs de fibres musculaires : les fibres lentes et les fibres rapides. Les fibres rapides sont mobilisées en premier mais sont plus fatigables que les fibres lentes.  
 
 Les fibres lentes servent aux efforts de longue durée et de faible force, comme par exemple le maintien de la posture, elles se contractent lentement. 
 Elles sont riches en mitochondries et en capillaires sanguins, car leur alimentation en énergie se fait principalement par la consommation d'oxygène. 
@@ -160,9 +161,9 @@ Lorsque la concentration en calcium diminue car le signal du neurone moteur s'es
 
 
 \subsection{Mécanique de la contraction musculaire}
-Dans les conditions optimales, une seule cellule musculaire mature peut exercer une force de l'ordre de 0,3 \micro N, et un muscle peut exercer autour de 30N/cm$^2$ de section efficace. 
+Dans les conditions optimales, une seule cellule musculaire mature humaine peut exercer une force de l'ordre de 0,3 \micro N, et un muscle peut exercer autour de 30N/cm$^2$ de section. 
 
-Le modèle de Hill \cite{Hill}, élaboré bien avant que les mécanismes internes de la contraction musculaire soient connus, permet de relier la vitesse de contraction d'un muscle aux forces qu'il est capable d'appliquer. 
+Le modèle de Hill \cite{Hill}, élaboré bien avant que les mécanismes internes de la contraction musculaire soient connus, permet de relier la vitesse de contraction d'un muscle aux forces qu'il est capable de développer. 
 
 Hill constate que pour un muscle de taille donnée se raccourcissant d'une longueur $x$, l'énergie dissipée dans le muscle est proportionnelle à $x$ : $W_d=ax$. $a$ est proportionnel à la section efficace du muscle (et donc du nombre de myofibres), et comme la force maximale supportée par le muscle également, le rapport entre les deux  est constant : $$\frac{a}{P_0}=0.25$$
 
@@ -186,21 +187,24 @@ L'équation de Hill relie donc la force que peut appliquer un muscle $P$ à la v
 Non seulement la loi de Hill est vérifiée pour les muscles striées, mais elle l'est également au niveau du myoblaste unique \cite{Mitrossilis} et même au niveau d'un unique filament d'actine déplacé par 8 têtes de myosine du muscle squelettique \cite{Debold}, ce qui confirme l'hypothèse de Huxley \cite{Huxley} qui attribue ce comportement aux propriétés du complexe acto-myosine. 
 
 \section{Les cellules satellites, MRTF-A et régulation de la masse musculaire}
-Entre la lame basale et les myofibres, on peut trouver des cellules moins différenciées, les cellules satellites. Celles-ci sont responsables de la réparation et de la croissance des muscles adultes. 
+
+Le muscle est un tissu plastique : il peut augmenter ou diminuer sa masse en réponse aux sollicitations mécaniques qui lui sont imposées. Nous en faisons tous quotidiennement l'expérience : la pratique d'activités physiques augmentent la taille de nos muscles, tandis qu'une immobilisation prolongée, comme par exemple suite à une fracture, conduit à une diminution rapide de notre masse musculaire. L'équipe d'Athanassia Sotiropoulos à l'Institut Cochin, avec laquelle nous avons collaboré, a caractérisé le rôle central de SRF dans ce phénomène. 
+
+Entre la lame basale et les myofibres, on peut trouver des myoblastes, les cellules satellites. Celles-ci sont responsables de la réparation et de la croissance des muscles adultes. 
 En effet, les myofibres sont des cellules qui ne se reproduisent plus, et après les deux phases de création de myofibres pendant la vie embryonnaire, le nombre de fibres musculaires reste constant. 
 Cependant, lorsqu'elles sont activées en réponse à une blessure ou à une sollicitation importante du muscle, les cellules satellites prolifèrent, et une partie d'entre elles se différencient et fusionnent avec les fibres musculaires. 
 
-En réponse à une stimulation mécanique (hypertrophie compensatoire), SRF est activé dans les myofibres \textit{in vivo} par l'intermédiaire de MRTF-A  \cite{guerci_srf-dependent_2012}. 
+Pour étudier la réponse à une stimulation mécanique, les souris sont soumises à une hypertrophie compensatoire : un des muscles de la patte ne peut plus faire son travail, et les autres sont obligés de compenser son manque d'activité en développant plus de force. En réponse à cette surcharge de travail, SRF est activé dans les myofibres \textit{in vivo} par l'intermédiaire de MRTF-A  \cite{guerci_srf-dependent_2012}. 
 L'activation de SRF dans les myofibres produit un signal paracrine composé d'Interleukines 6, qui encourage la prolifération des cellules satellites, et d'interleukines 4 qui les fait fusionner avec les fibres musculaires. 
-Dans les fibres musculaires mutantes où SRF est désactivé, le nombre de noyaux par fibre n'augmente pas, ce qui signifie qu'il n'y a pas de fusion des cellules satellites avec les myofibres. La surexpression d'IL6 chez les mutants restaure la prolifération, mais pas la fusion des cellules satellites. Surexprimer Cox2, qui est en aval de SRF et en amont de l'IL4, ou l'IL4 elle-même permet de restaurer la fusion et l'hypertrophie chez les mutants. 
+Dans les fibres musculaires mutantes où SRF est désactivé, le nombre de noyaux par fibre n'augmente pas, ce qui signifie qu'il n'y a pas de fusion des cellules satellites avec les myofibres. La surexpression d'IL6 chez les mutants restaure la prolifération, mais pas la fusion des cellules satellites. Surexprimer IL4 ou Cox2, qui est en aval de SRF et en amont de l'IL4 permet de restaurer la fusion et l'hypertrophie chez les mutants. 
 
 
-Au contraire, lors d'une absence de signaux mécaniques induite par la dénervation, l'actine G s'accumule dans le noyau des fibres musculaires et l'activité de SRF diminue, cependant, cette diminution n'est pas à l'origine de l'actine nucléaire \cite{collard_nuclear_2014}. En revanche, l'activité de MICAL-2 est également réduite, or son rôle contribue normalement à exclure l'actine monomérique du noyau. 
+Au contraire, lors d'une absence de signaux mécaniques induite par la dénervation, l'actine G s'accumule dans le noyau des fibres musculaires et l'activité de SRF diminue (\cite{collard_nuclear_2014}). Le rôle de MICAL-2 est normalement d'exclure l'actine du noyau, et son activité est réduite pendant l'atrophie, ce qui contribue donc à l'accumulation nucléaire d'actine constatée. 
 L'accumulation d'actine G dans le noyau favorise l'export de MRTF-A, qui est confiné dans le cytoplasme dans les muscles dénervés. Cela explique le déficit d'activité de SRF, qui ne peut pas être atteint par son cofacteur. 
 
-La désactivation de SRF, l'injection de CCG1423 (drogue inhibant MRTF/SRF), ou l'expression d'une actine non polymérisable sont tous liés à une augmentation de la gravité de l'atrophie musculaire, montrant que cette voie de signalisation protège l'organisme de la destruction de ses propres muscles. 
+La désactivation de SRF, l'injection de CCG1423 (drogue inhibant MRTF/SRF), ou l'expression d'une actine non polymérisable conduisent tous à une aggravation de l'atrophie musculaire, montrant que cette voie de signalisation protège l'organisme de la destruction de ses propres muscles. 
 
 Au contraire, l'expression d'une MRTF-A incapable de se lier à l'actine, et donc constitutivement active (sur le modèle de la myocardine), permet de protéger les muscles de l'atrophie induite par la dénervation, ce que ne fait pas la simple sur-expression de MRTF-A GFP. Cependant, si SRF n'est pas fonctionnel, cette protection n'est plus efficace, prouvant que c'est bien le couple MRTF/SRF qui est nécessaire. 
 
 
-%\end{document}
+\end{document}
