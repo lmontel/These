@@ -8,6 +8,7 @@
 \usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 \newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio.bib}
 
 \begin{document}
 
@@ -42,7 +43,7 @@
 	
 	Après rinçage, \nombre{110 000} cellules sont ensemencées sur chaque lamelle dans du milieu complet. 
 	
-	\subsubsection{Visualiser une protéine dans la cellule : anticorps, marqueurs et protéines fluorescentes}
+	\subsection{Visualiser une protéine dans la cellule : anticorps, marqueurs et protéines fluorescentes}
 	
 	Trois techniques ont été utilisée pendant cette thèse pour visualiser nos deux protéines d'intérêt, l'actine et MRTF, dans les cellules. 
 	
@@ -53,6 +54,30 @@
 	La dernière technique fait appel à la Green Fluorescent Protein (GFP), protéine découverte dans les années soixante chez une méduse, et utilisée à partir des années 90 pour marquer des protéines. En fusionnant la séquence génétique de la GFP avec la séquence de la protéine à observer, on obtient un nouveau gène codant pour une version fluorescente de la protéine d'intérêt. Après introduction du gène dans les cellules, celles-ci expriment alors la version fluorescente de la protéine. Cette utilisation de la GFP a révolutionné la biologie cellulaire et a été l'objet du prix Nobel de Chimie en 2008. Aujourd'hui, il existe de nombreuses variantes de cette technique, que ce soit au niveau des bandes d'émission et d'absorption du fluorophore (il en existe de toutes les couleurs du spectre visible) ou au niveau de la manière dont le gène de la nouvelle protéine est intégrée dans les cellules (transfection, électroporation, infection par des virus  \dots).
 	
 	Cette dernière technique permet d'observer la protéine fluorescente en direct pendant la vie de la cellule, alors que la première technique ne peut être utilisée que sur des cellules fixées. La seconde technique peut parfois être utilisée sur des cellules vivantes lorsque la drogue utilisée n'est pas trop toxique. 
+	
+	\subsubsection{Visualiser le cytosquelette d'actine dans le cadre des expériences sur MRFT-A}
+	
+L'observation en direct du cytosquelette d'actine est particulièrement intéressant car le système est très dynamique, ce que ne peuvent pas capturer les expériences sur cellules fixées.
+Cependant, cela signifie qu'il faut trouver un moyen d'observer l'état du cytosquelette en le perturbant le moins possible. 
+
+Durant cette thèse, j'ai testé quatre moyens d'observer l'actine ou les filaments d'actine dans les cellules vivantes. Tous se sont finalement révélés perturber dans une certaine mesure l'état du cytosquelette. 
+
+La première méthode d'observation de l'actine dans les cellules vivantes est de leur faire exprimer, en plus de l'actine endogène, un autre gène codant pour une actine fluorescente, en l'occurence ici une actine dotée d'un fluorophore mCherry. 
+Elle a l'avantage de marquer toute l'actine, et pas seulement les filaments comme les méthodes qui seront présentées après. 
+Mais elle a le désavantage de faire sur-exprimer l'actine	 à la cellule, de manière variable d'une cellule transfectée à l'autre. 
+Or MRTF-A est une sonde extrêmement sensible de la quantité de G-actine dans la cellule.  Sur-exprimer l'actine augmente la quantité totale d'actine G, et a un effet très visible sur MRTF-A, comme il sera présenté au chapitre 8. 
+
+Les trois autres méthodes sont des détecteurs qui marquent uniquement les filaments d'actine, avec l'avantage de voir plus nettement la structure du cytosquelette. Il est à noter qu'actuellement il n'existe aucune sonde commercialisée pour observer l'actine monomérique \textit{in vivo}, même si une sonde a été développée récemment à partir des groupes RPEL de MRTF-A \cite{belin_visualization_2013}. 
+
+La LifeAct est une petite protéine de seulement 17 acides aminés qui se lie aux filaments d'actine \cite{lukinavicius}. Adjointe à un fragment de protéine fluorescente, comme la GFP ou mCherry, elle permet d'observer les filaments dans les cellules vivantes.  Son ADN doit être transfecté dans la cellule pour y être exprimé avant observation. Elle a été présentée comme un moyen s'observer les filaments sans les perturber, et sans affecter leur polymérisation et leur dépolymérisation. Cependant, et comme ce sera présenté au chapitre 8, la LifeAct n'est pas complètement sans influence sur le cytosquelette d'actine. On constate une tendance à stabiliser les filaments d'actine qui est visible par l'observation de MRTF-A. 
+
+La F-tractin \cite{johnson} est un fragment de protéine constitué des 66 premiers acides aminés de l'inositol trisphosphate 3-kinase A, qui se lie aux filaments d'actine. Comme la LifeAct, sa séquence codante doit être exprimée par la cellule avant observation. Comme la Life, j'ai également observé une tendance de la F-tractin à stabiliser suffisamment les filaments d'actine pour affecter la localisation de MRTF-A. 
+
+Enfin, la SiRactine est une des dernières sondes développées pour marquer les filaments d'actine \textit{in vivo} \cite{Lukinavicius}. Il s'agit d'un fluorophore Silicone-Rhodamine conjugué à un fragment de la japlakinolide, drogue connue pour se lier aux filaments d'actine et les stabiliser. Cette construction a pour particularité, par un mécanisme d'activation, d'être 100 fois plus fluorescentes lorsqu'elle est liée aux filaments d'actine que dans l'état non-lié, ce qui minimise le bruit de fond. La qualité de la fluorescence devait permettre d'utiliser la SiR-actine dans des quantité suffisamment faibles pour que l'influence stabilisatrice du japlakinolide sur les filaments d'actine soit invisible. Un effet sur les expériences avec MRTF-A est néanmoins visible. 
+
+MRTF-A est une sonde extrêmement sensible de l'état du cytosquelette de la cellule, et toutes les méthodes que nous avons utilisées pour visualiser le cytosquelette \textit{in vivo} ont montré des effets sur sa localisation dans une population de cellules. 
+	
+	
 	\subsection{Transfections}
 	Afin de visualiser les protéines qui nous intéressent, on ajoute aux cellules de l'ADN non chromosomique d'origine bactérienne appelés plasmides qui codent pour une version fluorescente de nos protéines d'intérêt. Ces plasmides sont intégrées aux cellules grâce à des agents spécifiques comme la nanofectine et la lipofectamine lors de la transfection. 
 	
@@ -576,8 +601,8 @@ $$ \langle h_u \rangle = 1.6 \mu m \: \langle \theta \rangle = 110 \degres$$
 
 Ce qui nous donne avec les deux modèles : 
 \begin{align}
- \p_{Gallet}&=\frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right) = 0.50 \\
-\p_{Kamgoué}&= 0.92
+ p_{Gallet}&=\frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right) = 0.50 \\
+p_{Kamgoue}&= 0.92\\
 \end{align}
 
 Les deux modèles donnent donc deux valeurs différentes, mais ayant le même ordre de grandeur. 
