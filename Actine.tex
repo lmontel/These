@@ -1,18 +1,18 @@
-\documentclass{report}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\graphicspath{{Figures/}}
-\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-\addbibresource{biblio.bib}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
-
-
-
-
-\begin{document}
+%\documentclass{report}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\graphicspath{{Figures/}}
+%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+%\addbibresource{biblio.bib}
+%\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%
+%
+%
+%
+%\begin{document}
 \chapter{L'actine}
 
 L'actine est une protéine ubiquitaire conservée chez tous les eucaryotes, exprimée dans tous les types cellulaires. 
@@ -368,19 +368,26 @@ Si les organisations décrites ici ont été particulièrement étudiées dans l
 
 \subsubsection{Le cortex}
 
+\begin{figure}
+\includegraphics[scale=0.25]{Figures/cortex.png} 
+\caption{Image en microscopie électronique du cortex d'actine sous la membrane, par \cite{morone}. La barre d'échelle de l'image du haut représente 100nm, celle du bas 50 nm. On peut également voir une cavéole.}
+\end{figure}
+
 La membrane plasmique est soutenue par un réseau d'actine de quelques centaines de nanomètres d'épaisseur appelé le cortex.
 
 Le cortex est constitué d'un mélange entre un réseau ramifié par Arp2/3 et des faisceaux de filaments alignés. 
 Il est attaché à la membrane plasmique par des protéines comme celles de la famille ERM (ezrine, radixine, moesine). 
 
-Il contient également des myosines qui mettent le réseau sous tension. Cette tension crée une pression vers l'intérieur de la cellule contrée par la pression osmotique. 
-Lorsque le cortex d'actine est brisé ou détaché de la membrane localement, cette pression interne de la cellule provoque la formation d'une protrusion de la cellule appelée bleb. 
+Il contient également des myosines qui mettent le réseau sous tension. Cette tension crée une pression vers l'intérieur de la cellule contrée par la pression osmotique. L'interaction entre les deux forces explique la forme ronde des cellules lorsqu'elles entrent en mitose \cite{stewart}.
+Lorsque le cortex d'actine est brisé ou détaché de la membrane localement, cette pression interne de la cellule provoque la formation d'une protrusion de la cellule appelée bleb \cite{paluch}.
 
-Les blebs sont un moyen qu'a la cellule d'explorer l'espace. La protrusion de membrane est alors complétée par un réseau d'actine et des adhésions à partir desquels la cellule va pouvoir se tracter vers l'avant. 
+Les blebs sont un moyen qu'a la cellule d'explorer l'espace. La protrusion de membrane est alors complétée par un réseau d'actine et des adhésions à partir desquels la cellule va pouvoir se tracter vers l'avant \cite{charras}. 
 Ce mode de déplacement a été particulièrement étudié chez les amibes comme Dictyostelium, c'est pourquoi il est dit \og amiboïde \fg.  
 
-Le cortex et la membrane sont intimement couplés mécaniquement, au point qu'il est souvent difficile de séparer l'influence mécanique de la tension de la membrane de celle du cortex. 
-En aspirant le cortex dans une micropipette il est possible de tester la résistance mécanique du cortex, et de constater qu'elle dépend de l'activité des myosines. 
+Ils peuvent également être le moyen d'équilibrer les forces dans une cellule en division, pour positionner correctement le fuseau mitotique \cite{sedzinski}.
+
+Le cortex et la membrane sont intimement couplés mécaniquement, au point qu'il est souvent difficile de séparer l'influence mécanique de la tension de la membrane de celle du cortex \cite{campillo}. 
+En aspirant le cortex dans une micropipette il est possible de tester la résistance mécanique du cortex, et de constater qu'elle dépend de l'activité des myosines \cite{bergert}.  
 
 
 
@@ -388,16 +395,21 @@ En aspirant le cortex dans une micropipette il est possible de tester la résist
 
 Le lamellipode est une structure plane à l'avant d'une cellule en mouvement, prenant la plupart du temps une forme en croissant. 
 
-Sous la membrane, la GTPase Rac active Arp2/3 par l'intermédiaire du complexe WAVE, formant un réseau ramifié.
+Sous la membrane, la GTPase Rac active Arp2/3 par l'intermédiaire du complexe WAVE, formant un réseau ramifié \cite{lebensohn}. 
 La croissance des filaments pousse alors le bord de la cellule vers l'avant, en s'appuyant sur les adhésions focales à l'arrière du lamellipode. 
 La croissance du réseau ramifié créé par Arp2/3 est maintenu sous contrôle par les protéines de coiffage qui bloquent l'élongation excessive des filaments. 
 
-Le flux rétrograde de l'actine entraîne les filaments vers l'arrière de la cellule où ils sont fragmentés et dépolymérisés. 
+Le flux rétrograde de l'actine entraîne les filaments vers l'arrière de la cellule où ils sont fragmentés et dépolymérisés . 
 Certains sont assemblés en faisceaux contractiles par les myosines. 
 
-À l'arrière de la cellue, le réseau d'actine est détruit et les adhésions disparaissent afin de permettre à la cellule d'avancer. 
+À l'arrière de la cellule, le réseau d'actine est détruit sous l'action conjuguée de la tension de membrane \cite{raucher} et des myosines \cite{wilson} et les adhésions disparaissent afin de permettre à la cellule d'avancer.
 
 Le lamellipode est principalement lié aux déplacements sur une surface plane, comme en culture cellulaire ou à la surface d'un épithélium. 
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/lamellipode.png}
+\caption{Images en microscopie de fluorescence et schéma représentatif d'un lamellipode de kératocyte, d'un lamellipode de fibroblaste et des filopodes d'un neurone, d'après \cite{huber}. } 
+\end{figure}
 
 
 \subsubsection{Les filopodes}
@@ -405,13 +417,13 @@ Le lamellipode est principalement lié aux déplacements sur une surface plane, 
 Les filopodes sont des protrusions consituées d'un faisceau d'actine dont les extrémité $+$ sont pointées vers l'extérieur. 
 La croissance du filopode est principalement liée à celle des filaments du faisceau grâce à l'action des formines ou de Ena/VASP. 
 
-Un filopode peut se former à partir de la convergence de filaments provenant d'un réseau branché au bord de la cellule. 
+Un filopode peut se former à partir de la convergence de filaments provenant d'un réseau branché au bord de la cellule \cite{small}. Cependant, Arp2/3 n'est pas indispensable à la formation des filopodes \cite{wu}. 
 Des protéines comme la fascine associent alors ces filaments en faisceau rigide, dont la croissance déforme la membrane plasmique. 
 
 Les filopodes servent à explorer l'espace, initiant le contact avec la matrice extra-cellulaire ou avec d'autres cellules voisines. 
-Certaines bactéries exploitent ce comportement pour être capturées et internalisées par la cellule. 
+Certaines bactéries exploitent ce comportement pour être capturées et internalisées par la cellule \cite{romero_2011}. 
 Après contact avec la bactérie, le filopode se rétracte rapidement, ramenant la bactérie vers sa cible.
-La force exercée par un filopode en rétraction peut atteindre 10pN, à des vitesses de l'ordre de 100nm/s. 
+La force exercée par un filopode en rétraction peut atteindre 10pN, à des vitesses de l'ordre de 100nm/s \cite{vonna},\cite{romero_2011}. 
 
 
 
@@ -460,4 +472,4 @@ Dans le cas de l'actine, les nesprines et Sun 1 et 2 font la liaison entre les f
 
 
 
-\end{document}
+%\end{document}
