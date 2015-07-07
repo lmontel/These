@@ -1,4 +1,4 @@
-\documentclass[draft]{report}
+\documentclass                                                                                                                                                                                                                                                                                                                                       {report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
@@ -376,7 +376,7 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peuvent pas être exclue. On note $h$ la distance à la lamelle la plus proche. 
  De plus, la viscosité $\eta$ du fluide est très sensible aux variations de température, or l'électro-aimant chauffe pendant l'application de la force à cause de l'effet Joule dans la bobine. 
  Comme la mesure est effectuée à une distance de 0,5 à 1mm de la pointe, celle-ci chauffe le fluide localement. 
- On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a=0.0178 Pa.s/°C$ autour de 24\degres C. 
+ On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a=0.0178 Pa.s/\deg C$ autour de 24\degres C. 
  
  Le modèle de Stokes est donc corrigé ainsi : 
  
@@ -440,7 +440,7 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  
  \begin{figure}
  \includegraphics[scale=0.5]{Calibration_resume.png}
- \caption{Courbe de calibration des forces exercées à 700\micro m de la pointe pour l'ancienne (en rouge) et la nouvelle bobine (en bleu, utilisée pour les expériences). }
+ \caption{Courbe de calibration des forces exercées à 700\micro m de la pointe. }
  \end{figure}
 	
 	
@@ -451,10 +451,10 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
 	
 	\paragraph{Ingrédients : }
 	\begin{quote}
-	Pour la fabrication de la solution intermédiaire : 
+	Pour la fabrication de la suspension de billes fonctionnalisées : 
 	\begin{itemize}
 	\item PBS
-	\item la solution mère de Dynabeads à 4.10$^{8}$ billes/ml
+	\item la suspension mère de Dynabeads à 4.10$^{8}$ billes/ml
 	\item de l'eau micro-filtrée 
 	\item un aimant permanent
 	\item de la fibronectine
@@ -475,7 +475,7 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
 	\paragraph{Protocole : }
 	\begin{quote}
 	\begin{enumerate}
-	\item Suspendre 50 \micro l de solution mère dans 450  \micro l d'eau micro-filtrée. 
+	\item Suspendre 50 \micro l de suspension mère de Dynabeads dans 450  \micro l d'eau micro-filtrée. 
 	\item Placer l'aimant sous l'eppendorf pour attirer les billes, et prélever 450 \micro l de surnageant.
 	\item Suspendre à nouveau dans 450 \micro l d'eau.
 	\item Répéter deux fois les deux étapes précédentes, mais la dernière fois, ajouter 450 \micro l de PBS au lieu de l'eau. 
@@ -488,10 +488,10 @@ La solution intermédiaire ainsi préparée peut être conservée à 4 \degres C
 Une heure avant la première expérience : 
 	\item Placer l'eppendorf dans la cuve à ultra-sons pendant 15 à 30 minutes en agitant toutes les 5 minutes pour disperser à nouveau les billes
 	\item Prélever 50 \micro l de suspension et les suspendre dans 950 \micro l de DMEM 1\% BSA. 
-	\item Ajouter 75 \micro l de suspension sur une lamelle de C2C12.
+	\item Ajouter 75 \micro l de cette suspension sur une lamelle de C2C12.
 	\item Laisser incuber les billes et les cellules ensemble pendant 30 minutes à 37 \degres C. 
 	\item Rincer 2 fois avec 1ml de milieu en cisaillant le moins possible pour enlever les billes qui n'ont pas adhéré aux cellules. 
-	\item Ajouter 15 \micro l d'HEPES pour préserver l'acidité du milieu pendant l'expérience.
+	\item Ajouter 15 \micro l d'HEPES pour tamponner le milieu pendant l'expérience.
 	\item Coller le séparateur sur la lamelle 22mm*64mm*15mm lavée à l'alcool 70\%
 	\item Ajouter 65\micro l de milieu 1,5\% d'HEPES
 	\item Monter la lamelle de C2C12 pour fermer la chambre expérimentale.  
@@ -509,11 +509,11 @@ La lamelle préparée ainsi peut être observée immédiatement et conservée ju
 	\item Au 20X, repérer la face supérieure de la lamelle au-dessus de la chambre expérimentale.
 	\item Grâce au vernier de la tour à objectif, placer le plan focal 100 \micro m au-dessus de la lamelle. 
 	\item Approcher la pointe avec le micromanipulateur afin de la placer dans le plan focal et au centre du champ de la caméra. 
-	\item Décaler horizontalement vers la droite la pointe de 240 \micro m dans la configuration courte distance et de 390 \micro m dans la configuration longue distance. La pointe est alors alignée de sort que l'axe de la bobine passe par le centre du champ d'observation. 
+	\item Décaler horizontalement vers la droite la pointe de 240 \micro m dans la configuration courte distance et de 390 \micro m dans la configuration longue distance. La pointe est alors alignée de sorte que l'axe de la bobine passe par le centre du champ d'observation. 
 	\item Mémoriser cette position et éloigner la pointe.
 	\item Décaler la lamelle, changer d'objectif pour le 100X en configuration longue distance, pour le 40X sinon.
 	\item Placer une goutte d'huile sur l'objectif s'il s'agit du 100X et repositionner la lamelle. 
-	\item Chercher une cellule sur laquelle a adhéré une bille unique et placer la bille au centre du champ.
+	\item Chercher une cellule sur laquelle a adhéré une bille unique et placer la bille au centre du champ d'observation.
 	\item Ramener la pointe à la position mémorisée.
 	\item Alimenter la pointe avec un signal sinusoïdal de fréquence 0.5Hz afin de chercher la plus petite intensité de courant pour laquelle la bille a un mouvement détectable. 
 	\item Régler le GBF pour fournir la tension continue correspondante en réponse à un déclenchement externe (la carte PCI reliée à l'ordinateur). 
@@ -560,7 +560,7 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	\subsection{Fonction de fluage}
 	\`A l'issue d'une expérience, nous obtenons donc la position de la bille au cours du temps, en fonction de la force appliquée, pour 4 à 6 applications de la force. 
 	
-	Cependant, pour obtenir des mesures de modules visco-élastiques, il est nécessaire d'utiliser un modèle reliant le mouvement de la bille à la déformation de la cellule, et d'un modèle reliant la force exercée sur la bille à la contrainte subie par la cellule.
+	Cependant, pour obtenir des mesures de modules visco-élastiques, il est nécessaire d'utiliser un modèle reliant le mouvement de la bille à la déformation de la cellule, et la force exercée sur la bille à la contrainte subie par la cellule.
 	Plusieurs modèles existent, en particulier un modèle théorique, le modèle de Gallet, et un modèle numérique développé dans la thèse d'Alain Kamgoué, mais les deux supposent que la bille est soumise à une force incluse dans le plan focal du microscope, ce qui n'est pas le cas de notre pince magnétique, qui tire également verticalement. 
 	
 	Le modèle de Gallet suppose que la bille est enfoncée d'un angle $\theta$ dans la cellule, et qu'elle est soumise à une force horizontale $\vec{F}_0$. La cellule est modélisée comme un milieu visco-élastique semi-infini homogène et isotrope. La bille est supposée s'ancrer dans la cellule de manière homogène et infiniment rigide. 
@@ -620,10 +620,10 @@ C'est pourquoi les résultats seront en général présentés uniquement sous la
 \section{\'Etirement}
 	L'objectif de ce dispositif est de soumettre les cellules à une déformation constante pendant plusieurs heures et de les observer en fluorescence pendant l'étirement sur un microscope inversé. 
 	
-	Par rapport aux expériences de pinces magnétiques, qui ont l'avantage de nous renseigner quantitativement sur les paramètres rhéologiques de la cellule, les expériences d'étirement du substrat permettent de suivre une trentaine de cellules en même temps pendant une expérience qui dure plus longtemps. Ainsi, avec l'étireur on peut observer une trentaine de cellules pendant deux heures, alors qu'avec les pinces magnétiques on aurait pendant ce temps observé 4 cellules pendant 30 minutes chacune. 
+	Les expériences de pinces magnétiques ont l'avantage de nous renseigner quantitativement sur les paramètres rhéologiques de la cellule. Cependant, elles nous obligent à une observation cellule par cellule, ce qui rend la construction d'une étude statistique très longue. Avec l'étireur on peut observer une trentaine de cellules simultanément pendant deux heures, alors qu'avec les pinces magnétiques on aurait pendant ce temps observé 4 cellules pendant 30 minutes chacune.
 	
 	\subsection{Description de l'étireur}
-	Pendant ma thèse j'ai conçu les plans de cet étireur de cellules qui a ensuite été réalisé par l'atelier du laboratoire. Il est composé de trois parties principales : la cuve, le support de lamelle et le plot. Toutes les parties de l'étireur sont en PVC, le plot étant transparent pour laisser passer la lumière du condenseur. L'étireur à une symétrie cylindrique autour d'un axe vertical. 
+	Pendant ma thèse j'ai conçu les plans de cet étireur de cellules qui a ensuite été réalisé par l'atelier du laboratoire. Il est composé de trois parties principales : la cuve, le support de lamelle et le plot. Toutes les parties de l'étireur sont en PVC, sauf le plot qui est en plexiglas transparent pour laisser passer la lumière du condenseur. L'étireur à une symétrie cylindrique autour d'un axe vertical. 
 	\begin{figure}
 	\includegraphics[scale=0.2]{Etireur_3D_vue_dessous_rayon_blanc.png}
 	\caption{Modélisation de l'étireur vu de dessous pendant l'étirement.}
@@ -632,31 +632,36 @@ C'est pourquoi les résultats seront en général présentés uniquement sous la
 	La cuve doit remplir deux fonctions : contenir le milieu de culture nécessaire aux cellules et permettre l'observation de celles-ci au microscope inversé. Elle est composée de deux pièces trouées en leur centre qui se vissent l'une dans l'autre. Au niveau de l'ouverture destinée à l'observation, on place une lamelle de verre de 30 mm de diamètre dont le contour a été préalablement enrobé dans du téflon souple. Cette lamelle de verre est enserrée entre les deux pièces de façon à former une cuve étanche dont le fond transparent permet l'observation.
 	\subsubsection{La lamelle de PDMS} 
 	Les cellules adhèrent à une lamelle de PDMS réticulé élastique recouverte de fibronectine. Cette lamelle est maintenue par le support et déformée par le plot qui la pousse vers le bas. 
-	Le PDMS est fabriqué à partir d'un mélange 90\% PDMS et 10\% de réticulant. On place alors 1,8g du mélange dans une boite de Petri de XX mm de diamètre et on l'étale jusqu'à la recouvrir entièrement de manière homogène. La masse est choisie de façon à ce que le PDMS étalé fasse 0,3mm d'épaisseur. Les boîtes recouvertes de PDMS sont alors placées toute la nuit dans un incubateur à 60\degres  C pour réticuler le gel. À l'aide d'un emporte-pièce, des disques de 30mm sont alors découpés dans les boîtes.
+	Le PDMS (Sylbard Silicon Elastomer, Dow Corning) est fabriqué à partir d'un mélange 90\% PDMS et 10\% de réticulant. On place alors 1,8g du mélange dans une boite de Petri de 90 mm de diamètre et on l'étale par drainage jusqu'à la recouvrir entièrement de manière homogène. La masse est choisie de façon à ce que le PDMS étalé fasse 0,3mm d'épaisseur. Les boîtes recouvertes de PDMS sont alors placées toute la nuit dans un incubateur à 60\degres  C pour réticuler l'élastomère. À l'aide d'un emporte-pièce, des disques de 30mm sont alors découpés dans les boîtes.
 
 		
 	\subsubsection{Le support}
-	Le support est la pièce de serrage de la lamelle de PDMS sur laquelle sont cultivées les cellules. La lamelle de PDMS est placée entre deux anneaux plats de téflon d'un millimètre d'épaisseur qui sont destinés à homogénéiser la pression exercée sur la lamelle par la pièce de serrage. L'ensemble est posé sur un support de hauteur variable (1 mm ou 3mm) qui va déterminer l'étirement maximal possible, et serré par une pièce qui se visse dans le support. 
+	Le support est la pièce de serrage de la lamelle de PDMS sur laquelle sont cultivées les cellules. La lamelle de PDMS est placée entre deux anneaux plats de téflon d'un millimètre d'épaisseur qui sont destinés à homogénéiser la pression exercée sur la lamelle par la pièce de serrage. L'ensemble est posé sur un support de hauteur 1 mm ou 3mm qui va déterminer l'étirement maximal possible, et serré par une pièce qui se visse dans le support. 
 	Cette pièce doit maintenir fermement les bords de la lamelle en place tandis que le centre est étiré par le plot. 
 	\subsubsection{Le plot}
-	Le plot transparent est maintenu dans une pièce qui se visse à l'intérieur de la cuve. Le vissage va faire descendre le plot, qui va ainsi étirer la lamelle en la rapprochant du fond de la cuve et donc de l'objectif du microscope. 
-	L'utilisation du support de 1mm ou de 3mm permet de fixer la lamelle de PDMS à différentes hauteurs, et donc pour un même abaissement du plot d'étirer plus ou moins la lamelle. Il existe deux diamètre de plots cylindriques : 10mm et 15mm, qui permettent également de régler l'étirement subit par le PDMS. 
+	Le plot transparent est maintenu dans une pièce qui se visse à l'intérieur de la cuve. Le vissage va faire descendre le plot, qui va ainsi étirer la lamelle en la rapprochant du fond de la cuve et donc de l'objectif du microscope. Le pas de vis fin fait descendre de 1mm la membrane à chaque tour. 
+	L'utilisation du support de 1mm ou de 3mm permet de fixer la lamelle de PDMS à différentes hauteurs, et donc pour un même abaissement du plot d'étirer plus ou moins la lamelle. Il existe deux diamètre de plots cylindriques : 10mm et 14mm, qui permettent également de régler l'étirement subi par le PDMS. 
 	\subsection{Calibration de l'étireur}
 	
 	Un modèle géométrique simple permet d'estimer rapidement l'augmentation de la surface de la lamelle de PDMS en fonction du diamètre et de l'enfoncement du plot : 
 	$$R_{etire}=R_p+\sqrt{h^2+(R_l-R_p)^2}$$
-	$$ \Delta A = \frac{R_{etire}^2}{R_l^2}-1$$ 	
+	$$ \frac{\Delta A}{A} = \frac{R_{etire}^2}{R_l^2}-1$$ 	
 		
 	\begin{figure}[h!]
 		\includegraphics[scale=0.5]{Modele_etireur.png}
 		\caption{Modèle simple de la déformation créée par l'étireur. $R_p$ est le rayon du plot, $R_l$ le rayon de la lamelle qui n'est pas maintenu par le support et $h$ la hauteur d'enfoncement du plot.}
 		\end{figure}	
-	Afin de le comparer à l'étirement réel subi par la lamelle de PDMS, des lamelles ont été recouvertes de Pluronics, puis exposées à un rayonnement UVC à travers un masque de quartz contenant un grand nombre de carrés de taille connue formant un quadrillage. Puis les lamelles ont été recouvertes de fibronectine fluorescente, qui ne pouvait adhérer qu'aux endroits non éclairés par les UV. 
+		
+		\begin{figure}
+		\includegraphics[scale=0.5]{Figures/Calibration_etireur.png} 
+		\caption{Résultats de la calibration de l'étireur pour les différents étirements utilisés comparés au modèle théorique, pour $R_p$= 5 ou 7 mm et $R_l$=13mm}
+		\end{figure}
+	Afin de le comparer à l'étirement réel subi par la lamelle de PDMS, des lamelles ont été recouvertes de Pluronic (Pluronic F-127, Sigma Aldrich), un copolymère photosensible, puis exposées à un rayonnement UVC afin d'oxyder le Pluronic à travers un masque de quartz imprimé d'une fine couche de métal formant un grand nombre de carrés de taille connue formant un quadrillage. Puis les lamelles ont été recouvertes de fibronectine fluorescente, qui ne pouvait adhérer qu'aux endroits non éclairés par les UV. 
 	
 	\paragraph{Ingrédients : }
 	\begin{itemize}
 	\item une lamelle de PDMS vierge
-	\item Pluronics
+	\item Pluronic
 	\item Fibronectine Cy3
 	\item un masque en quartz 
 	\item une lampe UVC
@@ -664,52 +669,57 @@ C'est pourquoi les résultats seront en général présentés uniquement sous la
 	
 	\paragraph{Protocole}
 	\begin{enumerate}
-	\item Préparer une solution de Pluronics 0,2\% en masse
-	\item Laisser incuber 1 ml de la solution de Pluronics pendant une heure à température ambiante
+	\item Préparer une solution de Pluronic 0,2\% en masse
+	\item Laisser incuber 1 ml de la solution de Pluronic pendant une heure à température ambiante
 	\item Rincer au PBS, puis à l'eau, laisser sécher
 	\item Exposer la lamelle derrière le masque aux UVC pendant 7 minutes
 	\item Diluer 4 \micro g de fibronectine fluorescente dans 1 ml de PBS
 	\item Laisser la solution de fibronectine incuber 30 minutes à 37 \degres C sur la lamelle, à l'abri de la lumière
-	\item Rincer au PBS et stockez à 4 \degres C dans le PBS, à l'abri de la lumière
+	\item Rincer au PBS et stocker à 4 \degres C dans le PBS, à l'abri de la lumière
 \end{enumerate}		
 	
 	Nous avons ainsi obtenu des lamelles recouvertes d'un quadrillage visible en microscopie de fluorescence. Ce quadrillage a été observé avant et après étirement, et l'étirement a alors été mesuré à partir de la formation du quadrillage.
 	
-	\begin{figure}
-	\includegraphics[scale=0.05]{Calibration_plot.png}
-	\includegraphics[scale=0.05]{Calibration_fibro_(RGB).png}
-	\caption{À gauche : image du plot reconstituée à partir d'images prises au 4X sur le microscope confocal. À droite : images en fluorescence du quadrillage de fibronectine Cy3 avant (en rouge) et après (en bleu) un étirement 30\%.}
-	\end{figure}
+%	\begin{figure}
+%	\includegraphics[scale=0.05]{Calibration_plot.png}
+%	\includegraphics[scale=0.05]{Calibration_fibro_(RGB).png}
+%	\caption{À gauche : image du plot reconstituée à partir d'images prises au 4X sur le microscope confocal. À droite : images en fluorescence du quadrillage de fibronectine Cy3 avant (en rouge) et après (en bleu) un étirement 30\%.}
+%	\end{figure}
 	
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/Zoom_Calibration_etireur.png} 
+
+\caption{Superposition des images prises en microscopie de fluorescence du quadrillage de fibronectine Cy3 imprimé sur une lamelle de PDMS avant(en rouge) et après (en bleu) étirement. }
+\end{figure}
 	Les images nous montrent que la déformation du PDMS par le plot est radiale et uniforme, et que le modèle géométrique le plus simple décrit bien quantitativement la déformation subie. 
 	
 	\subsection{Le microscope confocal}
 	
-	Pour les expériences d'étirement, il était nécessaire d'utiliser le microscope confocal du laboratoire car il était le seul à disposer d'une platine motorisée, de 4 lasers et des filtres automatisés. Cependant, l'étireur impose d'avoir un plan focal situé à une grande distance de l'objectif, ce qui impose l'utilisation d'un objectif à air à grande distance de travail. Cela nous interdit malheureusement de profiter de la fonctionnalité du confocal qui est de faire des images en 3D. 
+	Pour les expériences d'étirement, nous avons utilisé le microscope confocal du laboratoire car il dispose d'une platine motorisée, de 4 lasers et des filtres automatisés. Cependant, l'étireur impose d'avoir un plan focal situé à une grande distance de l'objectif, ce qui impose l'utilisation d'un objectif à air à grande distance de travail. Cela nous interdit malheureusement de profiter de la fonctionnalité du confocal qui est de faire des images en 3D. 
 	
 	Les observations en fluorescence contiennent donc nécessairement une intégration du signal selon l'axe vertical, ce qui implique que les endroits où la cellule est épaisse apparaissent comme plus lumineux que les endroits où elle est fine. 
 	
-	Il en ressort que la zone du noyau, la plus épaisse de la cellule, est presque toujours plus lumineuse que les bords de la cellules qui sont très fins. 
-	Il peut alors se révéler peu pertinent de comparer la fluorescence du cytoplasme en entier et la fluorescence du noyau lorsqu'on veut comparer la concentration d'une protéine fluorescente de part et d'autre de la membrane nucléaire.
-	
-	C'est pourquoi il peut être intéressant de regarder non seulement toute la cellule, mais également une zone péri-nucléaire, d'épaisseur semblable au noyau. Entre le noyau et la zone péri-nucléaire, on compare des luminosités à épaisseur fixée.
+%	Il en ressort que la zone du noyau, la plus épaisse de la cellule, est presque toujours plus lumineuse que les bords de la cellules qui sont très fins. 
+%	Il peut alors se révéler peu pertinent de comparer la fluorescence du cytoplasme en entier et la fluorescence du noyau lorsqu'on veut comparer la concentration d'une protéine fluorescente de part et d'autre de la membrane nucléaire.
+%	
+%	C'est pourquoi il peut être intéressant de regarder non seulement toute la cellule, mais également une zone péri-nucléaire, d'épaisseur comparable à celle du noyau. Entre le noyau et la zone péri-nucléaire, on compare des luminosités à épaisseur fixée.
 	
 	\paragraph{Description générale}
 	
-	Le microscope confocal est composé : 
+	Le microscope confocal est un modèle \og spinning  disk \fg d'Andor, composé : 
 	\begin{itemize}
 	\item d'un microscope inversé Olympus IX81
-	\item de 4 lasers de puissance réglable Andor Laser Combiner 400 series
+	\item de 4 lasers Andor Laser Combiner 400 series et des AOTF qui permettent de couper une partie de leur puissance.
 	\item d'une roue motorisée de 10 filtres Sutter Lambda 10B Controller
 	\item d'un disque rotatif Yokogawa CSUX1
 	\item d'une platine motorisée Prior Proscan II
-	\item d'un système piézo de réglage pour l'axe Z Andor APZ-100
-	\item d'une caméra Andor IXON+
+	\item d'un platine piézo de réglage pour l'axe Z Andor APZ-100
+	\item d'une caméra EMCCD IXON+ Andor Technologies
 	\item d'un ordinateur avec le logiciel constructeur IQ2 pour contrôler l'ensemble
 	\item d'une enceinte thermalisée par un Cube 2 de Life Imaging Services
 \end{itemize}	 
 
-Dans les expériences décrites, sauf indications contraires, il sera utilisé avec un objectif 20X Olympus à grande distance de travail. 
+Dans les expériences décrites, sauf indications contraires, il sera utilisé avec un objectif 20X à air Olympus à grande distance de travail (Olympus LUCPLFLN 20X, ouverture numérique 0.45, distance de travail 6.6 - 7.8 mm).
 
 Quatre configurations d'observation ont été utilisées pour la fluorescence : 
 \begin{itemize}
@@ -726,7 +736,7 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	
 	Après ensemencement et adhésion, les lamelles de PDMS peuvent être montées à l'avance sur le support et maintenues dans 5 à 7ml de milieu de culture blanc (5ml pour l'étirement 10\% et 7ml pour 30\%). 
 	
-	Juste avant l'expérience, la lamelle et le milieu de culture sont montés dans le reste de l'étireur et 1,5\% d'HEPES sont alors ajoutés pour tamponner l'acidité du milieu pendant la durée de l'expérience. L'étireur complet est alors placé sur la plate-forme du microscope et observé à l'aide d'un objectif 20X (trouver les caracs de l'objectif). Les cellules sont observées en lumière blanche et en fluorescence une première fois avant étirement brièvement, afin d'avoir une idée de l'état de départ des cellules. 
+	Juste avant l'expérience, la lamelle et le milieu de culture sont montés dans le reste de l'étireur et 1,5\% d'HEPES sont alors ajoutés pour tamponner le milieu pendant la durée de l'expérience. L'étireur complet est alors placé sur la platine du microscope et observé à l'aide d'un objectif 20X (trouver les caracs de l'objectif). Les cellules sont observées en lumière blanche et en fluorescence une première fois avant étirement brièvement, afin d'avoir une idée de l'état de départ des cellules. 
 	
 	En vissant le plot, on étire alors la lamelle rapidement en quelques secondes jusqu'à la déformation souhaitée. On cherche alors des cellules exprimant la MRTF-A GFP. À chaque fois qu'une ou plusieurs cellules sont visibles dans un champ, on enregistre la position de la platine motorisée. Toutes les 5 à 10 minutes, on retourne observer toutes les cellules répertoriées afin de suivre l'évolution de la localisation de MRTF-A au cours du temps. De nouvelles cellules sont recherchées jusqu'à 40 minutes après l'étirement et l'observation est ensuite maintenue pendant 2h après l'étirement. 
 	\begin{figure}
@@ -738,9 +748,9 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	
 	\subsection{Protocole d'étirement fixé}
 	
-	Le protocole d'étirement avec observation en direct ne nous permet pas d'observer la population de cellules à des instants courts, car il faut du temps pour retrouver un nombre suffisant de cellules. De plus, l'observation de l'état du cytosquelette en direct est difficile car les différents marqueurs disponibles perturbent trop le système : la surexpression d'actine lors de la transfection avec une actine Mcherry modifie de manière très visible l'équilibre entre MRTF-A et l'actine G, la LifeAct RFP, qui marque les filaments d'actine, est exprimée tellement intensément que sa fluorescence empiète sur celle de MRTF-A GFP. De plus, il n'existe pour l'instant aucun marqueur commercial permettant de visualiser l'actine G dans les cellules vivantes. 
+	Le protocole d'étirement avec observation en direct ne nous permet pas d'observer la population de cellules à des instants courts, car il faut du temps pour retrouver un nombre suffisant de cellules. De plus, l'observation de l'état du cytosquelette en direct est difficile car les différents marqueurs disponibles perturbent trop le système : la sur-expression d'actine lors de la transfection avec une actine mCherry modifie de manière très visible l'équilibre entre MRTF-A et l'actine G, ce qui sera présenté au chapitre 8, la LifeAct RFP, qui marque les filaments d'actine, est exprimée tellement intensément que sa fluorescence empiète sur celle de MRTF-A GFP. La différence d'expression des deux plasmides peut être en partie due à la différence de poids moléculaire des deux protéines : MRTF-A est une grosse protéine d'environ 150 kDa, alors que la Life ne fait que 17 acides aminés de long. De plus, il n'existe pour l'instant aucun marqueur commercial permettant de visualiser l'actine G dans les cellules vivantes. 
 	
-	Fixer les cellules nous permet d'avoir un marquage quadrichrome : la F-actine en rouge-profond grâce à la phalloïdine, la G-actine en rouge grâce à la DNaseI, MRTF-A GFP ou anticorps anti-MRTF-A en vert et l'ADN du noyau en bleu grâce au DAPI. 
+	Fixer les cellules nous permet d'avoir un marquage quadrichrome : la F-actine en rouge-profond grâce à la phalloïdine Alexa 647, la G-actine en rouge grâce à la DNaseI Alexa 594, MRTF-A GFP ou anticorps anti-MRTF-A en vert et l'ADN du noyau en bleu grâce au DAPI. 
 	
 	\begin{figure}
 	\includegraphics[scale=0.3]{2014-06-18-Et10-0-1(RGB).png}
@@ -755,12 +765,12 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	\subsection{Dépouillement des images}
 	\subsubsection{\'Etirement observé en direct, traitement qualitatif}
 	On obtient après une observation en direct d'étirement typique une vingtaine de série d'images de cellules observées pendant 120 minutes après étirement, comme la série exposée en figure \ref{Etirement_live} le présente.
-	Les images sont observées grâce à ImageJ, qui nous permet de reconstituer une pile d'images en 4 dimensions (x,y,temps et couleur). On peut alors observer qualitativement à l'\oe il s'il y a plus de MRTF-A GFP dans le noyau, dans le cytoplasme, ou si c'est homogène. 
+	Les images sont observées grâce à ImageJ, qui nous permet de reconstituer une pile d'images en 4 dimensions (x,y,temps et couleur). On peut alors observer qualitativement à l'\oe il s'il y a plus de MRTF-A GFP dans le noyau, dans le cytoplasme, ou si la répartition est homogène. 
 	
-	Toutes les données finales sont destinées à être stockées dans une base de donnée SQL. Cette forme de stockage de données permet de sélectionner et de trier les données en fonction de nombreux critères à la fois quantitatifs et qualitatifs. Pour remplir la base de donnée, j'ai également créé une interface en Python. Cette interface récupère dans les métadonnées des images prises au microscope les temps auxquelles ces images ont été prises. L'utilisateur peut alors remplir pour chaque temps la localisation principale de MRTF-A dans la cellule : Nucléaire, Homogène ou Cytoplasmique. 
+	Toutes les données finales sont destinées à être stockées dans une base de données SQL. Cette forme de stockage de données permet de sélectionner et de trier les données en fonction de nombreux critères à la fois quantitatifs et qualitatifs. Pour remplir et interroger la base de données, j'ai également créé une interface en Python. Cette interface récupère dans les métadonnées des images prises au microscope les temps auxquels ces images ont été prises. L'utilisateur peut alors remplir pour chaque temps la localisation principale de MRTF-A dans la cellule : Nucléaire, Homogène ou Cytoplasmique. 
 	Pour chaque champ d'observation, il note également le nombre de cellules visibles dans le champ, ce qui permet d'évaluer la densité locale de cellules. 
 	
-	Dans cette base de données, on retrouve alors pour chaque cellule la localisation de MRTF-A au cours du temps écoulé depuis l'étirement, l'étirement, le passage, le nombre de cellules présentes dans chaque champ, et l'expression en Actine Mcherry.
+	Dans cette base de données, on retrouve alors pour chaque cellule la localisation de MRTF-A au cours du temps écoulé depuis l'étirement, l'étirement, le passage, le nombre de cellules présentes dans chaque champ, et l'expression en actine mCherry.
 	\subsubsection{\'Etirement fixé, traitement quantitatif}	
 	
 	Pour chaque lamelle fixée, on obtient une série d'images en 5 couleurs : rouge profond, rouge, vert, bleu et lumière blanche. 
@@ -771,11 +781,11 @@ Pour chaque cellule, on procède alors ainsi :
 \begin{itemize}
 \item Si la cellule est isolée, on utilise un seuillage sur l'image en rouge profond pour sélectionner le contour de la cellule
 \item Si la cellule est collée à une autre cellule, il faut sélectionner le contour à la main
-\item On mesure alors la valeur moyenne des pixels dans cette zone, son aire, ses paramètres géométriques\dots
+\item On mesure alors la valeur moyenne des pixels dans cette zone, son aire, ses paramètres géométriques, 
 successivement en rouge profond (F-actine), en rouge (G-actine) et en rapport (F/G). 
 \item On fait un seuillage sur l'image en DAPI afin de sélectionner le contour du noyau
 \item On mesure alors les valeurs dans le noyau en rouge profond, rouge, vert et en rapport F/G. 
-\item On sélectionne enfin une zone péri-nucléaire d'intensité homogène, qui correspond à une zone d'épaisseur proche de celle du noyau
+\item On sélectionne enfin une zone péri-nucléaire d'intensité homogène en vert, qui correspond à une zone d'épaisseur proche de celle du noyau
 \item On mesure alors les valeurs en rouge et en vert dans cette zone
 \end{itemize}	
 	
