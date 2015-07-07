@@ -1,15 +1,15 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%
-%\addbibresource{biblio.bib}
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+\addbibresource{biblio2.bib}
+\begin{document}
 \chapter{MRTF-A}
 La fonction principale des protéines de la famille des myocardines est l'activation du facteur de transcription Serum Response Factor. 
 
@@ -68,8 +68,8 @@ One-Twenty-Two-Megakaryocytic-Acute-Leukemia (OTT-MAL) est la protéine résulta
 
 \subsubsection{D'autres manières de réguler SRF}
 
-Si ces deux familles de cofacteurs sont les principales voies de régulation de SRF, il possède encore d'autres coactivateurs et corépresseurs, dont je ne parlerai pas ici (\cite{posern_actin_2006}). Des micro-ARN peuvent également réguler sont activité au niveau des ARN messagers transcrits \cite{chen}. 
-SRF peut aussi être clivé en deux parties non fonctionnelles  \cite{drewett}, phosphorylé de sorte qu'il soit incapable de se lier aux MRTF ni à l'ADN \cite{Iyer}, ou être séquestré dans le cytoplasme \cite{lange}.   
+Si ces deux familles de cofacteurs sont les principales voies de régulation de SRF, il possède encore d'autres coactivateurs et corépresseurs, dont je ne parlerai pas ici (\cite{posern_actin_2006}). Des micro-ARN peuvent également réguler sont activité au niveau des ARN messagers transcrits (\cite{chen_role_2006}). 
+SRF peut aussi être clivé en deux parties non fonctionnelles  (\cite{drewett_serum_2001}), phosphorylé de sorte qu'il soit incapable de se lier aux MRTF ni à l'ADN \cite{iyer_novel_2003}, ou être séquestré dans le cytoplasme (\cite{lange_kinase_2005}).   
 
 
 \section{MRTF-A, indépendamment de SRF}
@@ -104,11 +104,11 @@ Ainsi l'activation de la voie TNF$\alpha$/NF-$\kappa$B peut être empêchée par
  \includegraphics[scale=0.30]{MRTF-A_actines_complexes.png}
  \caption{D'après \cite{hirano_sensing_2011}\label{hirano}}
  \end{figure}
- Deux domaines basiques, B2 et B3 sont inclus dans les motifs RPEL et forment un signal de localisation nucléaire (NLS) bipartite (\cite{rajakyla_actin-regulated_2010}). Lorsqu'il n'y a pas d'actine sur les motifs RPEL, ce NLS peut se lier au complexe Importine$\alpha / \beta$ (\cite{hirano_sensing_2011},\cite{rajakyla_actin-regulated_2010}) et MRTF-A est importée dans le noyau de la cellule, où se trouve SRF. En présence de suffisamment de monomères d'actine, leur liaison aux domaines RPEL recouvre le NLS et MRTF-A reste cytoplasmique (Posern 2002, \cite{miralles_actin_2003},\cite{posern_mutant_2004}). 
+ Deux domaines basiques, B2 et B3 sont inclus dans les motifs RPEL et forment un signal de localisation nucléaire (NLS) bipartite (\cite{rajakyla_actin-regulated_2010}). Lorsqu'il n'y a pas d'actine sur les motifs RPEL, ce NLS peut se lier au complexe Importine $\alpha / \beta$ (\cite{hirano_sensing_2011},\cite{rajakyla_actin-regulated_2010}) et MRTF-A est importée dans le noyau de la cellule, où se trouve SRF. En présence de suffisamment de monomères d'actine, leur liaison aux domaines RPEL recouvre le NLS et MRTF-A reste cytoplasmique (\cite{posern_mutant_2002}, \cite{miralles_actin_2003},\cite{posern_mutant_2004}). 
  
  MRTF-A est exportée du noyau par Crm1 (\cite{vartiainen_nuclear_2007},\cite{hayashi_differences_2013}).Cependant, ces deux articles se contredisent sur la question de la liaison à l'actine : le premier observe qu'une surexpression de l'actine augmente la vitesse d'export, le second montre que la liaison entre Crm1 et MRTF-A est empêchée lorsque MRTF-A est liée à l'actine. Récemment, \cite{rajakyla_rna_2015} ont découvert par une élégante expérience de FRET que la protéine Ddx19 est indispensable à MRTF-A pour changer de conformation préalablement à son import (voir figure \ref{Ddx}. Une explication possible qui serait compatible avec les deux observations apparemment contradictoires concernant l'export serait que pour être exportée, MRTF-A doive retrouver sa configuration repliée, et qu'elle ne puisse le faire qu'en se liant à l'actine. Elle devrait ensuite perdre tout ou partie des actines liées à ses RPEL pour se lier à Crm1 et être exportée. En particulier, sur la figure \ref{hirano}, le NES se situerait plus à droite encore que le NLS2. La conformation à 3 actines laisserait donc plus facilement apparaître le NES. 
  
- La drogue anti-cancéreuse CCG1423 se lie aux motifs RPEL de MRTF-A, MRTF-B et de la myocardine, et bloque leur import dans le noyau \cite{hayashi_2014}. 
+ La drogue anti-cancéreuse CCG1423 se lie aux motifs RPEL de MRTF-A, MRTF-B et de la myocardine, et bloque leur import dans le noyau (\cite{hayashi_2014}). 
  
  Les motifs RPEL sont donc la clé de la régulation de MRTF-A par l'actine : selon la concentration en monomères d'actine, MRTF-A est localisée dans le cytoplasme en cas d'excès et dans le noyau, où se trouve SRF, en cas de manque. Lorsque le domaine RPEL est muté ou absent, la protéine est constitutivement nucléaire (\cite{miralles_actin_2003}), comme la myocardine, dont les motifs RPEL ne sont pas fonctionnels (\cite{guettler_rpel_2008}). 
  
@@ -132,7 +132,7 @@ Ainsi l'activation de la voie TNF$\alpha$/NF-$\kappa$B peut être empêchée par
  
  
  \subsection{Phosphorylation}
-	MRTF-A peut être phosphorylée par ERK1/2 (\cite{miralles_actin_2003},\cite{cen_myocardin/mkl_2004}). \cite{muelich} montrent qu'un mutant non phosphorylable est incapable de se lier à l'actine et est constitutivement nucléaire, car il ne peut pas être exporté. Les données de \cite{kalita_role_2006} montrent également que MRTF-A doit être phosphorylée pour se lier à SRF et activer la transcription.
+	MRTF-A peut être phosphorylée par ERK1/2 (\cite{miralles_actin_2003},\cite{cen_myocardin/mkl_2004}). \cite{muehlich_serum-induced_2008} montrent qu'un mutant non phosphorylable est incapable de se lier à l'actine et est constitutivement nucléaire, car il ne peut pas être exporté. Les données de \cite{kalita_role_2006} montrent également que MRTF-A doit être phosphorylée pour se lier à SRF et activer la transcription.
 	
 	Dans les neurones, la phosphorylation de MRTF-A par ERK1/2 est même la voie principale de régulation de son activité, car la protéine est toujours nucléaire, mais elle n'active SRF qu'une fois phosphorylée (\cite{kalita_role_2006}). 
 	
@@ -282,7 +282,7 @@ Dans le foie de rats et de souris, la polymérisation de l'actine est maximale a
 \subsection{MRTF-A et cancers}
 Le rôle de MRTF-A dans l'invasion, les métastases et la prolifération cancéreuse est complexe. 
 Dans l'exemple du cancer du sein, on a attribué à MRTF-A un rôle antiprolifératif en tant que facteur de transcription de l'Eplin$\alpha$ (Epithelial protein lost in Neoplasm), protéine qui est inversement corrélée avec la mortalité et l'invasion cancéreuse ( \cite{leitner_epithelial_2010}).
-Cependant, dans les cancers du sein sensibles aux \oe strogènes, l'activation de MRTF-A favorise la transition vers un type insensible au contrôle hormonal (\cite{kerdivel_activation_2014}) et MRTF et SRF sont nécessaires à l'adhésion, à la motilité et à l'invasion dans des lignées issues de cancers du sein et de mélanomes (\cite{medjkane_myocardin-related_2009}). CCG1423 est d'ailleurs une drogue anti-cancéreuse qui bloque la voie RhoA/MRTF/SRF. Une publication récente montre qu'elle intéragit directement avec MRTF-A, MRTF-B et avec la myocardine au niveau de leurs séquences RPEL lorsqu'il ,'y a pas d'actines, et qu'elle bloque ainsi leur import dans le noyau \cite{hayashi_2014}. 
+Cependant, dans les cancers du sein sensibles aux \oe strogènes, l'activation de MRTF-A favorise la transition vers un type insensible au contrôle hormonal (\cite{kerdivel_activation_2014}) et MRTF et SRF sont nécessaires à l'adhésion, à la motilité et à l'invasion dans des lignées issues de cancers du sein et de mélanomes (\cite{medjkane_myocardin-related_2009}). CCG1423 est d'ailleurs une drogue anti-cancéreuse qui bloque la voie RhoA/MRTF/SRF. Une publication récente montre qu'elle intéragit directement avec MRTF-A, MRTF-B et avec la myocardine au niveau de leurs séquences RPEL lorsqu'il ,'y a pas d'actines, et qu'elle bloque ainsi leur import dans le noyau \cite{hayashi_differences_2013}. 
  
 
 \cite{leitner_mal/mrtf-controls_2011} montre bien le rôle complexe que peut avoir la régulation d'un élément du cytosquelette dans différents contextes : MRTF-A augmente l'adhésion dans deux types cellulaires, des cellules épithéliales non-invasives et des cellules tumorales de cancer du sein, mais l'effet sur la motilité est opposé dans les deux types. Dans les cellules mammaires épithéliales, l'augmentation de l'adhésion causée par la surexpression de MRTF-A cloue les cellules sur place : l'adhésion est trop forte et les cellules ne sont plus capables de se détacher pour avancer. Inversement, l'adhésion était le facteur limitant dans les cellules tumorales. Avec la surexpression de MRTF-A, elles adhèrent mieux et se déplacent plus efficacement. 
@@ -303,4 +303,4 @@ L'histone méthyltransférase SMYD3 coopère avec MRTF-A, sans interaction direc
 
 
 
-%\end{document}
+\end{document}

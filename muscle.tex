@@ -1,16 +1,16 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%\addbibresource{biblio.bib}
-%
-%
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio2.bib}
+
+
+\begin{document}
 \chapter{De la cellule au muscle}
 
 Les muscles représentent environ 40\% de la masse totale d'un humain adulte. Ils participent à tous les phénomènes indispensables à notre vie : ils nous permettent de nous mouvoir, d'exercer des forces sur notre environnement, mais aussi de respirer, de faire circuler le sang, de digérer \dots 
@@ -38,11 +38,11 @@ La différenciation se produit quand les myoblastes sont suffisamment nombreux e
 %% Impossible de retrouver la référence
 \begin{figure}
 \includegraphics[scale=0.4]{Figures/Myoblast_fusion.png} 
-\caption{\'E tapes successives de la différenciation des myoblastes en myotubes chez la souris, d'après \cite{Abmayr}}
+\caption{\'E tapes successives de la différenciation des myoblastes en myotubes chez la souris, d'après \cite{abmayr_myoblast_2012}. }
 \end{figure}
 
 Les myoblastes vont alors s'aligner les uns avec les autres, sortir du cycle cellulaire et devenir des myocytes. Certains de ces myocytes deviendront des cellules fondatrices de myotubes. Les autres myocytes vont alors fusionner avec lors d'un processus asymétrique qui mène à la formation de myotubes polynuclés de plusieurs centaines de microns de long. 
-Les myoblastes étendent autour d'eux des lamellipodes et des filopodes pour contacter les cellules voisines. Au niveau de ces contacts, les compositions des lipides de la membrane change, on trouve un grand nombre de protéines comme les M- et N-cadhérines, les intégrines et les filamines qui assurent un lien avec le cytosquelette (revue par \cite{abmayr}. Ce dernier est réorganisé localement : un réseau dense se forme sous la membrane, mis sous tension par la myosine 2A \cite{duan}. 
+Les myoblastes étendent autour d'eux des lamellipodes et des filopodes pour contacter les cellules voisines. Au niveau de ces contacts, les compositions des lipides de la membrane change, on trouve un grand nombre de protéines comme les M- et N-cadhérines, les intégrines et les filamines qui assurent un lien avec le cytosquelette (revue par \cite{abmayr_myoblast_2012}. Ce dernier est réorganisé localement : un réseau dense se forme sous la membrane, mis sous tension par la myosine 2A \cite{duan_dependence_2009}. 
 Le myoblaste envahit le myotube à l'aide de structures podosome-like quasiment exclusivement composés d'actine en filaments, avant que des pores se forment entre les deux cellules pour achever la fusion. 
 
 
@@ -63,7 +63,7 @@ Une fois le myotube formé, il mature pour devenir une myofibre en développant 
 
 \begin{figure}
 \includegraphics[scale=0.2]{Figures/sarcomere.png} 
-\caption{Organisation schématique du disque Z, d'après \cite{ferrer_2008}}
+\caption{Organisation schématique du disque Z, d'après \cite{ferrer_molecular_2008}}
 \end{figure}
 
 Un sarcomère est composé de filaments d'actine et de filaments de myosines qui sont dotés de milliers de têtes de myosines. Le mouvement des têtes de myosines sur le filament d'actine fait coulisser les deux filaments l'un par rapport à l'autre, ce qui crée la contraction musculaire. 
@@ -75,7 +75,7 @@ Les nébulines, de très longues protéines qui peuvent se lier à environ 200 a
 
 \begin{figure}
 \includegraphics[scale=0.4]{Figures/Myomesine.png}
-\caption{Organisation dans les deux plans des filaments de myosine au niveau de la bande M, d'après \cite{tskhovrebova_2012}}
+\caption{Organisation dans les deux plans des filaments de myosine au niveau de la bande M, d'après \cite{tskhovrebova_making_2012}}
 \end{figure}
  
 Autour des filaments d'actine, la tropomyosine, liée également à la troponine, régule la liaison entre le filament d'actine et le filament de myosine, en recouvrant ou découvrant les sites de liaisons des têtes de myosines à l'actine, et le maintient polymérisé. 
@@ -94,17 +94,17 @@ La desmine, le filament intermédiaire du cytosquelette spécifique du muscle s'
 
 \subsection{Rôle de la voie RhoA/MRTF-A/SRF}
 
-Parmi les gènes cibles de SRF, on trouve un grand nombre de protéines indispensables à la constitution des sarcomères :  tous les différents gènes d'actine et en particulier l'$\alpha$ Skeletal Actin , des myosines (MHC9,myo16,myoIE), des $\alpha$-actinines, des intégrines et des tropomyosines (\cite{selvaraj_2004},\cite{charvet_2006},\cite{esnault_rho-actin_2014}).
+Parmi les gènes cibles de SRF, on trouve un grand nombre de protéines indispensables à la constitution des sarcomères :  tous les différents gènes d'actine et en particulier l'$\alpha$ Skeletal Actin , des myosines (MHC9,myo16,myoIE), des $\alpha$-actinines, des intégrines et des tropomyosines (\cite{selvaraj_megakaryoblastic_2003},\cite{charvet_new_2006},\cite{esnault_rho-actin_2014}).
 
-MyoD, facteur de transcription de la famille des Myogenic Regulatory Factors et marqueur de la différenciation en cellule musculaire, contient un Serum Response Element (\cite{l'honore_2003}) et est activé par MRTF-A/SRF (\cite{Mokalled_2011}. 
+MyoD, facteur de transcription de la famille des Myogenic Regulatory Factors et marqueur de la différenciation en cellule musculaire, contient un Serum Response Element (\cite{lhonore_myod_2003}) et est activé par MRTF-A/SRF (\cite{mokalled_mastr_2012}. 
 
 Il suffit qu'un seul des maillons de la voie RhoA/MRTF/SRF manque pour que la différenciation en cellule musculaire échoue. 
 
-\textit{In vivo} dans des souris ayant une délétion conditionnelle de SRF dans les muscles, on observe une diminution de l'expression de la tropomyosine et de l'$\alpha$ actine du muscle squelettique, corrélés à des défauts dans la croissance des myofibres, une désorganisation des sarcomères et une hypotrophie musculaire (\cite{charvet_2006},\cite{li_requirement_2005}). \textit{In vitro}, un SRF dominant négatif bloque la différenciation de myoblastes C2C12 en myotubes (\cite{wei_1998}).
+\textit{In vivo} dans des souris ayant une délétion conditionnelle de SRF dans les muscles, on observe une diminution de l'expression de la tropomyosine et de l'$\alpha$ actine du muscle squelettique, corrélés à des défauts dans la croissance des myofibres, une désorganisation des sarcomères et une hypotrophie musculaire (\cite{charvet_new_2006},\cite{li_requirement_2005}). \textit{In vitro}, un SRF dominant négatif bloque la différenciation de myoblastes C2C12 en myotubes (\cite{wei_rhoa_1998}).
 
 Les souris dominant négatif MRTF-A sont viables mais présentent une hypotrophie musculaire qui dépend du niveau d'expression de MRTF-A, une fibrose, et des noyaux positionnés au centre des fibres musculaires, ce qui les désorganise \cite{li_requirement_2005}. \textit{In vitro}, la différenciation des C2C12 nécessite également la présence des MRTF \cite{selvaraj_megakaryoblastic_2003}. 
 
-Bloquer RhoA avec un dominant négatif (\cite{wei_1998}) empêche également la différenciation.
+Bloquer RhoA avec un dominant négatif (\cite{wei_rhoa_1998}) empêche également la différenciation.
 
 \cite{kawauchi_p130cas-dependent_2012} détaillent un peu plus loin ces voies de signalisations impliquées dans la différenciation musculaire, en montrant que la signalisation passe par p130Cas, les intégrines $\beta$3 et ILK, qui désactivent à la fois ERK1/2 (ce qui empêche la phosphorylation de MRTF-A et donc promeut son accumulation nucléaire, et met hors jeu les TCF), et la cofiline (ce qui promeut l'actine polymérisée). Ils montrent que p130Cas contribue à maintenir l'actine polymérisée et MRTF-A présent dans le noyau alors que la différenciation se fait dans un milieu pauvre en sérum, où RhoA est diminué. 
  
@@ -114,6 +114,7 @@ Les sarcomères mis bout à bout  forment des myofibrilles. Les myofibrilles adj
 
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/12_29_0.png} 
+ \caption{Illustration de la structure globale du muscle.}
 \end{figure}
 
 Dans une myofibre, on trouve de nombreuses myofibrilles liées les unes aux autres, de l'ordre de quelques dizaines, qui occupent la majeure partie de l'espace disponible. Les multiples noyaux sont repoussés en périphérie de la cellule. 
@@ -140,7 +141,7 @@ Les fibres rapides permettent des mouvements puissants, développant une grande 
 \subsection{Mécanismes moléculaires}
 \begin{figure}[p]
 \includegraphics[scale=0.3]{Figures/Contraction.png}
-\caption{Illustration réalisée par Hank van Helvete (CC BY-SA 2.5)}
+\caption{Illustration du cycle de la contraction musculaire, réalisée par Hank van Helvete (CC BY-SA 2.5)}
 \end{figure}
 Le signal de contraction musculaire arrive du système nerveux par un neurone moteur, qui est attaché à une fibre musculaire par la plaque motrice.
 Lorsque le signal nerveux est transmis au niveau de la synapse, la membrane de la myofibre est dépolarisée, ce qui aboutit à libérer des ions Calcium du Réticulum Sarcoplasmique (l'équivalent pour la cellule musculaire du Réticulum Endoplasmique lisse). 
@@ -163,7 +164,7 @@ Lorsque la concentration en calcium diminue car le signal du neurone moteur s'es
 \subsection{Mécanique de la contraction musculaire}
 Dans les conditions optimales, une seule cellule musculaire mature humaine peut exercer une force de l'ordre de 0,3 \micro N, et un muscle peut exercer autour de 30N/cm$^2$ de section. 
 
-Le modèle de Hill \cite{Hill}, élaboré bien avant que les mécanismes internes de la contraction musculaire soient connus, permet de relier la vitesse de contraction d'un muscle aux forces qu'il est capable de développer. 
+Le modèle de Hill (\cite{hill_heat_1938}), élaboré bien avant que les mécanismes internes de la contraction musculaire soient connus, permet de relier la vitesse de contraction d'un muscle aux forces qu'il est capable de développer. 
 
 Hill constate que pour un muscle de taille donnée se raccourcissant d'une longueur $x$, l'énergie dissipée dans le muscle est proportionnelle à $x$ : $W_d=ax$. $a$ est proportionnel à la section efficace du muscle (et donc du nombre de myofibres), et comme la force maximale supportée par le muscle également, le rapport entre les deux  est constant : $$\frac{a}{P_0}=0.25$$
 
@@ -184,7 +185,7 @@ Cette relation peut se réécrire :
 \end{equation}
 L'équation de Hill relie donc la force que peut appliquer un muscle $P$ à la vitesse de contraction $v$. Plus la contraction est rapide, moins elle peut être forte, au contraire plus elle est lente et plus elle peut développer de force. 
 
-Non seulement la loi de Hill est vérifiée pour les muscles striées, mais elle l'est également au niveau du myoblaste unique \cite{Mitrossilis} et même au niveau d'un unique filament d'actine déplacé par 8 têtes de myosine du muscle squelettique \cite{Debold}, ce qui confirme l'hypothèse de Huxley \cite{Huxley} qui attribue ce comportement aux propriétés du complexe acto-myosine. 
+Non seulement la loi de Hill est vérifiée pour les muscles striées, mais elle l'est également au niveau du myoblaste unique (\cite{mitrossilis_single-cell_2009}) et même au niveau d'un unique filament d'actine déplacé par 8 têtes de myosine du muscle squelettique (\cite{debold_slip_2005}), ce qui confirme l'hypothèse de Huxley qui attribue ce comportement aux propriétés du complexe acto-myosine. 
 
 \section{Les cellules satellites, MRTF-A et régulation de la masse musculaire}
 
@@ -207,4 +208,4 @@ La désactivation de SRF, l'injection de CCG1423 (drogue inhibant MRTF/SRF), ou 
 Au contraire, l'expression d'une MRTF-A incapable de se lier à l'actine, et donc constitutivement active (sur le modèle de la myocardine), permet de protéger les muscles de l'atrophie induite par la dénervation, ce que ne fait pas la simple sur-expression de MRTF-A GFP. Cependant, si SRF n'est pas fonctionnel, cette protection n'est plus efficace, prouvant que c'est bien le couple MRTF/SRF qui est nécessaire. 
 
 
-%\end{document}
+\end{document}

@@ -8,7 +8,7 @@
 \usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 \newcommand{\micro}{$\mathrm{\mu}$}
-\addbibresource{biblio.bib}
+\addbibresource{biblio2.bib}
 
 \begin{document}
 
@@ -67,13 +67,13 @@ Elle a l'avantage de marquer toute l'actine, et pas seulement les filaments comm
 Mais elle a le désavantage de faire sur-exprimer l'actine	 à la cellule, de manière variable d'une cellule transfectée à l'autre. 
 Or MRTF-A est une sonde extrêmement sensible de la quantité de G-actine dans la cellule.  Sur-exprimer l'actine augmente la quantité totale d'actine G, et a un effet très visible sur MRTF-A, comme il sera présenté au chapitre 8. 
 
-Les trois autres méthodes sont des détecteurs qui marquent uniquement les filaments d'actine, avec l'avantage de voir plus nettement la structure du cytosquelette. Il est à noter qu'actuellement il n'existe aucune sonde commercialisée pour observer l'actine monomérique \textit{in vivo}, même si une sonde a été développée récemment à partir des groupes RPEL de MRTF-A \cite{belin_visualization_2013}. 
+Les trois autres méthodes sont des détecteurs qui marquent uniquement les filaments d'actine, avec l'avantage de voir plus nettement la structure du cytosquelette. Il est à noter qu'actuellement il n'existe aucune sonde commercialisée pour observer l'actine monomérique \textit{in vivo}, même si une sonde a été développée récemment à partir des groupes RPEL de MRTF-A \parencite{belin_visualization_2013}. 
 
-La LifeAct est une petite protéine de seulement 17 acides aminés qui se lie aux filaments d'actine \cite{lukinavicius}. Adjointe à un fragment de protéine fluorescente, comme la GFP ou mCherry, elle permet d'observer les filaments dans les cellules vivantes.  Son ADN doit être transfecté dans la cellule pour y être exprimé avant observation. Elle a été présentée comme un moyen s'observer les filaments sans les perturber, et sans affecter leur polymérisation et leur dépolymérisation. Cependant, et comme ce sera présenté au chapitre 8, la LifeAct n'est pas complètement sans influence sur le cytosquelette d'actine. On constate une tendance à stabiliser les filaments d'actine qui est visible par l'observation de MRTF-A. 
+La LifeAct est une petite protéine de seulement 17 acides aminés qui se lie aux filaments d'actine \parencite{riedl_lifeact:_2008}. Adjointe à un fragment de protéine fluorescente, comme la GFP ou mCherry, elle permet d'observer les filaments dans les cellules vivantes.  Son ADN doit être transfecté dans la cellule pour y être exprimé avant observation. Elle a été présentée comme un moyen s'observer les filaments sans les perturber, et sans affecter leur polymérisation et leur dépolymérisation. Cependant, et comme ce sera présenté au chapitre 8, la LifeAct n'est pas complètement sans influence sur le cytosquelette d'actine. On constate une tendance à stabiliser les filaments d'actine qui est visible par l'observation de MRTF-A. 
 
-La F-tractin \cite{johnson} est un fragment de protéine constitué des 66 premiers acides aminés de l'inositol trisphosphate 3-kinase A, qui se lie aux filaments d'actine. Comme la LifeAct, sa séquence codante doit être exprimée par la cellule avant observation. Comme la Life, j'ai également observé une tendance de la F-tractin à stabiliser suffisamment les filaments d'actine pour affecter la localisation de MRTF-A. 
+La F-tractin \parencite{johnson_neuronal_2009} est un fragment de protéine constitué des 66 premiers acides aminés de l'inositol trisphosphate 3-kinase A, qui se lie aux filaments d'actine. Comme la LifeAct, sa séquence codante doit être exprimée par la cellule avant observation. Comme la Life, j'ai également observé une tendance de la F-tractin à stabiliser suffisamment les filaments d'actine pour affecter la localisation de MRTF-A. 
 
-Enfin, la SiRactine est une des dernières sondes développées pour marquer les filaments d'actine \textit{in vivo} \cite{Lukinavicius}. Il s'agit d'un fluorophore Silicone-Rhodamine conjugué à un fragment de la japlakinolide, drogue connue pour se lier aux filaments d'actine et les stabiliser. Cette construction a pour particularité, par un mécanisme d'activation, d'être 100 fois plus fluorescentes lorsqu'elle est liée aux filaments d'actine que dans l'état non-lié, ce qui minimise le bruit de fond. La qualité de la fluorescence devait permettre d'utiliser la SiR-actine dans des quantité suffisamment faibles pour que l'influence stabilisatrice du japlakinolide sur les filaments d'actine soit invisible. Un effet sur les expériences avec MRTF-A est néanmoins visible. 
+Enfin, la SiRactine est une des dernières sondes développées pour marquer les filaments d'actine \textit{in vivo} \parencite{lukinavicius_fluorogenic_2014}. Il s'agit d'un fluorophore Silicone-Rhodamine conjugué à un fragment de la japlakinolide, drogue connue pour se lier aux filaments d'actine et les stabiliser. Cette construction a pour particularité, par un mécanisme d'activation, d'être 100 fois plus fluorescentes lorsqu'elle est liée aux filaments d'actine que dans l'état non-lié, ce qui minimise le bruit de fond. La qualité de la fluorescence devait permettre d'utiliser la SiR-actine dans des quantité suffisamment faibles pour que l'influence stabilisatrice du japlakinolide sur les filaments d'actine soit invisible. Un effet sur les expériences avec MRTF-A est néanmoins visible. 
 
 MRTF-A est une sonde extrêmement sensible de l'état du cytosquelette de la cellule, et toutes les méthodes que nous avons utilisées pour visualiser le cytosquelette \textit{in vivo} ont montré des effets sur sa localisation dans une population de cellules. 
 	
@@ -262,10 +262,10 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 		\subsubsection{\'Electroaimant}
 		L'électro-aimant est composé d'un c\oe ur entouré d'une bobine de fil de cuivre. Le passage d'un courant électrique dans la bobine crée un champ magnétique dont les lignes de champ sont conduites par le c\oe ur. 
 		
-		\paragraph{Le c\oe ur} Deux types de c\oe ur ont été testés : un c\oe ur en fer doux (diamètre, longueur) et un c\oe ur en mu-métal, un alliage de grande perméabilité magnétique (diamètre \nombre{5,10mm} , longueur \nombre{143,64}mm).
+		\paragraph{Le c\oe ur} Deux types de c\oe ur ont été testés : un c\oe ur en fer doux (diamètre : \nombre{5.30}mm, longueur : \nombre{52.17}mm) et un c\oe ur en mu-métal, un alliage de grande perméabilité magnétique (diamètre : \nombre{5,10mm} , longueur : \nombre{143,64}mm).
 		
 		Une extrémité du barreau est taillée en pointe. La forme de pointe permet d'augmenter le gradient de champ magnétique en resserrant les lignes de champ à cet endroit. Il est très important de conserver sa symétrie cylindrique, et d'avoir le rayon de courbure le plus faible possible au bout de la pointe. Les résultats obtenus sont visible en figure $\ref{pointe}$. \'Etant en fer doux, le barreau est très malléable, il faut donc le manipuler avec précautions : le moindre choc aplatit la pointe. 
-	 Le barreau a été usiné au tour, puis pour la taille d'entretien de la pointe, on monte le barreau sur un moteur de perceuse, ce qui permet de garder la symétrie cylindrique, et on l'approche d'un morceau de papier de verre de grain de plus en plus fin, incliné avec un angle de 30 $\degres$ .
+	 Le barreau a été usiné au tour à l'atelier de mécanique, puis pour la taille d'entretien de la pointe, on monte le barreau sur une perceuse sur pied, ce qui permet de garder la symétrie cylindrique, et on l'approche d'un morceau de papier de verre de grain de plus en plus fin, collée sur une pièce métallique inclinée avec un angle de 30 $\degres$ .
 	 
 	 \begin{figure}[ht!]%
 \includegraphics[width=6cm]{pointe1-2011-03-29-20X.png}%
@@ -275,7 +275,7 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 \label{pointe}
 \end{figure}
 	 
-	 L'angle optimal pour maximiser le gradient peut être calculé \cite{magnetisme}. Ici, on doit aussi prendre en compte le fait que la pointe doit être approchée de biais au-dessus de la lamelle d'échantillon. Il nous faut donc un angle plus faible que l'angle optimal, trop obtus. On a fixé cet angle à 30 $\degres$ , car il est prévu d'approcher la pointe de la lamelle sur laquelle seront les cellules avec un angle de 45 $\degres$, comme représenté sur la figure \ref{montage global} .
+	 L'angle optimal pour maximiser le gradient peut être calculé \parencite{durand_electrostatique_1953}, il vaut environ 55\degres. Ici, on doit aussi prendre en compte le fait que la pointe doit être approchée de biais au-dessus de la lamelle d'échantillon. Il nous faut donc un angle plus faible que l'angle optimal, trop obtus. On a fixé cet angle à 30 $\degres$ , car il est prévu d'approcher la pointe de la lamelle sur laquelle seront les cellules avec un angle de 45 $\degres$, comme représenté sur la figure \ref{montage global} .
 
 \paragraph{La bobine}
 
@@ -285,36 +285,37 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 	\begin{figure}
 	\includegraphics[scale=1]{champB.pdf}
 	\end{figure}
-	Le champ $\vec{B}$ généré par un solénoïde de longueur finie dans le vide sur son axe à une distance $z$:
+	Le champ $\vec{B}$ généré par un solénoïde de longueur finie dans le vide sur son axe à une distance $z$ vaut:
 		
 		$$ \vec{B} = \frac{\mu_0 n I}{2} \left(\cos \left(\theta_2 -\cos \theta_1 \right)\right) \vec{u_z}$$
 		
-		dépend du nombre $n$ de spires par mètre, de la longueur de la bobine $l_b$ et du courant $I$ qui passe à l'intérieur. On veut donc maximiser $n$ et $I$ pour augmenter la valeur de $B$. La distance $z$ sera de l'ordre de 700\micro m. 
+		Sa valeur dépend du nombre $n$ de spires par mètre, de la longueur de la bobine $l_b$, de son rayon $r_b$ et du courant $I$ qui la traverse. On veut donc maximiser $n$ et $I$ pour augmenter la valeur de $B$. La distance $z$ sera de l'ordre de 700\micro m. 
 		
 		La puissance dissipée par effet Joule $$P = R I^2$$ dépend de la résistance de la bobine et de $I$, il s'agit de minimiser ces quantités.
 		
-		La résistance de la bobine : $$R = \frac{L}{\gamma s}$$
+		La résistance $R$ de la bobine dépend de la section du fil $s$, de sa longueur totale $L$ et de $\gamma$ la conductivité du cuivre :
+:
+		 $$R = \frac{L}{\gamma s}$$
 		
-		dépend de la section du fil $s$, de sa longueur totale $L$. $\gamma$ est la conductivité du cuivre.  
+				
+		Le nombre de spires par mètre est directement reliée à la section du fil   : $$ n = \frac{1}{2r_f} = \frac{1}{2 \sqrt{\frac{s}{\pi}}} = \sqrt{\frac{\pi}{4s}}$$  Il est facile de voir que lorsque $s$ augmente, $R$ diminue en $s^{-1}$ alors que $n$ ne diminue qu'en $s^{-1/2}$, et donc qu'il faut choisir la section de fil la plus grande disponible.
+		En pratique, on ne fait pas qu'une couche de bobinage, mais $n_c$, le nombre de spires par mètres est aussi relié à la longueur totale de fil $L$.
 		
-		La section du fil est directement reliée au nombre de spires par mètre : $$ n = \frac{1}{2r_f} = \frac{1}{2 \sqrt{\frac{s}{\pi}}} = \sqrt{\frac{\pi}{4s}}$$  Il est facile de voir que lorsque $s$ augmente, $R$ diminue en $s^{-1}$ alors que $n$ ne diminue qu'en $s^{-1/2}$, et donc qu'il faut choisir la section de fil la plus grande disponible.
-		En pratique, on ne fait pas qu'une couche de bobinage, mais plusieurs, le nombre de spires par mètres est donc aussi relié à la longueur totale de fil $L_f$.
+		$$R \propto L \approx n_c \frac{\pi r_b l_b}{r_f}$$ où  $l_b$ sa longueur, $r_f$ le rayon du fil. 
 		
-		$$R \propto L_f \approx n_c \frac{\pi d_b l_b}{d_f}$$ où $d_b$ est le diamètre de la bobine, $l_b$ sa longueur, $d_f$ le diamètre du fil. 
+		$$n = n_c \frac{1}{2r_f}$$
 		
-		$$n = n_c \frac{1}{d_f}$$
-		
-		Pour augmenter $n_c$ en augmentant le moins possible $R$, il faut alors minimiser le rapport $\frac{\pi d_b l_b}{d_f}$. On a déjà maximisé $d_f$, on minimise alors également $d_b$ le diamètre de la bobine.
+		Pour augmenter $n_c$ en augmentant le moins possible $R$, il faut alors minimiser le rapport $\frac{\pi r_b l_b}{r_f}$. On a choisi $r_f$ le plus grand disponible, on prend également $r_b$ le diamètre de la bobine le plus petit possible.
 		
 		En ce qui concerne la longueur de la bobine, $l_b$, on aimerait la minimiser pour diminuer $R$, cependant, le champ $B$ est maximal pour une bobine de longueur infinie. La longueur optimale correspond en fait à celle du c\oe ur : ajouter de la longueur de bobine au-delà n'augmente que peu le champ, à cause de la faible perméabilité magnétique de l'air.
 		
-		La bobine finalement utilisée dans nos expériences est composée de 8 couches de fil de cuivre de diamètre 0,5mm bobinées sur un tube d'aluminium de diamètre extérieur égal à 5,38mm sur une longueur de 66,5mm. Sa résistance est mesurée à 3,3$\Omega$ et son inductance à 1,2mH. 
+		La bobine finalement utilisée dans nos expériences est composée de 8 couches de fil de cuivre de diamètre 0,5mm bobinées sur un tube d'aluminium de diamètre extérieur égal à 5,38mm sur une longueur de 66,5mm et de diamètre intérieur égal à celui du c\oe ur. Sa résistance est mesurée à 3,3$\Omega$ et son inductance à 1,2mH. 
 		
-		L'aluminium est un bon support pour la bobine car il est à la fois léger, car il ne faut pas surcharger le micromanipulateur qui portera l'électro-aimant dans le montage final, et qu'il conduit bien la chaleur dégagée par l'effet Joule pour qu'elle soit évacuée vers la pointe. L'aluminium a pu également être taraudé à une extrémité afin d'y attacher une vis de support qui est tenue par le micromanipulateur, et qui sert également à évacuer une partie de la chaleur de la pointe.                       
+		L'aluminium est un bon support pour la bobine car il est à la fois léger, car il ne faut pas surcharger le micromanipulateur qui portera l'électro-aimant dans le montage final, et qu'il conduit bien la chaleur dégagée par l'effet Joule pour qu'elle soit évacuée vers le c\oe ur. L'aluminium a pu également être taraudé à une extrémité afin d'y attacher une vis de support en laiton qui est tenue par le micromanipulateur, et qui sert également à évacuer une partie de la chaleur de la pointe.                       
 		\subsubsection{Montage sous microscope}
 		\paragraph{Circuit électrique}
 		
-		Un générateur de tension basse fréquence, contrôlé par ordinateur par l'intermédiaire d'une carte PCI, alimente un amplificateur de courant fabriqué par les ateliers du laboratoire, qui permet de délivrer des courants jusqu'à 2A à la bobine. 
+		Un générateur de tension basse fréquence, contrôlé par ordinateur par l'intermédiaire d'une carte PCI (Measurement Computing 1208 HS4AO), alimente un amplificateur de courant fabriqué par les ateliers du laboratoire, qui permet de délivrer des courants jusqu'à 2A à la bobine. 
 		La bobine ayant à dessein une résistance la plus faible possible pour limiter l'effet Joule, une résistance de 10$\Omega$ est ajoutée au circuit. Un ampèremètre mesure à tout instant l'intensité délivrée à la bobine. 
 		
 		Le temps de réponse caractéristique du circuit RL est donc de 16ms, ce qui sera négligeable dans toutes les configurations où les pinces seront utilisées. 
@@ -326,13 +327,13 @@ Le principe des pinces magnétiques est donc d'utiliser un électro-aimant, qui 
 		 \label{montage global}
 		 \end{figure}
 		 
-		 L'électro-aimant que l'on a fabriqué précédemment est monté sur un micromanipulateur (InjectMan NI2, Eppendorf, avec une précision de position de 0.1$\mu$m), et incliné à 45 $\degres$ . La force que nous allons exercer sur les billes est parallèle à l'axe de la bobine, nous allons donc appliquer simultanément une force horizontale et une force verticale vers le haut. 
+		 L'électro-aimant que l'on a fabriqué précédemment est monté sur un micromanipulateur (InjectMan NI2, Eppendorf, avec une précision de position de 0.1$\mu$m), incliné à 45 $\degres$ . La force que nous allons exercer sur les billes est parallèle à l'axe de la bobine, nous allons donc appliquer simultanément une force horizontale et une force verticale vers le haut. 
 		 
 		 Un thermomètre est fixé sur la pointe pour mesurer sa température à tout instant et vérifier qu'il n'y a pas de risque d'endommager les cellules pendant l'expérience. 
 		 
-		 Les cellules ont préalablement été ensemencées sur une lamelle de verre et incubées avec les microbilles recouvertes de fibronectine. Sur une lame de verre 22mm*64mm*0.15mm, on monte un séparateur et la lamelle de verre, le tout formant une chambre expérimentale fermée de 65\micro l emplie de milieu de culture. 		 
+		 Les cellules ont préalablement été ensemencées sur une lamelle de verre et incubées avec les microbilles recouvertes de fibronectine. Sur une lame de verre 22mm*64mm*0.15mm, on monte un séparateur (GeneFrame Spacer AB-0577, Thermo Scientific) et la lamelle de verre, le tout formant une chambre expérimentale fermée de 65\micro l emplie de milieu de culture. 		 
 		 
-		 Le micromanipulateur et la lamelle contenant les cellules sont montés sur un microscope inversé (Leica DMIRB). \`A l'aide du micromanipulateur, on peut approcher la pointe de l'électro-aimant à une distance de 100$\mu$m de la lamelle. On enregistre les images de la bille à l'aide d'une caméra (CoolSnap HQZ) reliée à un ordinateur qui la contrôle par l'intermédiaire de MicroManager. 
+		 Le micromanipulateur et la lamelle contenant les cellules sont montés sur un microscope inversé (Leica DMIRB). \`A l'aide du micromanipulateur, on peut approcher la pointe de l'électro-aimant à une distance de 100$\mu$m de la lamelle. On enregistre les images de la bille à l'aide d'une caméra (CoolSnap HQ2) reliée à un ordinateur qui la contrôle par l'intermédiaire de MicroManager. 
 		 
 		 \begin{figure}
 		 \includegraphics[scale=0.5]{modeop1.pdf}
@@ -357,25 +358,25 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
 	\subsection{Calibration}
   
  Les caractéristiques magnétiques des billes ne sont pas fournies par le fabriquant, et de plus à des distances inférieures au millimètre, la précision sur les mesures de $\vec{B}$ et $\vec{\nabla}B$ est mauvaise. 
- Il est donc impossible de calculer de manière fiable la force exercée par la point sur les billes à un courant et à une distance données.
+ Il est donc impossible de calculer de manière fiable la force exercée par la pointe sur les billes à un courant et à une distance donnée.
  Pour connaître la force exercée par l'électro-aimant sur les billes en fonction de la distance et du courant, nous avons donc procédé à une calibration.
  
  \subsubsection{Principe}
  
- Les billes de diamètre $d=4.5$\micro m sont placées dans du PDMS liquide de masse volumique $\rho$ proche de celle de l'eau mais de grande viscosité $\eta=0.75$Pa.s . 
+ Les billes de diamètre $d=4.5$\micro m sont placées dans du PDMS liquide de masse volumique $\rho$ proche de celle de l'eau mais de grande viscosité $\eta=0.75$Pa.s. 
  Dans ces conditions, le nombre de Reynolds associé aux billes lorsqu'elles se déplacent à une vitesse $U$ dans le liquide vaut : $$Re = \frac{\rho U d }{\eta}=6*U*10^{-3}$$
- et donc $Re \ll 1$ tant que la vitesse $U \ll 167 m.s^{-1}$. 
- On peut donc en conclure que les forces inertielles sont complètement négligeables devant les forces visqueuses dans ces conditions. 
+ et donc $Re \ll 1$ tant que  $U \ll 167 m.s^{-1}$. 
+ On peut donc en conclure que l'inertie est complètement négligeable devant les effets visqueux dans ces conditions. 
  
- Les billes subissent donc deux forces : la force magnétique exercée par la pointe, et les forces de friction visqueuses exercées par le fluide qui s'annulent à l'équilibre. 
+ Les billes subissent donc deux forces : la force magnétique exercée par la pointe, et les forces de friction visqueuses exercées par le fluide. 
  
  La force de friction visqueuse sur une sphère peut être modélisée par la relation de Stokes : 
  $$ \vec{F}_{vis}=- 3 \pi \eta d \vec{U} =-\vec{F}_{mag}$$
  
- Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peuvent pas être exclues. On appelle $h$ la distance à la lamelle la plus proche. 
+ Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peuvent pas être exclue. On note $h$ la distance à la lamelle la plus proche. 
  De plus, la viscosité $\eta$ du fluide est très sensible aux variations de température, or l'électro-aimant chauffe pendant l'application de la force à cause de l'effet Joule dans la bobine. 
  Comme la mesure est effectuée à une distance de 0,5 à 1mm de la pointe, celle-ci chauffe le fluide localement. 
- On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a$. 
+ On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a=0.0178 Pa.s/°C$ autour de 24\degres C. 
  
  Le modèle de Stokes est donc corrigé ainsi : 
  
@@ -394,10 +395,10 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
 
  
  L'électro-aimant est monté sur le micromanipulateur à l'horizontale.  
- On suspend 1 \micro l de solution mère de billes dans 499 \micro l de PDMS, et on passe cette suspension 45 minutes dans une cuve à ultra-sons en cisaillant toutes les 5 minutes.
+ On suspend 1 \micro l de suspension mère de billes dans 499 \micro l de PDMS, et on passe cette suspension 45 minutes dans une cuve à ultra-sons en cisaillant toutes les 5 minutes.
  La suspension est placée dans une chambre expérimentale formée par une lamelle 22mm*64mm*0.15mm, une lamelle 22mm*22mm*0.1mm et un séparateur de 240 \micro m d'épaisseur. La chambre est ouverte du côté où l'on va approcher la pointe. 
  
- La chambre expérimentale est placée sous un microscope droit Reichert doté d'un objectif 5X et d'un 20X et d'une caméra reliée à un ordinateur.
+ La chambre expérimentale est placée sous un microscope droit Reichert doté d'un objectif 5X et d'un 20X et d'une caméra reliée à un ordinateur. Le protocole d'étalonnage est alors le suivant : 
  
  \begin{quote}
  \begin{enumerate}
@@ -416,26 +417,26 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  On recommence cette opération une dizaine de fois pour chaque intensité de courant. 
  
  \subsubsection{Traitement des données}
- On obtient alors $T_{init}$,$T_{fin}$, $i$, $h$ directement, et des vidéos desquelles on extrait $d_{min}$, $d_{max}$ les petit et grand axes de la bille, la position $(x(t),y(t))$ de la bille au court du temps, et une image de la pointe d'où on obtient $(x_p,y_p)$ la position de la pointe. 
+ On obtient alors $T_{init}$, $T_{fin}$, $i$, $h$ directement, et des vidéos desquelles on extrait $d_{min}$, $d_{max}$ les petit et grand axes de la bille, la position $(x(t),y(t))$ de la bille au cours du temps, et une image de la pointe d'où on obtient $(x_p,y_p)$ la position de la pointe. 
  
  Les vidéos des billes attirées par la pointe sont traitées avec l'algorithme d'ImageJ \emph{Analyse Particules} qui repère les billes et relève leur position sur toutes les images successives et leur taille. 
  Cependant, si ImageJ repère toutes les billes sur chaque image, il ne relie pas une position à l'instant $t$ à la position de la même bille à l'instant $t+ \Delta t$. 
  
- Pour cela, j'ai créé sous Igor un algorithme de tri qui sépare les trajectoires des différents billes et crée pour chaque bille une trajectoire $(x(t),y(t)$. 
+ Pour cela, j'ai créé sous Igor un algorithme de tri qui sépare les trajectoires des différentes billes et crée pour chaque bille une trajectoire $(x(t),y(t))$. 
  
- La position de la pointe $(xp,yp)$ est repérée sur l'image prise en début d'expérience au 5X, grâce à ImageJ également. Comme la position du champ du 20X dans le champ du 5X est connue, la position $(xp,yp)_{5X}$ de la pointe dans le champ du 5X peut être convertie en position dans le champ du 20X $(xp,yp)_{20X}$. 
+ La position de la pointe $(x_p,y_p)$ est repérée sur l'image prise en début d'expérience au 5X, grâce à ImageJ également. Comme la position du champ du 20X dans le champ du 5X est connue, la position $(xp,yp)_{5X}$ de la pointe dans le champ du 5X peut être convertie en position dans le champ du 20X $(xp,yp)_{20X}$. 
  
- On peut constater immédiatement que la vitesse maximale des billes est atteinte quasiment immédiatement, on peut donc supposer que nous sommes toujours dans le régime stationnaire $\vec{F}_{mag}=-\vec{F}_{vis}$. 
- Les billes ne se déplacent cependant pas à une vitesse constante, car lorsqu'elles se rapprochent de la pointe, la force $F_{mag}$ à laquelle elle sont soumises change. 
+ Nous nous situons toujours dans le régime stationnaire $\vec{F}_{mag}=-\vec{F}_{vis}$. 
+ Les billes ne se déplacent cependant pas à une vitesse constante, car lorsqu'elles se rapprochent de la pointe, la force $F_{mag}$ à laquelle elle sont soumises augmente. 
  
  Enfin, pour chaque bille, un algorithme sous Igor permet de : 
  \begin{itemize}
  \item Calculer la distance de la bille à la pointe à chaque instant.
- \item \`A l'aide d'un ajustement linéaire local, en déduire la vitesse $U(t)$ de la bille.
+ \item \`A l'aide d'un ajustement linéaire local de la trajectoire sur quarante points (donc 8 secondes), en déduire la vitesse $U(t)$ de la bille.
  \item \`A l'aide de la formule de Stokes corrigée \ref{Stokes_corr}, estimer la force exercée par la pointe sur la bille.
  \end{itemize}
  
- On obtient donc une série de courbes de calibrations, où à chaque intensité de courant on connaît le module de la force magnétique $F$ en fonction de la distance de la bille à la pointe. 
+ On obtient donc une série de courbes de calibration, où à chaque intensité de courant on connaît le module de la force magnétique $F$ en fonction de la distance de la bille à la pointe. 
  
  \begin{figure}
  \includegraphics[scale=0.5]{Calibration_resume.png}
@@ -443,7 +444,7 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  \end{figure}
 	
 	
-	\subsection{Protocole de renforcement}
+	\subsection{Protocole de mesures mécaniques}
 	\subsubsection{Préparation des cellules et des billes}
 	
 	Les cellules sont ensemencées sur une lamelle de verre recouverte de fibronectine comme indiqué en \ref{Coating} 24 heures avant le début des expériences. 
