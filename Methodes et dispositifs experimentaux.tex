@@ -1,16 +1,16 @@
-\documentclass                                                                                                                                                                                                                                                                                                                                       {report}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\graphicspath{{Figures/}}
-\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
-\newcommand{\micro}{$\mathrm{\mu}$}
-\addbibresource{biblio2.bib}
-
-\begin{document}
+%\documentclass                                                                                                                                                                                                                                                                                                                                       {report}
+%\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%\graphicspath{{Figures/}}
+%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+%\usepackage[colorlinks,linkcolor=blue]{hyperref}
+%\newcommand{\micro}{$\mathrm{\mu}$}
+%\addbibresource{biblio2.bib}
+%
+%\begin{document}
 
 \chapter{Méthodes et dispositifs expérimentaux}
 
@@ -557,34 +557,37 @@ Par la suite, pour les expériences menées plus tardivement avec Pierre-Olivier
 	\includegraphics[scale=0.11]{c9-rigidification-couleurs.png}
 	\caption{Déplacement au cours du temps d'une bille adhérant sur une C2C12 et soumise à 4 créneaux de force de 100pN pendant 33s toutes les 100s. }
 	\end{figure}
-	\subsection{Fonction de fluage}
+	\subsection{Fonction de fluage \label{fluage}}
 	\`A l'issue d'une expérience, nous obtenons donc la position de la bille au cours du temps, en fonction de la force appliquée, pour 4 à 6 applications de la force. 
 	
-	Cependant, pour obtenir des mesures de modules visco-élastiques, il est nécessaire d'utiliser un modèle reliant le mouvement de la bille à la déformation de la cellule, et la force exercée sur la bille à la contrainte subie par la cellule.
-	Plusieurs modèles existent, en particulier un modèle théorique, le modèle de Gallet, et un modèle numérique développé dans la thèse d'Alain Kamgoué, mais les deux supposent que la bille est soumise à une force incluse dans le plan focal du microscope, ce qui n'est pas le cas de notre pince magnétique, qui tire également verticalement. 
+	\begin{figure}
+	\includegraphics[scale=0.4]{Figures/j_0.pdf} 
+	\caption{Schéma pour le modèle analytique.}
+	\end{figure}
 	
-	Le modèle de Gallet suppose que la bille est enfoncée d'un angle $\theta$ dans la cellule, et qu'elle est soumise à une force horizontale $\vec{F}_0$. La cellule est modélisée comme un milieu visco-élastique semi-infini homogène et isotrope. La bille est supposée s'ancrer dans la cellule de manière homogène et infiniment rigide. 
+	\begin{figure}
+	\includegraphics[scale=0.3]{Figures/Kamgoue.png} 
+	\caption{Schéma pour le modèle numérique \parencite{kamgoue_estimation_2007}}
+	\end{figure}
+	
+	Cependant, pour obtenir des mesures de modules visco-élastiques, il est nécessaire d'utiliser un modèle reliant le mouvement de la bille à la déformation de la cellule, et la force exercée sur la bille à la contrainte subie par la cellule.
+	Plusieurs modèles existent, en particulier un modèle analytique, le modèle développé dans l'équipe par F.Gallet \parencite{laurent_assessment_2002}, et un modèle numérique développé dans la thèse d'Alain Kamgoué dans l'équipe de J.Ohayon \parencite{kamgoue_estimation_2007}, mais les deux supposent que la bille est soumise à une force dans le plan d'étalement de la cellule, ce qui n'est pas le cas de notre pince magnétique, qui tire également verticalement. 
+	
+	Le modèle de Gallet suppose que la bille est enfoncée d'un angle $\theta$ dans la cellule, et qu'elle est soumise à une force horizontale $\vec{F}_0$. La cellule est modélisée comme un milieu visco-élastique semi-infini ($h_u \rightarrow \infty$) homogène et isotrope. La bille est supposée s'ancrer dans la cellule de manière homogène et infiniment rigide. 
 	La valeur de la fonction de fluage est alors donnée par : 
 	\begin{equation}
 	J(t)=2\pi a \frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right)  \frac{\delta R(t)}{F_0} 
 	\label{Fluage}
 	\end{equation}
-	où $a$ est le rayon de la sphère, $\theta$ l'angle d'enfoncement dans le milieu visco-élastique, $\delta R$ le déplacement de la bille et $F_0$ la composante horizontale de la force exercée sur la bille. 
+	où $a$ est le rayon de la bille, $\theta$ son demi-angle d'enfoncement dans le milieu visco-élastique, $\delta R$ le déplacement de la bille et $F_0$ la composante horizontale de la force exercée sur la bille. 
 	
 	Passons en revue les différentes approximations.
 	
-	 L'ancrage de la bille à la cellule est assurée par les liaisons fibronectine-intégrine ponctuellement sur la surface de bille immergée dans la cellule. Il nous est impossible avec les techniques dont nous disposons d'avoir une quelconque idée de la quantité de liaisons ponctuelles à la surface de contact. Cependant, en plus des contacts spécifiques, la cellule peut établir avec la membrane des contacts non spécifiques. La supposition d'un très grand nombre de sites de liaisons au niveau de la surface de contact est donc crédible. On l'a vu précédemment, au niveau du complexe d'adhésions à l'intérieur de la cellule, la situation est extraordinairement complexe. Lorsque l'on sonde par les intégrines, on sonde la rigidité de l'ensemble de l'assemblage complexe qui les relie au cytosquelette d'actine. 
+	 L'ancrage de la bille à la cellule est assurée par les liaisons fibronectine-intégrine ponctuellement sur la surface de bille immergée dans la cellule. Il nous est difficile avec les techniques dont nous disposons d'avoir une idée de la quantité de liaisons ponctuelles à la surface de contact. Cependant, en plus des contacts spécifiques, la cellule peut établir avec la membrane des contacts non spécifiques. La supposition d'un très grand nombre de sites de liaisons au niveau de la surface de contact est donc crédible. On l'a vu précédemment, au niveau du complexe d'adhésion à l'intérieur de la cellule, la situation est extraordinairement complexe. Lorsque l'on sonde par les intégrines, on sonde la rigidité de l'ensemble de l'assemblage complexe qui les relie au cytosquelette d'actine. 
 	
 	La cellule est considérée comme un milieu semi-infini. 
-	Cette approximation serait facile à justifier si la bille était de taille négligeable par rapport à l'épaisseur de la cellule, mais l'épaisseur de la cellule et la taille de la bille sont en fait presque égales; et souvent, la bille est plus grande que l'épaisseur de la cellule lorsqu'elle est loin du noyau. 
-	Cependant, la cellule n'est certainement pas non plus isotrope. 
-	En effet, lorsqu'avec les pinces magnétiques, on exerce une force ayant deux composantes égales, l'une horizontale et l'autre verticale, la bille n'a un mouvement détectable que dans le plan horizontal. 
-	Dans le plan vertical, la bille ne sort pas du plan focal, alors qu'un mouvement très faible serait immédiatement détectable par l'intermédiaire des anneaux de diffraction. 
-	Sur le verre, les C2C12 sont très étalées et leur surface inférieure est ancrée à la fibronectine adsorbée sur le verre de façon très forte et la rigidité des cellules selon l'axe vertical est beaucoup plus grande à la fois que la rigidité dans les deux autres directions, mais aussi que la gamme de ridigités que nous pouvons sonder avec les pinces magnétiques. 
-	
-	Enfin, la cellule est considérée comme un matériau passif, ce qui n'est le cas que pendant les 10 à 20 premières secondes d'application de la force. 
-	Après ce temps, il devient évident que la cellule exerce activement des forces sur la bille. 
-	C'est pourquoi il faut se limiter à appliquer ce modèle pendant les premières 10 secondes de l'application de la force, et c'est pour cette raison qu'il est important de prendre le plus d'images possible pendant ce temps. 
+	Cette approximation serait facile à justifier si la bille était de taille négligeable par rapport à l'épaisseur de la cellule, mais l'épaisseur de la cellule et la taille de la bille sont en fait comparables; et souvent, le rayon de la bille est même plus grand que l'épaisseur de la cellule lorsqu'elle est loin du noyau. 
+
 	
 	Durant sa thèse sous la direction de Jacques Ohayon, Alain Kamgoué a développé un modèle à partir de simulations numériques, qui prend à en compte à la fois l'angle d'enfoncement de la cellule et l'épaisseur finie de la cellule sous la bille, mais qui considère alors la cellule comme un matériau purement élastique dont il cherche à extraire le module d'Young. Il calcule alors un préfacteur géométrique : 
 $$ p(\theta,\frac{h_u}{2R})=\frac{ F_0}{2 \pi a \delta R(t) E} $$
@@ -597,25 +600,21 @@ J= 2 \pi a p(\theta,\frac{h_u}{2R}) \frac{\delta R(t)}{F_0}
 
 La différence entre les deux modèles est donc uniquement le facteur géométrique, qui dépend dans les deux cas de l'enfoncement de la bille, et dans le second cas également de l'épaisseur de la cellule en-dessous de la bille.
 
-Durant les expériences de pinces magnétiques, nous ne pouvons pas mesurer l'angle d'enfoncement des billes. Cependant, des cellules fixées ont été observées au microscope confocal, ce qui nous a permis de mesurer l'angle d'enfoncement des billes, et la hauteur $h_u$ pour 23 billes. On obtient alors : 
-$$ \langle h_u \rangle = 1.6 \mu m \: \langle \theta \rangle = 110 \degres$$
+Lorsque $h_u \rightarrow \infty$, on retrouve bien $\alpha_{Kamgoue} \rightarrow \alpha_{Gallet}$. Dans des conditions pas trop extrêmes ($\theta<120\deg$, $\frac{h_u}{2a}>0,1$), les deux facteurs restent du même ordre de grandeur. 
 
-Ce qui nous donne avec les deux modèles : 
-\begin{align}
- p_{Gallet}&=\frac{2}{3}\left(\frac{1}{\left( \frac{3}{2 \sin \theta}+\frac{\cos \theta}{\sin^3 \theta}\right)} \right) = 0.50 \\
-p_{Kamgoue}&= 0.92\\
-\end{align}
+Les deux supposent une force horizontale, ce qui est faux ici. Ils supposent également, et c'est justifié dans \cite{laurent_assessment_2002}, que ce préfacteur est le même pour la composante visqueuse et pour la composante élastique. 
 
-Les deux modèles donnent donc deux valeurs différentes, mais ayant le même ordre de grandeur. 
-Les deux supposent une force horizontale, ce qui est faux ici. Le modèle de Gallet prend en compte le caractère visco-élastique de la cellule, mais en faisant l'hypothèse d'un milieu semi-infini, alors que le modèle de Kamgoué-Ohayon considère une épaisseur finie mais oublie la composante visqueuse du milieu cellulaire. 
-
-Le véritable préfacteur se trouve probablement entre les deux, et en réalité ce n'est pas l'essentiel ici : il s'agit d'observer l'évolution des paramètres mécaniques de la cellule au cours du temps, et cette comparaison reste strictement identique quel que soit le préfacteur utilisé. 
+Le véritable préfacteur se trouve probablement entre les deux, et en réalité ce n'est pas l'essentiel ici : il s'agit d'observer l'évolution des paramètres mécaniques de la cellule au cours du temps, et cette comparaison reste à peu près identique quel que soit le préfacteur utilisé. 
 C'est pourquoi les résultats seront en général présentés uniquement sous la forme $\frac{\delta R(t)}{F_0}$ sans tenir compte du préfacteur géométrique. 
 
 
+Les deux modèles font une autre hypothèse, nécessaire pour le calcul, en supposant que le milieu cellulaire est isotrope.  
+	Or, lorsqu'avec les pinces magnétiques, on exerce une force ayant deux composantes égales, l'une horizontale et l'autre verticale, la bille n'a un mouvement détectable que dans le plan horizontal. 
+	Dans le plan vertical, la bille ne sort pas du plan focal, alors qu'un mouvement très faible serait immédiatement détectable par l'intermédiaire des anneaux de diffraction. Ces observations seront discutées plus en détails dans le chapitre suivant qui présente les résultats. 
 
-
-	
+	Enfin, la cellule est considérée comme un matériau passif, ce qui n'est le cas que pendant les 10 à 20 premières secondes d'application de la force. 
+	Après ce temps, il devient évident que la cellule exerce activement des forces sur la bille. 
+	C'est pourquoi il faut se limiter à appliquer ce modèle pendant les premières 10 secondes de l'application de la force, et c'est pour cette raison qu'il est important de prendre le plus d'images possible pendant ce temps. 
 	
 \section{\'Etirement}
 	L'objectif de ce dispositif est de soumettre les cellules à une déformation constante pendant plusieurs heures et de les observer en fluorescence pendant l'étirement sur un microscope inversé. 
@@ -792,4 +791,4 @@ successivement en rouge profond (F-actine), en rouge (G-actine) et en rapport (F
 	On obtient alors des tableaux de données contenant les valeurs moyennes d'intensité pour la phalloïdine, la DNase et la MRTF-A (GFP ou endogène) et les aires des cellules et de leurs noyaux. 
 	
 	
-\end{document}
+%\end{document}
