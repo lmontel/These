@@ -65,7 +65,7 @@ L'objectif étant d'observer également le cytosquelette d'actine, nous avons me
 L'ajout d'actine mCherry augmente le réservoir d'actine monomérique de la cellule, et d'autant plus que l'actine fluorescente polymérise un peu moins bien que l'actine sauvage, et donc participe à maintenir MRTF-A dans le cytoplasme. 
 Cette méthode d'observation est donc loin d'être neutre pour notre système, comme on le verra plus loin.
  
-La LifeAct \cite{riedl} est une petite protéine qui se lie aux filaments d'actine, et qui n'est pas censée interférer avec la polymérisation des filaments. Cependant, nous avons constaté une tendance à la stabilisation des filaments avec la LifeAct. De plus, sa fluorescence était trop intense et interférait de manière importante avec le signal de MRTF-A GFP. 
+La LifeAct \cite{riedl_lifeact:_2008} est une petite protéine qui se lie aux filaments d'actine, et qui n'est pas censée interférer avec la polymérisation des filaments. Cependant, nous avons constaté une tendance à la stabilisation des filaments avec la LifeAct. De plus, sa fluorescence était trop intense et interférait de manière importante avec le signal de MRTF-A GFP. 
 
 La DNaseI et la phalloïdine nous permettent d'observer à la fois l'actine G et l'actine F dans la cellule, mais ne peuvent être utilisées que sur des échantillons fixés, ce qui limite fortement l'observation de la dynamique de réorganisation du cytosquelette.
  
@@ -265,7 +265,7 @@ De plus, sur la figure \ref{Et30_transloc}, on peut constater qu'il y a dès le 
 
 Au contraire, les évènements entrants sont au même niveau que pendant l'expérience témoin pendant les 80 premières minutes de l'étirement 30\%. À partir de t=80 minutes, on observe que le comportement s'inverse : il y a un grand nombre d'évènements entrants et les évènements sortants redescendent au niveau du témoin. 
 
-Un pic d'évènements sortants devrait être lié à une grande quantité de G-actine libérée dans ces cellules, de manière très rapide, ce qui nous amène naturellement à poser l'hypothèse d'une destruction brutale du cytosquelette en réponse à un déformation trop forte. Cette défaillance du cytosquelette d'actine à 30 \% de déformation est surprenamment cohérente avec les mesures faites sur de l'actine \textit{in vitro} \cite{janmey}. 
+Un pic d'évènements sortants devrait être lié à une grande quantité de G-actine libérée dans ces cellules, de manière très rapide, ce qui nous amène naturellement à poser l'hypothèse d'une destruction brutale du cytosquelette en réponse à un déformation trop forte. Cette défaillance du cytosquelette d'actine à 30 \% de déformation est surprenamment cohérente avec les mesures faites sur de l'actine \textit{in vitro} \cite{janmey_mechanical_1994}. 
 À partir de t=80 minutes, lorsque les évènements entrants commencent à augmenter, on verrait alors les conséquences d'une reconstruction progressive du cytosquelette. 
 
  
@@ -294,20 +294,45 @@ La seconde est de passer aux expériences fixées, qui ont l'avantage de pouvoir
 
 \subsection{Visualisation de l'actine pendant l'étirement 10\%}
 
+\subsubsection{Utiliation de F-tractine RFP}
+
+
+La LifeAct a montré ses effets pendant les expériences sur les pinces magnétiques, elle n'a donc pas été réutilisée pour les expériences d'étirement. 
+
+La F-tractine est un marqueur des filaments qui fonctionne de manière similaire, mais est réputé perturber moins le cytosquelette d'actine. Elle est constituée des 66 premiers acides aminés d'une protéine qui se lie aux filaments d'actine. Comme la LifeAct, son gène doit être transfecté préalablement dans la cellule. 
+
+Malheureusement, les expériences qui suivent n'ont pas pu être réalisées exactement dans les mêmes conditions que les expériences précédemment décrites. En effet, suite au rachat de notre fournisseur, la nanofectine n'est plus commercialisée. Les transfections MRTF-A GFP des expériences avec la F-tractine et avec la SiRactine ont donc dû être réalisées avec de la lipofectamine. 
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Lipo_vs_Nano.png}
+\caption{Comparaison de l'état après 20 minutes d'étirement (dont nous avons vu précédemment qu'il est proche de l'état initial) pour des C2C12 étirées à 10\% transfectées à la nanofectine (90 cellules en 5 expériences) ou à la lipofectamine (70 cellules en 4 expériences).  \label{LipoNano}}
+\end{figure}
+
+La figure \ref{LipoNano} montre la différence entre les répartitions initiales pour les cellules transfectées à la nanofectine et celles transfectées à la lipofectamine. On voit que MRTF-A est beaucoup plus souvent localisée dans le cytoplasme avec la lipofectamine. Cela correspond bien à ce qui est visible pendant les expériences : avec la lipofectamine, on trouve plus de cellules exprimant le plasmide, mais le niveau de fluorescence est moins fort pour chacune. Les cellules pour lesquelles la transfection a réussi sur-expriment donc moins MRTF-A GFP que lors d'une tranfection à la nanofectine.
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/F_tractin.png} 
+\caption{\'Evolution de la population de cellules ayant MRTF-A cytoplasmique, homogène ou nucléaire en fonction du temps écoulé depuis le début de l'étirement à 10\%, pour des C2C12 transfectées MRTF-A GFP et exprimant ou non la F-tractin RFP. \label{Ftractin}}
+\end{figure}
+
+On peut voir sur la figure \ref{Ftractin} que la F-tractin perturbe de manière importante la répartition de MRTF-A dans les cellules, et ce dès le début de l'observation. 
+La quantité de cellules ayant MRTF-A cytoplasmique est divisée par deux dès le début de l'expérience. 
+
+Ces expériences ont été réalisées sur des lamelles recouvertes de 5 fois moins de fibronectine que les expériences précédentes et suivantes. 
+On remarque dans ce cas que l'étirement n'a pas d'effet sur les cellules, en fait, l'observation des images nous montre qu'elles se décollent de la lamelle. 
+Lorsqu'il y a trop peu d'adhésion, l'effet mécanique de l'étirement ne peut pas être transmis aux cellules, et il n'y a aucune réaction. 
+
+
+\subsubsection{Utilisation de SiRactine}
 La SiRactine est un dérivé d'une drogue connue pour stabiliser les filaments d'actine, le jasplakinolide, couplé à un fluorophore dont la fluorescence sera 100 fois plus élevée lorsqu'elle est liée aux filaments d'actine. 
 Elle a l'avantage de s'utiliser en très petites quantités, et directement sur les cellules à observer sans transfection et sans rinçage, ce qui fait que contrairement à l'actine mCherry ou à la LifeAct, toutes les cellules seront marquées à des niveaux semblables. 
 
 Durant ces expériences, nous avons réalisé des mesures quantitatives d'intensité de fluorescence en MRTF-A GFP et en SiRactine. Pour chaque cellule, on calcule le ratio entre l'intensité médiane de fluorescence dans la zone péri-nucléaire et dans le noyau. Un ratio au-dessus de 1 correspond à une cellules qui était labellisée cytoplasmique, tandis qu'un ratio inférieur à 1 correspond à une localisation majoritairement nucléaire. 
 
-Malheureusement, les expériences avec cette nouvelle sonde n'ont pas pu être réalisées exactement dans les mêmes conditions que les expériences précédemment décrites. En effet, suite au rachat de notre fournisseur, la nanofectine n'est plus commercialisée. Les transfections MRTF-A GFP des expériences avec la SiRactine ont donc dû être réalisées avec de la lipofectamine. 
 
 
-\begin{figure}
-\includegraphics[scale=0.5]{Figures/Lipo_vs_Nano.png}
-\caption{Comparaison de l'état après 20 minutes d'étirement (dont nous avons vu précédemment qu'il est proche de l'état initial) pour des C2C12 étirées à 10\% transfectées à la nanofectine (90 cellules en 5 expériences) ou à la lipofectamine (38 cellules en 3 expériences).  \label{LipoNano}}
-\end{figure}
 
-La figure \ref{LipoNano} montre la différence entre les répartitions initiales pour les cellules transfectées à la nanofectine et celles transfectées à la lipofectamine. On voit que MRTF-A est beaucoup plus souvent localisée dans le cytoplasme avec la lipofectamine. Cela correspond bien à ce qui est visible pendant les expériences : avec la lipofectamine, on trouve plus de cellules exprimant le plasmide, mais le niveau de fluorescence est moins fort pour chacune. Les cellules pour lesquelles la transfection a réussi sur-expriment donc moins MRTF-A GFP que lors d'une tranfection à la nanofectine.
+
 
 La figure \ref{CHN_SiR} montre l'évolution de ces trois populations au cours du temps lors d'une expérience d'étirement 10\% avant laquelle les cellules avaient été marquées à la SiRactine. 
 On peut y voir à partir de 20 minutes après étirement une diminution du nombre de cellules ayant MRTF-A dans le cytoplasme et une augmentation des localisations homogène et nucléaire simultanées, pendant environ 20 minutes. 
@@ -343,6 +368,38 @@ En comparant avec les expériences précédentes transfectées à la nanofectine
 
 \subsection{Comparaison avec des expériences sur des myoblastes primaires}
 
+Parallèlement aux expériences sur les C2C12, nous avons également testé la SiRactine dans des expériences d'étirement réalisées sur des myoblastes primaires. 
+Ces myoblastes ont été infectés par un lentivirus et expriment donc tous le même gène de MRTF-A GFP que celui que l'on transfectait dans les C2C12. 
+
+Les myoblastes primaires adhèrent mal au PDMS recouvert de fibronectine qui était utilisé pour les C2C12, ils sont cultivés sur des lamelles de Flexcell (Flexcell International Corporation) recouverts de collagène I. 
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Siractine_MRTFA_vs_temps.png} 
+\caption{Rapport des intensités médianes en MRTF-A GFP  péri-nucléaire/nucléaire et Intensité en Siractine normalisée en fonction du temps écoulé depuis le début de l'étirement pour des myoblastes primaires soumis à 10\% d'étirement (5 expériences, 159 cellules). \label{myoblastes_Sir}}
+\end{figure}
+
+La SiRactine a une évolution proche de celle observée précédemment pour les C2C12 primaires, mais avec une croissance plus régulière au cours du temps (voir la figure \ref{myoblastes_Sir}). On peut en revanche constater que la dynamique de MRTF-A est différente : il faut attendre beaucoup plus longtemps après le début de la polymérisation pour avoir un effet sur la localisation de MRTF-A. 
+
+Après une heure d'étirement et de polarisation, le MRTF-A ratio diminue, ce qui signifie que la part de MRTF-A qui se trouve dans le noyau augmente. 
+On a donc bien à nouveau une accumulation nucléaire de MRTF-A en réponse à un signal mécanique qui active la polymérisation d'actine. 
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Avec_Sans_Siractine.png} 
+\caption{Rapport des intensités médianes en MRTF-A GFP  péri-nucléaire/nucléaire en fonction du temps écoulé depuis le début de l'étirement pour des myoblastes primaires soumis à 10\% d'étirement avec et sans ajout de SiRactine (Avec SiRactine : 5 expériences, 159 cellules, Sans SiRactine : 5 expériences, 239 cellules)}
+\end{figure}
+
+Cependant, un contrôle réalisé avec des myoblastes primaires non marqués avec la SiRactine nous montre une absence d'accumulation nucléaire de MRTF-A en réponse à l'étirement. 
+Dès le début de l'expérience, on peut voir que le MRTF-A ratio moyen est plus élevé sans SiRactine qu'avec. 
+La SiRactine est un dérivé d'une drogue connue pour stabiliser les filaments d'actine, il est donc raisonnable de supposer que l'ajout, même d'une quantité aussi faible (2,5nM), de Siractine, puisse augmenter la quantité de filaments d'actine dans la cellule au détriment des monomères, et contribuer à plus de MRTF-A dans le noyau. 
+La différence entre les deux expériences pourrait alors s'expliquer ainsi : la SiRactine augmente la quantité de filaments par rapport aux monomères, elle déplace donc l'équilibre entre MRTF-A et la G-actine plus proche du point où il y a trop de MRTF-A et pas assez de G-actine.
+Lorsque l'étirement est imposé, il y a polymérisation de l'actine dans les deux cas, mais c'est seulement dans le cas où le ratio F-actine/G-actine est déjà élevé que l'augmentation suffit à faire basculer l'équilibre chimique de la cellule en faveur d'une MRTF-A libre de rentrer dans le noyau. 
+
+Des expériences témoins sans étirement, avec ou sans SiRactine sont également en cours pour essayer de déterminer ce qui relève de l'effet de l'étirement et ce qui relève de l'ajout de SiRactine, en particulier pour vérifier que l'augmentation d'intensité de la SiRactine est bien liée à l'application de l'étirement. 
+
+La SiRactine s'est révélée un outil très efficace d'observation en direct de l'actine. Cependant, l'équilibre de MRTF-A GFP est suffisamment sensible pour détecter son influence même à de très faibles concentrations. 
+Les marquages sur cellules fixées ont cet avantage de ne pas perturber les cellules, puisque les marqueurs sont ajoutés après la fin de la vie de la cellule. 
+Ils nous permettent également de marquer la G-actine en plus de la F-actine, ce qui ne nous est actuellement pas possible sur des cellules vivantes. 
+
+
 \section{Application d'une déformation globale avec l'étireur : \'Etude quantitative sur cellules fixées}
 
 Lors de ces expériences, des cellules transfectées MRTF-A GFP étaient ensemencées sur 6 lamelles de PDMS. Puis chacune d'elle était successivement montée dans l'étireur, étirée à 10 ou 30 \%, puis laissée en étirement à l'incubateur pendant un temps donné. Une fois le temps écoulé, la lamelle était démontée et fixée. Après fixation, l'actine F, l'actine G et le noyau étaient marqués , et les lamelles étaient observées en microscopie de fluorescence. Le protocole de l'étirement et du marquage sont décrits en détail dans le chapitre dédié aux méthodes expérimentales. 
@@ -364,9 +421,9 @@ L'observation la plus frappante de ces expériences concerne la localisation de 
 
 Ce résultat peut paraître contre-intuitif : comment cette expulsion d'actine hors du noyau, qui diminue notablement le ratio F/G peut-il permettre l'accumulation nucléaire de MRTF-A ? En réalité, il existe deux manière pour la cellule de confiner MRTF-A dans le noyau. La première est liée au manque de G-actine dans le cytoplasme, qui va conduire à l'import rapide de MRTF-A. La seconde est liée au manque de G-actine dans le noyau, qui va empêcher MRTF-A de sortir du noyau, car cette dernière a besoin de se lier à la G-actine pour être exportée. Ici c'est donc le manque de G-actine dans le noyau qui conduit à l'accumulation de MRTF-A GFP. 
 
-Or récemment, il a été montré que la protéine MICAL-2, présente majoritairement dans le noyau, est capable, en réponse au sérum, de dépolymériser les filaments d'actine en oxydant les monomères qui le compose \cite{lundquist}. De plus, ces monomères d'actine oxydée sont expulsés du noyau. De plus, MICAL-2 a également été lié à l'accumulation d'actine dans le noyau et l'exclusion de MRTF-A dans le cytoplasme des cellules musculaires lors de l'atrophie provoquée par une dénervation chez la souris \cite{collard}. MICAL-2 apparaît donc comme une piste sérieuse pour expliquer l'expulsion massive d'actine monomérique hors du noyau suite à l'application de l'étirement. 
+Or récemment, il a été montré que la protéine MICAL-2, présente majoritairement dans le noyau, est capable, en réponse au sérum, de dépolymériser les filaments d'actine en oxydant les monomères qui le compose \cite{lundquist_redox_2014}. De plus, ces monomères d'actine oxydée sont expulsés du noyau. De plus, MICAL-2 a également été lié à l'accumulation d'actine dans le noyau et l'exclusion de MRTF-A dans le cytoplasme des cellules musculaires lors de l'atrophie provoquée par une dénervation chez la souris \cite{collard_nuclear_2014}. MICAL-2 apparaît donc comme une piste sérieuse pour expliquer l'expulsion massive d'actine monomérique hors du noyau suite à l'application de l'étirement. 
 
-De manière encore inexpliquée pour l'instant, une des expériences avec des cellules non transfectées ne montre pas cet effet sur l'actine monomérique autour de 10 à 20 minutes d'étirement. Tout au plus peut-on observer une augmentation du ratio de G-actine péri-nucléaire par rapport à nucléaire au bout de 40 minutes. Une des pistes pourrait être la quantité de DMEM plus importante mise dans chaque puit pour les besoins de cette expérience à concentration égale, qui mènerait à une plus grande concentration en sérum le lendemain de l'expérience. La concentration en sérum et la quantité d'actine monomérique ont en effet déjà été liées dans d'autres expériences \cite{Mouilleron},\cite{Vartiainen}\cite{lundquist}.  
+De manière encore inexpliquée pour l'instant, une des expériences avec des cellules non transfectées ne montre pas cet effet sur l'actine monomérique autour de 10 à 20 minutes d'étirement. Tout au plus peut-on observer une augmentation du ratio de G-actine péri-nucléaire par rapport à nucléaire au bout de 40 minutes. Une des pistes pourrait être la quantité de DMEM plus importante mise dans chaque puit pour les besoins de cette expérience à concentration égale, qui mènerait à une plus grande concentration en sérum le lendemain de l'expérience. La concentration en sérum et la quantité d'actine monomérique ont en effet déjà été liées dans d'autres expériences \cite{mouilleron_molecular_2008},\cite{vartiainen_nuclear_2007}\cite{lundquist_redox_2014}.  
 
 
 
