@@ -8,7 +8,7 @@
 \usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 \newcommand{\micro}{$\mathrm{\mu}$}
-\addbibresource{biblio.bib}
+\addbibresource{biblio2.bib}
 
 \begin{document}
 
@@ -289,7 +289,59 @@ Comme lors de l'autre expérience d'étirement, une grande partie des cellules c
 Initialement, on souhaitait regarder en parallèle l'état du cytosquelette d'actine et la localisation de MRTF-A. 
 Malheureusement, comme on peut le voir tant en expériences de pinces magnétiques que d'étirement, les plasmides Actine mCherry et LifeAct RFP perturbent de manière trop importante le cytosquelette d'actine pour être utilisés pendant les expériences. 
 C'est pourquoi les expériences ont été faites avec MRTF-A GFP seulement, ce qui nous prive d'informations sur l'état du cytosquelette.
-Afin de vérifier les hypothèses posées pour expliquer les observations aux deux étirements testés, il nous a fallu passer aux expériences fixées, qui ont l'avantage de pouvoir être marquées à la fois pour l'actine F et pour l'actine G. Pour cette dernière, il n'existe actuellement aucune sonde commerciale fonctionnant sur des cellules vivantes. 
+Afin de vérifier les hypothèses posées pour expliquer les observations aux deux étirements testés,deux approches ont été testées. La première est d'utiliser la SiRactine, un nouveau marqueur fluorescent pour les filaments d'actine, qui s'utilise directement sur les cellules sans rinçage. 
+La seconde est de passer aux expériences fixées, qui ont l'avantage de pouvoir être marquées à la fois pour l'actine F et pour l'actine G. Pour cette dernière, il n'existe actuellement aucune sonde commerciale fonctionnant sur des cellules vivantes. 
+
+\subsection{Visualisation de l'actine pendant l'étirement 10\%}
+
+La SiRactine est un dérivé d'une drogue connue pour stabiliser les filaments d'actine, le jasplakinolide, couplé à un fluorophore dont la fluorescence sera 100 fois plus élevée lorsqu'elle est liée aux filaments d'actine. 
+Elle a l'avantage de s'utiliser en très petites quantités, et directement sur les cellules à observer sans transfection et sans rinçage, ce qui fait que contrairement à l'actine mCherry ou à la LifeAct, toutes les cellules seront marquées à des niveaux semblables. 
+
+Durant ces expériences, nous avons réalisé des mesures quantitatives d'intensité de fluorescence en MRTF-A GFP et en SiRactine. Pour chaque cellule, on calcule le ratio entre l'intensité médiane de fluorescence dans la zone péri-nucléaire et dans le noyau. Un ratio au-dessus de 1 correspond à une cellules qui était labellisée cytoplasmique, tandis qu'un ratio inférieur à 1 correspond à une localisation majoritairement nucléaire. 
+
+Malheureusement, les expériences avec cette nouvelle sonde n'ont pas pu être réalisées exactement dans les mêmes conditions que les expériences précédemment décrites. En effet, suite au rachat de notre fournisseur, la nanofectine n'est plus commercialisée. Les transfections MRTF-A GFP des expériences avec la SiRactine ont donc dû être réalisées avec de la lipofectamine. 
+
+
+\begin{figure}
+\includegraphics[scale=0.5]{Figures/Lipo_vs_Nano.png}
+\caption{Comparaison de l'état après 20 minutes d'étirement (dont nous avons vu précédemment qu'il est proche de l'état initial) pour des C2C12 étirées à 10\% transfectées à la nanofectine (90 cellules en 5 expériences) ou à la lipofectamine (38 cellules en 3 expériences).  \label{LipoNano}}
+\end{figure}
+
+La figure \ref{LipoNano} montre la différence entre les répartitions initiales pour les cellules transfectées à la nanofectine et celles transfectées à la lipofectamine. On voit que MRTF-A est beaucoup plus souvent localisée dans le cytoplasme avec la lipofectamine. Cela correspond bien à ce qui est visible pendant les expériences : avec la lipofectamine, on trouve plus de cellules exprimant le plasmide, mais le niveau de fluorescence est moins fort pour chacune. Les cellules pour lesquelles la transfection a réussi sur-expriment donc moins MRTF-A GFP que lors d'une tranfection à la nanofectine.
+
+La figure \ref{CHN_SiR} montre l'évolution de ces trois populations au cours du temps lors d'une expérience d'étirement 10\% avant laquelle les cellules avaient été marquées à la SiRactine. 
+On peut y voir à partir de 20 minutes après étirement une diminution du nombre de cellules ayant MRTF-A dans le cytoplasme et une augmentation des localisations homogène et nucléaire simultanées, pendant environ 20 minutes. 
+Cette diminution correspond à un pic des évènements C $\rightarrow H$ visible sur la figure \ref{transloc_Sir}. 
+Sur la figure \ref{Siractine_quantif}, on peut constater que l'intensité de fluorescence en SiRactine croît pendant cette période de temps, indiquant une polymérisation de l'actine. 
+
+Cette accumulation est suivie d'un plateau entre 40 et 60 minutes après l'étirement : la polymérisation de l'actine semble s'arrêter, tandis qu'en même temps le ratio moyen du signal MRTF-A GFP péri-nucléaire/nucléaire stagne et il y a un arrêt total des évènements de changement de localisation. 
+
+À 60 minutes, la polymérisation d'actine reprend, et on peut voir qu'elle est suivie d'un pic de relocalisations de MRTF-A du cytoplasme vers le noyau (évènements C $\rightarrow$ H ) en retard d'environ 20 minutes par rapport à la reprise de la polymérisation. 
+
+Non seulement ces expériences confirment que la relocalisation de MRTF-A vers le noyau en réponse à l'étirement est précédée de polymérisation d'actine, mais elles nous donnent également un temps de réponse, estimé à 20 minutes, entre le début de la polymérisation et l'effet visible sur MRTF-A GFP. Cela explique pourquoi pendant les expériences précédentes, presque aucune différence n'était observée entre l'état initial et l'état à 20 minutes d'étirement.
+
+Les expériences sont en cours pour réaliser des expériences témoins transfectées à la lipofectamine, étirées mais sans marquage Siractine, et des témoins transfectées à la lipofectamine, non étirées avec marquage Siractine, afin de contrôler l'effet qu'a l'ajout de Siractine sur la polymérisation et sur la localisation de MRTF-A. 
+En comparant avec les expériences précédentes transfectées à la nanofectine, on peut constater que le pic d'entrées C $\rightarrow$ H visible à 20 minutes est présent dans les deux conditions, mais qu'il est plus précoce pendant l'expérience avec SiRactine. Les deux expériences témoins devraient nous permettre de savoir si l'effet est dû au changement de méthode de transfection ( qui change la quantité de MRTF-A GFP sur-exprimée) ou à l'ajout de Siractine (qui pourrait stabiliser les filaments, par effet du jasplakinolide). 
+ 
+
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/Et10_Siractine_comparaison.png}
+\caption{\'Evolution de la population de cellules ayant MRTF-A cytoplasmique, homogène ou nucléaire en fonction du temps écoulé depuis le début de l'étirement à 10\%, pour des C2C12 transfectées MRTF-A GFP avec de la nanofectine, et pour des C2C12 transfectées MRTF-A GFP avec de la lipofectamine et avec ajout de SiRactine pour visualiser les filaments d'actine. \label{CHN_SiR}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/Et10_transloc_Siractine.png} 
+\caption{Nombre d'évènements ayant eu lieu pendant la fenêtre [t-5min,t+5min] pour chaque type de transition possible divisé par le nombre de cellules observées, pour des C2C12 transfectées MRTF-A GFP à la nanofectine et pour des C2C12 transfectées MRTF-A GFP à la lipofectamine et avec ajout de SiRactine, toutes étirées à 10\%. \label{transloc_Sir}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/C2C12.png} 
+\caption{Ratio des intensités médianes de MRTF-A GFP péri-nucléaire/nucléaire (en vert) et Intensité médiane de SiRactine renormalisée par l'intensité médiane à 20 minutes (en rouge)  en fonction du temps écoulé depuis le début de l'étirement 10 \% (2 expériences, 68 cellules, les tracés en poitillés représentent chacune des deux expériences).\label{Siractine_quantif}}
+\end{figure}
+ 
+
+
+\subsection{Comparaison avec des expériences sur des myoblastes primaires}
 
 \section{Application d'une déformation globale avec l'étireur : \'Etude quantitative sur cellules fixées}
 
@@ -335,11 +387,6 @@ Ces résultats sont confirmées par les expériences, tant en MRTF-A GFP qu'en M
 La dépolymérisation est suivie d'une récupération qui se fait à un rythme variable d'une expérience à l'autre, sans que l'on ait pour l'instant réussi à distinguer l'origine de cette variabilité. 
 
 On constate également que l'expulsion de l'actine monomérique du noyau est présente mais de manière beaucoup moins marquée que lors de l'étirement 10 \%. Cela pourrait signifier que la même voie que pour l'étirement 10 \% est activée, mais que son action est diminuée et masquée par les dommages causés au cytosquelette, jusqu'au moment où la récupération a eu lieu. 
-
-\section{Application d'une déformation globale avec l'étireur : \'Etude quantitative dynamique}
-
-
-
 
 
 
