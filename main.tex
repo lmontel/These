@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[10pt,twoside]{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
@@ -6,6 +6,10 @@
 \usepackage{graphicx}
 \graphicspath{{Figures/}}
 \usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RO,LE]{}
+
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 \newcommand{\micro}{$\mathrm{\mu}$}
 \addbibresource{biblio2.bib}
@@ -20,6 +24,7 @@
 
 \begin{document}
 
+
 \begin{abstract}
 Abstract
 \end{abstract}
@@ -28,11 +33,10 @@ Abstract
 
 
 
-
 \input{Cellule1}
 
 
-\input{Actine}
+\input{Actine2}
 
 
 
@@ -42,7 +46,7 @@ Abstract
 
 \input{Rheologie}
 
-\input{Methodes}
+\input{Methodes_et_dispositifs_experimentaux}
 \input{Pinces}
 \input{MRTFA_Resultats}
 
