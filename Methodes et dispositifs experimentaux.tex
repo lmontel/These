@@ -1,16 +1,16 @@
-%\documentclass                                                                                                                                                                                                                                                                                                                                       {report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%\addbibresource{biblio2.bib}
-%
-%\begin{document}
+\documentclass                                                                                                                                                                                                                                                                                                                                       {report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio2.bib}
+
+\begin{document}
 
 \chapter{Méthodes et dispositifs expérimentaux}
 
@@ -64,7 +64,7 @@ Durant cette thèse, j'ai testé quatre moyens d'observer l'actine ou les filame
 
 La première méthode d'observation de l'actine dans les cellules vivantes est de leur faire exprimer, en plus de l'actine endogène, un autre gène codant pour une actine fluorescente, en l'occurence ici une actine dotée d'un fluorophore mCherry. 
 Elle a l'avantage de marquer toute l'actine, et pas seulement les filaments comme les méthodes qui seront présentées après. 
-Mais elle a le désavantage de faire sur-exprimer l'actine	 à la cellule, de manière variable d'une cellule transfectée à l'autre. 
+Mais elle a le désavantage de faire sur-exprimer l'actine à la cellule, de manière variable d'une cellule transfectée à l'autre. 
 Or MRTF-A est une sonde extrêmement sensible de la quantité de G-actine dans la cellule.  Sur-exprimer l'actine augmente la quantité totale d'actine G, et a un effet très visible sur MRTF-A, comme il sera présenté au chapitre 8. 
 
 Les trois autres méthodes sont des détecteurs qui marquent uniquement les filaments d'actine, avec l'avantage de voir plus nettement la structure du cytosquelette. Il est à noter qu'actuellement il n'existe aucune sonde commercialisée pour observer l'actine monomérique \textit{in vivo}, même si une sonde a été développée récemment à partir des groupes RPEL de MRTF-A \parencite{belin_visualization_2013}. 
@@ -90,11 +90,9 @@ MRTF-A est une sonde extrêmement sensible de l'état du cytosquelette de la cel
 	
 	La transfection est d'autant plus efficace que les cellules sont proches de la confluence. Cependant, on ne peut pas laisser les C2C12 atteindre la confluence, l'efficacité de transfection est donc toujours limitée. La transfection peut se faire avant ou après l'ensemencement des cellules sur leur substrat (verre ou PDMS selon l'expérience). Lorsque la transfection a lieu avant l'ensemencement, elle est faite directement dans la boîte de culture, alors que lorsqu'elle est faite après, elle a lieu dans les puits. 
 	
-	 
+	 Dans les protocoles suivants, les proportions sont données pour un puits d'une plaque 6 puits. Une petite boîte de culture (T-25) représente une surface de 2,5 fois celle d'un puits, les quantités utilisées lors de la transfection d'une boîte sont donc multipliées d'autant.
 	
-	\subsubsection{Protocole de transfection}
-	
-	Dans les protocoles suivants, les proportions sont données pour un puits d'une plaque 6 puits. Une petite boîte de culture (T-25) représente une surface de 2,5 fois celle d'un puits, les quantités utilisées lors de la transfection d'une boîte sont donc multipliées d'autant.
+	\subsubsection{Protocole de transfection à la nanofectine}
 	
 	Trois protocoles sont décrits simultanément ici : le protocole pour une transfection simple de MRTF-A GFP , puis pour une transfection double MRTF-A GFP/Actine Mcherry (option 1) ou MRTF-A GFP/LifeAct RFP (option 2). Sauf indication contraire, toutes les étapes et ingrédients optionnels sont en plus des ingrédients pour la transfection simple.
 	
@@ -121,7 +119,7 @@ MRTF-A est une sonde extrêmement sensible de l'état du cytosquelette de la cel
 \begin{enumerate}
 	\item Diluer dans un eppendorf 1 \micro g de MRTF-A GFP dans 50 \micro l de solution de NaCl 150mM. 
 	\item Diluer de même 1 \micro g de nanofectine
-	\item (option 1 ou 2 ) Répéter ces deux étapes avec l'Actine Mcherry ou la LifeAct RFP
+	\item (option 1 ou 2 ) Répéter ces deux étapes avec l'Actine mCherry ou la LifeAct RFP
 	\item Transvaser le contenu de l'eppendorf de nanofectine dans l'eppendorf d'ADN (le sens est important)
 	\item (option 1 ou 2 ) Répéter l'opération pour les deux autres tubes
 	\item Laisser incuber 30 minutes à 37~\degres C 
@@ -134,11 +132,61 @@ MRTF-A est une sonde extrêmement sensible de l'état du cytosquelette de la cel
 \end{enumerate}
 \end{quote}
 
+\subsubsection{Protocole de transfection à la lipofectamine}
+
+Suite au rachat de notre fournisseur, la nanofectine n'est plus commercialisée. Les expériences suivantes ont donc été réalisées avec de la lipofectamine (Lipofectamine 3000 Transfection Kit, Invitrogen). Deux protocoles sont décrits ici en même temps : MRTF-A GFP avec et sans F-tractine RFP. 
+
+\paragraph{Ingrédients :}
+\begin{quote}
+
+	\begin{itemize}
+	\item Des C2C12 ensemencées dans un puits d'une plaque 6 puits
+	\item 6 \micro l de lipofectamine 3000 
+	\item 1 \micro g d'ADN de MRTF-A GFP
+	\item 2 \micro l de P3000 Reagent
+	\item (option 1 : F-tractine) 1 \micro g d'ADN de F-tractine RFP
+	\item (option 1 : F-tractine) 6 \micro l de lipofectamine 3000
+	\item (option 1 : F-tractine) 2 \micro l de P3000 Reagent
+	\item 2*125 \micro l d'OptiMEM (Opti-MEM I Reduced Serum Medium, Gibco)
+	\item 0,75ml de milieu complet (transfection simple uniquement)
+	\end{itemize}
+\end{quote}
+\paragraph{Protocole : }
+\begin{quote}
+\begin{enumerate}
+	\item Dans l'eppendorf \no 1, mélanger 6 \micro l de lipofectamine 3000 et 125 \micro d'OptiMEM. 
+	\item (option 1) Répétez cette étape dans l'eppendorf \no 1bis. 
+	\item Dans l'eppendorf \no 2 mélanger 1\micro g de plasmide MRTF-A GFP, 2 \micro l de P3000 Reagent et 125 \micro l d'OptiMEM.
+	\item (option 1) Dans l'eppendorf \no 2bis mélanger 1\micro g de plasmide F-tractine, 2 \micro l de P3000 Reagent et 125 \micro l d'OptiMEM.
+	\item Transvaser le contenu de l'eppendorf \no 2 dans l'eppendorf \no 1. 
+	\item (option 1) Transvaser le contenu de l'eppendorf \no bis2 dans l'eppendorf \no 1bis. 
+	\item Laisser incuber 5 minutes à 37\degres C. 
+	\item (MRTF-A GFP seule) Mélanger à 1.75 \micro l de DMEM sans rouge phénol.
+	\item (option 1) Mélanger les eppendorfs \no 2 et \no 2bis à 1.5 \micro l de DMEM ans rouge phénol
+	\item Rincer les C2C12 et leur ajouter les 2ml de solution. 
+	\item Laisser incuber une nuit à 37 \degres C.
+	\item Ne pas rincer avant les expériences.
+\end{enumerate}
+\end{quote}
+
 	\subsection{Marquage DAPI sur cellules vivantes}
 	
 	Le  4',6'-diamidino-2-phénylindole (DAPI) est une molécule fluorescente qui peut se fixer entre les bases A et T de l'ADN. Elle peut entrer dans les cellules vivantes et permet ainsi de marquer l'ADN du noyau. Sa localisation dans l'ADN perturbe la réplication de l'ADN nécessaire à la division cellulaire, c'est pourquoi le DAPI est ajouté à la dernière minute avant les expériences sur cellules vivantes. 
 	
 	Trente minutes avant l'observation, du DAPI est ajouté au milieu de culture en proportion 1/1000 ou 1/500 (selon l'efficacité du lot de DAPI pour entrer dans les cellules). Il est si possible rincé avant l'observation pour améliorer le contraste. 
+	
+	\subsection{Marquage SiRactine sur cellules vivantes}
+
+	La SiRactine est un marqueur des filaments d'actine qui peut être ajouté aux cellules vivantes avant l'observation. Elle a un pic d'absorption à 652 nm et un pic de fluorescence à 674 nm, ce qui la rend compatible avec les plasmides fluorescents dans le vert (comme la GFP) et dans le rouge (comme la mCherry ou la RFP). 
+	
+	La SiRactine pouvant avoir un effet de stabilisation des filaments d'actine, lorsqu'on l'utilise sur des cellules vivantes, il faut trouver la concentration minimale nécessaire à l'observation. Plus la concentration utilisée est faible, plus il faudra la mettre longtemps à l'avance sur les cellules. 
+	
+	La quantité de SiRactine désirée est ajoutée la veille ou 3 heures avant l'observation (selon la concentration) sur les cellules, et ne doit pas être rincée. 
+	
+	Une série de dilutions allant de 50nM à 500nM a été testée préalablement aux expériences, puis trois conditions ont été utilisées : 50 nM incubé toute la nuit, 50nM incubé 3 heures et 2,5nM incubé toute la nuit. 
+	
+	
+	
 	\subsection{Fixation}
 	La fixation permet de figer les protéines des cellules à un instant donné. Elle est réalisée en ajoutant sur une lamelle recouverte de cellules préalablement rincée au PBS une solution à 4\% de paraformaldéhyde (PFA) pendant 20 minutes à température ambiante. Cette solution est ensuite rincée au PBS. 
 	
@@ -740,7 +788,7 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	En vissant le plot, on étire alors la lamelle rapidement en quelques secondes jusqu'à la déformation souhaitée. On cherche alors des cellules exprimant la MRTF-A GFP. À chaque fois qu'une ou plusieurs cellules sont visibles dans un champ, on enregistre la position de la platine motorisée. Toutes les 5 à 10 minutes, on retourne observer toutes les cellules répertoriées afin de suivre l'évolution de la localisation de MRTF-A au cours du temps. De nouvelles cellules sont recherchées jusqu'à 40 minutes après l'étirement et l'observation est ensuite maintenue pendant 2h après l'étirement. 
 	\begin{figure}
 	\includegraphics[scale=0.5]{Montage_translocations_2013-04-16_l2z1.png}
-	\caption{C2C12 transfectées MRTF-A GFP (en vert) et Actine Mcherry (en rouge), marquées au DAPI (en bleu), étirées à 30\% pendant 120 minutes. Dans les deux cellules marquées d'une flèche, MRTF-A s'accumule dans le noyau, puis retourne dans le cytoplasme.}
+	\caption{C2C12 transfectées MRTF-A GFP (en vert) et Actine mCherry (en rouge), marquées au DAPI (en bleu), étirées à 30\% pendant 120 minutes. Dans les deux cellules marquées d'une flèche, MRTF-A s'accumule dans le noyau, puis retourne dans le cytoplasme.}
 	\label{Etirement_live}
 	\end{figure}
 	
@@ -791,4 +839,4 @@ successivement en rouge profond (F-actine), en rouge (G-actine) et en rapport (F
 	On obtient alors des tableaux de données contenant les valeurs moyennes d'intensité pour la phalloïdine, la DNase et la MRTF-A (GFP ou endogène) et les aires des cellules et de leurs noyaux. 
 	
 	
-%\end{document}
+\end{document}
