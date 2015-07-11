@@ -1,0 +1,47 @@
+\documentclass[10pt,twoside]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[RO,LE]{}
+
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio2.bib}
+
+\begin{document}
+
+\chapter*{Conclusions et perspectives}
+
+ Les premiers, et les plus tangibles résultats de cette thèse sont les deux dispositifs expérimentaux que j'ai construits : les pinces magnétiques et l'étireur. Les pinces magnétiques permettent de faire de la rhéologie, ou d'exercer des forces pour observer leur réponse biologique avec la microscopie de fluorescence, et même de faire ces deux choses en même temps. Elles ont été conçues pour être transportables d'un microscope à l'autre et adaptées à des expériences différentes. 
+  
+ Pendant ma thèse, j'ai mesuré avec ces pinces magnétiques les propriétés rhéologiques de myoblastes murins C2C12, et j'ai pu m'apercevoir que leur comportement en réponse à l'application d'une force dépend principalement de l'endroit et de la direction dans laquelle s'appliquent ces forces. Pour poursuivre les investigations, il s'agirait probablement maintenant de combiner la technique des pinces à celle des micro-patrons adhésifs, que David Pereira, en thèse avec Sylvie Hénon dans notre équipe, explore déjà dans le cadre d'un autre projet. On pourrait alors contrôler la géométrie de la cellule et observer de manière beaucoup plus systématique la réponse mécanique lors d'une stimulation à des endroits différents de la cellule. 
+
+Les pinces magnétiques m'ont également servi à tester la réponse du facteur de transcription MRTF-A à des forces extérieures. On a constaté un effet particulièrement marqué de la contrainte mécanique sur la relocalisation de MRTF-A lorsque la LifeAct stabilise les filaments d'actine, même s'il semble y avoir un effet, plus faible ou plus lent, dans les expériences avec MRTF-A GFP seulement. 
+
+Elles ont aussi servi dans plusieurs collaborations à l'intérieur et à l'extérieur du laboratoire. Au sein de MSC, Elisabeth Charrier a, pendant sa thèse, utilisé les pinces magnétiques pour caractériser la rhéologie de cellules possédant une version mutante du gène de la desmine, le filament intermédiaire des cellules musculaires. Pierre-Olivier Strale est également venu utiliser avec moi les pinces magnétiques pour observer les propriétés mécaniques de cadhérines mutantes (article en annexe). 
+
+L'expérience d'étirement a été un prototype, avec lequel j'ai pu réaliser un grand nombre d'expériences dans différentes conditions, avec au total plusieurs milliers de cellules observées. Depuis, un deuxième étireur identique au premier a été fabriqué par l'atelier du laboratoire. Une version pour appliquer l'étirement sur 6 puits en même temps est actuellement développée par Sylvie Hénon, qui permettrait de réaliser des expériences dans un grand nombre de conditions en même temps, en particulier pour l'étude des voies de signalisation avec des siRNA. 
+L'étireur a été utilisé non seulement sur des C2C12 et des myoblastes primaires, comme présenté dans ma thèse, mais il est également utilisé par Alessandra Pincini pour mener des expériences analogues sur les myotubes. 
+
+L'objectif principal de cette thèse était de savoir si l'application de contraintes mécaniques sur des myoblastes \textit{in vitro} était suffisant pour relocaliser le facteur de transcription MRTF-A dans le noyau des cellules. L'équilibre entre l'actine en filaments et l'actine monomérique était déjà connu comme le régulateur principal de la localisation de MRTF-A dans la cellule, et donc de son activité. Les rôles du sérum et de la voie RhoA avaient été déjà largement explorés \textit{in vitro}. 
+
+Ici, nous avons montré qu'une contrainte mécanique sur des myoblastes est à l'origine d'une réorganisation du cytosquelette d'actine qui entraîne une accumulation de MRTF-A dans le noyau de la cellule, là où elle pourra activer SRF, en accord avec les mécanismes qui avaient déjà lié MRTF-A et l'actine. 
+Nous avons également pu observer que cette polymérisation d'actine précède l'accumulation de MRTF-A d'environ 20 minutes. 
+
+Avec l'expression de plasmides d'actine mCherry, de LifeAct RFP et de F-tractine, et avec l'ajout de SiRactine, nous avons également pu constater que toute perturbation de l'équilibre entre F-actine et G-actine est susceptible de provoquer des changements dans la localisation de MRTF-A au sein d'une population. Cela prouve la très grande sensibilité du système aux changements de l'équilibre de l'actine, capable de détecter des changements dus à des marqueurs qui sont censés perturber aussi peu que possible cet équilibre. 
+
+Les changements de localisation de l'actine monomérique que nous avons observés sont la prochaine piste à explorer dans les résultats d'étirement. Ils sont d'autant plus renforcés par l'irruption de MICAL-2, qui dépolymérise et expulse l'actine du noyau, dans les protéines qui régulent MRTF-A, en particulier dans le cadre de l'atrophie musculaire. C'est une nouvelle voie de régulation de SRF qui pourrait être complémentaire de la voie de polymérisation de l'actine. La voie RhoA assurerait alors l'entrée de MRTF-A dans le noyau en organisant la pénurie de monomères d'actine dans le cytoplasme, tandis que MICAL-2 assurerait la séquestration de MRTF-A dans le noyau en organisant la pénurie de monomères dans le noyau. Alessandra Pincini a déjà testé des siRNA de MICAL-2, ce qui va permettre de tester rapidement ces hypothèses. 
+
+En associant les expériences menées pendant ma thèse sur les C2C12 et sur les myoblastes primaires, et les expériences menées par Alessandra Pincini sur les myoblastes primaires et les myotubes à l'aide de l'étireur, nous obtiendrons un paysage complet de la régulation de la localisation de MRTF-A par les contraintes mécaniques qui complètera les études menées précédemment à l'Institut Cochin sur les souris. 
+
+
+
+
+
+\end{document}
