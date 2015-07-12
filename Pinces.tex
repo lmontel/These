@@ -98,7 +98,7 @@ Par défaut, la fonction de fluage sera calculée sans son préfacteur géométr
 $$ J(t) = 2 \pi a p \xi (t)\qquad \xi (t) = \frac{\delta x (t)}{F}$$
 	
 \begin{figure}
-\includegraphics[scale=0.11]{c9-rigidification-couleurs.png}
+\includegraphics[scale=0.09]{c9-rigidification-couleurs.png}
 
 \caption{Exemple de tracé de la position selon $x$ d'une bille au cours du temps lorsqu'elle est soumise à 4 créneaux de force successifs. $\delta R(t)$ =$\delta x(t)$ lorsque le déplacement ne se fait que selon l'axe $X$. On peut remarquer l'allure caractéristique en loi de puissance.\label{Exemple}} 
 	\includegraphics[scale=0.5]{Figures/Exemple_C162_loglog.png}
@@ -176,23 +176,21 @@ Pour chaque cellule, la force est appliquée à 4 reprises pour la série \no 1 
 
 Dans les résultats finaux, ne sont conservées que les cellules pour lesquelles la mesure des paramètres ($A, \alpha$) est possible lors de l'application du premier créneau. 
 En revanche, il arrive pour un nombre non négligeable de cellules que le déplacement de la bille pendant les créneaux suivants passe en dessous de notre résolution, ce qui signifie que la cellule devient trop rigide. Dans ce cas de figure, $A$ a été fixé à 0. 
-
-\begin{figure}
-\includegraphics[scale=0.3]{Figures/A_creneaux_temoin.png}
-\includegraphics[scale=0.3]{Figures/E_creneaux_temoin.png} 
+\begin{center}
+\begin{figure}[p]
+\includegraphics[width=6.5cm]{Figures/A_creneaux_temoin.png}
+\includegraphics[width=6.5cm]{Figures/E_creneaux_temoin.png} 
 \\
-\includegraphics[scale=0.3]{Figures/A_creneaux_S2.png} 
-\includegraphics[scale=0.3]{Figures/E_creneaux_S2.png} 
-\caption{\label{Evolution_6c}} 
+\includegraphics[width=6.5cm]{Figures/A_creneaux_S2.png} 
+\includegraphics[width=6.5cm]{Figures/E_creneaux_S2.png} 
+\caption{\label{Evolution_6c} Histogramme des paramètres $A$ et $\alpha$ pour six applications de force successives.}
 \end{figure}
-
+\end{center}
 \begin{figure}
-\includegraphics[scale=0.3]{Figures/A_diff_seul.png} 
-\includegraphics[scale=0.3]{Figures/E_diff_seul.png}
+\includegraphics[height=5cm]{Figures/A_diff_seul.png} 
+\includegraphics[height=5cm]{Figures/E_diff_seul.png}
 \caption{Amplitude des évolutions entre la première mesure et les 6 suivantes, pour la série \no 3 témoin (en noir) et pour la même concentration de fibronectine et 125s de force en rouge.}
 \label{Diff}
-
- 
 \end{figure}
 On peut voir sur la figure \ref{Evolution_6c} qu'il n'y a pas de changements de $A$ communs à toute la population de cellules : ce ne sont pas toutes les cellules qui se rigidifient ou se ramollissent ensemble. 
 En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme  et 3\ieme créneaux, qui se résorbe ensuite, mais il n'est pas significatif. 
@@ -213,12 +211,12 @@ On peut créer un classement semblable avec l'évolution de l'exposant $\alpha$.
 \end{figure}
 
 \begin{figure}
-\includegraphics[scale=0.5]{Figures/Evolution_J4-J0_sur_J0.png} 
+\includegraphics[width=10cm]{Figures/Evolution_J4-J0_sur_J0.png} 
 \caption{Histogramme cumulé de $\frac{A_4-A_1}{A_1}$ pour les trois groupes de cellules classées. On voit que près de la moitié des cellules se rigidifiant sont passées sous le seuil de détection de la pince, tandis que les ramollissements sont souvent supérieurs à 100\%.  }
 \end{figure}
 
 \begin{figure}
-\includegraphics[scale=0.5]{Figures/FRI_temoin_vs_C4.png} 
+\includegraphics[width=10cm]{Figures/FRI_temoin_vs_C4.png} 
 \caption{Répartition des cellules dans les trois catégories d'évolution de $A$ au cours des applications de force \label{FRI_temoin}}
 \end{figure}
 
@@ -242,10 +240,15 @@ Nous avons alors cherché si ces différences de comportement ne provenaient pas
 \includegraphics[scale=0.5]{Figures/Positions_FRI.png} 
 \caption{Longueur et orientation du vecteur entre le bord du noyau et la bille. La flèche représente la direction de la force exercée sur les billes.\label{polar}}
 \end{figure}
-\begin{figure}
+\begin{figure}[p]
 \includegraphics[scale=0.5]{Figures/Hist_Angles.png} 
 \caption{Réparition des comportements cellulaires en fonction de l'angle formé entre l'axe bille-noyau et la direction de la force appliquée, pour 125 secondes de force et 4 \micro g de fibronectine. p=0.044 \label{Angle_C4}}
 \end{figure}
+\begin{figure}[p]
+\includegraphics[scale=0.5]{Figures/Evolution_DBN.png}
+\caption{Différence entre la distance bille-noyau finale et la distance bille-noyau initiale, pour les cellules classées précédemment. \label{DBN}}
+\end{figure}
+
 
 On peut observer une corrélation entre la position de la bille par rapport au noyau et l'appartenance à l'une des trois populations, comme mis en évidence sur les figures \ref{polar} et \ref{Angle_C4}. 
 Plus précisément, lorsque les billes sont \og à l'arrière du noyau \fg par rapport à la force appliquée, c'est-à-dire lorsqu'on a tendance à pousser la bille vers le noyau, alors la tendance est nettement à la rigidification. Au contraire, lorsque l'axe bille-noyau est perpendiculaire à la direction de la force, il n'y a pas de tendance cohérente. 
@@ -253,11 +256,6 @@ Plus précisément, lorsque les billes sont \og à l'arrière du noyau \fg par r
 Au vu de cette information, on pourrait se dire que les cellules rigidifiées, qui sont tirées vers le noyau, expérimentent en fait un gradient de viscosité en se rapprochant du noyau : elles se rapprochent d'une zone péri-nucléaire où la viscosité serait plus élevée. 
 
 Cependant, on peut voir sur la figure \ref{DBN} que ce n'est pas le cas, au contraire : la majorité des cellules qui se ramollissent se rapprochent du noyau, alors que les cellules rigidifiées se rapprochent ou s'éloignent dans des proportions égales. La statistique n'est cependant pas assez riche pour que l'on puisse affirmer que cet effet est systématique.
-
-\begin{figure}
-\includegraphics[scale=0.5]{Figures/Evolution_DBN.png}
-\caption{Différence entre la distance bille-noyau finale et la distance bille-noyau initiale, pour les cellules classées précédemment. \label{DBN}}
-\end{figure}
 
  
  \section{Rôle des interactions \textit{cis} des cadhérines dans la formation de contacts intercelluaires}
@@ -273,6 +271,7 @@ Cependant, on peut voir sur la figure \ref{DBN} que ce n'est pas le cas, au cont
  Le seconde différence et visible lors de l'observation des déplacements de la bille. Lorsque la bille est ancrée par des cadhérines mutantes, son déplacement sur les 6 créneaux de force est deux fois plus important que lorsqu'elle est ancrée par les cadhérines sauvages. En revanche, dans un cas comme dans l'autre, aucune augmentation ni diminution cohérente n'a été observée. Les cellules exprimant la cadhérine mutante apparaissent donc comme moins rigides lorsqu'elle sont sondées par les jonctions \textit{adherens}. 
  
  Enfin, une troisième différence est visible lors de la phase de relaxation : les billes ancrées par des cadhérines mutantes sont beaucoup plus mobiles que les autres. Cela révèle un lien plus faible entre les cadhérines mutantes et le cytosquelette sous-jacent. 
+ \newpage
 
  \begin{figure}[h!]
 \caption{\small Résultats des expériences sur les E-cadhérines mutantes incapables d'interactions \textit{cis}, d'après \cite{Strale}. A : Montage expérimental, B : Proportion des billes immobiles, mobiles ou arrachées sous force pour des cellules exprimant la cadhérine mutante (cis Ecad, 54 cellules) ou sauvage (wt Ecad, 39 cellules). C : Déplacements des billes sous force en fonction du temps. D : Moyennes des déplacements pour toutes les applications de force, pour 12 billes dans chaque condition. E : Trajectoires (en \micro m) d'une bille pendant les six périodes de relaxation dans les deux conditions. F : Déplacement quadratique moyen pendant la relaxation pour 12 billes et 6 créneaux dans chaque condition}
