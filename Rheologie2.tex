@@ -36,6 +36,9 @@ La rhéologie est l'étude de la manière dont les matériaux se comportent lors
 
 Par exemple, on appelle solide élastique un matériau pour lequel la déformation $\epsilon$ est proportionnelle à la contrainte $ \sigma$. On appelle module d'Young ce coefficient de proportionnalité quand on applique un étirement uniaxial (voir figure \ref{young}): 
 $$ E = \frac{\sigma}{\epsilon}$$
+ Deux modules sont nécessaires pour caractériser les propriétés élastiques d'un matériau, le module d'Young $E$ et le coefficient de Poisson $\nu$, ou le module de compression $K$ et le module de cisaillement $G$. Les cellules sont des milieux incompressibles, elles se déforment
+en gardant leur volume constant. En d'autres termes $K$ est très grand devant $G$. La relation entre $G$ et $E$ s'écrit alors $E=3G$.
+
 La déformation élastique est parfaitement réversible, c'est-à-dire que si on enlève la contrainte, le matériau revient à sa forme initiale. C'est le cas, aux petites déformations, de solides comme l'acier, le verre, le caoutchouc etc. Au niveau énergétique, la déformation élastique est donc une manière de stocker de l'énergie dans le système par l'intermédiaire de la déformation, énergie qui pourra être récupérée plus tard lorsque le solide reprendra sa forme initiale. 
 
 \begin{figure}
@@ -390,7 +393,7 @@ Dans le second cas, les cellules étaient ensemencées sur des motifs carrés d'
 Dans les deux cas, la forme et l'aire proposées à la cellule déterminent suffisamment l'état du cytosquelette pour induire la translocation de MRTF-A.  
 \begin{figure}
 \includegraphics[scale=0.7]{Patterns_elisabeth.png}
-\caption{Images de C2C12 sauvages et possédant une version mutante de la desmine (E413K) sur des micro-patrons adhésifs. Les filaments d'actine sont marqués à la phalloïdine Alexa 647 (en bleu), les filaments de desmine-GFP sont en vert, les noyaux sont marqués au DAPI (en magenta) et le motif en fibronectine Cy3.5 (en rouge), d'après \cite{charrier_implication_2014}. }
+\caption{Images de C2C12 sauvages et possédant une version mutante de la desmine (E413K) sur des micro-patrons adhésifs. Les filaments d'actine sont marqués à la phalloïdine Alexa 647 (en bleu), les filaments de desmine-GFP sont en vert, les noyaux sont marqués au DAPI (en magenta) et le motif en fibronectine Cy3.5 (en rouge), d'après \cite{charrier_implication_2014}. Micropatrons réalisés par Martial Balland (LIPhy Grenoble), cellules, marquages et images réalisées par Elisabeth Charrier (MSC et Biologie Fonctionnelle et Adaptative, Université Paris Diderot) }
 \end{figure}
 \subsubsection{Méthodes également utilisées en rhéologie active}
 
