@@ -12,13 +12,13 @@
 %\begin{document}
 
 \chapter{Rhéologie locale d'une cellule unique}
-\begin{center}
+\begin{figure}
 \includegraphics[scale=0.7]{Chapitre7.png}
 
-\end{center}
+\end{figure}
 \newpage
 
-Les pinces magnétiques ont été construites afin de pouvoir observer l'évolution des caractéristiques mécaniques d'une cellule au cours du temps, lorsque celle-ci est soumise à des forces de manière répétée. L'objectif initial était de poursuivre ainsi une investigation débutée par Delphine Icard avec les pinces optiques. En effet, dans sa thèse, elle avait observé que lorsqu'une force identique est appliquée de manière répétée sur une cellule, elle devient de plus en plus rigide, et que cet effet s'accompagne d'un recrutement d'actine autour du point d'application de la force. L'utilisation de pinces magnétiques nous permet de réaliser des expériences sous microscope confocal, ce qui n'était pas possible avec les pinces optiques. Ces expériences couplant mécanique et observations en microscopie de fluorescence seront décrites au chapitre suivant. 
+Les pinces magnétiques ont été construites afin de pouvoir observer l'évolution des caractéristiques mécaniques d'une cellule au cours du temps, lorsque celle-ci est soumise à des forces de manière répétée. L'objectif initial était de poursuivre ainsi une investigation débutée par Delphine Icard avec les pinces optiques. En effet, dans sa thèse, elle avait observé que lorsqu'une force identique est appliquée de manière répétée sur une cellule, elle devient de plus en plus rigide, et que cet effet s'accompagne d'un recrutement d'actine autour du point d'application de la force \parencite{icard-arcizet_cell_2008}. L'utilisation de pinces magnétiques nous permet de réaliser des expériences sous microscope confocal, ce qui n'était pas possible avec les pinces optiques. Ces expériences couplant mécanique et observations en microscopie de fluorescence seront décrites au chapitre suivant. 
 
 Deux expériences sont décrites ici : les expériences faites avec la pince immédiatement après sa construction et dont le but est d'observer l'évolution des paramètres mécaniques de C2C12 isolées, et des expériences faites bien après en collaboration avec Pierre-Oliver Strale sur d'autres cellules exprimant des cadhérines mutantes. 
 
@@ -158,6 +158,14 @@ L'exposant médian, $\alpha=0.18$ nous indique que la réponse mécanique des ce
 Il est important de rappeler que la population est tronquée de ses cellules les plus rigides. 
 Les valeurs obtenues peuvent paraître faibles en comparaison de celles obtenues précédemment sur la même lignée par Delphine Icard avec les pinces optiques \cite{icard-arcizet_cell_2008}. Cependant les pinces optiques opéraient sur des billes bien moins enfoncées à l'intérieur de la cellule, avec une épaisseur sous la bille plus élevée et avec une fonctionnalisation différente des billes (polypeptide d’une vingtaine d’acides aminés se terminant par le tripeptide RGD). Les éléments du cytosquelette sondés n’étaient peut-être pas les mêmes. La valeur de $\alpha$ était d’ailleurs elle aussi supérieure à celle mesurée ici. De manière générale, on voit que la valeur de $G_0$ va être très dépendante du modèle utilisé. 
 
+Le modèle de visco-élasticité de \cite{balland_power_2006} décrit au chapitre 5 montrait une relation linéaire entre $\ln(G_0)$ et $\alpha$. Nous avons ici retrouvé la même relation, visible en figure \ref{lnG0}. 
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/lnG0_vs_alpha.png} 
+\caption{Corrélation entre $\ln(G_0)$ et $\alpha$.\label{lnG0}}
+\end{figure}
+
+
 \subsubsection{Influence de l'enrobage des billes en fibronectine}
 
 Pendant la première série d'expériences, des billes enrobées de deux concentrations différentes de fibronectine ont été utilisées. 
@@ -184,7 +192,7 @@ En revanche, il arrive pour un nombre non négligeable de cellules que le dépla
 \begin{figure}[p]
 \includegraphics[width=6.5cm]{Figures/A_creneaux_temoin.png}
 \includegraphics[width=6.5cm]{Figures/E_creneaux_temoin.png} 
-\\
+
 \includegraphics[width=6.5cm]{Figures/A_creneaux_S2.png} 
 \includegraphics[width=6.5cm]{Figures/E_creneaux_S2.png} 
 \caption{\label{Evolution_6c} Histogramme des paramètres $A$ et $\alpha$ pour six applications de force successives, pour le témoin avec 10s d’application de force, en haut, et pour 125s d’application de force, en bas.}
@@ -197,11 +205,8 @@ En revanche, il arrive pour un nombre non négligeable de cellules que le dépla
 \label{Diff}
 \end{figure}
 
-%LES TEXTES, AXES, ENCARTS DES FIGURES 5 ET 6 SONT TROP PETITS
-%A QUOI CORRESPOND LA DOUBLE ECHELLE « FREQUENCE » ET « FREQUENCE CUMULEE » DE LA FIG 5 ?
-
 On peut voir sur la figure \ref{Evolution_6c} qu'il n'y a pas de changements de $A$ communs à toute la population de cellules : ce ne sont pas toutes les cellules qui se rigidifient ou se ramollissent ensemble. 
-En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme  et 3\ieme créneaux, qui se résorbe ensuite, mais il n'est pas significatif. 
+En revanche, on peut observer un décalage des exposants vers les valeurs les plus faibles aux 2\ieme{} et 3\ieme{} créneaux, qui se résorbe ensuite, mais il n'est pas significatif. 
 Le comportement mécanique de ces cellules soumises à une force pendant de longues durées évolue donc d'abord dans le sens d'une \og élastification \fg , d'une diminution de la part dissipative de la réponse mécanique. 
 
 Pour distinguer dans l’évolution des paramètres mécaniques ce qui est dû à l’application prolongée d’une force de ce qui est dû à la dispersion naturelle des mesures, nous avons comparé les résultats obtenus pour 10 secondes et 125 secondes d’application de force.
