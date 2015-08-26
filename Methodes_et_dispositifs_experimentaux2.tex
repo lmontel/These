@@ -719,8 +719,8 @@ Les deux modèles font une autre hypothèse, nécessaire pour le calcul, en supp
 	\subsection{Calibration de l'étireur}
 	
 	Un modèle géométrique simple permet d'estimer rapidement l'augmentation de la surface de la lamelle de PDMS en fonction du diamètre et de l'enfoncement du plot : 
-	$$R_{etire}=R_p+\sqrt{h^2+(R_l-R_p)^2}$$
-	$$ \frac{\Delta A}{A} = \frac{R_{etire}^2}{R_l^2}-1$$ 	
+	$$\alpha=\frac{R_p}{R_l}<1 \qquad \beta=\frac{h}{R_l}$$
+	$$ \frac{\Delta A}{A} = \alpha^2-1+(\alpha+1)\sqrt{\beta^2+(1-\alpha)^2}$$ 	
 		
 	\begin{figure}[h!]
 		\includegraphics[scale=0.5]{Modele_etireur.png}
@@ -729,7 +729,7 @@ Les deux modèles font une autre hypothèse, nécessaire pour le calcul, en supp
 		
 		\begin{figure}
 		\includegraphics[scale=0.5]{Figures/Calibration_etireur.png} 
-		\caption{Résultats de la calibration de l'étireur pour les différents étirements utilisés comparés au modèle théorique, pour $R_p$= 5 ou 7 mm et $R_l$=13mm}
+		\caption{Résultats de la calibration de l'étireur pour les différents étirements utilisés comparés au modèle théorique, pour $R_p$= 5 ou 7 mm et $R_l$=12mm}
 		\end{figure}
 	Afin de le comparer à l'étirement réel subi par la lamelle de PDMS, des lamelles ont été recouvertes de Pluronic (Pluronic F-127, Sigma Aldrich), un copolymère photosensible, puis exposées à un rayonnement UVC afin d'oxyder le Pluronic à travers un masque de quartz imprimé d'une fine couche de métal formant un grand nombre de carrés de taille connue formant un quadrillage. Puis les lamelles ont été recouvertes de fibronectine fluorescente, qui ne pouvait adhérer qu'aux endroits non éclairés par les UV. 
 	
