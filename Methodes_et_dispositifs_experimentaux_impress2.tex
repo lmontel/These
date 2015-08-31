@@ -866,5 +866,14 @@ successivement en rouge profond (F-actine), en rouge (G-actine) et en rapport (F
 	
 	On obtient alors des tableaux de données contenant les valeurs moyennes d'intensité pour la phalloïdine, la DNase et la MRTF-A (GFP ou endogène) et les aires des cellules et de leurs noyaux. 
 	
+\section{Tests statistiques}
+	De manière générale, les expériences de biophysique réalisées sur des cellules sont plus difficiles à reproduire que des expériences de physique classique. 
+	En effet, les cellules au sein d'une population ont une certaine variabilité dans leurs caractéristiques et dans leur comportement : elles ne sont pas de la même taille, ni de la même forme, elles sont à des étapes différentes de leur cycle cellulaire \dots 
+	Pour avoir une idée du comportement général, il faut refaire les expériences sur une population de cellules, ce qui va permettre de dégager les tendances générales à toute la population. 
+	Lorsque deux populations a priori identiques de cellules ont été soumises à des conditions expérimentales, elles peuvent donner des résultats différents. Les tests statistiques servent alors à estimer les chances que ces différences ne soient dues qu'au hasard des fluctuations, et non aux différences de conditions expérimentales. 	
+	Les données récoltées durant ces expériences sont de deux catégories : certaines sont des nombres (comme l'aire des cellules, les paramètres rhéologiques, les intensités de fluorescence \dots), d'autres sont des données qualitatives (comme la localisation majoritairement cytoplasmique, homogène ou nucléaire de MRTF-A). Dans ce second cas, on compte la quantité de cellules dans chaque catégorie, et on cherche à savoir si leur répartition dans deux ou plus conditions expérimentales distintes est significativement différente.  
+	Pour comparer deux distributions de données chiffrées, le test de Student (t-test) est la méthode la plus classique. Elle suppose que les données aient une distribution normale, mais n'est pas extrêmement sensible aux déviations de cette hypothèse, et que les variances sont proches ( ce qui peut être faux si les deux échantillons sont de taille trop différentes). 
+	Pour comparer des données qualitatives, par exemple la quantité de cellules ayant MRTF-A majoritairement cytoplasmique, homogène ou nucléaire avec ou sans étirement, il faut utiliser des tests spécifiques comme le test de Fischer (lorsqu'il s'agit de petits échantillons) ou le G-test lorsque les échantillons sont suffisamment grands. Ces tests calculent les probabilités que deux répartitions obtenues dans des conditions expérimentales différentes soient issues de la même population. 
+	J'ai principalement été guidée dans mes choix de tests statistiques par l'excellent et très pédagogique Biological Handbook of Statistics ( http://www.biostathandbook.com ).
 	
 %\end{document}
