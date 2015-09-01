@@ -1,15 +1,15 @@
-%\documentclass{report}
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
-%\usepackage[francais]{babel}
-%\usepackage{amsmath}
-%\usepackage{graphicx}
-%\graphicspath{{Figures/}}
-%\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
-%\usepackage[colorlinks,linkcolor=blue]{hyperref}
-%\newcommand{\micro}{$\mathrm{\mu}$}
-%\addbibresource{biblio2.bib}
-%\begin{document}
+\documentclass{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{Figures/}}
+\usepackage[backend=biber,style=authoryear,bibencoding=utf8]{biblatex}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\newcommand{\micro}{$\mathrm{\mu}$}
+\addbibresource{biblio2.bib}
+\begin{document}
 
 \chapter{Rhéologie locale d'une cellule unique}
 
@@ -71,11 +71,16 @@ Sur la vidéo, on peut observer la position dans le plan XY du centre de la bill
 Une fois les positions du centre de la bille extraites de la vidéo par le logiciel d'analyse d'images, on peut en tirer le déplacement de la bille par rapport à sa position au temps t=0 de l'application de la force, pour chaque créneau $\delta R(t)=\sqrt{\delta x(t)^2+\delta y(t)^2}$. 
 La plupart du temps, on a $\delta R(t) \approx \delta x(t)$. 
 %J’AI SUPPRIME CE QUI AVAIT DEJA ETE DIT JUSTE AVANT
- 
+
+\begin{figure}
+\includegraphics[scale=0.3]{confocal.png}
+\caption{\label{confocal} Images en 3D d'une bille (en jaune) enfoncée dans une cellule prises au microscope confocal. En rouge, les filaments d'actine marqués à la phalloïdine Alexa 597 et en bleu le noyau marqué au DAPI. La bille fait 4.41 \micro m de diamètre et sert d'échelle.}
+\end{figure}
 Durant les expériences de pinces magnétiques, nous ne pouvons pas mesurer l'angle d'enfoncement $\theta$ des billes. Cependant, des cellules fixées ont été observées au microscope confocal, ce qui nous a permis de mesurer l'angle d'enfoncement des billes, et la hauteur $h_u$ sous la bille pour 23 billes. On obtient alors pour 4 \micro g de fibronectine : 
 $$ \langle h_u \rangle = 1.6 \mu m \qquad \langle \theta \rangle = 110 \degres$$
 
-On voit bien ici que l'hypothèse d'un milieu semi-infini sous la bille n'est pas du tout vérifiée. Au contraire, on a même $\frac{h_u}{2a} <1$. 
+On voit bien ici que l'hypothèse d'un milieu semi-infini sous la bille n'est pas du tout vérifiée. Au contraire, on a même $\frac{h_u}{2a} <1$. L'angle moyen d'enfoncement $\theta$ est supérieur à 90$\degres$, ce qui signifie que la bille est souvent enfoncée plus qu'à moitié dans la cellule, certaines billes étant même complètement à l'intérieur de la cellule. On peut voir une image typique en figure \ref{confocal} : la bille est proche du noyau et enfoncée presque sur toute l'épaisseur de la cellule. 
+De manière générale, la plupart des billes, à l'échelle de temps de quelques heures sont ramenées vers le noyau de la cellule et profondément enfoncées, sans que nous sachions quel mécanisme est à \oe uvre (est-ce le flux rétrograde d'actine qui entraîne la bille, ou un transport actif lié aux microtubules ? ). Elles sont presque toujours attachées solidement au cytosquelette de la cellule, et je n'ai pu observer que quelques fois sur des centaines de billes testées la formation d'un tube de membrane indiquant un défaut d'ancrage au cytosquelette. 
 
 Ce qui nous donne avec les deux modèles décrits dans le chapitre 6 : 
 \begin{align}
@@ -102,16 +107,21 @@ Par défaut, la fonction de fluage sera calculée sans son préfacteur géométr
 $$ J(t) = 2 \pi a p \xi (t)\qquad \xi (t) = \frac{\delta x (t)}{F}$$
 	
 \begin{figure}
-\includegraphics[scale=0.09]{c9-rigidification-couleurs.png}
+\includegraphics[scale=0.4]{C162.png}
 
 \caption{Exemple de tracé de la position selon $x$ d'une bille au cours du temps lorsqu'elle est soumise à 4 créneaux de force successifs. $\delta R(t)$ =$\delta x(t)$ lorsque le déplacement ne se fait que selon l'axe $X$.\label{Exemple}} 
-	\includegraphics[scale=0.5]{Figures/Exemple_C162_loglog.png}
+	\includegraphics[scale=0.40]{Figures/Exemple_C162_loglog.png}
 	\caption{Déplacement de la bille en fonction du temps écoulé depuis le début du créneau, pour les 4 créneaux successifs. On peut remarquer l'allure caractéristique en loi de puissance. On peut également voir qu'ici qu'après le premier créneau le déplacement est plus grand en réponse à la même force : la cellule s'est \og ramollie \fg. }
 \end{figure}
 
-	 
+\begin{figure}
+\includegraphics[scale=0.5]{Exponentiel.png}
+\includegraphics[scale=0.5]{Exponentiel_zoom.png}
+\caption{\label{Fits comparés} Exemple d'ajustement du déplacement d'une bille au cours du temps par une loi de puissance $A*t^{\alpha}$ et par une exponentielle $A(1-e^{-t/\tau})$, sur les dix premières secondes d'application de la force (pendant lesquelles le taux d'échantillonnage est le plus élevé). On peut voir que pour cette cellule, le modèle en loi de puissance continue de bien décrire le déplacement longtemps après les dix premières secondes avec seulement deux paramètres, ce qui n'est pas le cas pour le modèle exponentiel. }
+\end{figure}
+
 La fonction de fluage de la cellule peut être correctement ajustée par une loi de puissance à une échelle de temps comprise entre 0.1 s (résolution de la technique) 15-20 s. Au-delà, les mouvements actifs de la cellule perturbent le mouvement de la bille.  
-L'utilisation d'une loi de puissance nous permet de réaliser tous les ajustements sur 3 décades en temps avec seulement deux paramètres, ce que ne permettraient pas des modèles construits par l’association de quelques éléments élastiques et visqueux. 
+L'utilisation d'une loi de puissance nous permet de réaliser tous les ajustements sur 3 décades en temps avec seulement deux paramètres, ce que ne permettraient pas des modèles construits par association de quelques éléments élastiques et visqueux. On peut voir en figure \ref{Fits comparés} qu'un ajustement à l'aide d'une exponentielle n'est pas aussi performant. 
 
 On peut alors réaliser un ajustement avec la fonction : 
 $$ \xi (t) = \frac{\delta x}{F}=A \left( \frac{t}{t_0} \right)^{\alpha}$$
@@ -256,6 +266,7 @@ Nous avons alors cherché si ces différences de comportement ne provenaient pas
 
 \begin{figure}
 \includegraphics[scale=0.45]{Figures/Positions_FRI.png} 
+\includegraphics[scale=0.2]{Figures/Schema_angle.png}
 \caption{Longueur et orientation du vecteur entre le bord du noyau et la bille. La flèche représente la direction de la force exercée sur les billes.\label{polar}}
 \end{figure}
 \begin{figure}[p]
@@ -311,4 +322,4 @@ Cependant, on peut voir sur la figure \ref{DBN} que ce n'est pas le cas, au cont
  
  
  
-%\end{document}
+\end{document}
