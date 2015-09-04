@@ -1,4 +1,4 @@
-%\documentclass                                                                                                                                                                                                                                                                                                                                       {report}
+%\documentclass[10pt,twoside,openright]{report}
 %\usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
 %\usepackage[francais]{babel}
@@ -9,8 +9,8 @@
 %\usepackage[colorlinks,linkcolor=blue]{hyperref}
 %\newcommand{\micro}{$\mathrm{\mu}$}
 %\addbibresource{biblio2.bib}
-%
-%\begin{document}
+
+\begin{document}
 
 \chapter{Méthodes et dispositifs expérimentaux}
 
@@ -170,9 +170,9 @@ Suite au rachat de notre fournisseur, la nanofectine n'est plus commercialisée.
 	\item (option 1 : F-tractine) 6 \micro l de lipofectamine 3000
 	\item (option 1 : F-tractine) 2 \micro l de P3000 Reagent
 	\item 2*125 \micro l d'OptiMEM (Opti-MEM I Reduced Serum Medium, Gibco)
-	\item 0,75ml de milieu complet (transfection simple uniquement)
+	\item 1,75ml de milieu complet (transfection simple uniquement)
 	\item (option 1) 4*125 \micro l d'OptiMEM
-	\item (option 1) 0,5ml de milieu complet 
+	\item (option 1) 1,5ml de milieu complet 
 	\end{itemize}
 \end{quote}
 \paragraph{Protocole : }
@@ -185,8 +185,8 @@ Suite au rachat de notre fournisseur, la nanofectine n'est plus commercialisée.
 	\item Transvaser le contenu de l'eppendorf \no 2 dans l'eppendorf \no 1. 
 	\item (option 1) Transvaser le contenu de l'eppendorf \no bis2 dans l'eppendorf \no 1bis. 
 	\item Laisser incuber 5 minutes à 37\degres C. 
-	\item (MRTF-A GFP seule) Mélanger à 1.75 \micro l de DMEM sans rouge phénol.
-	\item (option 1) Mélanger les eppendorfs \no 2 et \no 2bis à 1.5 \micro l de DMEM ans rouge phénol
+	\item (MRTF-A GFP seule) Mélanger à 1.75 ml de DMEM sans rouge de phénol.
+	\item (option 1) Mélanger les eppendorfs \no 2 et \no 2bis à 1.5 ml de DMEM sans rouge de phénol
 	\item Rincer les C2C12 et leur ajouter les 2ml de solution. 
 	\item Laisser incuber une nuit à 37 \degres C.
 	\item Ne pas rincer avant les expériences.
@@ -448,15 +448,15 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  La force de friction visqueuse sur une sphère peut être modélisée par la relation de Stokes : 
  $$ \vec{F}_{vis}=- 3 \pi \eta d \vec{U} =-\vec{F}_{mag}$$
  
- Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur entre 2 lammelles de microscope, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peut pas être exclue. On note $h$ la distance à la lamelle la plus proche. 
+ Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur entre 2 lamelles de microscope, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peut pas être exclue. On note $h$ la distance à la lamelle la plus proche. 
  De plus, la viscosité $\eta$ du fluide est très sensible aux variations de température, or l'électro-aimant chauffe pendant l'application de la force à cause de l'effet Joule dans la bobine. 
  Comme la mesure est effectuée à une distance de 0,5 à 1mm de la pointe, celle-ci chauffe le fluide localement. 
- On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a=0.0178 Pa.s/\degres C$ autour de 24\degres C. 
+ On a mesuré la dépendance de la viscosité du fluide en fonction de la température $\dfrac{\eta}{T}=0.0178 Pa.s/\degres C$ autour de 24\degres C. 
  
  Le modèle de Stokes est donc corrigé ainsi : 
  
  \begin{equation}
- {F}_{mag}= 3 \pi \left(\eta_{24^{o}C}-a\left(\frac{T_{fin}-T_{init}}{2} - 24\right) \right) *\left( \frac{d_{max}+d_{min}}{2} \right) * \left( 1+\frac{d}{h} \right)*\vec{U}
+ {F}_{mag}= 3 \pi \left(\eta_{24^{o}C}-\dfrac{\eta}{T}\left(\frac{T_{fin}-T_{init}}{2} - 24\right) \right) *\left( \frac{d_{max}+d_{min}}{2} \right) * \left( 1+\frac{d}{h} \right)*\vec{U}
  \label{Stokes_corr}
  \end{equation}
  
@@ -728,8 +728,8 @@ Les deux modèles font une autre hypothèse, nécessaire pour le calcul, en supp
 		\end{figure}	
 		
 		\begin{figure}
-		\includegraphics[scale=0.5]{Figures/Calibration_etireur.png} 
-		\caption{Résultats de la calibration de l'étireur pour les différents étirements utilisés comparés au modèle théorique, pour $R_p$= 5 ou 7 mm et $R_l$=12mm}
+		\includegraphics[scale=0.4]{Figures/Calibration_etireur.png} 
+		\caption{Résultats de la calibration de l'étireur pour les différents étirements utilisés comparés au modèle théorique, pour $R_p$= 5 ou 7 mm et $R_l$=12mm. Il est à noter que le modèle théorique n'est pas ajusté, il est calculé à partir des paramètres géométriques de l'étireur.}
 		\end{figure}
 	Afin de le comparer à l'étirement réel subi par la lamelle de PDMS, des lamelles ont été recouvertes de Pluronic (Pluronic F-127, Sigma Aldrich), un copolymère photosensible, puis exposées à un rayonnement UVC afin d'oxyder le Pluronic à travers un masque de quartz imprimé d'une fine couche de métal formant un grand nombre de carrés de taille connue formant un quadrillage. Puis les lamelles ont été recouvertes de fibronectine fluorescente, qui ne pouvait adhérer qu'aux endroits non éclairés par les UV. 
 	
@@ -764,7 +764,7 @@ Les deux modèles font une autre hypothèse, nécessaire pour le calcul, en supp
 \begin{figure}
 \includegraphics[scale=0.3]{Figures/Zoom_Calibration_etireur.png} 
 
-\caption{Superposition des images prises en microscopie de fluorescence du quadrillage de fibronectine Cy3 imprimé sur une lamelle de PDMS avant(en rouge) et après (en cyan) étirement. }
+\caption{Superposition des images prises en microscopie de fluorescence du quadrillage de fibronectine Cy3 imprimé sur une lamelle de PDMS avant(en rouge) et après (en v) étirement. Ces images ne représentent qu'une petite partie de la surface étirée totale, car l'image originale du plot tout entier est trop grande pour être présentée ici.}
 \end{figure}
 	Les images nous montrent que la déformation du PDMS par le plot est radiale et uniforme, et que le modèle géométrique le plus simple décrit bien quantitativement la déformation subie. 
 	
@@ -816,7 +816,7 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	En vissant le plot, on étire alors la lamelle rapidement en quelques secondes jusqu'à la déformation souhaitée. On cherche alors des cellules exprimant la MRTF-A GFP. À chaque fois qu'une ou plusieurs cellules sont visibles dans un champ, on enregistre la position de la platine motorisée. Toutes les 5 à 10 minutes, on retourne observer toutes les cellules répertoriées afin de suivre l'évolution de la localisation de MRTF-A au cours du temps. De nouvelles cellules sont recherchées jusqu'à 40 minutes après l'étirement et l'observation est ensuite maintenue pendant 2h après l'étirement. 
 	\begin{figure}
 	\includegraphics[scale=0.5]{Montage_translocations_2013-04-16_l2z1.png}
-	\caption{C2C12 transfectées MRTF-A GFP (en vert) et Actine mCherry (en rouge), marquées au DAPI (en bleu), étirées à 30\% pendant 120 minutes. Dans les deux cellules marquées d'une flèche, MRTF-A s'accumule dans le noyau, puis retourne dans le cytoplasme.}
+	\caption{C2C12 transfectées MRTF-A GFP (en rouge) et Actine mCherry (en bleu), marquées au DAPI (en jaune), étirées à 30\% pendant 120 minutes. Dans les deux cellules marquées d'une flèche, MRTF-A s'accumule dans le noyau, puis retourne dans le cytoplasme.}
 	\label{Etirement_live}
 	\end{figure}
 	
@@ -829,7 +829,7 @@ Quatre configurations d'observation ont été utilisées pour la fluorescence :
 	
 	\begin{figure}
 	\includegraphics[scale=0.3]{2014-06-18-Et10-0-1(RGB).png}
-	\caption{C2C12 marquées par la phalloïdine (ici en rouge), par la DNase I (en vert), un anticorps anti-MRTF-A (en cyan) et le DAPI (en magenta).}
+	\caption{C2C12 marquées par la phalloïdine (ici en magenta), par la DNase I (en jaune), un anticorps anti-MRTF-A (en rouge) et le DAPI (en vert).}
 	\end{figure}
 	
 	Pour une expérience d'étirement fixé, on prépare une boîte de C2C12 proches de la confluence (60-70\%) transfectées si l'on veut observer la MRTF-A GFP. Elles sont ensemencées ensemble sur 6 lamelles de PDMS dans une plaque 6 puits dans 3ml de milieu de culture 24h avant le début de l'expérience. Le lendemain, une de ces lamelles est montée sur le support, rincée au PBS et fixée immédiatement, c'est la lamelle témoin. Les autres lamelles sont successivement étirées, laissées à l'incubateur pendant un temps donné, puis démontées, rincées et fixées immédiatement. On obtient ainsi pour un même étirement une lamelle à t=0 et 5 lamelles à différents temps après étirement (par exemple 5, 10, 20, 30, 60 minutes après étirement). 
@@ -866,5 +866,14 @@ successivement en rouge profond (F-actine), en rouge (G-actine) et en rapport (F
 	
 	On obtient alors des tableaux de données contenant les valeurs moyennes d'intensité pour la phalloïdine, la DNase et la MRTF-A (GFP ou endogène) et les aires des cellules et de leurs noyaux. 
 	
+\section{Tests statistiques}
+	De manière générale, les expériences de biophysique réalisées sur des cellules sont plus difficiles à reproduire que des expériences de physique classique. 
+	En effet, les cellules au sein d'une population ont une certaine variabilité dans leurs caractéristiques et dans leur comportement : elles ne sont pas de la même taille, ni de la même forme, elles sont à des étapes différentes de leur cycle cellulaire \dots 
+	Pour avoir une idée du comportement général, il faut refaire les expériences sur une population de cellules, ce qui va permettre de dégager les tendances générales à toute la population. 
+	Lorsque deux populations a priori identiques de cellules ont été soumises à des conditions expérimentales, elles peuvent donner des résultats différents. Les tests statistiques servent alors à estimer les chances que ces différences ne soient dues qu'au hasard des fluctuations, et non aux différences de conditions expérimentales. 	
+	Les données récoltées durant ces expériences sont de deux catégories : certaines sont des nombres (comme l'aire des cellules, les paramètres rhéologiques, les intensités de fluorescence \dots), d'autres sont des données qualitatives (comme la localisation majoritairement cytoplasmique, homogène ou nucléaire de MRTF-A). Dans ce second cas, on compte la quantité de cellules dans chaque catégorie, et on cherche à savoir si leur répartition dans deux ou plus conditions expérimentales distintes est significativement différente.  
+	Pour comparer deux distributions de données chiffrées, le test de Student (t-test) est la méthode la plus classique. Elle suppose que les données aient une distribution normale, mais n'est pas extrêmement sensible aux déviations de cette hypothèse, et que les variances sont proches ( ce qui peut être faux si les deux échantillons sont de taille trop différentes). 
+	Pour comparer des données qualitatives, par exemple la quantité de cellules ayant MRTF-A majoritairement cytoplasmique, homogène ou nucléaire avec ou sans étirement, il faut utiliser des tests spécifiques comme le test de Fischer (lorsqu'il s'agit de petits échantillons) ou le G-test lorsque les échantillons sont suffisamment grands. Ces tests calculent les probabilités que deux répartitions obtenues dans des conditions expérimentales différentes soient issues de la même population. 
+	J'ai principalement été guidée dans mes choix de tests statistiques par l'excellent et très pédagogique Biological Handbook of Statistics ( http://www.biostathandbook.com ).
 	
 %\end{document}

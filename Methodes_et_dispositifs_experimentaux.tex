@@ -444,12 +444,12 @@ Le choix entre les deux méthodes dépend donc de la précision d'observation do
  Dans notre dispositif, les billes sont placées dans une chambre expérimentale de 240\micro m de hauteur formée par un séparateur, et l'influence de la lamelle supérieure ou de la lamelle inférieure ne peuvent pas être exclue. On note $h$ la distance à la lamelle la plus proche. 
  De plus, la viscosité $\eta$ du fluide est très sensible aux variations de température, or l'électro-aimant chauffe pendant l'application de la force à cause de l'effet Joule dans la bobine. 
  Comme la mesure est effectuée à une distance de 0,5 à 1mm de la pointe, celle-ci chauffe le fluide localement. 
- On a mesuré la dépendance de la viscosité du fluide en fonction de la température $a=0.0178 Pa.s/\deg C$ autour de 24\degres C. 
+ On a mesuré la dépendance de la viscosité du fluide en fonction de la température $\dfrac{\eta}{T}=0.0178 Pa.s/\deg C$ autour de 24\degres C. 
  
  Le modèle de Stokes est donc corrigé ainsi : 
  
  \begin{equation}
- {F}_{mag}= 3 \pi \left(\eta_{24^{o}C}-a\left(\frac{T_{fin}-T_{init}}{2} - 24\right) \right) *\left( \frac{d_{max}+d_{min}}{2} \right) * \left( 1+\frac{d}{h} \right)*\vec{U}
+ {F}_{mag}= 3 \pi \left(\eta_{24^{o}C}-\dfrac{\eta}{T}\left(\frac{T_{fin}-T_{init}}{2} - 24\right) \right) *\left( \frac{d_{max}+d_{min}}{2} \right) * \left( 1+\frac{d}{h} \right)*\vec{U}
  \label{Stokes_corr}
  \end{equation}
  

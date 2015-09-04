@@ -98,6 +98,18 @@ Parmi ces expériences, certaines cellules ont été observées alors qu'elles n
 \caption{Proportion des cellules observées pour lesquelles MRTF-A GFP change de localisation dans la cellule au cours de l'expérience. * : $p<\frac{0.05}{4}$ , ** $p<\frac{0.01}{4}$, *** $p<\frac{0.001}{4}$ (réalisés avec un test de Fisher et une correction pour les comparaisons multiples)\label{MRTF-A Pinces}}
 \end{figure}
 
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/CHN_pinces.png} 
+\caption{Répartition de MRTF-A dans les cellules avant application de la force. \label{CHN_pinces}}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Pinces_vs_temoin.png} 
+\caption{\label{pinces_vs_temoin} Proportion des cellules observées pour lesquelles MRTF-A GFP change de localisation dans la cellule au cours de l'expérience. p=0.012 (G-test d'indépendance)}
+\end{figure}
+
+
+
 On peut voir sur la figure \ref{MRTF-A Pinces} que l'ajout d'actine exogène réduit le nombre de cellules pour lesquelles MRTF-A change de localisation, mais de manière non significative  \footnote{ Il est à noter que vu le petit nombre de cellules observées, ces différences non significatives pourraient le devenir si l'on observait plus de cellules. }, alors que l'ajout de LifeAct RFP a l'effet inverse de manière significative.
 En effet, en ajoutant de l'actine mCherry, on augmente la quantité totale de G-actine dans la cellule, et ce d'autant plus que l'actine fluorescente polymérise un peu moins bien que l'actine sauvage. Comme plus de G-actine est disponible pour se lier à MRTF-A, celle-ci est d'autant plus susceptible d'être liée à l'actine et donc cytoplasmique. 
 Si la réserve d'actine monomérique est grande, une polymérisation d'actine en réponse à la force appliquée ne sera pas forcément suffisante pour dépléter la réserve de G-actine excédentaire.
@@ -110,24 +122,13 @@ On peut également remarquer que les résultats pour MRTF-A GFP seule sont ident
 De plus, on peut voir en comparant avec les expériences LifeAct témoin sans bille que l'application d'une force sur la cellule a un effet significatif sur la relocalisation de MRTF-A. 
 La présence de Life-Act RFP stabilisant les filaments, la réserve d'actine monomérique est plus faible dans les cellules doublement transfectées MRTF-A GFP + LifeAct RFP, ce qui les rend plus sensibles : une contrainte plus faible suffit à dépléter suffisamment la réserve de G-actine. Il est également possible qu’en présence de LifeAct la polymérisation d’actine sous force appliquée soit plus efficace.
 
-Les expériences de pince magnétiques sont les toutes premières que j'ai réalisées au sujet de MRTF-A. Voyant que les résultats étaient très semblables entre les expériences MRTF-A GFP seule avec billes et les témoins MRTF-A GFP + LifeAct RFP, j'ai alors pensé que l'expérience était un échec, et j'ai orienté mes efforts vers les expériences d'étirement. À la fin de ma thèse, avec du recul et une meilleur compréhension du système actine/MRTF-A, j'ai compris les résultats obtenus sur les pinces magnétiques. Malheureusement, le témoin MRTF-A GFP seule sans billes qui complèterait les résultats ne peut plus être réalisé, car la nanofectine utilisée alors pour les transfections n'est plus commercialisée. Cependant, je peux comparer les expériences MRTF-A GFP avec billes et les expériences témoins non étirées qui sont également transfectées à la nanofectine, et qui seront présentées en détail section \ref{rinçage}. Il y a deux différences entre le vrai témoin et les témoins non-étirées : le substrat est différent (verre contre PDMS) et l'environnement également (cuve de 65\micro l contre 7 ml). Le projet est maintenant de voir si ces deux conditions ont une influence sur la localisation de MRTF-A, pour savoir s'il est pertinent d'utiliser les témoins non-étirées comme référence pour les expériences de pinces magnétiques. 
+Les expériences de pince magnétiques sont les toutes premières que j'ai réalisées au sujet de MRTF-A. Voyant que les résultats étaient très semblables entre les expériences MRTF-A GFP seule avec billes et les témoins MRTF-A GFP + LifeAct RFP, j'ai alors pensé que l'expérience était un échec, et j'ai orienté mes efforts vers les expériences d'étirement. À la fin de ma thèse, avec du recul et une meilleur compréhension du système actine/MRTF-A, j'ai compris les résultats obtenus sur les pinces magnétiques. Malheureusement, le témoin MRTF-A GFP seule sans billes qui complèterait les résultats ne peut plus être réalisé, car la nanofectine utilisée alors pour les transfections n'est plus commercialisée. Cependant, je peux comparer les expériences MRTF-A GFP avec billes et les expériences témoins non étirées qui sont également transfectées à la nanofectine, et qui seront présentées en détail section \ref{Rinçage}. Il y a deux différences entre le vrai témoin et les témoins non-étirées : le substrat est différent (verre contre PDMS) et l'environnement également (cuve de 65\micro l contre 7 ml). Le projet est maintenant de voir si ces deux conditions ont une influence sur la localisation de MRTF-A, pour savoir s'il est pertinent d'utiliser les témoins non-étirées comme référence pour les expériences de pinces magnétiques. 
 
 Dans le cas des pinces, on a vu que dans environ 20\% des cellules, MRTF-A est relocalisée, en 30 minutes d'observation. Dans le cas du témoin, c'est le cas de 20\% des cellules, mais en deux heures d'observation. Si l'on compte quel pourcentage de cellules ont eu une relocalisation de MRTF-A en seulement 30 minutes, on voit qu'il n'est que de 8,6\%, ce qui est significativement moins que dans le cas des expériences de pinces magnétiques (voir figure \ref{pinces_vs_temoin}).
 
 
 
 
-
-
-\begin{figure}
-\includegraphics[scale=0.4]{Figures/CHN_pinces.png} 
-\caption{Répartition de MRTF-A dans les cellules avant application de la force. \label{CHN_pinces}}
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale=0.4]{Figures/Pinces_vs_temoin.png} 
-\caption{\label{pinces_vs_temoin} Proportion des cellules observées pour lesquelles MRTF-A GFP change de localisation dans la cellule au cours de l'expérience. p=0.012 (G-test d'indépendance)}
-\end{figure}
 
 
 
@@ -141,6 +142,14 @@ C'est pourquoi les expériences sur MRTF-A ont été poursuivies par des déform
 
 
 \subsection{\'Etat de référence}
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Reference.png} 
+\includegraphics[scale=0.32]{Figures/Reference_transloc.png} 
+\caption{Répartition entre les trois états pour des cellules fixées immédiatement après un montage sans rinçage et sans étirement (n=7, 963 cellules) et lors de l'observation en direct après 5 minutes d'observation sans étirement (n=5, 41 cellules). La différence n'est pas significative (p=0.995, G-test).
+\label{Référence}}
+
+\caption{Quantité de cellules changeant au moins une fois d'état pendant 2 heures d'observation et direction de ces changements \label{Ref_transloc}}
+\end{figure}
 
 Avant de comparer ce qu'il se passe pour différents taux d'étirement, il est nécessaire de mesurer quel est l'état de référence de notre système, qui sera le témoin. 
 
@@ -149,18 +158,9 @@ Aucun rinçage n'a été effectué avant expérience pour éliminer l'effet du c
 
 La dynamique de référence des cellules a été observée pendant deux heures de manière strictement identique à une expérience où l'étirement est non-nul, afin de pouvoir quantifier la fréquence naturelle des changements de localisation de MRTF-A pendant cette durée. 
 
-\begin{figure}
-\includegraphics[scale=0.5]{Figures/Reference.png} 
-\caption{Répartition entre les trois états pour des cellules fixées immédiatement après un montage sans rinçage et sans étirement (n=7, 963 cellules) et lors de l'observation en direct après 5 minutes d'observation sans étirement (n=5, 41 cellules). La différence n'est pas significative (p=0.995, G-test).
-\label{Référence}}
-\includegraphics[scale=0.4]{Figures/Reference_transloc.png} 
-\caption{Quantité de cellules changeant au moins une fois d'état pendant 2 heures d'observation et direction de ces changements \label{Ref_transloc}}
-\end{figure}
 
-\begin{figure}
-\includegraphics[scale=0.4]{Figures/CHN_vs_Temps_reference.png} 
-\caption{\label{Reference_dynamique} \'E{}volution de la proportion de cellules ayant MRTF-A dans chacune des trois localisations au cours du temps lors d'une expérience témoin où l'on a monté à l'avance la lamelle dans l'étireur et où l'on n'applique aucune contrainte.}
-\end{figure}
+
+
 
 On peut observer la répartition entre les trois états est la même lors des expériences fixées immédiatement après montage et après 5 minutes d'étirement sur la figure \ref{Référence}.
 Cela peut indiquer qu'il n'y a aucune réponse de la part des cellules durant les 5 premières minutes, mais cela n'exclut pas une réaction très rapide qui reviendrait à l'équilibre pendant ce laps de temps, même si ceci semble peu probable. 
@@ -168,12 +168,16 @@ Cela peut indiquer qu'il n'y a aucune réponse de la part des cellules durant le
 Le lecteur attentif aura remarqué que cette répartition est différente de celle présentée en figure \ref{MRTF-A Pinces}. 
 Cela est dû aux différences dans la préparation des cellules dans les deux expériences, car la transfection n'était pas faite dans les conditions optimales lors des expériences de pinces magnétiques. 
 La quantité de plasmide ayant pénétré dans les cellules était plus faible, et la quantité de cellules ayant MRTF-A dans le noyau (Homogène ou Nucléaire) l'est également. 
-
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/CHN_vs_Temps_reference.png} 
+\caption{\label{Reference_dynamique} \'E{}volution de la proportion de cellules ayant MRTF-A dans chacune des trois localisations au cours du temps lors d'une expérience témoin où l'on a monté à l'avance la lamelle dans l'étireur et où l'on n'applique aucune contrainte.}
+\end{figure}
 
 L'évolution de l'état de base au cours du temps est présentée sur la figure \ref{Reference_dynamique}. On peut observer que la proportion des différents états reste relativement stable, avec une légère diminution de la quantité de MRTF-A Cytoplasmique au cours du temps. 
 Pendant la durée totale de l'expérience, on peut observer sur la figure \ref{Ref_transloc} qu'environ 27\% des cellules ont changé d'état au moins une fois, et que dans les deux tiers des cas, ces changements se font vers des états où MRTF-A est plus nucléaire qu'avant (évènements \og entrants \fg). 
 
 \subsection{Effet du rinçage et du montage préalables \label{Rinçage}}
+
 
 En faisant des expériences témoin durant lesquelles aucun étirement n'était imposé, nous avons commencé à soupçonner qu'une ou plusieurs étapes de la préparation de l'échantillon pouvaient interférer avec les expériences. 
 Deux étapes ont été testées : la première est l'étape durant laquelle on sort la lamelle de la plaque six puits pour la monter dans l'étireur, et qui implique des contraintes mécaniques sur la lamelle ; la seconde est l'étape de rinçage durant laquelle le milieu de culture des puits était remplacé par du milieu neuf dans l'étireur, ce qui pouvait induire une variation de la concentration en sérum. 
@@ -182,16 +186,16 @@ Pour l'étape de montage, nous avons testé le montage juste avant l'expérience
 Le rinçage est toujours effectué en même temps que le montage. 
 
 
-\begin{figure}
-\includegraphics[scale=0.5]{Figures/CHN_montage_rincage.png} 
-\caption{\label{CHN_montage} Influence sur la localisation de MRTF-A des contraintes mécaniques dues au montage de la lamelle dans l'étireur (Montage) et de la variation de concentration en sérum due au remplacement du milieu de culture par du milieu neuf au moment du montage (Rinçage). Montées : montage à $t-5$ minutes, Prémontées : montage à $t-18$ heures, rinçage au même moment.
-Tous les tests on été réalisés avec un G-test d'indépendance t et une correction de Bonferroni pour les comparaisons multiples. ** : $p<\frac{0.01}{4}$ et *** : $p<\frac{0.001}{4}$}
-\end{figure}
+
 
 On peut voir sur la figure \ref{CHN_montage} que lorsque les cellules sont rincées juste avant l'expérience (Montées Rincées vs Montées Non Rincées), il y a significativement moins de cellules pour lesquelles MRTF-A est majoritairement cytoplasmique. 
 Comme son nom l'indique, Serum Response Factor est puissamment activé par le sérum, et ici le seul rinçage avec du milieu neuf suffit à activer la voie de signalisation MRTF-A/SRF et changer la localisation de MRTF-A d'une partie des cellules. 
 On peut également constater que lorsque le rinçage est effectué la veille (Prémontées Rincées vs Prémontées Non Rincées), il n'y a plus aucun effet. 
-
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{Figures/CHN_montage_rincage.png} 
+\caption{\label{CHN_montage} Influence sur la localisation de MRTF-A des contraintes mécaniques dues au montage de la lamelle dans l'étireur (Montage) et de la variation de concentration en sérum due au remplacement du milieu de culture par du milieu neuf au moment du montage (Rinçage). Montées : montage à $t-5$ minutes, Prémontées : montage à $t-18$ heures, rinçage au même moment.
+Tous les tests on été réalisés avec un G-test d'indépendance t et une correction de Bonferroni pour les comparaisons multiples. ** : $p<\frac{0.01}{4}$ et *** : $p<\frac{0.001}{4}$}
+\end{figure}
 On peut finalement voir que l'étape du montage n'a pas la même influence selon qu'il y a rinçage ou non. Sans rinçage, cette étape n'a pas d'influence significative sur l'état des cellules, en revanche avec rinçage, on peut remarquer que le montage a tendance à augmenter la quantité de cellules ayant MRTF-A dans le cytoplasme aux dépens de celles l'ayant réparti de manière homogène. 
 
 Une fois ces résultats mis en évidence, nous avons réalisé la suite des expériences en évitant scrupuleusement de changer le milieu de culture dans lequel baignent les cellules le jour même de l'expérience. 
@@ -203,7 +207,7 @@ Une fois ces résultats mis en évidence, nous avons réalisé la suite des exp�
 
 \subsection{Résultats pour l'étirement 10\%}
 
-Dans les mêmes conditions que pour le témoin, c'est-à-dire avec des lamelles montées la veille des expériences en conservant le même milieu de culture, et sans actine mCherry, nous avons appliqué un étirement de 10\% au temps t=0, puis observé les cellules toutes les 10 minutes pendant 120 minutes en maintenant l'étirement. 
+Dans les mêmes conditions que pour le témoin, c'est-à-dire avec des lamelles montées la veille des expériences en conservant le même milieu de culture, et sans actine mCherry, nous avons appliqué un étirement de 10\% au temps t=0, puis observé les cellules toutes les 10 minutes \footnote{Les cellules sont en fait observées de la première à la dernière, en recommençant de manière cyclique avec un cycle prenant de 5 à 10 minutes selon les expériences, le but étant d'observer chaque cellule le plus fréquemment possible. À l'intérieur d'un cycle, toutes les cellules ne sont pas observées au même moment, leur instant d'observation est réparti sur toute la durée du cycle. } pendant 120 minutes en maintenant l'étirement. 
 
 La figure \ref{CHN_dyn_Et10} montre la fréquence dans la population de cellules de chacune des trois localisations possibles de MRTF-A GFP en fonction du temps écoulé depuis le début de l'étirement. 
  
@@ -215,7 +219,7 @@ Si initialement la quantité de cellules ayant MRTF-A clairement accumulée dans
 
 
 \begin{figure}
-\includegraphics[scale=0.4]{Figures/Etirement10_vs_0_dynamique.png} 
+\includegraphics[scale=0.5]{Figures/Etirement10_vs_0_dynamique.png} 
 \caption{\label{CHN_dyn_Et10} Comparaison de l'évolution de la fréquence de chaque localisation de MRTF-A au cours du temps après 10\% d'étirement et dans les expériences témoin (n=5 et 141 cellules dans les deux cas)}
 \end{figure}
 
@@ -255,25 +259,14 @@ La première hypothèse pour expliquer cette accumulation nucléaire de MRTF-A e
 Initialement, on s'attendait à voir pour l'étirement le plus fort les mêmes effets que pour l'étirement 10\%, mais plus importants. 
 Ce n'est pas du tout ce qui est ressorti des expériences, qui ont montré à peu près le contraire. 
 
-En effet, si l'on observe l'évolution des trois populations différentes par rapport au témoin, on peut voir sur la figure \ref{Et30_CHN} que la quantité de cellules avec MRTF-A majoritairement cytoplasmique augmente, passant d'environ 50 \% à t=20 minutes à plus de 60\% au bout de 80 minutes d'étirement, lorsqu'elle atteint son maximum. 
-Au contraire, on peut voir à t=80 minutes que les cellules pour lesquelles MRTF-A GFP est homogène, qui comptaient pour un quart de la population initialement, ne représentent plus que 15 \% du total. 
-Les cellules ayant MRTF-A majoritairement nucléaire sont elles en proportion inférieure à 20 \% pendant toute la durée de l'expérience. 
-
-On constate donc que l'évolution de la population est à l'inverse de celle observée pour un étirement plus faible : de plus en plus de MRTF-A est confinée dans le cytoplasme. 
-
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/Etirement30_vs_0_dynamique.png} 
 \caption{\label{Et30_CHN} Comparaison de l'évolution de la fréquence de chaque localisation de MRTF-A au cours du temps après 30\% d'étirement ou dans les expériences témoin (n=5 et 141 cellules pour le témoin, n=3 et 102 cellules pour l'étirement 30\%)}
 \end{figure}
+En effet, si l'on observe l'évolution des trois populations différentes par rapport au témoin, on peut voir sur la figure \ref{Et30_CHN} que la quantité de cellules avec MRTF-A majoritairement cytoplasmique augmente, passant d'environ 50 \% à t=20 minutes à plus de 60\% au bout de 80 minutes d'étirement, lorsqu'elle atteint son maximum. 
+Au contraire, on peut voir à t=80 minutes que les cellules pour lesquelles MRTF-A GFP est homogène, qui comptaient pour un quart de la population initialement, ne représentent plus que 15 \% du total. 
+Les cellules ayant MRTF-A majoritairement nucléaire sont elles en proportion inférieure à 20 \% pendant toute la durée de l'expérience.
 
-De plus, sur la figure \ref{Et30_transloc}, on peut constater qu'il y a dès le début de l'expérience un pic net dans le nombre d'évènements sortants H $\rightarrow$ C entre 20 et 40 minutes, pendant lequel les évènements sont 6 fois plus nombreux que pour le témoin. Un pic synchronisé est visible dans les transitions sortantes N $\rightarrow$ H. 
-
-Au contraire, les évènements entrants sont au même niveau que pendant l'expérience témoin pendant les 80 premières minutes de l'étirement 30\%. À partir de t=80 minutes, on observe que le comportement s'inverse : il y a un grand nombre d'évènements entrants et les évènements sortants redescendent au niveau du témoin. 
-
-Un pic d'évènements sortants devrait être lié à une grande quantité de G-actine libérée dans ces cellules, de manière très rapide, ce qui nous amène naturellement à poser l'hypothèse d'une destruction brutale du cytosquelette en réponse à une déformation trop forte. Cette défaillance du cytosquelette d'actine à 30 \% de déformation est de façon surprenante cohérente avec les mesures faites sur de l'actine \textit{in vitro} \cite{janmey_mechanical_1994}. 
-À partir de t=80 minutes, lorsque les évènements entrants commencent à augmenter, on verrait alors les conséquences d'une reconstruction progressive du cytosquelette. 
-
- 
 \begin{figure}
 \includegraphics[scale=0.4]{Figures/Etirement30_vs_0_translocations.png}
 \caption{\label{Et30_transloc} Nombre d'évènements ayant eu lieu pendant la fenêtre [t-5min,t+5min] pour chaque type de transition possible divisé par le nombre de cellules observées. La première lettre du titre de chaque graphe représente l'état initial de la localisation de MRTF-A dans la cellule, la seconde lettre l'état final. Par exemple le premier graphe "CH" représente le nombre de cellules dans lesquelles MRTF-A est passée d'une localisation cytoplasmique à homogène dans l'intervalle [t-5min;t+5min] divisé par le nombre total de cellules. }
@@ -283,13 +276,27 @@ Un pic d'évènements sortants devrait être lié à une grande quantité de G-a
 \includegraphics[scale=0.5]{Figures/Etirement30_vs_temoin_activite.png}
 \caption{\label{Et30_activite} Quantité de changements d'état par cellule pour les trois conditions différentes (p=$10^{-4}$, G-test d'indépendance).}
 \end{figure}
-
-On peut finalement remarquer que comme lors de l'autre expérience d'étirement, une grande partie des cellules change au moins une fois d'état pendant les deux heures d'observation, comme on peut le voir sur la figure \ref{Et30_activite}, mais il y a nettement moins de déséquilibre entre les évènements entrants et sortants (p=0.014, figure \ref{Et30_ES}). 
-
- \begin{figure}
+\begin{figure}
  \includegraphics[scale=0.5]{Figures/Activite.png} 
  \caption{\label{Et30_ES} Comparaison pour les deux étirements et le témoin de la proportion de cellules qui changent d'état au moins une fois pendant deux heures d'observation. *** : p<$\frac{0.001}{2}$, G-test d'indépendance.}
  \end{figure}
+ 
+
+On constate donc que l'évolution de la population est à l'inverse de celle observée pour un étirement plus faible : de plus en plus de MRTF-A est confinée dans le cytoplasme. 
+
+
+De plus, sur la figure \ref{Et30_transloc}, on peut constater qu'il y a dès le début de l'expérience un pic net dans le nombre d'évènements sortants H $\rightarrow$ C entre 20 et 40 minutes, pendant lequel les évènements sont 6 fois plus nombreux que pour le témoin. Un pic synchronisé est visible dans les transitions sortantes N $\rightarrow$ H. 
+
+Au contraire, les évènements entrants sont au même niveau que pendant l'expérience témoin pendant les 80 premières minutes de l'étirement 30\%. À partir de t=80 minutes, on observe que le comportement s'inverse : il y a un grand nombre d'évènements entrants et les évènements sortants redescendent au niveau du témoin. 
+
+Un pic d'évènements sortants devrait être lié à une grande quantité de G-actine libérée dans ces cellules, de manière très rapide, ce qui nous amène naturellement à poser l'hypothèse d'une destruction brutale du cytosquelette en réponse à une déformation trop forte. Cette défaillance du cytosquelette d'actine à 30 \% de déformation est de façon surprenante cohérente avec les mesures faites sur de l'actine \textit{in vitro} \cite{janmey_mechanical_1994}. 
+À partir de t=80 minutes, lorsque les évènements entrants commencent à augmenter, on verrait alors les conséquences d'une reconstruction progressive du cytosquelette. 
+
+ 
+
+On peut finalement remarquer que comme lors de l'autre expérience d'étirement, une grande partie des cellules change au moins une fois d'état pendant les deux heures d'observation, comme on peut le voir sur la figure \ref{Et30_activite}, mais il y a nettement moins de déséquilibre entre les évènements entrants et sortants (p=0.014, figure \ref{Et30_ES}). 
+
+ 
  
 Initialement, on souhaitait regarder en parallèle l'état du cytosquelette d'actine et la localisation de MRTF-A. 
 Malheureusement, comme on peut le voir tant en expériences de pinces magnétiques que d'étirement, l'expression d'actine mCherry et de LifeAct RFP perturbe de manière trop importante le cytosquelette d'actine pour être utilisée pendant les expériences. 
@@ -318,7 +325,7 @@ Pourtant, on aurait pu s'attendre à ce qu'il y ait plus d'évènements entrants
 
 Finalement, la sur-expression d'actine mCherry bloque le changement de localisation de MRTF-A par rapport à des cellules dans les mêmes conditions n'exprimant pas l’actine mCherry, ce qui est facilement expliqué par le fait qu'une plus grande réserve d'actine monomérique va séquestrer MRTF-A dans le cytoplasme de manière plus efficace.
 
-\subsubsection{Utiliation de F-tractine RFP pendant l'étirement 10\%}
+\subsubsection{Utilisation de F-tractine RFP pendant l'étirement 10\%}
 
 
 La LifeAct a montré ses effets pendant les expériences sur les pinces magnétiques, elle n'a donc pas été réutilisée pour les expériences d'étirement. 
@@ -344,13 +351,21 @@ La quantité de cellules ayant MRTF-A cytoplasmique est divisée par deux dès l
 
 
 \subsubsection{Utilisation de SiRactine pendant l'étirement 10\%}
+
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/Et10_Siractine_comparaison.png}
+\caption{\'Evolution de la population de cellules ayant MRTF-A cytoplasmique, homogène ou nucléaire en fonction du temps écoulé depuis le début de l'étirement à 10\%, pour des C2C12 transfectées MRTF-A GFP avec de la nanofectine, et pour des C2C12 transfectées MRTF-A GFP avec de la lipofectamine et avec ajout de SiRactine pour visualiser les filaments d'actine. \label{CHN_SiR}}
+\end{figure}
 La SiRactine est un dérivé d'une drogue connue pour stabiliser les filaments d'actine, le jasplakinolide, couplé à un fluorophore dont la fluorescence sera 100 fois plus élevée lorsqu'elle est liée aux filaments d'actine. 
 Elle a l'avantage de s'utiliser en très petites quantités, et directement sur les cellules à observer sans transfection et sans rinçage, ce qui fait que contrairement à l'actine mCherry ou à la LifeAct, toutes les cellules seront marquées à des niveaux semblables, et qu'elle est toujours disponible dans le milieu, ce qui permet de suivre la quantité de F-actine.. 
 
 Durant ces expériences, nous avons réalisé des mesures quantitatives d'intensité de fluorescence en MRTF-A GFP et en SiRactine. Pour chaque cellule, on calcule le ratio entre les intensités médianes de fluorescence dans la zone péri-nucléaire et dans le noyau. Un ratio au-dessus de 1 correspond à une cellule qui était labellisée cytoplasmique, tandis qu'un ratio inférieur à 1 correspond à une localisation majoritairement nucléaire. 
 
 
-
+\begin{figure}
+\includegraphics[scale=0.3]{Figures/Et10_transloc_Siractine.png} 
+\caption{Nombre d'évènements ayant eu lieu pendant la fenêtre [t-5min,t+5min] pour chaque type de transition possible divisé par le nombre de cellules observées, pour des C2C12 transfectées MRTF-A GFP à la nanofectine et pour des C2C12 transfectées MRTF-A GFP à la lipofectamine et avec ajout de SiRactine, toutes étirées à 10\%. \label{transloc_Sir}}
+\end{figure}
 
 
 
@@ -365,31 +380,42 @@ Cette accumulation est suivie d'un plateau entre 40 et 60 minutes après l'étir
 
 Non seulement ces expériences confirment que la relocalisation de MRTF-A vers le noyau en réponse à l'étirement est précédée de polymérisation d'actine, mais elles nous donnent également un temps de réponse, estimé à 20 minutes, entre le début de la polymérisation et l'effet visible sur MRTF-A GFP. Cela explique pourquoi pendant les expériences précédentes, presque aucune différence n'était observée entre l'état initial et l'état à 20 minutes d'étirement.
 
-Des expériences sont en cours pour réaliser des témoins transfectés à la lipofectamine, étirés mais sans marquage SiRactine, et des témoins transfectés à la lipofectamine, non étirés avec marquage SiRactine, afin de contrôler l'effet qu'a l'ajout de SiRactine sur la polymérisation et sur la localisation de MRTF-A. 
-En comparant avec les expériences précédentes transfectées à la nanofectine, on peut constater que le pic d'entrées C $\rightarrow$ H visible à 20 minutes est présent dans les deux conditions, mais qu'il est plus précoce pendant l'expérience avec SiRactine. Les deux expériences témoins devraient nous permettre de savoir si l'effet est dû au changement de méthode de transfection (qui change la quantité de MRTF-A GFP sur-exprimée) ou à l'ajout de SiRactine (qui pourrait stabiliser les filaments, par effet du jasplakinolide). 
- 
-
-\begin{figure}
-\includegraphics[scale=0.3]{Figures/Et10_Siractine_comparaison.png}
-\caption{\'Evolution de la population de cellules ayant MRTF-A cytoplasmique, homogène ou nucléaire en fonction du temps écoulé depuis le début de l'étirement à 10\%, pour des C2C12 transfectées MRTF-A GFP avec de la nanofectine, et pour des C2C12 transfectées MRTF-A GFP avec de la lipofectamine et avec ajout de SiRactine pour visualiser les filaments d'actine. \label{CHN_SiR}}
-\end{figure}
-
-\begin{figure}
-\includegraphics[scale=0.3]{Figures/Et10_transloc_Siractine.png} 
-\caption{Nombre d'évènements ayant eu lieu pendant la fenêtre [t-5min,t+5min] pour chaque type de transition possible divisé par le nombre de cellules observées, pour des C2C12 transfectées MRTF-A GFP à la nanofectine et pour des C2C12 transfectées MRTF-A GFP à la lipofectamine et avec ajout de SiRactine, toutes étirées à 10\%. \label{transloc_Sir}}
-\end{figure}
+La chute brutale observée après 90 minutes d'étirement est un artefact expérimental : une des deux expériences présentées ici n'a pas pu être poursuivie plus longtemps, et à partir de t=90 minutes, la population de cellules observées chute brutalement, donnant un poids démesuré aux quelques cellules observées restantes. On peut d'ailleurs voir que la courbe de l'autre expérience (courbe verte en pointillés du haut) est stable. 
 
 \begin{figure}
 \includegraphics[scale=0.4]{Figures/C2C12.png} 
 \caption{Ratio des intensités médianes de MRTF-A GFP péri-nucléaire/nucléaire (en vert) et Intensité médiane de SiRactine renormalisée par l'intensité médiane à 20 minutes (en rouge)  en fonction du temps écoulé depuis le début de l'étirement 10 \% (2 expériences, 68 cellules, les tracés en poitillés représentent chacune des deux expériences).\label{Siractine_quantif}}
 \end{figure}
  
+Des expériences sont en cours pour réaliser des témoins transfectés à la lipofectamine, étirés mais sans marquage SiRactine, et des témoins transfectés à la lipofectamine, non étirés avec marquage SiRactine, afin de contrôler l'effet qu'a l'ajout de SiRactine sur la polymérisation et sur la localisation de MRTF-A. 
+En comparant avec les expériences précédentes transfectées à la nanofectine, on peut constater que le pic d'entrées C $\rightarrow$ H visible à 20 minutes est présent dans les deux conditions, mais qu'il est plus précoce pendant l'expérience avec SiRactine. Les deux expériences témoins devraient nous permettre de savoir si l'effet est dû au changement de méthode de transfection (qui change la quantité de MRTF-A GFP sur-exprimée) ou à l'ajout de SiRactine (qui pourrait stabiliser les filaments, par effet du jasplakinolide). 
+ 
+\subsection{Synthèse des résultats de l'étirement des C2C12 observé en direct}
+
+Pendant ces expériences, nous avons étudié les effets de trois paramètres : du montage expérimental lui-même (état de référence et influence du montage et du rinçage), des techniques d'observation de l'actine (actine mCherry, LifeAct, F-tractin et SiRactine) et d'une stimulation mécanique ( force exercée par les pinces magnétiques ou déformation du substrat). 
+
+Le système actine/MRTF-A apparaît extrêmement sensible, tant aux perturbations dues au montage expérimental qu'aux techniques d'observation de l'actine. 
+Ainsi, changer la concentration en sérum par un rinçage avant l'expérience suffit à perturber le système et à faire entrer MRTF-A dans le noyau d'une partie de la population cellulaire. 
+
+De même, nous avons constaté que les trois produits utilisés pour marquer les filaments d'actine (LifeAct, F-tractin et SiRactine) contribuent à stabiliser les filaments suffisamment pour causer une accumulation nucléaire de MRTF-A, quand bien même leurs fabricants annonçaient un effet négligeable. 
+Au contraire, l'ajout d'actine en excès par la transfection d'actine mCherry bloque MRTF-A dans le cytoplasme, de manière concordante avec les résultats de la littérature sur les actines non polymérisables. 
+
+Finalement, nous avons pu constater qu'une stimulation mécanique par l'intermédiaire des intégrines, tant au niveau local avec les pinces magnétiques, qu'au niveau global avec l'étireur, suffit à déclencher une accumulation nucléaire de MRTF-A, validant ainsi nos hypothèses de travail. Cependant, lorsque la contrainte devient trop importante ( 30\% de déformation du substrat), le cytosquelette d'actine cède et l'excès de monomères d'actine issus de sa désintégration confine MRTF-A dans le cytoplasme. 
+
+
+
+
+
 
 
 \subsection{Comparaison avec des expériences sur des myoblastes primaires}
 
 Le travail que j'ai présenté dans ce chapitre fait partie d'un projet plus important sur le rôle de MRTF-A dans la mécanotransduction des cellules musculaires. Alessandra Pincini, post-doc à l'Institut Cochin et au laboratoire Matière et Systèmes Complexes, a pour projet de mener des expériences similaires à celles que j'ai présentées sur les C2C12, mais avec des lignées de myoblastes primaires et des myotubes différenciés à partir de ces lignées. Pour cela, elle a conçu des lentivirus avec lesquels elle a infecté ces myoblastes primaires avec la MRTF-A GFP. Elle a créé ainsi plusieurs lignées de myoblastes qui expriment de manière stable MRTF-A GFP, et qu'elle peut différencier pour créer des myotubes fluorescents. 
 
+\begin{figure}
+\includegraphics[scale=0.4]{Figures/Siractine_MRTFA_vs_temps.png} 
+\caption{Rapport des intensités médianes en MRTF-A GFP  péri-nucléaire/nucléaire et Intensité en Siractine normalisée en fonction du temps écoulé depuis le début de l'étirement pour des myoblastes primaires soumis à 10\% d'étirement (5 expériences, 159 cellules). \label{myoblastes_Sir}}
+\end{figure}
 Durant la fin de ma thèse, afin de créer un tout cohérent avec les deux projets, Tiana Jacquemart, stagiaire de M1 au laboratoire MSC, a réalisé, avec l'aide d'Alessandra et la mienne, des expériences similaires à celles présentées à la section précédente, mais avec les myoblastes infectés créés par Alessandra Pincini. 
 
 Les myoblastes primaires adhèrent mal au PDMS recouvert de fibronectine qui était utilisé pour les C2C12. Pour les expériences d'étirement, ils sont ensemencés sur des lamelles de Flexcell (Flexcell International Corporation) recouverts de collagène I. 
@@ -397,12 +423,9 @@ Ils sont ordinairement cultivés dans un milieu beaucoup plus riche en facteurs 
 Dans ces conditions, ils sont très motiles, et complètement insensibles à l'étirement du substrat. 
 Afin de les amener dans des conditions plus proches des C2C12, leur milieu de culture habituel a été remplacé la veille des expériences par le milieu de culture utilisé pour les C2C12. 
 
-\begin{figure}
-\includegraphics[scale=0.4]{Figures/Siractine_MRTFA_vs_temps.png} 
-\caption{Rapport des intensités médianes en MRTF-A GFP  péri-nucléaire/nucléaire et Intensité en Siractine normalisée en fonction du temps écoulé depuis le début de l'étirement pour des myoblastes primaires soumis à 10\% d'étirement (5 expériences, 159 cellules). \label{myoblastes_Sir}}
-\end{figure}
 
-La figure \ref{myoblastes_Sir} montre les écolutions temporelles du ratio MRTF-A péri-nucléaire/nucléaire et de l'intensité médiane en SiRactine pour ces myoblastes étirés à 10\%. 
+
+La figure \ref{myoblastes_Sir} montre les évolutions temporelles du ratio MRTF-A péri-nucléaire/nucléaire et de l'intensité médiane en SiRactine pour ces myoblastes étirés à 10\%. 
 La SiRactine a une évolution proche de celle observée précédemment pour les C2C12 primaires, mais avec une croissance plus régulière au cours du temps. On peut en revanche constater que la dynamique de MRTF-A est différente : il faut attendre beaucoup plus longtemps après le début de la polymérisation pour avoir un effet sur la localisation de MRTF-A. 
 
 Après une heure d'étirement et de polarisation, le MRTF-A ratio diminue, ce qui signifie que la part de MRTF-A qui se trouve dans le noyau augmente. 
@@ -427,7 +450,7 @@ Ils nous permettent également de marquer la G-actine en plus de la F-actine, ce
 
 \section{Application d'une déformation globale avec l'étireur : \'Etude quantitative sur cellules fixées}
 
-Lors ds expériences décrites ici, des cellules transfectées MRTF-A GFP étaient ensemencées sur 6 lamelles de PDMS. Puis chacune d'elle était successivement montée dans l'étireur, étirée à 10 ou 30 \%, puis laissée en étirement à l'incubateur pendant un temps donné. Une fois le temps écoulé, la lamelle était démontée et fixée. Après fixation, l'actine F, l'actine G et le noyau étaient marqués, et les lamelles étaient observées en microscopie de fluorescence. Le protocole de l'étirement et du marquage sont décrits en détail dans le chapitre dédié aux méthodes expérimentales. 
+Lors des expériences décrites ici, des cellules transfectées MRTF-A GFP étaient ensemencées sur 6 lamelles de PDMS. Puis chacune d'elle était successivement montée dans l'étireur, étirée à 10 ou 30 \%, puis laissée en étirement à l'incubateur pendant un temps donné. Une fois le temps écoulé, la lamelle était démontée et fixée. Après fixation, l'actine F, l'actine G et le noyau étaient marqués, et les lamelles étaient observées en microscopie de fluorescence. Le protocole de l'étirement et du marquage sont décrits en détail dans le chapitre dédié aux méthodes expérimentales. 
 Trois expériences indépendantes sur des cellules MRTF-A GFP ont été réalisées pour chacun des deux étirements possibles. Une expérience sur des cellules non transfectées, mais marquées avec un anti-corps contre MRTF-A, a été réalisée pour chaque étirement. 
 
 Initialement, l'un des objectifs était de pouvoir quantifier l'évolution de la quantité de F-actine par rapport à celle de G-actine. Cependant, il est apparu à la fin de la série d'expériences que l'intensité de fluorescence de la phalloïdine Alexa 647 était de moins en moins fiable avec le temps. Les expériences réalisées immédiatement après l'ouverture du flacon de phalloïdine Alexa 647, qui comprennent les trois expériences d'étirement 30 \% et une seule expérience à 10\%, sont exploitables. Dans les expériences réalisées plus tard, la phalloïdine devient beaucoup plus sensible au photo-blanchiment, et l'ordre dans lequel les lamelles sont observées est le déterminant majeur de l'intensité de fluorescence observée, ce qui fausse complètement les observations. 
@@ -446,6 +469,10 @@ L'observation la plus frappante des expériences d'étirement 10\% sur cellules 
 
 Ce résultat peut paraître contre-intuitif : comment cette expulsion d'actine hors du noyau, qui diminue notablement le ratio F/G peut-il permettre l'accumulation nucléaire de MRTF-A ? En réalité, il existe deux manières pour la cellule de confiner MRTF-A dans le noyau. La première est liée au manque de G-actine dans le cytoplasme, qui va conduire à l'import rapide de MRTF-A. La seconde est liée au manque de G-actine dans le noyau, qui va empêcher MRTF-A de sortir du noyau, car cette dernière a besoin de se lier à la G-actine pour être exportée. Ici c'est donc le manque de G-actine dans le noyau qui conduit à l'accumulation de MRTF-A GFP. 
 
+\begin{figure}
+\includegraphics[scale=0.6]{Figures/Expusion2.png} 
+\caption{\label{expulsion} Marquage de l'actine monomérique avec de la DNase I dans des C2C12 soumises à 10\% d'étirement. L'image numéro 1 est un témoin (t=0), l'image numéro 2 a été fixée après 10 minutes d'étirement. On peut voir l'actine monomérique, initialement majoritairement nucléaire être expulsée vers le cytoplasme à 10 minutes.}
+\end{figure}
 Or récemment, il a été montré que la protéine MICAL-2, présente majoritairement dans le noyau, est capable, en réponse au sérum, de dépolymériser les filaments d'actine en oxydant les monomères qui les composent \parencite{lundquist_redox_2014}. De plus, ces monomères d'actine oxydée sont expulsés du noyau. Il a également été montré que MICAL-2 joue un rôle dans l'accumulation d'actine dans le noyau et l'exclusion de MRTF-A dans le cytoplasme des cellules musculaires lors de l'atrophie provoquée par une dénervation chez la souris \parencite{collard_nuclear_2014}. MICAL-2 apparaît donc comme une piste sérieuse pour expliquer l'expulsion massive d'actine monomérique hors du noyau suite à l'application de l'étirement. 
 
 De manière encore inexpliquée pour l'instant, une des expériences avec des cellules non transfectées ne montre pas cet effet sur l'actine monomérique autour de 10 à 20 minutes d'étirement. Tout au plus peut-on observer une augmentation du ratio de G-actine péri-nucléaire par rapport à nucléaire au bout de 40 minutes. Une des pistes pour expliquer cette différence avec les autres expériences pourrait être la quantité de DMEM plus importante mise dans chaque puits, à concentration égale, pour les besoins de cette expérience, qui mènerait à une plus grande concentration en sérum le lendemain de l'expérience. La concentration en sérum et la quantité d'actine monomérique ont en effet déjà été liées dans d'autres expériences \cite{mouilleron_molecular_2008}, \cite{vartiainen_nuclear_2007}, \cite{lundquist_redox_2014}.  
@@ -458,18 +485,22 @@ Les résultats des expériences à 30\% d'étirement pointaient vers une dépoly
 
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/Et30_MRTFA_FG.png} 
-\caption{\label{Et30_MRTFA_FG} Intensité médiane de MRTFA-GFP ou de MRTF-A endogène dans la zone péri-nucléaire par rapport à la zone nucléaire (en bleu) et intensité médiane de la phalloïdine (F-actine) par rapport à la DNaseI (G-actine) (en rouge et orange)  au cours du temps, pour trois expériences transfectées et une non tranfectée, étirées à 30\%.  }
+\caption{\label{Et30_MRTFA_FG} Intensité médiane de MRTFA-GFP ou de MRTF-A endogène dans la zone péri-nucléaire par rapport à la zone nucléaire (en bleu) et intensité médiane de la phalloïdine (F-actine) par rapport à la DNaseI (G-actine) (en rouge et orange)  au cours du temps, pour trois expériences transfectées et une non transfectée, étirées à 30\%.  }
 \end{figure}
 \begin{figure}
 \includegraphics[scale=0.5]{Figures/Et30_Aires.png} 
-\caption{\label{Et30_Aires} Aire moyenne des cellules au cours du temps pendant l'étirement 30\%. }
+\caption{\label{Et30_Aires} Aire moyenne de cellules transfectées MRTF-A GFP au cours du temps pendant l'étirement 30\%, correspondant aux courbes bleue (MRTF-A GFP) et rouge (ratio actine F/G) de la figure \ref{Et30_MRTFA_FG} }
 \end{figure}
 Ces résultats sont confirmées par les expériences, tant en MRTF-A GFP qu'en MRTF-A endogène. On peut constater sur la figure \ref{Et30_MRTFA_FG} que 20 minutes après le début de l'étirement la proportion d'actine F par rapport à l'actine G est diminuée de moitié. Cette diminution est accompagnée d'une diminution de l'aire des cellules visible sur la figure \ref{Et30_Aires}. Cela confirme que les cellules ne peuvent pas supporter des déformations aussi importantes, en conséquence de quoi elles se décollent partiellement et leur réseau d'actine est dépolymérisé. 
 De plus, MRTF-A est relocalisée vers le cytoplasme de manière quasiment simultanée. 
 
 On voit que la destruction du cytosquelette se fait progressivement : elle a déjà débuté après 10 minutes d'étirement, mais atteint son maximum 20 minutes après l'étirement. En revanche, il n'y a pas de décalage temporel entre la dépolymérisation du réseau d'actine et la relocalisation de MRTF-A. L'étape cinétiquement déterminante ici est liée à la réorganisation du cytosquelette. 
 
+\begin{figure}
+\includegraphics[scale=0.35]{Figures/Images_FG_Et30.png} 
+\caption{\label{image_fg} Images du ratio d'actine F/G pixel par pixel de C2C12 transfectées MRTF-A GFP, étirées à 30\%, fixées à différents temps et marquées de manière identique avec de la phalloïdine (actine F) et de la DNase I (actine G). De gauche à droite : témoin t=0, 10, 20 et 45 minutes après étirement.}
 
+\end{figure}
 La dépolymérisation est suivie d'une récupération qui se fait à un rythme variable d'une expérience à l'autre, sans que l'on ait pour l'instant réussi à distinguer l'origine de cette variabilité. 
 
 On constate également que l'expulsion de l'actine monomérique du noyau est présente mais de manière beaucoup moins marquée que lors de l'étirement à 10 \%. Cela pourrait signifier que la même voie que pour l'étirement à 10 \% est activée, mais que son action est diminuée et masquée par les dommages causés au cytosquelette, jusqu'au moment où la récupération a eu lieu. 
@@ -505,6 +536,6 @@ De nouvelles expériences, en particulier avec les SiRNA anti-MICAL-2 qui vienne
 %- à échelle de temps un peu plus longue, étudier la boucle de rétroaction entre niveau de G-actine – localisation de MRTFA – expression de G-actine
 %- appliquer des déformations cycliques plutôt que permanentes
 %Est-ce vraiment ici qu'il faut le faire, ou plutôt dans la conclusion juste après ? J'ai peur que ça se répète sinon.  
-
+%
 %\end{document}
 
